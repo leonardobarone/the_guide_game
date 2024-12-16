@@ -1,6 +1,0 @@
-npm install @vis.gl/react-google-maps
-npm install @googlemaps/markerclusterer
-__________________________________________________
-
-account : procidaislandapp@gmail.com
-id mappa : b28b9e40a7377c78

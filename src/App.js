@@ -1,10 +1,10 @@
 'use client';
 
 import {
+  AdvancedMarker,
   APIProvider,
   Map,
   // useMap,
-  // AdvancedMarker,
 } from '@vis.gl/react-google-maps';
 
 // import { MarkerClusterer } from '@googlemaps/markerclusterer';
@@ -36,5 +36,9 @@ function App() {
 export default App;
 
 const Markers = ({ places }) => {
-  return null;
+  return <>
+    {places.map( place => <AdvancedMarker position={place} key={place.id}>
+      <img width={33} src="./icon.png" alt="icon place" />
+    </AdvancedMarker>)}
+  </>;
 }
