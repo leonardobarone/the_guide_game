@@ -4,11 +4,12 @@ import {
   AdvancedMarker,
   APIProvider,
   Map,
+  InfoWindow
   // useMap,
 } from '@vis.gl/react-google-maps';
 
 // import { MarkerClusterer } from '@googlemaps/markerclusterer';
-// import { useEffect, useState, useRef } from 'react';
+import { useState } from 'react';
 // import { Marker } from '@googlemaps/markerclusterer';
 import places from './places';
 
@@ -24,7 +25,7 @@ function App() {
         <Map 
           defaultCenter={{lat: 40.7564296094562, lng: 14.013971500161295}} 
           defaultZoom={13} 
-          mapId={'b28b9e40a7377c78'}
+          mapId='b28b9e40a7377c78'
         >
           <Markers places={places} />
         </Map>
@@ -36,9 +37,19 @@ function App() {
 export default App;
 
 const Markers = ({ places }) => {
+  const [selectedPlace, setSelectedPlace] = useState(null);
   return <>
-    {places.map( place => <AdvancedMarker position={place} key={place.id}>
-      <img width={50} src="./icon.png" alt="icon place" />
-    </AdvancedMarker>)}
+    {
+      places.map((place)=> {
+        return <>
+          <AdvancedMarker position={place} key={place.id} onClick={()=> setSelectedPlace(place)}>
+            <img width={50} src="./icon.png" alt="icon place" />
+          </AdvancedMarker>
+          {selectedPlace && (<InfoWindow position={selectedPlace} onCloseClick={()=> setSelectedPlace(null)}>
+            {selectedPlace.name}
+          </InfoWindow>)}
+        </>
+      })
+    }
   </>;
 }
