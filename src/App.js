@@ -22,8 +22,8 @@ function App() {
     <div style={{height: '80vh', width: '100%'}}>
       <APIProvider apiKey='AIzaSyA7zTeRL20KTZpxmmgoSyDIBUZqgdxW1xk'>
         <Map 
-          center={{lat: 40.7564296094562, lng: 14.013971500161295}} 
-          zoom={13} 
+          defaultCenter={{lat: 40.7564296094562, lng: 14.013971500161295}} 
+          defaultZoom={13} 
           mapId={'b28b9e40a7377c78'}
         >
           <Markers places={places} />
@@ -38,7 +38,7 @@ export default App;
 const Markers = ({ places }) => {
   return <>
     {places.map( place => <AdvancedMarker position={place} key={place.id}>
-      <img width={33} src="./icon.png" alt="icon place" />
+      <img width={50} src="./icon.png" alt="icon place" />
     </AdvancedMarker>)}
   </>;
 }
