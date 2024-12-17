@@ -4,7 +4,7 @@ import {
   AdvancedMarker,
   APIProvider,
   Map,
-  InfoWindow
+  InfoWindow,
   // useMap,
 } from '@vis.gl/react-google-maps';
 
@@ -27,7 +27,7 @@ const Home = () => {
             defaultZoom={13} 
             mapId='b28b9e40a7377c78'
             >
-            <Markers places={places} />
+              <Markers places={places} />
             </Map>
         </APIProvider>
         </div>  
@@ -45,7 +45,8 @@ const Markers = ({ places }) => {
             <AdvancedMarker position={place} key={place.id} onClick={()=> setSelectedPlace(place)}>
               <img width={50} src="./icon.png" alt="icon place" />
             </AdvancedMarker>
-            {selectedPlace && (<InfoWindow headerContent={<h3>{selectedPlace.name}</h3>} position={selectedPlace} onCloseClick={()=> setSelectedPlace(null)}>
+            
+            {selectedPlace && (<InfoWindow headerContent={<h1 className='prova'>{selectedPlace.name}</h1>} style={{padding: '0px', border: '1px solid black'}} className='ciao' position={selectedPlace} onCloseClick={()=> setSelectedPlace(null)}>
               {selectedPlace.name}
             </InfoWindow>)}
           </>
