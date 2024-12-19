@@ -1,4 +1,4 @@
-/* RESET */
+/* RESET RULES */
 * {
     padding: 0px;
     margin: 0px;
@@ -9,14 +9,6 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.ciao {
-
-    height: 200px;
-
-    width: 200px;
-    background-color: pink;
-  }
-
-  .prova {
-    font-size: 16px;
-  }
+header {
+  padding: 25px;
+}
