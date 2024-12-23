@@ -7,15 +7,11 @@ const Home = () => {
   const [selectedPlace, setSelectedPlace] = useState(null)
 
   return <>
-    <header>
-      <h1>The Guide Game</h1>
-      <p>Il miglior gioco guida di tutti i tempi!</p>
-    </header>
     <APIProvider 
       apiKey={"AIzaSyA7zTeRL20KTZpxmmgoSyDIBUZqgdxW1xk"} // process.env.API_KEY
     > 
       <Map
-        style={{width: '100vw', height: '75vh'}}
+        style={{width: '100vw', height: '100vh'}}
         defaultCenter={{lat: 40.7564296094562, lng: 14.013971500161295}}
         defaultZoom={13}
         gestureHandling={'greedy'} // ??
