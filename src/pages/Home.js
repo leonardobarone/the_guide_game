@@ -1,5 +1,6 @@
 import { APIProvider, Map, AdvancedMarker, InfoWindow } from '@vis.gl/react-google-maps';
-import places from '../places';
+import places from '../utils/places';
+import icon from "../images/icon.png";
 import { useState } from 'react';
 
 const Home = () => {
@@ -32,7 +33,7 @@ const Home = () => {
               >
                 <img 
                   width={50} 
-                  src="./icon.png" 
+                  src={icon} 
                   alt="icon place description" 
                 />
               </AdvancedMarker>
