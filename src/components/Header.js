@@ -14,6 +14,7 @@ const Header = () => {
 export default Header;
 
 const Wrapper = styled.header`
+    font-size: 12px;
     position: absolute;
     top: 0px;
     left: 0px;

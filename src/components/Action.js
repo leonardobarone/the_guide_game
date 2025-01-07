@@ -12,31 +12,31 @@ const Action = () => {
       <ul>
         <li>
           <Link className='link' to="#">
-            <MdAccountCircle />
+            <MdAccountCircle style={{fontSize: "24px", marginBottom: '5px'}} />
             <h2>Account</h2>
           </Link>
           </li>
         <li>
           <Link className='link' to="#">
-            <IoNewspaperOutline />
+            <IoNewspaperOutline style={{fontSize: "24px", marginBottom: '5px'}} />
             <h2>Regole</h2>
           </Link>
           </li>
         <li>
           <Link className='link' to="#">
-            <FaMapMarkerAlt />
+            <FaMapMarkerAlt style={{fontSize: "24px", marginBottom: '5px'}} />
             <h2>Mappa</h2>
           </Link>
           </li>
         <li>
           <Link className='link' to="#">
-            <CiFlag1 />
+            <CiFlag1 style={{fontSize: "24px", marginBottom: '5px'}} />
             <h2>Tappe</h2>
           </Link>
           </li>
         <li>
           <Link className='link' to="#">
-            <FaTrophy />
+            <FaTrophy style={{fontSize: "24px", marginBottom: '5px'}} />
             <h2>Obiettivi</h2>
           </Link>
           </li>
@@ -65,7 +65,7 @@ const Wrapper = styled.nav`
       li {
         text-align: center;
         h2 {
-          font-size: 12px;
+          font-size: 14px;
         }
       }
     }
