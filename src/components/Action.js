@@ -29,7 +29,7 @@ const Action = () => {
           </Link>
           </li>
         <li>
-          <Link className='link' to="#">
+          <Link className='link' to="/quiz">
             <CiFlag1 style={{fontSize: "28px", marginBottom: '4px'}} />
             <h2>Tappe</h2>
           </Link>
