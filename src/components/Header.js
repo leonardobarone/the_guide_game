@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <Wrapper>
         <Link className='link' to="/">
-            <h1>The Guide Game</h1>
+            <h1>Game Of Procida</h1>
         </Link>
     </Wrapper>
   )
@@ -14,7 +14,7 @@ const Header = () => {
 export default Header;
 
 const Wrapper = styled.header`
-    font-size: 12px;
+    font-size: 16px;
     position: absolute;
     top: 0px;
     left: 0px;

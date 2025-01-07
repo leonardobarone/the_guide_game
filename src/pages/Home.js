@@ -13,7 +13,7 @@ const Home = () => {
       <Map
         style={{width: '100vw', height: '100vh'}}
         defaultCenter={{lat: 40.7564296094562, lng: 14.013971500161295}}
-        defaultZoom={13}
+        defaultZoom={13.25}
         gestureHandling={'greedy'} // ??
         disableDefaultUI={true} // ??
         mapId="b28b9e40a7377c78" // process.env.API_KEY

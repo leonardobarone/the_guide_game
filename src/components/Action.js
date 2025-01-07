@@ -12,31 +12,31 @@ const Action = () => {
       <ul>
         <li>
           <Link className='link' to="#">
-            <MdAccountCircle style={{fontSize: "24px", marginBottom: '5px'}} />
+            <MdAccountCircle style={{fontSize: "28px", marginBottom: '4px'}} />
             <h2>Account</h2>
           </Link>
           </li>
         <li>
           <Link className='link' to="#">
-            <IoNewspaperOutline style={{fontSize: "24px", marginBottom: '5px'}} />
+            <IoNewspaperOutline style={{fontSize: "28px", marginBottom: '4px'}} />
             <h2>Regole</h2>
           </Link>
           </li>
         <li>
           <Link className='link' to="#">
-            <FaMapMarkerAlt style={{fontSize: "24px", marginBottom: '5px'}} />
+            <FaMapMarkerAlt style={{fontSize: "28px", marginBottom: '4px'}} />
             <h2>Mappa</h2>
           </Link>
           </li>
         <li>
           <Link className='link' to="#">
-            <CiFlag1 style={{fontSize: "24px", marginBottom: '5px'}} />
+            <CiFlag1 style={{fontSize: "28px", marginBottom: '4px'}} />
             <h2>Tappe</h2>
           </Link>
           </li>
         <li>
           <Link className='link' to="#">
-            <FaTrophy style={{fontSize: "24px", marginBottom: '5px'}} />
+            <FaTrophy style={{fontSize: "28px", marginBottom: '4px'}} />
             <h2>Obiettivi</h2>
           </Link>
           </li>
@@ -65,7 +65,7 @@ const Wrapper = styled.nav`
       li {
         text-align: center;
         h2 {
-          font-size: 14px;
+          font-size: 12px;
         }
       }
     }
