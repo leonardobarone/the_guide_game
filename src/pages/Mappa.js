@@ -3,7 +3,7 @@ import places from '../utils/places';
 import icon from "../images/icon.png";
 import { useState } from 'react';
 
-const Home = () => {
+const Mappa = () => {
   const [selectedPlace, setSelectedPlace] = useState(null)
 
   return <>
@@ -52,4 +52,4 @@ const Home = () => {
   </>;
 }
 
-export default Home;
+export default Mappa;
