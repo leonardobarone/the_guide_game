@@ -22,9 +22,12 @@ const Wrapper = styled.header`
     position: fixed;
     padding: 16px;
     z-index: 16;
-    background-color: white;
-    border-bottom: 1px solid black;
+    background-color: lightgray;
     text-align: center;
+    h1 {
+      color: white;
+      text-shadow: 0px 2px 3px black;
+    }
 `;
 
 
