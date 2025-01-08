@@ -74,7 +74,6 @@ const Wrapper = styled.nav`
     padding: 16px;
     z-index: 16;
     background-color: lightgray;
-    border-top: 1px solid black;
     ul {
       list-style: none;
       display: flex;
