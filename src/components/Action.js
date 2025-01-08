@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import account from '../images/account.png';
 import regole from '../images/regole.png';
 import mappa from '../images/mappa.png';
@@ -15,37 +15,44 @@ const Action = () => {
   
   const imgStyle = {
     marginBottom: '4px',
-    width: '32px'
+    width: '32px',
   }
-  
+
+  const containerItem = {
+    padding: '8px 16px'
+  }
+
+  const location = useLocation();
+
+
   return (
     <Wrapper>
       <ul>
-        <li>
+        <li className={containerItem}>
           <Link className='link' to="#">
             <img style={imgStyle} src={account} alt="" />
             <h2>Account</h2>
           </Link>
           </li>
-        <li>
+        <li className={containerItem}>
           <Link className='link' to="#">
             <img style={imgStyle} src={regole} alt="" />
             <h2>Regole</h2>
           </Link>
           </li>
-        <li>
+        <li style={location.pathname === '/' ? {...containerItem, border: '1px solid black'} : {containerItem} }>
           <Link className='link' to="/">
             <img style={imgStyle} src={mappa} alt="" />
             <h2>Mappa</h2>
           </Link>
           </li>
-        <li>
+        <li style={location.pathname === '/quiz' ? {...containerItem, border: '1px solid black'} : {containerItem} }>
           <Link className='link' to="/quiz">
             <img style={imgStyle} src={tappe} alt="" />
             <h2>Tappe</h2>
           </Link>
           </li>
-        <li>
+        <li className={containerItem}>
           <Link className='link' to="#">
             <img style={imgStyle} src={obiettivi} alt="" />
             <h2>Obiettivi</h2>
