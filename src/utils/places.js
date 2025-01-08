@@ -7,6 +7,13 @@ import piazzaMartiri from '../images/places/piazzaMartiri.png';
 import cannoni from '../images/places/cannoni.png';
 import piazzaArmi from '../images/places/piazzaArmi.png';
 import palazzoCultura from '../images/places/palazzoCultura.png';
+import sanMichele from '../images/places/sanMichele.png';
+import corricella from '../images/places/corricella.png';
+import marinaPalazzo from '../images/places/marinaPalazzo.png';
+import faro from '../images/places/faro.png';
+import marinaChiesa from '../images/places/marinaChiesa.png';
+import cimitero from '../images/places/cimitero.png';
+
 
 
 const places = [
@@ -90,24 +97,28 @@ const places = [
       'name' : 'chiesa san michele', 
       'lat' : 40.76114699555021, 
       'lng' : 14.03477034182453,
+      'img' : sanMichele
     },
     { 
       'id' : 13,
       'name' : 'corricella lato gioco', 
       'lat' : 40.761668965789724, 
       'lng' : 14.031122853540293,
+      'img' : corricella
     },
     { 
       'id' : 14,
       'name' : 'marina palazzo merlato', 
       'lat' : 40.76560707054993, 
       'lng' : 14.025946693335339,
+      'img' : marinaPalazzo
     },
     { 
       'id' : 15,
       'name' : 'marina quadro parcheggio', 
       'lat' : 40.76549026088297, 
       'lng' : 14.027197943823944,
+      'img' : marinaChiesa
     },
     { 
       'id' : 16,
@@ -120,12 +131,14 @@ const places = [
       'name' : 'faro', 
       'lat' : 40.76948312980451, 
       'lng' : 14.015236440057858,
+      'img' : faro
     },
     { 
       'id' : 18,
       'name' : 'cimitero lato scesa', 
       'lat' : 40.76310198032642, 
       'lng' : 14.011398610432943,
+      'img' : cimitero
     },
   ];
   
