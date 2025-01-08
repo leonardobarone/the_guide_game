@@ -1,42 +1,53 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { MdAccountCircle } from "react-icons/md";
-import { IoNewspaperOutline } from "react-icons/io5";
-import { FaMapMarkerAlt } from "react-icons/fa";
-import { CiFlag1 } from "react-icons/ci";
-import { FaTrophy } from "react-icons/fa";
+import account from '../images/account.png';
+import regole from '../images/regole.png';
+import mappa from '../images/mappa.png';
+import tappe from '../images/tappe.png';
+import obiettivi from '../images/obiettivi.png';
+// import { MdAccountCircle } from "react-icons/md";
+// import { IoNewspaperOutline } from "react-icons/io5";
+// import { FaMapMarkerAlt } from "react-icons/fa";
+// import { CiFlag1 } from "react-icons/ci";
+// import { FaTrophy } from "react-icons/fa";
 
 const Action = () => {
+  
+  const imgStyle = {
+    marginBottom: '4px',
+    width: '32px'
+  }
+  
   return (
     <Wrapper>
       <ul>
         <li>
           <Link className='link' to="#">
-            <MdAccountCircle style={{fontSize: "28px", marginBottom: '4px'}} />
+            <img style={imgStyle} src={account} alt="" />
             <h2>Account</h2>
           </Link>
           </li>
         <li>
           <Link className='link' to="#">
-            <IoNewspaperOutline style={{fontSize: "28px", marginBottom: '4px'}} />
+            <img style={imgStyle} src={regole} alt="" />
             <h2>Regole</h2>
           </Link>
           </li>
         <li>
           <Link className='link' to="/">
-            <FaMapMarkerAlt style={{fontSize: "28px", marginBottom: '4px'}} />
+            <img style={imgStyle} src={mappa} alt="" />
             <h2>Mappa</h2>
           </Link>
           </li>
         <li>
           <Link className='link' to="/quiz">
-            <CiFlag1 style={{fontSize: "28px", marginBottom: '4px'}} />
+            <img style={imgStyle} src={tappe} alt="" />
             <h2>Tappe</h2>
           </Link>
           </li>
         <li>
           <Link className='link' to="#">
-            <FaTrophy style={{fontSize: "28px", marginBottom: '4px'}} />
+            <img style={imgStyle} src={obiettivi} alt="" />
             <h2>Obiettivi</h2>
           </Link>
           </li>
