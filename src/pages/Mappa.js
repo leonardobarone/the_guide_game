@@ -34,11 +34,13 @@ const Mappa = () => {
                 />
               </AdvancedMarker>
               {/* INIZIO CONDIZIONE */}
-              {selectedPlace && <InfoWindow 
+              {selectedPlace && <InfoWindow
+                style={{textAlign: 'center'}} 
                 headerContent={<h2>{selectedPlace.name}</h2>}
                 position={selectedPlace} 
                 onCloseClick={()=> setSelectedPlace(null)}
               >
+                { selectedPlace.img ? (<img style={{height: '100px', width: '100px'}} src={selectedPlace.img} alt="" />) : ''}
                 <p>Qui puoi andare al quiz del seguente luogo: {selectedPlace.name}</p>
               </InfoWindow>}
               {/* FINE CONDIZIONE */}
