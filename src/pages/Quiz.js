@@ -1,6 +1,13 @@
 import styled from 'styled-components';
 
 const Quiz = () => {
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert('CIAO PEPPE!');
+  }
+
+
   return <Wrapper>
         <div style={{padding: '100px 33px'}}>
       <h4>Proviamo un quiz con un input</h4>
@@ -13,7 +20,7 @@ const Quiz = () => {
           <label htmlFor="cognome">cognome</label>
           <input id="cognome" name="cognome" type="text" />
         </div>
-        <button type="submit">Prova</button>       
+        <button type="submit" onClick={handleSubmit}>Prova</button>       
       </form>
     </div>
   </Wrapper>
