@@ -1,10 +1,14 @@
+import { useState } from 'react';
 import styled from 'styled-components';
 
 const Quiz = () => {
 
+  const [nome, setNome] = useState('');
+  const [cognome, setCognome] = useState('');
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert('CIAO PEPPE!');
+    alert('ciao ' + nome + ' ' + cognome);
   }
 
 
@@ -14,11 +18,11 @@ const Quiz = () => {
       <form action="">
         <div>
           <label htmlFor="nome">nome</label>
-          <input id="nome" name="nome" type="text" />
+          <input id="nome" onChange={(e) => setNome(e.target.value)} value={nome} name="nome" type="text" />
         </div>
         <div>
           <label htmlFor="cognome">cognome</label>
-          <input id="cognome" name="cognome" type="text" />
+          <input id="cognome" onChange={(e) => setCognome(e.target.value)} value={cognome} name="cognome" type="text" />
         </div>
         <button type="submit" onClick={handleSubmit}>Prova</button>       
       </form>
@@ -34,12 +38,15 @@ export default Quiz;
 // PRIMO MODO: NEL FORM onSubmit={function}
 // E POI LA FUNZIONE: 
 
-// OPPURE SUL BUTTON:
+// SECONDO MODO OPPURE SUL BUTTON:
 // onClick={function}
 
 // LA FUNZIONE E' SEMPRE QUESTA: 
 // function (event)
 // event.preventDefault(); importante per aspettare
+
+// IMPORTANTE!!!!!!!!!!!!
+// onChange={(e) => setNome(e.target.value)} NELL'INPUT
 
 const Wrapper = styled.section`
     h4 {
