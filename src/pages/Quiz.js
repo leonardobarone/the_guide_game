@@ -24,6 +24,15 @@ export default Quiz;
 
 // for = htmlFor della label (corrisponde all'id) 
 
+// PRIMO MODO: NEL FORM onSubmit={function}
+// E POI LA FUNZIONE: 
+
+// OPPURE SUL BUTTON:
+// onClick={function}
+
+// LA FUNZIONE E' SEMPRE QUESTA: 
+// function (event)
+// event.preventDefault(); importante per aspettare
 
 const Wrapper = styled.section`
     h4 {

@@ -19,7 +19,7 @@ const Action = () => {
   }
 
   const containerItem = {
-    padding: '8px 16px'
+    padding: '12px 20px'
   }
 
   const location = useLocation();
@@ -40,13 +40,13 @@ const Action = () => {
             <h2>Regole</h2>
           </Link>
           </li>
-        <li style={location.pathname === '/' ? {...containerItem, border: '1px solid black'} : {containerItem} }>
+        <li style={location.pathname === '/' ? {...containerItem, backgroundColor: 'white', borderRadius: '100%'} : {containerItem} }>
           <Link className='link' to="/">
             <img style={imgStyle} src={mappa} alt="" />
             <h2>Mappa</h2>
           </Link>
           </li>
-        <li style={location.pathname === '/quiz' ? {...containerItem, border: '1px solid black'} : {containerItem} }>
+        <li style={location.pathname === '/quiz' ? {...containerItem, backgroundColor: 'white', borderRadius: '100%'} : {containerItem} }>
           <Link className='link' to="/quiz">
             <img style={imgStyle} src={tappe} alt="" />
             <h2>Tappe</h2>
@@ -73,7 +73,7 @@ const Wrapper = styled.nav`
     position: fixed;
     padding: 16px;
     z-index: 16;
-    background-color: white;
+    background-color: lightgray;
     border-top: 1px solid black;
     ul {
       list-style: none;
