@@ -30,7 +30,7 @@ const Actions = () => {
           </Link>
           </li>
         <li>
-          <Link className='link' style={location.pathname === '/' ? {backgroundColor: 'white'} : {}} to="/">
+          <Link className='link' style={location.pathname === '/mappa' ? {backgroundColor: 'white'} : {}} to="/mappa">
             <img src={mappa} alt="" />
             <h2>Mappa</h2>
           </Link>

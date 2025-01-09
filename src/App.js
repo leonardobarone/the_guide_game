@@ -4,16 +4,20 @@ import Quiz from "./pages/Quiz";
 import Error from "./pages/Error";
 import Header from "./components/Header";
 import Actions from './components/Actions';
+import Home from "./pages/Home";
 
 function App() {
   return (
     <Router>
       <Header />
-      <Routes>
-        <Route path="/" element={<Mappa />} />
-        <Route path="/quiz" element={<Quiz />} />
-        <Route path="*" element={<Error />} />
-      </Routes>
+      <main style={{marginTop: '69.6px'}}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/mappa" element={<Mappa />} />
+          <Route path="/quiz" element={<Quiz />} />
+          <Route path="*" element={<Error />} />
+        </Routes>
+      </main>
       <Actions />
     </Router>
   );
