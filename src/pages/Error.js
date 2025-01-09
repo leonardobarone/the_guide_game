@@ -1,6 +1,6 @@
 const Error = () => {
   return (
-    <div style={{paddingTop: '100px', paddingLeft: '50px'}}>
+    <div style={{padding: '32px'}}>
       <h1>404 - Pagina Non Trovata</h1>
     </div>
   )
