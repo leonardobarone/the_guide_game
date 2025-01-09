@@ -1,29 +1,28 @@
 import { useState } from 'react';
 import styled from 'styled-components';
+import bgQuiz from '../images/quiz.png';
 
 const Quiz = () => {
 
-  const [nome, setNome] = useState('');
-  const [cognome, setCognome] = useState('');
+  const [numero, setNumero] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert('ciao ' + nome + ' ' + cognome);
+    if (numero === '2968') {
+      alert('hai indovinato!');
+      setNumero('');
+    } else {
+      alert('hai sbagliato!');
+      setNumero('');
+    }
   }
 
 
   return <Wrapper>
-        <div style={{padding: '100px 33px'}}>
-      <h4>Proviamo un quiz con un input</h4>
+    <div style={{marginTop: '54px', backgroundColor: '#B66963', paddingBottom: '150px'}}>
+      <img className='quiz' src={bgQuiz} alt="" />
       <form action="">
-        <div>
-          <label htmlFor="nome">nome</label>
-          <input id="nome" onChange={(e) => setNome(e.target.value)} value={nome} name="nome" type="text" />
-        </div>
-        <div>
-          <label htmlFor="cognome">cognome</label>
-          <input id="cognome" onChange={(e) => setCognome(e.target.value)} value={cognome} name="cognome" type="text" />
-        </div>
+        <input onChange={(e) => setNumero(e.target.value)} value={numero} name="numero" type="text" />
         <button type="submit" onClick={handleSubmit}>Prova</button>       
       </form>
     </div>
@@ -45,31 +44,17 @@ export default Quiz;
 // function (event)
 // event.preventDefault(); importante per aspettare
 
-// IMPORTANTE!!!!!!!!!!!!
-// onChange={(e) => setNome(e.target.value)} NELL'INPUT
+// IMPORTANTE NELL'INPUT!!!!!!!!!!!!
+// onChange={(e) => setNome(e.target.value)} 
 
-const Wrapper = styled.section`
-    h4 {
-      text-align: center;
+const Wrapper = styled.section`   
+    .quiz {
+      width: 100%;
     }
     form {
-      margin-top: 10px;
-    }
-    button {
-      margin-top: 10px;
-      padding: 8px 20px;
-      background-color: lawngreen;
-      color: white;
-      border-radius: 5px;
-      border-style: none;
-      font-weight: bold;
-    }
-    button:focus, button:hover, button:active {
-      background-color: green;
-    }
-    form div {
-      padding: 5px 0px;
-      display: flex;
-      justify-content: space-between;
+      padding-top: 50px;
+      background-color: #B66963;
+      text-align: center;
+      width: 100%;
     }
 `;
