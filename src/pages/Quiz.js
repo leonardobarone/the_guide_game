@@ -22,7 +22,8 @@ const Quiz = () => {
     <div style={{marginTop: '54px', backgroundColor: '#B66963', paddingBottom: '150px'}}>
       <img className='quiz' src={bgQuiz} alt="" />
       <form action="">
-        <input onChange={(e) => setNumero(e.target.value)} value={numero} name="numero" type="text" />
+        <input color='red' onChange={(e) => setNumero(e.target.value)} value={numero} name="numero" type="text" />
+        <br />
         <button type="submit" onClick={handleSubmit}>Prova</button>       
       </form>
     </div>
@@ -52,9 +53,24 @@ const Wrapper = styled.section`
       width: 100%;
     }
     form {
-      padding-top: 50px;
+      padding-top: 32px;
       background-color: #B66963;
       text-align: center;
       width: 100%;
+    }
+    input {
+      padding: 8px;
+      color: white;
+      background-color: #B66963;
+      border: 1px dotted white; 
+    }
+
+    button {
+      margin-top: 16px;
+      color: white;
+      border-style: none;
+      border-radius: 4px;
+      background-color: #007bff;
+      padding: 8px 24px;
     }
 `;
