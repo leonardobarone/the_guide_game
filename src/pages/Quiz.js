@@ -50,6 +50,7 @@ export default Quiz;
 
 const Wrapper = styled.section`   
     .quiz {
+      margin-top: 24px;
       width: 100%;
     }
     form {
