@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Home = () => {
     return (
       <div style={{padding: '32px'}}>
@@ -10,6 +12,10 @@ const Home = () => {
             <li>Creata pagina home</li>
             <li>Cliccare Game of Procida per tornare nella Home</li>
             <li>Create pagine vuote e ordinate</li>
+            <li>Il quiz sta nella posizione: Palazzo Merlato</li>
+            <li>
+                <Link to='/quiz'>Puoi anche cliccare qui per andare direttamente al gioco</Link>
+            </li>
         </ul>
       </div>
     )
