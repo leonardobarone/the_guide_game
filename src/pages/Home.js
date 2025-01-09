@@ -9,6 +9,7 @@ const Home = () => {
             <li>Precisato i pulsanti in basso</li>
             <li>Creata pagina home</li>
             <li>Cliccare Game of Procida per tornare nella Home</li>
+            <li>Create pagine vuote e ordinate</li>
         </ul>
       </div>
     )

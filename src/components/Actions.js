@@ -18,13 +18,13 @@ const Actions = () => {
     <Wrapper>
       <ul>
         <li>
-          <Link className='link' style={location.pathname === '/account' ? {backgroundColor: 'white'} : {}} to="#">
+          <Link className='link' style={location.pathname === '/account' ? {backgroundColor: 'white'} : {}} to="/account ">
             <img src={account} alt="" />
             <h2>Account</h2>
           </Link>
           </li>
         <li>
-          <Link className='link' style={location.pathname === '/regole' ? {backgroundColor: 'white'} : {}} to="#">
+          <Link className='link' style={location.pathname === '/regole' ? {backgroundColor: 'white'} : {}} to="/regole">
             <img src={regole} alt="" />
             <h2>Regole</h2>
           </Link>
@@ -36,13 +36,13 @@ const Actions = () => {
           </Link>
           </li>
         <li>
-          <Link className='link' style={location.pathname === '/quiz' ? {backgroundColor: 'white'} : {}} to="/quiz">
+          <Link className='link' style={location.pathname === '/tappe' ? {backgroundColor: 'white'} : {}} to="/tappe">
             <img src={tappe} alt="" />
             <h2>Tappe</h2>
           </Link>
           </li>
         <li>
-          <Link className='link' style={location.pathname === '/obiettivi' ? {backgroundColor: 'white'} : {}} to="#">
+          <Link className='link' style={location.pathname === '/obiettivi' ? {backgroundColor: 'white'} : {}} to="/obiettivi">
             <img src={obiettivi} alt="" />
             <h2>Obiettivi</h2>
           </Link>

@@ -1,4 +1,6 @@
+import styled from 'styled-components';
 import { APIProvider, Map, AdvancedMarker, InfoWindow } from '@vis.gl/react-google-maps';
+import { Link } from 'react-router-dom';
 import places from '../utils/places';
 import icon from "../images/icon.png";
 import { useState } from 'react';
@@ -35,13 +37,15 @@ const Mappa = () => {
               </AdvancedMarker>
               {/* INIZIO CONDIZIONE */}
               {selectedPlace && <InfoWindow
-                style={{textAlign: 'center'}} 
                 headerContent={<h2>{selectedPlace.name}</h2>}
                 position={selectedPlace} 
                 onCloseClick={()=> setSelectedPlace(null)}
               >
-                { selectedPlace.img ? (<img style={{height: '100px', width: '100px'}} src={selectedPlace.img} alt="" />) : ''}
-                <p>Qui puoi andare al quiz del seguente luogo: {selectedPlace.name}</p>
+                {selectedPlace.game && 
+                  <Button>
+                    <Link className='link' to={selectedPlace.game}>GIOCA</Link>
+                  </Button>
+                }
               </InfoWindow>}
               {/* FINE CONDIZIONE */}
             </>
@@ -55,3 +59,15 @@ const Mappa = () => {
 }
 
 export default Mappa;
+
+const Button = styled.div`
+  .link {
+    display: inline-block;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border-radius: 4px;
+    padding: 8px 16px;
+    background-color: #007bff;
+  }
+`;
