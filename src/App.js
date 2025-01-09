@@ -3,7 +3,7 @@ import Mappa from "./pages/Mappa";
 import Quiz from "./pages/Quiz";
 import Error from "./pages/Error";
 import Header from "./components/Header";
-import Action from './components/Action';
+import Actions from './components/Actions';
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
         <Route path="/quiz" element={<Quiz />} />
         <Route path="*" element={<Error />} />
       </Routes>
-      <Action />
+      <Actions />
     </Router>
   );
 }

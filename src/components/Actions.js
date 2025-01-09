@@ -11,50 +11,39 @@ import obiettivi from '../images/obiettivi.png';
 // import { CiFlag1 } from "react-icons/ci";
 // import { FaTrophy } from "react-icons/fa";
 
-const Action = () => {
-  
-  const imgStyle = {
-    marginBottom: '4px',
-    width: '32px',
-  }
-
-  const containerItem = {
-    padding: '12px 20px'
-  }
-
+const Actions = () => {
   const location = useLocation();
-
 
   return (
     <Wrapper>
       <ul>
-        <li className={containerItem}>
-          <Link className='link' to="#">
-            <img style={imgStyle} src={account} alt="" />
+        <li>
+          <Link className='link' style={location.pathname === '/account' ? {backgroundColor: 'white'} : {}} to="#">
+            <img src={account} alt="" />
             <h2>Account</h2>
           </Link>
           </li>
-        <li className={containerItem}>
-          <Link className='link' to="#">
-            <img style={imgStyle} src={regole} alt="" />
+        <li>
+          <Link className='link' style={location.pathname === '/regole' ? {backgroundColor: 'white'} : {}} to="#">
+            <img src={regole} alt="" />
             <h2>Regole</h2>
           </Link>
           </li>
-        <li style={location.pathname === '/' ? {...containerItem, backgroundColor: 'white', borderRadius: '100%'} : {containerItem} }>
-          <Link className='link' to="/">
-            <img style={imgStyle} src={mappa} alt="" />
+        <li>
+          <Link className='link' style={location.pathname === '/' ? {backgroundColor: 'white'} : {}} to="/">
+            <img src={mappa} alt="" />
             <h2>Mappa</h2>
           </Link>
           </li>
-        <li style={location.pathname === '/quiz' ? {...containerItem, backgroundColor: 'white', borderRadius: '100%'} : {containerItem} }>
-          <Link className='link' to="/quiz">
-            <img style={imgStyle} src={tappe} alt="" />
+        <li>
+          <Link className='link' style={location.pathname === '/quiz' ? {backgroundColor: 'white'} : {}} to="/quiz">
+            <img src={tappe} alt="" />
             <h2>Tappe</h2>
           </Link>
           </li>
-        <li className={containerItem}>
-          <Link className='link' to="#">
-            <img style={imgStyle} src={obiettivi} alt="" />
+        <li>
+          <Link className='link' style={location.pathname === '/obiettivi' ? {backgroundColor: 'white'} : {}} to="#">
+            <img src={obiettivi} alt="" />
             <h2>Obiettivi</h2>
           </Link>
           </li>
@@ -63,7 +52,7 @@ const Action = () => {
   )
 }
 
-export default Action;
+export default Actions;
 
 const Wrapper = styled.nav`
     position: absolute;
@@ -71,7 +60,7 @@ const Wrapper = styled.nav`
     left: 0px;
     width: 100%;
     position: fixed;
-    padding: 16px;
+    padding: 10px;
     z-index: 16;
     background-color: lightgray;
     ul {
@@ -80,9 +69,16 @@ const Wrapper = styled.nav`
       justify-content: space-around;
       align-items: center;
       li {
+        .link {
+          border-radius: 100%;
+          padding: 8px 16px;
+        }
+        img {
+              width: 32px;
+        }
         text-align: center;
         h2 {
-          font-size: 12px;
+          font-size: 8px;
         }
       }
     }

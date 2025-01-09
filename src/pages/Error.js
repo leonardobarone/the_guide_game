@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Error = () => {
   return (
     <div style={{paddingTop: '100px', paddingLeft: '50px'}}>
