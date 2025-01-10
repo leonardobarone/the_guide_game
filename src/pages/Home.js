@@ -3,7 +3,7 @@ import background from '../images/background.jpg';
 
 const Home = () => {
     return (
-      <div style={{padding: '32px', height: '100%', width: '100%', height: 'calc(100vh - 150.41px)', backgroundImage: `url(${background})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center'}}>
+      <div style={{padding: '32px', height: 'calc(100vh - 150.41px)', width: '100%', height: 'calc(100vh - 150.41px)', backgroundImage: `url(${background})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center'}}>
         <h1>Pagina Home</h1>
         <em>Notte ultimo aggiornamento: 09/01/2025</em>
         <hr style={{margin: '10px 0px'}} />
