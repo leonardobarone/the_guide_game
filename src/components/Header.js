@@ -22,7 +22,7 @@ const Wrapper = styled.header`
     position: fixed;
     padding: 16px;
     z-index: 16;
-    background-color: lightgray;
+    background-color: #007bff;
     text-align: center;
     h1 {
       color: white;

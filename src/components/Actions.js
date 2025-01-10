@@ -62,7 +62,7 @@ const Wrapper = styled.nav`
     position: fixed;
     padding: 10px;
     z-index: 16;
-    background-color: lightgray;
+    background-color: #007bff;
     ul {
       list-style: none;
       display: flex;
