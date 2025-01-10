@@ -11,13 +11,13 @@ const Mappa = () => {
   return <>
     <APIProvider 
       apiKey={"AIzaSyA7zTeRL20KTZpxmmgoSyDIBUZqgdxW1xk"} // process.env.API_KEY
-    > 
+      > 
       <Map
-        style={{width: '100vw', height: '100vh'}}
-        defaultCenter={{lat: 40.7564296094562, lng: 14.013971500161295}}
+        style={{width: '100%', height: 'calc(100vh - 150.41px)'}}
+        defaultCenter={{lat: 40.75791635986094, lng: 14.014870424568413}}
         defaultZoom={13.25}
         gestureHandling={'greedy'} // ??
-        disableDefaultUI={true} // ??
+        // disableDefaultUI={true} // ??
         mapId="b28b9e40a7377c78" // process.env.API_KEY
       >
         {/* INIZIO CICLO */}

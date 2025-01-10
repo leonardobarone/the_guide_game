@@ -14,7 +14,7 @@ function App() {
   return (
     <Router>
       <Header />
-      <main style={{marginTop: '69.6px'}}>
+      <main style={{marginTop: '69.6px', marginBottom: '80.81px'}}>
         <Routes>
           <Route path="/" element={<Home />} />
           {/* ACTIONS */}
