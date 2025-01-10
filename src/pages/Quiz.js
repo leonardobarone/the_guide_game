@@ -22,7 +22,7 @@ const Quiz = () => {
 
 
   return <Wrapper>
-    <div style={{marginTop: '54px', backgroundColor: '#B66963', paddingBottom: '150px', position: 'relative'}}>
+    <div style={{backgroundColor: '#B66963', width: '100%', overflow: 'scroll', height: 'calc(100vh - 150.41px)', position: 'relative'}}>
       <img className='quiz' src={bgQuiz} alt="" />
       <form action="">
         <input color='red' onChange={(e) => setNumero(e.target.value)} value={numero} name="numero" type="text" />
@@ -57,7 +57,7 @@ export default Quiz;
 
 const Wrapper = styled.section`   
     .quiz {
-      margin-top: 10px;
+      margin-top: 15px;
       width: 100%;
     }
     form {
