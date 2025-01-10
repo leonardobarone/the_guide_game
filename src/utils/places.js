@@ -23,14 +23,14 @@ const places = [
       'lat' : 40.74816780827766, 
       'lng' : 13.99802003277768,
       'img' : cancelloVivara,
-      'game' : ''
+      'game' : null
     },
     { 
       'id' : 2,
       'name' : 'centro chiaiolella', 
       'lat' : 40.74907731485705, // 
       'lng' : 14.004420630163029,
-      'game' : ''
+      'game' : null
     },
     { 
       'id' : 3,
@@ -38,7 +38,7 @@ const places = [
       'lat' : 40.749785120321306, 
       'lng' : 14.006396901037244,
       'img' : diFronteSanGiuseppe,
-      'game' : ''
+      'game' : null
     },
     { 
       'id' : 4,
@@ -46,7 +46,7 @@ const places = [
       'lat' : 40.75442782491175, 
       'lng' : 14.019288058490305,
       'img' : belvedereElsa,
-      'game' : ''
+      'game' : null
     },
     { 
       'id' : 5,
@@ -54,7 +54,7 @@ const places = [
       'lat' : 40.76147334330341, 
       'lng' : 14.024883709709318,
       'img' : sanGiacomo,
-      'game' : ''
+      'game' : null
     },
     { 
       'id' : 6,
@@ -62,7 +62,7 @@ const places = [
       'lat' : 40.7644142361896, 
       'lng' : 14.028981057360241,
       'img' : sanLeonardo,
-      'game' : ''
+      'game' : null
     },
     { 
       'id' : 7,
@@ -70,14 +70,14 @@ const places = [
       'lat' : 40.76209727290956, 
       'lng' : 14.030961605019023,
       'img' : piazzaMartiri,
-      'game' : ''
+      'game' : null
     },
     { 
       'id' : 8,
       'name' : 'piazza martiri chiesa', 
       'lat' : 40.762092701859885, 
       'lng' : 14.031217755984029,
-      'game' : ''
+      'game' : null
     },
     { 
       'id' : 9,
@@ -85,7 +85,7 @@ const places = [
       'lat' : 40.76045522977777, 
       'lng' : 14.03256355435797,
       'img' : cannoni,
-      'game' : ''
+      'game' : null
     },
     { 
       'id' : 10,
@@ -93,7 +93,7 @@ const places = [
       'lat' : 40.761381645738474, 
       'lng' : 14.033831568670061,
       'img' : piazzaArmi,
-      'game' : ''
+      'game' : null
     },
     { 
       'id' : 11,
@@ -101,7 +101,7 @@ const places = [
       'lat' : 40.761431419915354, 
       'lng' : 14.034814598270996,
       'img' : palazzoCultura,
-      'game' : ''
+      'game' : null
     },
     { 
       'id' : 12,
@@ -109,7 +109,7 @@ const places = [
       'lat' : 40.76114699555021, 
       'lng' : 14.03477034182453,
       'img' : sanMichele,
-      'game' : ''
+      'game' : null
     },
     { 
       'id' : 13,
@@ -117,7 +117,7 @@ const places = [
       'lat' : 40.761668965789724, 
       'lng' : 14.031122853540293,
       'img' : corricella,
-      'game' : ''
+      'game' : null
     },
     { 
       'id' : 14,
@@ -133,14 +133,14 @@ const places = [
       'lat' : 40.76549026088297, 
       'lng' : 14.027197943823944,
       'img' : marinaChiesa,
-      'game' : ''
+      'game' : null
     },
     { 
       'id' : 16,
       'name' : 'marina quadrillo', 
       'lat' : 40.765394793342516, 
       'lng' : 14.029477741369188,
-      'game' : ''
+      'game' : null
     },
     { 
       'id' : 17,
@@ -148,7 +148,7 @@ const places = [
       'lat' : 40.76948312980451, 
       'lng' : 14.015236440057858,
       'img' : faro,
-      'game' : ''
+      'game' : null
     },
     { 
       'id' : 18,
@@ -156,7 +156,7 @@ const places = [
       'lat' : 40.76310198032642, 
       'lng' : 14.011398610432943,
       'img' : cimitero,
-      'game' : ''
+      'game' : null
     },
   ];
   
