@@ -14,6 +14,8 @@ import faro from '../images/places/faro.png';
 import marinaChiesa from '../images/places/marinaChiesa.png';
 import cimitero from '../images/places/cimitero.png';
 
+
+
 const places = [
     { 
       'id' : 1,
@@ -26,8 +28,8 @@ const places = [
     { 
       'id' : 2,
       'name' : 'centro chiaiolella', 
-      'lat' : 40.747664976235015, 
-      'lng' : 14.014383060054536,
+      'lat' : 40.74907731485705, // 
+      'lng' : 14.004420630163029,
       'game' : ''
     },
     { 
