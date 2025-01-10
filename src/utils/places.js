@@ -14,8 +14,6 @@ import faro from '../images/places/faro.png';
 import marinaChiesa from '../images/places/marinaChiesa.png';
 import cimitero from '../images/places/cimitero.png';
 
-
-
 const places = [
     { 
       'id' : 1,

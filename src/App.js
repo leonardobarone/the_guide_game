@@ -24,7 +24,6 @@ function App() {
           <Route path="/obiettivi" element={<Obiettivi />} />
           <Route path="/tappe" element={<Tappe />} />
           
-
           <Route path="/quiz" element={<Quiz />} />
           <Route path="*" element={<Error />} />
         </Routes>
