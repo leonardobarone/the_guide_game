@@ -29,23 +29,27 @@ const Tappe = () => {
       padding: 15px;
     }
     .card {
-      padding: 3px;
-      border: 1px solid black;
+      padding: 10px;
+      background-color: lightblue;
       display: flex;
+      align-items: center;
       justify-content: space-between;
+      border-radius: 5px;
+      box-shadow: 0px 1px 3px black;
     }
     img {
+      display: flex;
       width: 100px;
-      height: 100%;
+      height: 100px;
       object-fit: cover;
       object-position: center;
     }
     .left {
-      width: 30%;
+      width: 35%;
     }
     .right {
       padding: 10px;
-      width: 70%;
+      width: 65%;
     }
   }
   `
