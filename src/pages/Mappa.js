@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { APIProvider, Map, AdvancedMarker, InfoWindow } from '@vis.gl/react-google-maps';
 import { Link } from 'react-router-dom';
-import places from '../utils/places';
+import games from '../utils/games';
 import icon from "../images/icon.png";
 import { useState } from 'react';
 
@@ -22,7 +22,7 @@ const Mappa = () => {
       >
         {/* INIZIO CICLO */}
         {
-          places.map((place) => {
+          games.map((place) => {
             return (<>
               <AdvancedMarker
                 position={place}
