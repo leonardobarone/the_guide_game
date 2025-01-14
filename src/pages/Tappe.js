@@ -25,9 +25,9 @@ const Tappe = () => {
   const Wrapper = styled.section`
 
   .containerCard {
-    padding: 15px 15px 0px 15px;
+    padding: 10px 10px 0px 10px;
     &:last-child {
-      padding: 15px;
+      padding: 10px;
     }
     .bloccato {
       padding: 10px 0px;
