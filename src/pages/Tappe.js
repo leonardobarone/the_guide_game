@@ -6,7 +6,7 @@ const Tappe = () => {
     return <Wrapper>
       {places.map((place) => {
         return <div className='containerCard'>
-          <div className="card">
+          <Link to={`/tappe/${place.id}`} className="card link">
           {!place.risolto ? <div className='bloccato'>DA FARE</div> : ''}
             <div className="left">
               <img src={place.img ? place.img : 'https://static.vecteezy.com/system/resources/thumbnails/008/695/917/small_2x/no-image-available-icon-simple-two-colors-template-for-no-image-or-picture-coming-soon-and-placeholder-illustration-isolated-on-white-background-vector.jpg'} alt="" />
@@ -14,7 +14,7 @@ const Tappe = () => {
             <div className="right">
               <h5>{place.name.toUpperCase()}</h5>
             </div>
-          </div>
+          </Link>
         </div>
       })}
     </Wrapper>
@@ -44,7 +44,9 @@ const Tappe = () => {
     .card {
       position: relative;
       padding: 10px;
-      background-color: lightblue;
+      background-image: url('https://cdn.vectorstock.com/i/500p/19/85/wood-texture-vector-1051985.jpg');
+      background-position: cover;
+      background-repeat: no-repeat;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -52,18 +54,18 @@ const Tappe = () => {
       box-shadow: 0px 1px 3px black;
     }
     img {
-      display: flex;
-      width: 100px;
-      height: 100px;
+      display: block;
+      width: 80px;
+      height: 80px;
       object-fit: cover;
       object-position: center;
     }
     .left {
-      width: 35%;
+      width: 25%;
     }
     .right {
       padding: 10px;
-      width: 65%;
+      width: 75%;
     }
   }
   `

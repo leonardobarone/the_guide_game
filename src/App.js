@@ -8,6 +8,7 @@ import Quiz from "./pages/Quiz";
 import Error from "./pages/Error";
 import Header from "./components/Header";
 import Actions from './components/Actions';
+import SingleTappa from "./pages/SingleTappa";
 import Home from "./pages/Home";
 
 function App() {
@@ -24,6 +25,10 @@ function App() {
           <Route path="/obiettivi" element={<Obiettivi />} />
           <Route path="/tappe" element={<Tappe />} />
           
+
+          <Route path="/tappe/:id" element={<SingleTappa />} />
+
+
           <Route path="/quiz" element={<Quiz />} />
           <Route path="*" element={<Error />} />
         </Routes>
