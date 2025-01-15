@@ -35,6 +35,9 @@ function App() {
 
           <Route path="/quiz" element={<Quiz bgImage={quiz} correctAnswer={'2968'} />} />
           <Route path="/secondQuiz" element={<Quiz bgImage={secondQuiz} correctAnswer={'1785'} />} />
+
+
+          
           <Route path="*" element={<Error />} />
         </Routes>
       </main>
