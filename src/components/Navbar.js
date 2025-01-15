@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import { Link, useLocation } from 'react-router-dom';
 
-import account from '../images/account.png';
-import regole from '../images/regole.png';
-import mappa from '../images/mappa.png';
-import tappe from '../images/tappe.png';
-import obiettivi from '../images/obiettivi.png';
+import account from '../images/navbar/account.png';
+import regole from '../images/navbar/regole.png';
+import mappa from '../images/navbar/mappa.png';
+import tappe from '../images/navbar/tappe.png';
+import obiettivi from '../images/navbar/obiettivi.png';
 
 const Actions = () => {
   

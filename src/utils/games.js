@@ -60,7 +60,7 @@ const games = [
       'name' : 'cannoni', 
       'lat' : 40.76045522977777, 
       'lng' : 14.03256355435797,
-      'game' : null
+      'game' : '/secondQuiz'
     },
     { 
       'id' : 10,

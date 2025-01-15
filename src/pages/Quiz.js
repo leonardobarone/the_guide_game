@@ -1,9 +1,7 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-import bgQuiz from '../images/quiz.png';
 
-const Quiz = () => {
-
+const Quiz = ({ bgImage, correctAnswer }) => {
   const [numero, setNumero] = useState('');
   const [modale, setModale] = useState(false);  
   const [isWin, setIsWin] = useState(false);  
@@ -11,7 +9,7 @@ const Quiz = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setModale(true);
-    if (numero === '2968') {
+    if (numero === correctAnswer) {
       setNumero('');
       setIsWin(true);
     } else {
@@ -20,14 +18,13 @@ const Quiz = () => {
     }
   }
 
-
   return <Wrapper>
-    <div style={{backgroundColor: '#B66963', width: '100%', overflow: 'scroll', height: 'calc(100vh - 150.41px)', position: 'relative'}}>
-      <img className='quiz' src={bgQuiz} alt="" />
+    <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'space-around', width: '100%', overflow: 'scroll', height: 'calc(100vh - 125px)', position: 'relative'}}>
+      <img className='quiz' src={bgImage} alt="" />
       <form action="">
-        <input color='red' onChange={(e) => setNumero(e.target.value)} value={numero} name="numero" type="text" />
+        <input onChange={(e) => setNumero(e.target.value)} value={numero} name="numero" type="text" />
         <br />
-        <button type="submit" onClick={handleSubmit}>Prova</button>       
+        <button type="submit" onClick={handleSubmit}>Prova</button>      
       </form>
       <div style={modale ? {display: 'block'} : {display: 'none'}} className="modal">
         <div>{isWin ? 'HAI INDOVINATO' : 'HAI SBAGLIATO'}</div>
@@ -57,22 +54,20 @@ export default Quiz;
 
 const Wrapper = styled.section`   
     .quiz {
-      margin-top: 15px;
       width: 100%;
+      height: 350px;
+      object-fit: cover;
+      object-position: center;
     }
     form {
       padding-top: 32px;
-      background-color: #B66963;
       text-align: center;
       width: 100%;
+      input {
+        padding: 8px;
+        border: 1px dotted black; 
+      }
     }
-    input {
-      padding: 8px;
-      color: white;
-      background-color: #B66963;
-      border: 1px dotted white; 
-    }
-
     button {
       margin-top: 16px;
       color: white;
@@ -81,6 +76,7 @@ const Wrapper = styled.section`
       background-color: #007bff;
       padding: 8px 24px;
     }
+
     .modal {
       top: 0px;
       left: 0px;
@@ -88,6 +84,6 @@ const Wrapper = styled.section`
       right: 0px;
       position: absolute;
       padding: 16px;
-      background-color:  #B66963;
+      background-color: brown;
     }
 `;
