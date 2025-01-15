@@ -2,26 +2,40 @@ import { useState } from 'react';
 import styled from 'styled-components';
 
 
-const NumericKeyboard = () => {
+const NumericKeyboard = ({ sendDataToParent }) => {
     
-    const [numero, setNumero] = useState('0')
+    // debug
+
+    const [numero, setNumero] = useState('');
     
     const handleButtonClick = (value) => {
-        if (value === 'cancella') {
-            setNumero('0');
-          } else if (value === 'prova') {
-            console.log('Prova button clicked!');
-          } else {
-            // Verifica se il numero inizia con zero per evitare zeri inutili
-            if (numero === '0') {
-              setNumero(value);
-            } else {
-              setNumero(numero + value);
-            }
-          }
+        if (value === 'azzera') {
+            setNumero('');
+            sendDataToParent('')
+        } else if (value === 'indietro') {;
+            setNumero(numero.slice(0, -1));
+            sendDataToParent(numero.slice(0, -1));
+        }   else {
+            setNumero(numero + value);
+            sendDataToParent(prevNumero => prevNumero + value);
+        }
+        // if (value === 'azzera') {
+        //     alert('SONO QUI')
+        //     setNumero('0');
+        //     return;
+        //   } else if (value === 'indietro') {
+        //     console.log('indietro button clicked!');
+        //   } else {
+        //     // Verifica se il numero inizia con zero per evitare zeri inutili
+        //     if (numero === '0') {
+        //       setNumero(value);
+        //     } else {
+        //       setNumero(numero + value);
+        //     }
+        //   }
     }
 
-    const numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', 'cancella', '0', 'prova']; 
+    const numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', 'indietro', '0', 'azzera']; 
     return <>
             <h6>Current number: {numero}</h6>
         <Wrapper>

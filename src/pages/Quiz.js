@@ -1,37 +1,59 @@
 import NumericKeyboard from '../components/NumericKeyboard';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 const Quiz = ({ bgImage, correctAnswer }) => {
-  const [numero, setNumero] = useState('');
+
+  // debug
+  const [dataFromChild, setDataFromChild] = useState("");
+  function handleDataFromChild(data) {
+    setDataFromChild(data);
+  }
+
+
+  // const [numero, setNumero] = useState('');
   const [modale, setModale] = useState(false);  
   const [isWin, setIsWin] = useState(false);  
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setModale(true);
-    if (numero === correctAnswer) {
-      setNumero('');
+  console.log(dataFromChild);
+
+
+  useEffect(()=> {
+    if (dataFromChild === correctAnswer) {
+      console.log('ciao')
+      setModale(true);
       setIsWin(true);
     } else {
-      setNumero('');
       setIsWin(false);
     }
-  }
+  }, [dataFromChild])
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   setModale(true);
+  //   if (numero === correctAnswer) {
+  //     setNumero('');
+  //     setIsWin(true);
+  //   } else {
+  //     setNumero('');
+  //     setIsWin(false);
+  //   }
+  // }
 
   return <Wrapper>
     <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'space-around', width: '100%', overflow: 'scroll', height: 'calc(100vh - 125px)', position: 'relative'}}>
       <img className='quiz' src={bgImage} alt="" />
-      <form action="">
+      <h5>{dataFromChild}</h5>
+      {/* <form action="">
         <input onChange={(e) => setNumero(e.target.value)} value={numero} name="numero" type="text" />
         <br />
         <button type="submit" onClick={handleSubmit}>Prova</button>      
-      </form>
+      </form> */}
       <div style={modale ? {display: 'block'} : {display: 'none'}} className="modal">
         <div>{isWin ? 'HAI INDOVINATO' : 'HAI SBAGLIATO'}</div>
         <button onClick={()=> setModale(false)}>TORNA INDIETRO</button>
       </div>
-      <NumericKeyboard />        
+      <NumericKeyboard sendDataToParent={handleDataFromChild} />        
     </div>
   </Wrapper>
 }
