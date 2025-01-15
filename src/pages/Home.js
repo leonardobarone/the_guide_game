@@ -8,9 +8,10 @@ const Home = () => {
           <ul>
               <li>
                   <Link to='/quiz'>Quiz Arcate</Link>
-                  <Link to='/secondQuiz'>Quiz Cannoni</Link>
               </li>
- 
+              <li>
+                <Link to='/secondQuiz'>Quiz Cannoni</Link>
+              </li>
           </ul>
         </div>
 
