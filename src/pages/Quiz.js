@@ -1,3 +1,4 @@
+import NumericKeyboard from '../components/NumericKeyboard';
 import { useState } from 'react';
 import styled from 'styled-components';
 
@@ -30,6 +31,7 @@ const Quiz = ({ bgImage, correctAnswer }) => {
         <div>{isWin ? 'HAI INDOVINATO' : 'HAI SBAGLIATO'}</div>
         <button onClick={()=> setModale(false)}>TORNA INDIETRO</button>
       </div>
+      <NumericKeyboard />        
     </div>
   </Wrapper>
 }
@@ -55,7 +57,7 @@ export default Quiz;
 const Wrapper = styled.section`   
     .quiz {
       width: 100%;
-      height: 350px;
+      height: 310px;
       object-fit: cover;
       object-position: center;
     }
@@ -68,7 +70,8 @@ const Wrapper = styled.section`
         border: 1px dotted black; 
       }
     }
-    button {
+    
+    form button, .modal button {
       margin-top: 16px;
       color: white;
       border-style: none;
@@ -84,6 +87,6 @@ const Wrapper = styled.section`
       right: 0px;
       position: absolute;
       padding: 16px;
-      background-color: brown;
+      background-color: white;
     }
 `;

@@ -6,7 +6,7 @@ const Tappe = () => {
     return <Wrapper>
       {places.map((place) => {
         return <div key={place.id} className='containerCard'>
-          <Link to={`/tappe/${place.id}`} className="card link">
+          <Link to={`/tappe/${place.risolto ? place.id : ''}`} className="card link">
           {!place.risolto ? <div className='bloccato'>DA FARE</div> : ''}
             <div className="left">
               <img src={place.img} alt="" />
@@ -31,7 +31,7 @@ const Tappe = () => {
     }
     .bloccato {
       padding: 10px 0px;
-      background-color: red;
+      background-color: brown;
       position: absolute;
       font-size: 10px;
       color: white;

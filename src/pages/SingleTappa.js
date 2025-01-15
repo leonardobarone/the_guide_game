@@ -7,8 +7,8 @@ const SingleTappa = () => {
   
   return (
     <div>
-      {oggettoTrovato.name}
-      <img width={200} src={oggettoTrovato.img} alt="" />
+      <img width={'100%'} src={oggettoTrovato.img} alt="" />
+      <h2 style={{textAlign: 'center', textTransform: 'capitalize'}}>{oggettoTrovato.name}</h2>
     </div>
   )
 }
