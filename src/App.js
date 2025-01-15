@@ -7,7 +7,7 @@ import Tappe from "./pages/Tappe";
 import Quiz from "./pages/Quiz";
 import Error from "./pages/Error";
 import Header from "./components/Header";
-import Actions from './components/Actions';
+import Navbar from './components/Navbar';
 import SingleTappa from "./pages/SingleTappa";
 import Home from "./pages/Home";
 
@@ -15,10 +15,11 @@ function App() {
   return (
     <Router>
       <Header />
-      <main style={{marginTop: '69.6px', marginBottom: '80.81px'}}>
+      <main style={{marginTop: '50px', marginBottom: '75px'}}>
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* ACTIONS */}
+          
+          {/* Navbar */}
           <Route path="/mappa" element={<Mappa />} />
           <Route path="/regole" element={<Regole />} />
           <Route path="/account" element={<Account />} />
@@ -33,7 +34,7 @@ function App() {
           <Route path="*" element={<Error />} />
         </Routes>
       </main>
-      <Actions />
+      <Navbar />
     </Router>
   );
 }

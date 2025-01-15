@@ -14,19 +14,19 @@ const Header = () => {
 export default Header;
 
 const Wrapper = styled.header`
-    font-size: 16px;
-    position: absolute;
+    background-color: brown;
+    height: 50px;
+    font-size: 10px;
+    position: fixed;
     top: 0px;
     left: 0px;
     width: 100%;
-    position: fixed;
-    padding: 16px;
-    z-index: 16;
-    background-color: #007bff;
-    text-align: center;
-    h1 {
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .link {
       color: white;
-      text-shadow: 0px 2px 3px black;
     }
 `;
 
