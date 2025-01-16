@@ -15,12 +15,10 @@ const Quiz = ({ bgImage, correctAnswer }) => {
   const [modale, setModale] = useState(false);  
   const [isWin, setIsWin] = useState(false);  
 
-  console.log(dataFromChild);
 
 
   useEffect(()=> {
     if (dataFromChild === correctAnswer) {
-      console.log('ciao')
       setModale(true);
       setIsWin(true);
     } else {
