@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-
+import { IoMdBackspace } from "react-icons/io";
+import { MdDelete } from "react-icons/md";
 
 const NumericKeyboard = ({ sendDataToParent }) => {
     
@@ -38,12 +39,21 @@ const NumericKeyboard = ({ sendDataToParent }) => {
 
     const numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', 'indietro', '0', 'azzera']; 
     return <>
-            <h6>Current number: {numero}</h6>
+            <h6>CURRENT NUMBER = {numero}</h6>
         <Wrapper>
             {
                 numbers.map((number, index) => {
+                    let view = number;
+                    if (number == 'indietro') {
+                        view = <IoMdBackspace />
+                    } else if (number == 'azzera') {
+                        view = <MdDelete />
+                    } else {
+                        view = number;
+                    }
                     return <button key={index} onClick={() => handleButtonClick(number)}>
-                        {number}
+                        
+                        {view}
                     </button>
                 })
             }
