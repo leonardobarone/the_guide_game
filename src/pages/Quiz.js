@@ -41,7 +41,7 @@ const Quiz = ({ bgImage, correctAnswer }) => {
   // }
 
   return <Wrapper>
-    <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'space-around', width: '100%', overflow: 'scroll', height: 'calc(100vh - 125px)', position: 'relative'}}>
+    <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'space-between', width: '100%', overflow: 'scroll', height: 'calc(100vh - 125px)', position: 'relative'}}>
       <img className='quiz' src={bgImage} alt="" />
       <h5>{dataFromChild}</h5>
       {/* <form action="">

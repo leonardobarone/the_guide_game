@@ -63,7 +63,10 @@ const Wrapper = styled.div`
         border-style: none;
         border-bottom: 1px solid black;
         border-right: 1px solid black;
-        padding: 5px 0px;
+        padding: 9px 0px;
+        font-size: 25px;
+        color: white;
+        text-shadow: 0px 1px 3px black;
         &:nth-child(3n) {
             border-right: 0px;
         }
