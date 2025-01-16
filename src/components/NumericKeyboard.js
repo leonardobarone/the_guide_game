@@ -14,10 +14,10 @@ const NumericKeyboard = ({ sendDataToParent }) => {
         if (value === 'azzera' && numero != '') {
             setNumero('');
             sendDataToParent('')
-        } else if (value === 'indietro') {;
+        } else if (value === 'indietro' && numero != '') {;
             setNumero(numero.slice(0, -1));
             sendDataToParent(numero.slice(0, -1));
-        }   else if (limit < 5 && value != 'azzera') {
+        }   else if (limit < 5 && value != 'azzera' && value != 'indietro') {
             setNumero(prevNumero => prevNumero + value);
             sendDataToParent(prevNumero => prevNumero + value);
         }
