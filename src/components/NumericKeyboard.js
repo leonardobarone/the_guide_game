@@ -41,7 +41,7 @@ const NumericKeyboard = ({ sendDataToParent, rispostaCorretta }) => {
         if (numero === rispostaCorretta || numero.length === 4) {
             setNumero('')            
         }
-    }, [numero])
+    }, [numero, rispostaCorretta])
 
     const numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', 'indietro', '0', 'azzera']; 
     return <>
