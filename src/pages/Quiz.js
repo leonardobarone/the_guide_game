@@ -19,10 +19,11 @@ const Quiz = ({ bgImage, correctAnswer }) => {
 
   useEffect(()=> {
     if (dataFromChild === correctAnswer) {
+      setDataFromChild('')
       setModale(true);
-      setIsWin(true);
-    } else {
       setIsWin(false);
+    } else {
+      setIsWin(true);
     }
   }, [dataFromChild])
 
