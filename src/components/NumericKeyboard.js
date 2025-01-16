@@ -9,14 +9,15 @@ const NumericKeyboard = ({ sendDataToParent }) => {
     const [numero, setNumero] = useState('');
     
     const handleButtonClick = (value) => {
-        if (value === 'azzera') {
+        let limit = numero.length + 1;
+        if (value === 'azzera' && numero != '') {
             setNumero('');
             sendDataToParent('')
         } else if (value === 'indietro') {;
             setNumero(numero.slice(0, -1));
             sendDataToParent(numero.slice(0, -1));
-        }   else {
-            setNumero(numero + value);
+        }   else if (limit < 5 && value != 'azzera') {
+            setNumero(prevNumero => prevNumero + value);
             sendDataToParent(prevNumero => prevNumero + value);
         }
         // if (value === 'azzera') {
