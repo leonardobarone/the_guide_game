@@ -1,9 +1,9 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { IoMdBackspace } from "react-icons/io";
 import { MdDelete } from "react-icons/md";
 
-const NumericKeyboard = ({ sendDataToParent }) => {
+const NumericKeyboard = ({ sendDataToParent, rispostaCorretta }) => {
     
     // debug
 
@@ -11,16 +11,16 @@ const NumericKeyboard = ({ sendDataToParent }) => {
     
     const handleButtonClick = (value) => {
         let limit = numero.length + 1;
-        if (value === 'azzera' && numero != '') {
+        if (value === 'azzera' && numero !== '') {
             setNumero('');
             sendDataToParent('')
-        } else if (value === 'indietro' && numero != '') {;
+        } else if (value === 'indietro' && numero !== '') {;
             setNumero(numero.slice(0, -1));
             sendDataToParent(numero.slice(0, -1));
-        }   else if (limit < 5 && value != 'azzera' && value != 'indietro') {
+        } else if (limit < 5 && value !== 'azzera' && value !== 'indietro') {
             setNumero(prevNumero => prevNumero + value);
             sendDataToParent(prevNumero => prevNumero + value);
-        }
+        } 
         // if (value === 'azzera') {
         //     alert('SONO QUI')
         //     setNumero('0');
@@ -32,10 +32,16 @@ const NumericKeyboard = ({ sendDataToParent }) => {
         //     if (numero === '0') {
         //       setNumero(value);
         //     } else {
-        //       setNumero(numero + value);
+        //       setNumero(numero + val!=ue);
         //     }
         //   }
     }
+
+    useEffect(() => {
+        if (numero === rispostaCorretta || numero.length === 4) {
+            setNumero('')            
+        }
+    }, [numero])
 
     const numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', 'indietro', '0', 'azzera']; 
     return <>
@@ -44,9 +50,9 @@ const NumericKeyboard = ({ sendDataToParent }) => {
             {
                 numbers.map((number, index) => {
                     let view = number;
-                    if (number == 'indietro') {
+                    if (number === 'indietro') {
                         view = <IoMdBackspace />
-                    } else if (number == 'azzera') {
+                    } else if (number === 'azzera') {
                         view = <MdDelete />
                     } else {
                         view = number;

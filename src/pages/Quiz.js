@@ -4,6 +4,8 @@ import styled from 'styled-components';
 
 const Quiz = ({ bgImage, correctAnswer }) => {
 
+
+  let rispostaCorretta = correctAnswer;
   // debug
   const [dataFromChild, setDataFromChild] = useState("");
   function handleDataFromChild(data) {
@@ -19,13 +21,15 @@ const Quiz = ({ bgImage, correctAnswer }) => {
 
   useEffect(()=> {
     if (dataFromChild === correctAnswer) {
-      setDataFromChild('')
       setModale(true);
-      setIsWin(false);
-    } else {
       setIsWin(true);
+      setDataFromChild('')
+    } else if (dataFromChild.length === 4) {
+      setIsWin(false);
+      setModale(true)
+      setDataFromChild('')
     }
-  }, [dataFromChild])
+  }, [dataFromChild, correctAnswer])
 
   // const handleSubmit = (e) => {
   //   e.preventDefault();
@@ -52,7 +56,7 @@ const Quiz = ({ bgImage, correctAnswer }) => {
         <div>{isWin ? 'HAI INDOVINATO' : 'HAI SBAGLIATO'}</div>
         <button onClick={()=> setModale(false)}>TORNA INDIETRO</button>
       </div>
-      <NumericKeyboard sendDataToParent={handleDataFromChild} />        
+      <NumericKeyboard sendDataToParent={handleDataFromChild} rispostaCorretta={rispostaCorretta} />        
     </div>
   </Wrapper>
 }
