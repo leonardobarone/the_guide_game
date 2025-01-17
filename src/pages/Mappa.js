@@ -22,10 +22,10 @@ const Mappa = () => {
       >
         {/* INIZIO CICLO */}
         {
-          games.map((place) => {
+          games.map((place, item) => {
             return <AdvancedMarker
                 position={place}
-                key={place.id}
+                key={item}
                 onClick={()=> setSelectedPlace(place)}
               >
                 <img 
@@ -33,20 +33,19 @@ const Mappa = () => {
                   src={icon} 
                   alt="icon place description" 
                 />
+                {selectedPlace && <InfoWindow
+                  headerContent={<h2>{selectedPlace.name}</h2>}
+                  position={selectedPlace} 
+                  onCloseClick={()=> setSelectedPlace(null)}
+                >
+                  {selectedPlace.game && 
+                    <Button>
+                      <Link className='link' to={selectedPlace.game}>GIOCA</Link>
+                    </Button>
+                  }
+                </InfoWindow>}
               </AdvancedMarker>
-              {/* INIZIO CONDIZIONE */}
-              {selectedPlace && <InfoWindow
-                headerContent={<h2>{selectedPlace.name}</h2>}
-                position={selectedPlace} 
-                onCloseClick={()=> setSelectedPlace(null)}
-              >
-                {selectedPlace.game && 
-                  <Button>
-                    <Link className='link' to={selectedPlace.game}>GIOCA</Link>
-                  </Button>
-                }
-              </InfoWindow>}
-              {/* FINE CONDIZIONE */}
+              
           })
         }
         {/* FINE CICLO */}
