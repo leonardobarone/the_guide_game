@@ -1,6 +1,6 @@
 const Obiettivi = () => {
     return (
-      <div style={{padding: '32px'}}>
+      <div style={{marginTop: '50px', marginBottom: '75px', padding: '32px'}}>
         <h1>Pagina Obiettivi</h1>
       </div>
     )

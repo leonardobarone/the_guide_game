@@ -13,7 +13,7 @@ const Mappa = () => {
       apiKey={"AIzaSyA7zTeRL20KTZpxmmgoSyDIBUZqgdxW1xk"} // process.env.API_KEY
       > 
       <Map
-        style={{width: '100%', height: 'calc(100vh - 125px)'}}
+        style={{width: '100%', marginTop: '50px', marginBottom: '75px', height: 'calc(100vh - 125px)'}}
         defaultCenter={{lat: 40.75791635986094, lng: 14.014870424568413}}
         defaultZoom={13.25}
         gestureHandling={'greedy'} // ??

@@ -18,7 +18,6 @@ function App() {
   return (
     <Router>
       <Header />
-      <main style={{marginTop: '50px', marginBottom: '75px'}}>
         <Routes>
           <Route path="/" element={<Home />} />
           
@@ -40,7 +39,6 @@ function App() {
           
           <Route path="*" element={<Error />} />
         </Routes>
-      </main>
       <Navbar />
     </Router>
   );

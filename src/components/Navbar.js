@@ -10,6 +10,7 @@ import obiettivi from '../images/navbar/obiettivi.png';
 const Actions = () => {
   
   const location = useLocation();
+  if (location.pathname === '/quiz' || location.pathname === '/secondQuiz' ) return null;
 
   return (
     <Wrapper>

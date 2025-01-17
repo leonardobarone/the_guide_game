@@ -44,7 +44,7 @@ const Quiz = ({ bgImage, correctAnswer }) => {
   // }
 
   return <Wrapper>
-    <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'space-between', width: '100%', overflow: 'scroll', height: 'calc(100vh - 125px)', position: 'relative'}}>
+    <div style={{marginTop: '50px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', width: '100%', overflow: 'scroll', height: 'calc(100vh - 50px)', position: 'relative'}}>
       <img className='quiz' src={bgImage} alt="" />
       <h5>CURRENT NUMBER = {dataFromChild}</h5>
       {/* <form action="">
@@ -79,7 +79,7 @@ export default Quiz;
 // IMPORTANTE NELL'INPUT!!!!!!!!!!!!
 // onChange={(e) => setNome(e.target.value)} 
 
-const Wrapper = styled.section`   
+const Wrapper = styled.main`   
     .quiz {
       width: 100%;
       height: 310px;

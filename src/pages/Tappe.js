@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import places from "../utils/places";
 
 const Tappe = () => {
-    return <Wrapper>
+    return <Wrapper style={{marginTop: '50px', marginBottom: '75px',}}>
       {places.map((place) => {
         return <div key={place.id} className='containerCard'>
           <Link to={`/tappe/${place.risolto ? place.id : ''}`} className="card link">
@@ -22,7 +22,7 @@ const Tappe = () => {
   
   export default Tappe;
   
-  const Wrapper = styled.section`
+  const Wrapper = styled.main`
 
   .containerCard {
     padding: 10px 10px 0px 10px;

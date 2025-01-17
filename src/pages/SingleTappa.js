@@ -6,7 +6,7 @@ const SingleTappa = () => {
   const oggettoTrovato = places.find(oggetto => oggetto.id == id);
   
   return (
-    <div>
+    <div style={{marginTop: '50px', marginBottom: '75px'}}>
       <img width={'100%'} src={oggettoTrovato.img} alt="" />
       <h2 style={{textAlign: 'center', textTransform: 'capitalize'}}>{oggettoTrovato.name}</h2>
     </div>
