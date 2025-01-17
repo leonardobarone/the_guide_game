@@ -44,7 +44,7 @@ const Quiz = ({ bgImage, correctAnswer }) => {
   // }
 
   return <Wrapper>
-    <div style={{marginTop: '50px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', width: '100%', overflow: 'scroll', height: 'calc(100vh - 50px)', position: 'relative'}}>
+    <div style={{marginTop: '50px', display: 'flex', flexDirection: 'column', width: '100%', overflow: 'scroll', height: 'calc(100vh - 50px)', position: 'relative'}}>
       <img className='quiz' src={bgImage} alt="" />
       <h5>CURRENT NUMBER = {dataFromChild}</h5>
       {/* <form action="">
@@ -106,7 +106,7 @@ const Wrapper = styled.main`
     }
 
     .modal {
-      top: 0px;
+      top: 50px;
       left: 0px;
       bottom: 0px;
       right: 0px;
