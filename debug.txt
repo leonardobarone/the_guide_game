@@ -1,1 +1,1 @@
-1. non mostrare navbar quando numericKeyboard isVisible
+// 17 gennaio

@@ -3,7 +3,7 @@ import places from "../utils/places";
 
 const SingleTappa = () => {
   const {id} = useParams();
-  const oggettoTrovato = places.find(oggetto => oggetto.id == id);
+  const oggettoTrovato = places.find(oggetto => oggetto.id === id);
   
   return (
     <div style={{marginTop: '50px', marginBottom: '75px'}}>

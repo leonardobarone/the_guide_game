@@ -23,8 +23,7 @@ const Mappa = () => {
         {/* INIZIO CICLO */}
         {
           games.map((place) => {
-            return (<>
-              <AdvancedMarker
+            return <AdvancedMarker
                 position={place}
                 key={place.id}
                 onClick={()=> setSelectedPlace(place)}
@@ -48,8 +47,6 @@ const Mappa = () => {
                 }
               </InfoWindow>}
               {/* FINE CONDIZIONE */}
-            </>
-            )
           })
         }
         {/* FINE CICLO */}

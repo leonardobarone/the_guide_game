@@ -70,6 +70,10 @@ const NumericKeyboard = ({ sendDataToParent, rispostaCorretta }) => {
 export default NumericKeyboard;
 
 const Wrapper = styled.div`
+    position: fixed;
+    z-index: 5;
+    bottom: 0px;
+    left: 0px;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
