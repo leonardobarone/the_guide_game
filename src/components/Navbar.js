@@ -150,7 +150,7 @@ const Wrapper = styled.nav`
     content: '';
     position: absolute;
     top: 50%;
-    left: -21px;
+    left: -22px;
     width: 20px;
     height: 20px;
     background: transparent;
@@ -162,7 +162,7 @@ const Wrapper = styled.nav`
     content: '';
     position: absolute;
     top: 50%;
-    right: -21px;
+    right: -22px;
     width: 20px;
     height: 20px;
     background: transparent;
