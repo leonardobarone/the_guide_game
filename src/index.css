@@ -1,4 +1,4 @@
-/* RESET RULES */
+/* Reset Rules */
 * {
     padding: 0px;
     margin: 0px;
@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .link {
@@ -14,6 +14,3 @@ body {
   text-decoration: none;
   color: black;
 }
-
-/* COPIATO DALL'AI */
-
