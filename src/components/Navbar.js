@@ -9,9 +9,7 @@ const Navbar = () => {
 
   const activeLink = (linkId) => {
     setActive(linkId);
-  }
-
-  
+  }  
 
   return (
     <Wrapper>
@@ -53,11 +51,12 @@ const Wrapper = styled.nav`
     ul {
       position: relative;
       display: flex;
-      width: 400px;
+      // db
+      width: 100%;
       li {
         position: relative;
         list-style: none;
-        width: 80px;
+        width: calc(100% / 5);
         height: 80px;
         .link {
           position: relative;
@@ -107,23 +106,22 @@ const Wrapper = styled.nav`
           }
         } 
         &:nth-child(2).active ~ .indicator {
-          transform: translateX(calc(80px * 1));
+          transform: translateX(calc(100%));
         }
         &:nth-child(3).active ~ .indicator {
-          transform: translateX(calc(80px * 2));
+          transform: translateX(calc(200%));
         }
         &:nth-child(4).active ~ .indicator {
-          transform: translateX(calc(80px * 3));
+          transform: translateX(calc(300%));
         }
         &:nth-child(5).active ~ .indicator {
-          transform: translateX(calc(80px * 4));
+          transform: translateX(calc(400%));
         }
       }
       .indicator {
         position: absolute;
-        
-        width: 80px;
-        height: 80px;
+        width: calc(100% / 5);
+        height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -133,9 +131,9 @@ const Wrapper = styled.nav`
         &::before {
           content: '';
           position: absolute;
-          bottom: 14px;
-          width: 80%;
-          height: 16px;
+          bottom: 13px;
+          width: 85%;
+          height: 18px;
           background: #29fd23;
           border-radius: 10px;
         }
