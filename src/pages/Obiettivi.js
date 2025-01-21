@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { useGlobalContext } from "../context";
 
-import cards from '../utils/cards';
+// import cards from '../utils/cards';
 
 import { FaLock } from "react-icons/fa";
 import { FaLockOpen } from "react-icons/fa";
@@ -8,7 +9,9 @@ import { FaLockOpen } from "react-icons/fa";
 
 const Obiettivi = () => {
     
+  const {cards} = useGlobalContext();
 
+  console.log(cards)
     return (<Wrapper>
       <div className="container" style={{marginTop: '50px', marginBottom: '75px'}}>
         {
@@ -16,7 +19,7 @@ const Obiettivi = () => {
             return (
               <div key={card.id} className="card">
                 <div className="body">
-                  <img src={card.img ? card.img : 'https://img.freepik.com/free-vector/padlock-coloured-outline_78370-548.jpg?semt=ais_hybrid'} alt="" />
+                  <img src={card.sbloccato ? card.img : 'https://img.freepik.com/free-vector/padlock-coloured-outline_78370-548.jpg?semt=ais_hybrid'} alt="" />
                   <div className="tag">
                     <div style={{backgroundColor: `${card.sbloccato ? 'var(--success-bootstrap)' : 'var(--danger-bootstrap)'}`}} className="inside">
                       {card.sbloccato ? <FaLockOpen /> : <FaLock />}

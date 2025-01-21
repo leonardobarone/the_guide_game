@@ -1,8 +1,11 @@
 import NumericKeyboard from '../components/NumericKeyboard';
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
+import { useGlobalContext } from '../context';
 
 const Quiz = ({ bgImage, correctAnswer }) => {
+
+  const {setCards, cards} = useGlobalContext();
 
 
   let rispostaCorretta = correctAnswer;
@@ -20,7 +23,10 @@ const Quiz = ({ bgImage, correctAnswer }) => {
 
 
   useEffect(()=> {
+    const newArray = [...cards];
     if (dataFromChild === correctAnswer) {
+      newArray[newArray.length - 1].sbloccato = true;
+      setCards(newArray);
       setModale(true);
       setIsWin(true);
       setDataFromChild('')
@@ -29,7 +35,7 @@ const Quiz = ({ bgImage, correctAnswer }) => {
       setModale(true)
       setDataFromChild('')
     }
-  }, [dataFromChild, correctAnswer])
+  }, [dataFromChild, correctAnswer, cards, setCards])
 
   // const handleSubmit = (e) => {
   //   e.preventDefault();
