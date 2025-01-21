@@ -11,7 +11,6 @@ const Obiettivi = () => {
     
   const {cards} = useGlobalContext();
 
-  console.log(cards)
     return (<Wrapper>
       <div className="container" style={{marginTop: '50px', marginBottom: '75px'}}>
         {
@@ -27,9 +26,6 @@ const Obiettivi = () => {
                   </div>
                   <div className="title">
                     {card.title.toUpperCase()}
-                    <span className="subtitle">
-                      lorem ipsum
-                    </span>
                   </div>
                 </div>
               </div>
@@ -69,12 +65,6 @@ const Obiettivi = () => {
           font-size: 10px;
           font-weight: bold;
           background-color: white;
-          .subtitle {
-            display: block;
-            font-weight: lighter;
-            color: gray;
-            margin-top: 3px;
-          }
         }
         .tag {
           .inside {
