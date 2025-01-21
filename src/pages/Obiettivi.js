@@ -48,7 +48,7 @@ const Obiettivi = () => {
     align-content: flex-start;
     .card {
       flex-basis: 50%;
-      height: 250px;
+      height: 50%;
       .body {
         padding: 7px;
         width: 100%;

@@ -60,7 +60,7 @@ const NumericKeyboard = ({ sendDataToParent, rispostaCorretta }) => {
                     return (
                         <div className='prova'>
                             <button key={index} onClick={() => handleButtonClick(number)}>    
-                                {view}
+                                <span>{view}</span>
                             </button>
                         </div>
                     )
@@ -100,7 +100,9 @@ const Wrapper = styled.div`
                 padding: 10px 0px;
                 font-size: 25px;
                 color: var(--my-text);
-                opacity: 0.5;
+                span {
+                    opacity: 0.5;
+                }
             }
             /* &:nth-child(3n) {
             border-right: 0px;
