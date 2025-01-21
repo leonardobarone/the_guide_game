@@ -86,7 +86,7 @@ export default Quiz;
 // IMPORTANTE NELL'INPUT!!!!!!!!!!!!
 // onChange={(e) => setNome(e.target.value)} 
 
-const Wrapper = styled.main`   
+const Wrapper = styled.main`  
   .btn {
     color: white;
     font-weight: bold;

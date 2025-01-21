@@ -43,7 +43,7 @@ const NumericKeyboard = ({ sendDataToParent, rispostaCorretta }) => {
         }
     }, [numero, rispostaCorretta])
 
-    const numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', 'indietro', '0', 'azzera']; 
+    const numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'indietro', 'azzera']; 
     return <>
             <h6>CURRENT NUMBER = {numero}</h6>
         <Wrapper>
@@ -57,10 +57,13 @@ const NumericKeyboard = ({ sendDataToParent, rispostaCorretta }) => {
                     } else {
                         view = number;
                     }
-                    return <button key={index} onClick={() => handleButtonClick(number)}>
-                        
-                        {view}
-                    </button>
+                    return (
+                        <div className='prova'>
+                            <button key={index} onClick={() => handleButtonClick(number)}>    
+                                {view}
+                            </button>
+                        </div>
+                    )
                 })
             }
         </Wrapper>
@@ -70,6 +73,8 @@ const NumericKeyboard = ({ sendDataToParent, rispostaCorretta }) => {
 export default NumericKeyboard;
 
 const Wrapper = styled.div`
+    padding: 7px 0px;
+    background-color: var(--bg-gray);
     position: fixed;
     z-index: 5;
     bottom: 0px;
@@ -77,20 +82,28 @@ const Wrapper = styled.div`
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    border-top: 1px solid black;
-    button {
-        width: 33.33%;
-        background-color: brown;
-        border-style: none;
-        border-bottom: 1px solid black;
-        border-right: 1px solid black;
-        padding: 9px 0px;
-        font-size: 25px;
-        color: white;
-        text-shadow: 0px 1px 3px black;
-        &:nth-child(3n) {
+    align-content: flex-start;
+    .prova {
+        flex-basis: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+            button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 87%;
+                height: 87%;
+                background-color: var(--bg-white);
+                border: 1px solid var(--logo);
+                border-radius: 10px;
+                padding: 10px 0px;
+                font-size: 25px;
+                color: var(--logo);
+            }
+            /* &:nth-child(3n) {
             border-right: 0px;
-        }
+        } */
     }
 `;
 

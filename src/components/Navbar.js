@@ -110,7 +110,7 @@ const Wrapper = styled.nav`
            }
           &:hover {
            .icon {
-            color: var(--my-success);
+            color: var(--success-bootstrap);
             opacity: 1;
            } 
           }
@@ -119,7 +119,7 @@ const Wrapper = styled.nav`
           .link {
             .icon {
              opacity: 1;
-             color: var(--my-success);
+             color: var(--success-bootstrap);
              transform: translateY(-8px);
            }
            .text {
@@ -157,7 +157,7 @@ const Wrapper = styled.nav`
           bottom: 13px;
           width: 85%;
           height: 18px;
-          background: var(--my-success);
+          background: var(--success-bootstrap);
           border-radius: 10px;
         }
       }
