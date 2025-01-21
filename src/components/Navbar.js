@@ -64,9 +64,8 @@ const Wrapper = styled.nav`
     left: 0px;
     width: 100%;
     z-index: 10;
-    border-top: 1px solid var(--border);
     height: 80px;
-    background: var(--bg-white);
+    background: var(--bg-gray);
     display: flex;
     justify-content: center;
     ul {

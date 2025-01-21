@@ -10,11 +10,10 @@ body {
 }
 
 :root {
-  --bg-white: #FFFFFF;
-  --bg-gray: #f6f2f1;
-  --border: lightgray;
-  --logo: gray;
-  --success-bootstrap: #5cb85c;
+  --bg-white: #ffffff;
+  --bg-gray: lightgray;
+  --logo: black;
   --my-success: #29fd23;
+  --success-bootstrap: #5cb85c;
   --danger-bootstrap: #d9534f;
 }
