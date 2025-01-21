@@ -12,7 +12,7 @@ const Obiettivi = () => {
   const {cards} = useGlobalContext();
 
     return (<Wrapper>
-      <div className="container" style={{marginTop: '50px', marginBottom: '75px'}}>
+      <div className="container" style={{marginTop: '60px', marginBottom: '75px'}}>
         {
           cards.map((card) => {
             return (
