@@ -1,28 +1,51 @@
 import styled from "styled-components";
 
+import scialoja from '../images/scialoja.jpg'
+import venerdiSanto from '../images/venerdiSanto.jpg'
+
+import { FaLock } from "react-icons/fa";
+import { FaLockOpen } from "react-icons/fa";
+
 const Obiettivi = () => {
     return (<Wrapper>
       <div className="container" style={{marginTop: '50px', marginBottom: '75px'}}>
         <div className="card">
           <div className="body">
-            <img src="https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=612x612&w=0&k=20&c=rnCKVbdxqkjlcs3xH87-9gocETqpspHFXu5dIGB4wuM=" alt="" />
+            <img src={venerdiSanto} alt="" />
             <div className="tag">
-              <div className="ciao">
-                tag
+              <div style={{backgroundColor: 'lightgreen'}} className="ciao">
+                <FaLockOpen />
               </div>
+            </div>
+            <div className="title">
+              VENERDI SANTO
             </div>
           </div>
         </div>
         <div className="card">
           <div className="body">
-            <img src="https://picsum.photos/id/237/250" alt="" />
-            <div className="tag">tag</div>
+            <img src={scialoja} alt="" />
+            <div className="tag">
+              <div style={{backgroundColor: 'lightgreen'}} className="ciao">
+                <FaLockOpen />
+              </div>
+            </div>
+            <div className="title">
+              ANTONIO SCIALOJA
+            </div>
           </div>
         </div>
         <div className="card">
           <div className="body">
-            <img src="https://picsum.photos/id/237/250" alt="" />
-            <div className="tag">tag</div>
+            <img src="https://img.freepik.com/free-vector/padlock-coloured-outline_78370-548.jpg?semt=ais_hybrid" alt="" />
+            <div className="tag">
+              <div style={{backgroundColor: 'red'}} className="ciao">
+                <FaLock />
+              </div>
+            </div>
+            <div className="title">
+              CARTA ARTURO
+            </div>
           </div>
         </div>
       </div>
@@ -47,9 +70,22 @@ const Obiettivi = () => {
         height: 100%;
         padding: 7.5px;
         position: relative;
+        .title {
+          position: absolute;
+          bottom: 14px;
+          left: 14px;
+          width: 85%;
+          border-radius: 10px;
+          padding: 12px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: white;
+        }
         .tag {
           .ciao {
             border: 1px solid black;
+            border-radius: 10px;
             padding: 5px 20px;
           }
           position: absolute;
@@ -68,10 +104,10 @@ const Obiettivi = () => {
             content: '';
             position: absolute;
             background-color: transparent;
-            top: 1.90rem;
+            top: 2.2rem;
             right: 0rem;
             border-top-right-radius: 0.700rem;
-            box-shadow: 0rem -0.400rem pink;
+            box-shadow: 0rem -0.350rem pink;
 
           }
           &::before {
