@@ -95,11 +95,12 @@ const Wrapper = styled.div`
                 width: 87%;
                 height: 87%;
                 background-color: var(--bg-white);
-                border: 1px solid var(--logo);
+                border-style: none;
                 border-radius: 10px;
                 padding: 10px 0px;
                 font-size: 25px;
-                color: var(--logo);
+                color: var(--my-text);
+                opacity: 0.5;
             }
             /* &:nth-child(3n) {
             border-right: 0px;

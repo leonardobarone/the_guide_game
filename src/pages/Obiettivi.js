@@ -42,7 +42,7 @@ const Obiettivi = () => {
   const Wrapper = styled.section`
   .container {
     height: calc(100vh - 125px);
-    background-color: var(--bg-gray);
+    background-color: var(--bg-white);
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
@@ -77,7 +77,7 @@ const Obiettivi = () => {
           position: absolute;
           top: 7px;
           right: 7px;
-          background-color: var(--bg-gray);
+          background-color: var(--bg-white);
           padding: 4px 8px;
           z-index: 3;
           /* border-bottom: 0.5 solid black;
@@ -93,7 +93,7 @@ const Obiettivi = () => {
             top: 30px;
             right: 0rem;
             border-top-right-radius: 10px;
-            box-shadow: 4px -3px var(--bg-gray);
+            box-shadow: 4px -3px var(--bg-white);
           }
           
           &::before {
@@ -105,7 +105,7 @@ const Obiettivi = () => {
             top: 0px;
             left: -20px;
             border-top-right-radius: 0.700rem;
-            box-shadow: 2px -5px var(--bg-gray);
+            box-shadow: 2px -5px var(--bg-white);
           }
         }
         img {

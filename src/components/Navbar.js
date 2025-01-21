@@ -65,7 +65,7 @@ const Wrapper = styled.nav`
     width: 100%;
     z-index: 10;
     height: 80px;
-    background: var(--bg-white);
+    background: var(--bg-gray);
     display: flex;
     justify-content: center;
     ul {
@@ -91,17 +91,17 @@ const Wrapper = styled.nav`
             position: relative;
             display: block;
             line-height: 85px;
-            font-size: 1.5em;
+            font-size: 1.7em;
             transition: 0.5s;
             text-align: center;
-            color: var(--logo);
+            color: var(--my-text);
             opacity: 0.5;
           }
            .text {
             position: absolute;
             font-weight: 600;
             font-size: 0.6em;
-            color: var(--bg-white);
+            color: var(--bg-gray);
             text-transform: uppercase;
             transform: translateY(0px);
             letter-spacing: 0.05em;
