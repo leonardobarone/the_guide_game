@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Link, useLocation } from 'react-router-dom';
-import { useState, createElement } from 'react';
+import { useState, createElement, useEffect } from 'react';
 import links from '../utils/links';
 
 const Navbar = () => {
@@ -8,9 +8,24 @@ const Navbar = () => {
   const [active, setActive] = useState(null);
 
   const location = useLocation();
+
+  useEffect(() => {
+    // quando ricarica la pagina
+    // se il pathname è uno tra quei cinque rimane attivo
+    // 
+    const result = links.find(item => item.path === location.pathname);
+
+    if (result) {
+      setActive(result.id)      
+    } else {
+      setActive(null)
+    }
+  }, [location.pathname]);
+
   if (location.pathname === '/quiz' || location.pathname === '/secondQuiz') {
     return;
   }
+
 
   const activeLink = (linkId) => {
     setActive(linkId);
