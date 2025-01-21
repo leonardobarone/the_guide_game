@@ -35,9 +35,7 @@ const Obiettivi = () => {
             </div>
             <div className="title">
               ANTONIO SCIALOJA
-              <span className="subtitle">
-                lorem ipsum
-              </span>
+              
             </div>
           </div>
         </div>

@@ -1,11 +1,16 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useState, createElement } from 'react';
 import links from '../utils/links';
 
 const Navbar = () => {
 
   const [active, setActive] = useState(null);
+
+  const location = useLocation();
+  if (location.pathname === '/quiz' || location.pathname === '/secondQuiz') {
+    return;
+  }
 
   const activeLink = (linkId) => {
     setActive(linkId);

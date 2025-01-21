@@ -47,6 +47,7 @@ const Quiz = ({ bgImage, correctAnswer }) => {
     <div style={{marginTop: '50px', display: 'flex', flexDirection: 'column', width: '100%', overflow: 'scroll', height: 'calc(100vh - 50px)', position: 'relative'}}>
       <img className='quiz' src={bgImage} alt="" />
       <h5>CURRENT NUMBER = {dataFromChild}</h5>
+      <button className="btn">Prova</button>
       {/* <form action="">
         <input onChange={(e) => setNumero(e.target.value)} value={numero} name="numero" type="text" />
         <br />
@@ -80,6 +81,15 @@ export default Quiz;
 // onChange={(e) => setNome(e.target.value)} 
 
 const Wrapper = styled.main`   
+  .btn {
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border-style: none;
+    border-radius: 20px;
+    margin: 0px 8px;
+    background-color: var(--accent);
+  }
     .quiz {
       width: 100%;
       height: 310px;

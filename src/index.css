@@ -9,8 +9,22 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-/* .link {
-  display: block;
-  text-decoration: none;
-  color: black;
-} */
+:root {
+  /* bianco per il background */
+  /* grigio chiaro per bordi */
+  /* grigio scuro per i loghini  */
+  /* verde per il successo quando si sblocca qualcosa */
+  /* rosso per quando qualcosa è bloccato */
+  /* giallino o ocra per in esecuzione */
+  /* arancione per inviarci qualcosa */
+
+
+  --background: #FFFFFF;
+  --main: ; 
+  --sub: ;
+  --accent: #f36d0c;
+    /* per i pulsanti */
+  --success: #5cb85c;
+  --danger: #d9534f;
+  --warning: #f0ad4e;
+}
