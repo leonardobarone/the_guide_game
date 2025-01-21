@@ -13,12 +13,15 @@ const Obiettivi = () => {
           <div className="body">
             <img src={venerdiSanto} alt="" />
             <div className="tag">
-              <div style={{backgroundColor: 'lightgreen'}} className="ciao">
+              <div style={{backgroundColor: '#5cb85c'}} className="inside">
                 <FaLockOpen />
               </div>
             </div>
             <div className="title">
               VENERDI SANTO
+              <span className="subtitle">
+                lorem ipsum
+              </span>
             </div>
           </div>
         </div>
@@ -26,12 +29,15 @@ const Obiettivi = () => {
           <div className="body">
             <img src={scialoja} alt="" />
             <div className="tag">
-              <div style={{backgroundColor: 'lightgreen'}} className="ciao">
+              <div style={{backgroundColor: '#5cb85c'}} className="inside">
                 <FaLockOpen />
               </div>
             </div>
             <div className="title">
               ANTONIO SCIALOJA
+              <span className="subtitle">
+                lorem ipsum
+              </span>
             </div>
           </div>
         </div>
@@ -39,12 +45,15 @@ const Obiettivi = () => {
           <div className="body">
             <img src="https://img.freepik.com/free-vector/padlock-coloured-outline_78370-548.jpg?semt=ais_hybrid" alt="" />
             <div className="tag">
-              <div style={{backgroundColor: 'red'}} className="ciao">
+              <div style={{backgroundColor: '#d9534f'}} className="inside">
                 <FaLock />
               </div>
             </div>
             <div className="title">
               CARTA ARTURO
+              <span className="subtitle">
+                lorem ipsum
+              </span>
             </div>
           </div>
         </div>
@@ -58,73 +67,80 @@ const Obiettivi = () => {
   const Wrapper = styled.section`
   .container {
     height: calc(100vh - 125px);
-    background-color: pink;
+    background-color: #f6f2f1;
     display: flex;
     flex-wrap: wrap;
+    align-content: flex-start;
     .card {
-      border: 1px solid black;
       flex-basis: 50%;
-      height: 50%;
+      height: 250px;
       .body {
+        padding: 7px;
         width: 100%;
         height: 100%;
-        padding: 7.5px;
         position: relative;
         .title {
           position: absolute;
-          bottom: 14px;
-          left: 14px;
-          width: 85%;
+          bottom: 12px;
+          left: 12px;
+          width: 88%;
           border-radius: 10px;
-          padding: 12px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
+          padding: 10px;
+          text-align: center;
+          font-size: 10px;
+          font-weight: bold;
           background-color: white;
+          .subtitle {
+            display: block;
+            font-weight: lighter;
+            color: gray;
+            margin-top: 3px;
+          }
         }
         .tag {
-          .ciao {
-            border: 1px solid black;
-            border-radius: 10px;
-            padding: 5px 20px;
+          .inside {
+            border-radius: 17px;
+            color: white;
+            font-size: 12px;
+            padding: 4px 17px;
           }
+          
           position: absolute;
-          top: 7.5px;
-          right: 7.5px;
-          background-color: pink;
-          padding: 3px 10px;
+          top: 7px;
+          right: 7px;
+          background-color: #f6f2f1;
+          padding: 4px 8px;
           z-index: 3;
-          text-align: center;
-          border-bottom: 0.5 solid black;
-          border-left: 0.5 solid black;
-          border-radius: 0 0 0 1.25rem;
+          /* border-bottom: 0.5 solid black;
+          border-left: 0.5 solid black; */
+          border-radius: 0 0 0 10px;
+          
           &::after {
-            width: 1.125rem;
-            height: 1.125rem;
+            width: 20px;
+            height: 20px;
             content: '';
             position: absolute;
             background-color: transparent;
-            top: 2.2rem;
+            top: 30px;
             right: 0rem;
-            border-top-right-radius: 0.700rem;
-            box-shadow: 0rem -0.350rem pink;
-
+            border-top-right-radius: 10px;
+            box-shadow: 4px -3px #f6f2f1;
           }
+          
           &::before {
-            width: 1.125rem;
-            height: 1.125rem;
+            width: 20px;
+            height: 20px;
             content: '';
             position: absolute;
             background-color: transparent;
-            top: 0rem;
-            left: -1rem;
+            top: 0px;
+            left: -20px;
             border-top-right-radius: 0.700rem;
-            box-shadow: 0rem -0.4rem pink;
-
+            box-shadow: 2px -5px #f6f2f1;
           }
         }
         img {
-          border-radius: 15px;
+          border-radius: 10px;
           display: block;
           width: 100%;
           height: 100%;
