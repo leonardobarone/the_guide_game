@@ -58,7 +58,7 @@ const NumericKeyboard = ({ sendDataToParent, rispostaCorretta }) => {
                         view = number;
                     }
                     return (
-                        <div className='prova'>
+                        <div className='inner'>
                             <button key={index} onClick={() => handleButtonClick(number)}>    
                                 <span>{view}</span>
                             </button>
@@ -83,7 +83,7 @@ const Wrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
-    .prova {
+    .inner {
         flex-basis: 25%;
         display: flex;
         justify-content: center;

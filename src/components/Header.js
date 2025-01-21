@@ -17,7 +17,7 @@ export default Header;
 
 const Wrapper = styled.header`
     background-color: var(--bg-gray);
-    height: 50px;
+    height: 60px;
     padding-left: 10px;
     font-size: 8px;
     position: fixed;
