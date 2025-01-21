@@ -1,60 +1,38 @@
 import styled from "styled-components";
 
-import scialoja from '../images/scialoja.jpg'
-import venerdiSanto from '../images/venerdiSanto.jpg'
+import cards from '../utils/cards';
 
 import { FaLock } from "react-icons/fa";
 import { FaLockOpen } from "react-icons/fa";
 
+
 const Obiettivi = () => {
+    
+
     return (<Wrapper>
       <div className="container" style={{marginTop: '50px', marginBottom: '75px'}}>
-        <div className="card">
-          <div className="body">
-            <img src={venerdiSanto} alt="" />
-            <div className="tag">
-              <div style={{backgroundColor: 'var(--success-bootstrap)'}} className="inside">
-                <FaLockOpen />
+        {
+          cards.map((card) => {
+            return (
+              <div key={card.id} className="card">
+                <div className="body">
+                  <img src={card.img ? card.img : 'https://img.freepik.com/free-vector/padlock-coloured-outline_78370-548.jpg?semt=ais_hybrid'} alt="" />
+                  <div className="tag">
+                    <div style={{backgroundColor: `${card.sbloccato ? 'var(--success-bootstrap)' : 'var(--danger-bootstrap)'}`}} className="inside">
+                      {card.sbloccato ? <FaLockOpen /> : <FaLock />}
+                    </div>
+                  </div>
+                  <div className="title">
+                    {card.title.toUpperCase()}
+                    <span className="subtitle">
+                      lorem ipsum
+                    </span>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div className="title">
-              VENERDI SANTO
-              <span className="subtitle">
-                lorem ipsum
-              </span>
-            </div>
-          </div>
-        </div>
-        <div className="card">
-          <div className="body">
-            <img src={scialoja} alt="" />
-            <div className="tag">
-              <div style={{backgroundColor: 'var(--success-bootstrap)'}} className="inside">
-                <FaLockOpen />
-              </div>
-            </div>
-            <div className="title">
-              ANTONIO SCIALOJA
-              
-            </div>
-          </div>
-        </div>
-        <div className="card">
-          <div className="body">
-            <img src="https://img.freepik.com/free-vector/padlock-coloured-outline_78370-548.jpg?semt=ais_hybrid" alt="" />
-            <div className="tag">
-              <div style={{backgroundColor: 'var(--danger-bootstrap)'}} className="inside">
-                <FaLock />
-              </div>
-            </div>
-            <div className="title">
-              CARTA ARTURO
-              <span className="subtitle">
-                lorem ipsum
-              </span>
-            </div>
-          </div>
-        </div>
+            )
+          })
+        }
       </div>
     </Wrapper>
     )

@@ -21,92 +21,92 @@ const places = [
       'id' : "1",
       'name' : 'vivara', 
       'img' : vivara,
-      'risolto' : true
+      'sbloccato' : true
     },
     { 
       'id' : "2",
       'name' : 'chiesa chiaiolella',
       'img' : diFronteSanGiuseppe,
-      'risolto' : true
+      'sbloccato' : true
     },
     { 
       'id' : "3",
       'name' : 'belvedere elsa morante', 
       'img' : belvedereElsa,
-      'risolto' : true
+      'sbloccato' : true
     },
     { 
       'id' : "4",
       'name' : 'san giacomo', 
       'img' : sanGiacomo,
-      'risolto' : true
+      'sbloccato' : true
     },
     { 
       'id' : "5",
       'name' : 'chiesa san leonardo', 
       'img' : sanLeonardo,
-      'risolto' : true
+      'sbloccato' : true
     },
     { 
       'id' : "6",
       'name' : 'chiesa madonna delle grazie', 
       'img' : piazzaMartiri,
-      'risolto' : true
+      'sbloccato' : true
     },
     { 
       'id' : "7",
       'name' : 'santa margherita nuova', 
       'img' : cannoni,
-      'risolto' : false
+      'sbloccato' : false
     },
     { 
       'id' : "8",
       'name' : 'palazzo d\'avalos', 
       'img' : piazzaArmi,
-      'risolto' : true
+      'sbloccato' : true
     },
     { 
       'id' : "9",
       'name' : 'palazzo della cultura', 
       'img' : palazzoCultura,
-      'risolto' : true
+      'sbloccato' : true
     },
     { 
       'id' : "10",
       'name' : 'abbazia di san michele arcangelo', 
       'img' : sanMichele,
-      'risolto' : true
+      'sbloccato' : true
     },
     { 
       'id' : "11",
       'name' : 'marina corricella', 
       'img' : corricella,
-      'risolto' : true
+      'sbloccato' : true
     },
     { 
       'id' : "12",
       'name' : 'Palazzo Merlato', 
       'img' : palazzoMerlato,
       'game' : '/quiz',
-      'risolto' : true
+      'sbloccato' : true
     },
     { 
       'id' : "13",
       'name' : 'chiesa marina grande', 
       'img' : marinaChiesa,
-      'risolto' : true
+      'sbloccato' : true
     },
     { 
       'id' : "14",
       'name' : 'faro', 
       'img' : faro,
-      'risolto' : true
+      'sbloccato' : true
     },
     { 
       'id' : "15",
       'name' : 'pozzo vecchio', 
       'img' : cimitero,
-      'risolto' : true
+      'sbloccato' : true
     },
   ];
   
