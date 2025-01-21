@@ -49,8 +49,9 @@ const Wrapper = styled.nav`
     left: 0px;
     width: 100%;
     z-index: 10;
+    border-top: 1px solid var(--border);
     height: 80px;
-    background: #2f2f2f;
+    background: var(--bg-white);
     display: flex;
     justify-content: center;
     ul {
@@ -79,13 +80,14 @@ const Wrapper = styled.nav`
             font-size: 1.5em;
             transition: 0.5s;
             text-align: center;
-            color: rgba(255, 255, 255, 0.5);
+            color: var(--logo);
+            opacity: 0.5;
           }
            .text {
             position: absolute;
             font-weight: 600;
             font-size: 0.6em;
-            color: #222327;
+            color: var(--bg-white);
             text-transform: uppercase;
             transform: translateY(0px);
             letter-spacing: 0.05em;
@@ -94,14 +96,16 @@ const Wrapper = styled.nav`
            }
           &:hover {
            .icon {
-            color: rgba(255, 255, 255, 1);
+            color: var(--my-success);
+            opacity: 1;
            } 
           }
         }
         &.active {
           .link {
             .icon {
-             color: #29fd53;
+             opacity: 1;
+             color: var(--my-success);
              transform: translateY(-8px);
            }
            .text {
@@ -139,7 +143,7 @@ const Wrapper = styled.nav`
           bottom: 13px;
           width: 85%;
           height: 18px;
-          background: #29fd23;
+          background: var(--my-success);
           border-radius: 10px;
         }
       }

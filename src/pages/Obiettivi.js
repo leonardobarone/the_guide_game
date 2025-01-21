@@ -13,7 +13,7 @@ const Obiettivi = () => {
           <div className="body">
             <img src={venerdiSanto} alt="" />
             <div className="tag">
-              <div style={{backgroundColor: '#5cb85c'}} className="inside">
+              <div style={{backgroundColor: 'var(--success-bootstrap)'}} className="inside">
                 <FaLockOpen />
               </div>
             </div>
@@ -29,7 +29,7 @@ const Obiettivi = () => {
           <div className="body">
             <img src={scialoja} alt="" />
             <div className="tag">
-              <div style={{backgroundColor: '#5cb85c'}} className="inside">
+              <div style={{backgroundColor: 'var(--success-bootstrap)'}} className="inside">
                 <FaLockOpen />
               </div>
             </div>
@@ -43,7 +43,7 @@ const Obiettivi = () => {
           <div className="body">
             <img src="https://img.freepik.com/free-vector/padlock-coloured-outline_78370-548.jpg?semt=ais_hybrid" alt="" />
             <div className="tag">
-              <div style={{backgroundColor: '#d9534f'}} className="inside">
+              <div style={{backgroundColor: 'var(--danger-bootstrap)'}} className="inside">
                 <FaLock />
               </div>
             </div>
@@ -65,7 +65,7 @@ const Obiettivi = () => {
   const Wrapper = styled.section`
   .container {
     height: calc(100vh - 125px);
-    background-color: #f6f2f1;
+    background-color: var(--bg-gray);
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
@@ -98,7 +98,7 @@ const Obiettivi = () => {
         .tag {
           .inside {
             border-radius: 17px;
-            color: white;
+            color: var(--bg-gray);
             font-size: 12px;
             padding: 4px 17px;
           }
@@ -106,7 +106,7 @@ const Obiettivi = () => {
           position: absolute;
           top: 7px;
           right: 7px;
-          background-color: #f6f2f1;
+          background-color: var(--bg-gray);
           padding: 4px 8px;
           z-index: 3;
           /* border-bottom: 0.5 solid black;
@@ -122,7 +122,7 @@ const Obiettivi = () => {
             top: 30px;
             right: 0rem;
             border-top-right-radius: 10px;
-            box-shadow: 4px -3px #f6f2f1;
+            box-shadow: 4px -3px var(--bg-gray);
           }
           
           &::before {
@@ -134,7 +134,7 @@ const Obiettivi = () => {
             top: 0px;
             left: -20px;
             border-top-right-radius: 0.700rem;
-            box-shadow: 2px -5px #f6f2f1;
+            box-shadow: 2px -5px var(--bg-gray);
           }
         }
         img {

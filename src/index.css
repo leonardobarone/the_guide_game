@@ -10,21 +10,11 @@ body {
 }
 
 :root {
-  /* bianco per il background */
-  /* grigio chiaro per bordi */
-  /* grigio scuro per i loghini  */
-  /* verde per il successo quando si sblocca qualcosa */
-  /* rosso per quando qualcosa è bloccato */
-  /* giallino o ocra per in esecuzione */
-  /* arancione per inviarci qualcosa */
-
-
-  --background: #FFFFFF;
-  --main: ; 
-  --sub: ;
-  --accent: #f36d0c;
-    /* per i pulsanti */
-  --success: #5cb85c;
-  --danger: #d9534f;
-  --warning: #f0ad4e;
+  --bg-white: #FFFFFF;
+  --bg-gray: #f6f2f1;
+  --border: lightgray;
+  --logo: gray;
+  --success-bootstrap: #5cb85c;
+  --my-success: #29fd23;
+  --danger-bootstrap: #d9534f;
 }
