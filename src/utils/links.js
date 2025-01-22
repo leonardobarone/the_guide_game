@@ -1,40 +1,40 @@
 // Loghi
-import { CiUser } from "react-icons/ci";
-import { PiClipboardTextThin } from "react-icons/pi";
-import { CiMap } from "react-icons/ci";
-import { CiMapPin } from "react-icons/ci";
-import { CiSquareCheck } from "react-icons/ci";
+import { GiOpenTreasureChest } from "react-icons/gi";
+import { FaBook } from "react-icons/fa";
+import { FaCompass } from "react-icons/fa";
+import { GiTreasureMap } from "react-icons/gi";
+import { MdAccountCircle } from "react-icons/md";
 
 const links = [
     { 
         'id' : "1",
         'text' : 'Account', 
         'path' : '/account',
-        'icon' : CiUser
+        'icon' : MdAccountCircle
     },
     { 
         'id' : "2",
         'text' : 'Regole', 
         'path' : '/regole',
-        'icon' : PiClipboardTextThin
+        'icon' : FaBook
     },
     { 
         'id' : "3",
         'text' : 'Mappa', 
         'path' : '/mappa',
-        'icon' : CiMap
+        'icon' : GiTreasureMap
     },
     { 
         'id' : "4",
         'text' : 'Tappe', 
         'path' : '/tappe',
-        'icon' : CiMapPin
+        'icon' : FaCompass
     },
     { 
         'id' : "5",
         'text' : 'Obiettivi', 
         'path' : '/obiettivi',
-        'icon' : CiSquareCheck
+        'icon' : GiOpenTreasureChest
     },
   ];
 
