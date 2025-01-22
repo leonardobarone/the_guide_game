@@ -2,6 +2,8 @@ import NumericKeyboard from '../components/NumericKeyboard';
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { useGlobalContext } from '../context';
+import { IoIosHelpCircle } from "react-icons/io";
+import { MdOutlineArrowBack } from "react-icons/md";
 
 const Quiz = ({ bgImage, correctAnswer }) => {
 
@@ -21,7 +23,7 @@ const Quiz = ({ bgImage, correctAnswer }) => {
   const [isWin, setIsWin] = useState(false);  
 
 
-
+  
   useEffect(()=> {
     const newArray = [...cards];
     if (dataFromChild === correctAnswer) {
@@ -50,21 +52,41 @@ const Quiz = ({ bgImage, correctAnswer }) => {
   // }
 
   return <Wrapper>
-    <div style={{marginTop: '50px', display: 'flex', flexDirection: 'column', width: '100%', overflow: 'scroll', height: 'calc(100vh - 50px)', position: 'relative'}}>
+    <div className="card" style={{backgroundImage : `url(${bgImage})`}}>
+      <div className="boxTop">
+        <div className="left">
+          <MdOutlineArrowBack />
+        </div>
+        <div className="center">
+          Conta il numero dei merletti, moltiplicalo per il numero degli archi e per 8. 
+        </div>
+        <div className="right">
+          <IoIosHelpCircle />
+        </div>
+      </div>
+      <div className="result">
+        {dataFromChild ? dataFromChild : '...'}
+      </div>
+      <div className="tag">
+        <button className='btn'>Prova</button>
+      </div>
+    </div>
+    {/* <div style={{marginTop: '50px', display: 'flex', flexDirection: 'column', width: '100%', overflow: 'scroll', height: 'calc(100vh - 50px)', position: 'relative'}}>
       <img className='quiz' src={bgImage} alt="" />
       <h5>CURRENT NUMBER = {dataFromChild}</h5>
-      <button className="btn">Prova</button>
+      <button className="btn">Prova</button> */}
       {/* <form action="">
         <input onChange={(e) => setNumero(e.target.value)} value={numero} name="numero" type="text" />
         <br />
         <button type="submit" onClick={handleSubmit}>Prova</button>      
       </form> */}
-      <div style={modale ? {display: 'block'} : {display: 'none'}} className="modal">
+      {/* <div style={modale ? {display: 'block'} : {display: 'none'}} className="modal">
         <div>{isWin ? 'HAI INDOVINATO' : 'HAI SBAGLIATO'}</div>
-        <button onClick={()=> setModale(false)}>TORNA INDIETRO</button>
-      </div>
+        {
+          isWin ?  : <button onClick={()=> setModale(false)}>TORNA INDIETRO</button>
+        }
+      </div> */}
       <NumericKeyboard sendDataToParent={handleDataFromChild} rispostaCorretta={rispostaCorretta} />        
-    </div>
   </Wrapper>
 }
 
@@ -87,47 +109,94 @@ export default Quiz;
 // onChange={(e) => setNome(e.target.value)} 
 
 const Wrapper = styled.main`  
-  .btn {
-    color: white;
-    font-weight: bold;
-    padding: 10px;
-    border-style: none;
-    border-radius: 20px;
-    margin: 0px 8px;
-    background-color: var(--accent);
-  }
-    .quiz {
-      width: 100%;
-      height: 310px;
-      object-fit: cover;
-      object-position: center;
-    }
-    form {
-      padding-top: 32px;
-      text-align: center;
-      width: 100%;
-      input {
-        padding: 8px;
-        border: 1px dotted black; 
+  margin-top: 60px;
+  padding: 10px;
+  .card {
+    position: relative;
+    border-radius: 14px;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 8px;
+    .boxTop {
+      border-radius: 21px;
+      padding: 7px 3px;
+      background-color: var(--bg-white);
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      .right, .left {
+        flex-basis: 5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .left {
+        border-radius: 100%;
+        padding: 5px;
+        border: 1px solid var(--my-text);
+        opacity: 0.5;
+      }
+      .right {
+        font-size: 35px;
+        color: var(--my-success);
+      }
+      .center {
+        flex-basis: 70%;
+        font-size: 12px;
       }
     }
-    
-    form button, .modal button {
-      margin-top: 16px;
-      color: white;
-      border-style: none;
-      border-radius: 4px;
-      background-color: #007bff;
-      padding: 8px 24px;
+    .result {
+      margin-top: 125px;
+      margin-left: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      height: 30px;
+      width: 70px;
+      background-color: var(--bg-white);
     }
-
-    .modal {
-      top: 50px;
-      left: 0px;
-      bottom: 0px;
-      right: 0px;
+    .tag {
+      border-top-right-radius: 18px;
       position: absolute;
-      padding: 16px;
-      background-color: white;
+      bottom: -1px;
+      left: -1px;
+      padding: 5px;
+      background-color: var(--bg-white);
+      &::after {
+        width: 20px;
+        height: 20px;
+        content: '';
+        position: absolute;
+        background-color: transparent;
+        top: 25px;
+        right: -20px;
+        border-bottom-left-radius: 10px;
+        box-shadow: -4px 3px var(--bg-white);
+      }
+      
+      &::before {
+        content: '';
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        background-color: transparent;
+        top: -20px;
+        left: 1px;
+        border-bottom-left-radius: 0.700rem;
+        box-shadow: -6px 4px var(--bg-white);
+      }
+      .btn {
+        display: inline-block;
+        background-color: var(--my-success);
+        color: white;
+        font-weight: bold;
+        padding: 10px 75px;
+        border-style: none;
+        border-radius: 21px;
+      }
     }
+  }
 `;

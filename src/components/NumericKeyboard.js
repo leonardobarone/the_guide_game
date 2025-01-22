@@ -45,7 +45,7 @@ const NumericKeyboard = ({ sendDataToParent, rispostaCorretta }) => {
 
     const numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'indietro', 'azzera']; 
     return <>
-            <h6>CURRENT NUMBER = {numero}</h6>
+            {/* <h6>CURRENT NUMBER = {numero}</h6> */}
         <Wrapper>
             {
                 numbers.map((number, index) => {
