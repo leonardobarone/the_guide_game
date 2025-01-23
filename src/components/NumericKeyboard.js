@@ -101,7 +101,7 @@ const Wrapper = styled.div`
                 font-size: 25px;
                 color: var(--my-text);
                 span {
-                    opacity: 0.5;
+                    opacity: 0.3;
                 }
             }
             /* &:nth-child(3n) {

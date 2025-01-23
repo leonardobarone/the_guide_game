@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Mappa from "./pages/Mappa";
 import Account from "./pages/Account";
-import Obiettivi from "./pages/Obiettivi";
+import Task from "./pages/navbar/Task";
 import Regole from "./pages/Regole";
 import Tappe from "./pages/Tappe";
 import Quiz from "./pages/Quiz";
@@ -25,7 +25,7 @@ function App() {
           <Route path="/mappa" element={<Mappa />} />
           <Route path="/regole" element={<Regole />} />
           <Route path="/account" element={<Account />} />
-          <Route path="/obiettivi" element={<Obiettivi />} />
+          <Route path="/obiettivi" element={<Task />} />
           <Route path="/tappe" element={<Tappe />} />
           
 

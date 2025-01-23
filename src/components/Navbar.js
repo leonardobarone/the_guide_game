@@ -95,7 +95,7 @@ const Wrapper = styled.nav`
             transition: 0.5s;
             text-align: center;
             color: var(--my-text);
-            opacity: 0.5;
+            opacity: 0.3;
           }
            .text {
             position: absolute;
