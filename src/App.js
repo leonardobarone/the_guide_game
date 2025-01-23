@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Mappa from "./pages/Mappa";
-import Account from "./pages/Account";
+import Account from "./pages/navbar/Account";
 import Task from "./pages/navbar/Task";
 import Regole from "./pages/Regole";
-import Tappe from "./pages/Tappe";
+import Place from "./pages/navbar/Place";
 import Quiz from "./pages/Quiz";
 import Error from "./pages/Error";
 import Header from "./components/Header";
@@ -24,9 +24,9 @@ function App() {
           {/* Navbar */}
           <Route path="/mappa" element={<Mappa />} />
           <Route path="/regole" element={<Regole />} />
-          <Route path="/account" element={<Account />} />
+          <Route path="/profilo" element={<Account />} />
           <Route path="/obiettivi" element={<Task />} />
-          <Route path="/tappe" element={<Tappe />} />
+          <Route path="/tappe" element={<Place />} />
           
 
           <Route path="/tappe/:id" element={<SingleTappa />} />

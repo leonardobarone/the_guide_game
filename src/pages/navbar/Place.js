@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import { Link } from "react-router-dom";
-import places from "../utils/places";
+import places from "../../utils/places";
 
-const Tappe = () => {
+const Place = () => {
     return <Wrapper style={{marginTop: '50px', marginBottom: '75px',}}>
       {places.map((place) => {
         return <div key={place.id} className='containerCard'>
@@ -20,7 +20,7 @@ const Tappe = () => {
     </Wrapper>
   }
   
-  export default Tappe;
+  export default Place;
   
   const Wrapper = styled.main`
 

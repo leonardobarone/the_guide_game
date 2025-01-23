@@ -9,7 +9,7 @@ const links = [
     { 
         'id' : "1",
         'text' : 'Account', 
-        'path' : '/account',
+        'path' : '/profilo',
         'icon' : MdAccountCircle
     },
     { 
@@ -26,7 +26,7 @@ const links = [
     },
     { 
         'id' : "4",
-        'text' : 'Tappe', 
+        'text' : 'Place', 
         'path' : '/tappe',
         'icon' : FaCompass
     },
