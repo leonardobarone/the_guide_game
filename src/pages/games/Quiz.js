@@ -1,7 +1,7 @@
-import NumericKeyboard from '../components/NumericKeyboard';
+import NumericKeyboard from '../../components/NumericKeyboard';
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { useGlobalContext } from '../context';
+import { useGlobalContext } from '../../context';
 import { IoIosHelpCircle } from "react-icons/io";
 import { MdOutlineArrowBack } from "react-icons/md";
 
@@ -27,7 +27,7 @@ const Quiz = ({ bgImage, correctAnswer }) => {
   useEffect(()=> {
     const newArray = [...cards];
     if (dataFromChild === correctAnswer) {
-      newArray[newArray.length - 1].sbloccato = true;
+      newArray[newArray.length - 1].unblocked = true;
       setCards(newArray);
       setModale(true);
       setIsWin(true);

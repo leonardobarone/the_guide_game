@@ -15,10 +15,10 @@ const Task = () => {
             return (
               <div key={card.id} className="card">
                 <div className="body">
-                  <img src={card.sbloccato ? card.img : 'https://img.freepik.com/free-vector/padlock-coloured-outline_78370-548.jpg?semt=ais_hybrid'} alt="" />
+                  <img src={card.unblocked ? card.img : 'https://img.freepik.com/free-vector/padlock-coloured-outline_78370-548.jpg?semt=ais_hybrid'} alt="" />
                   <div className="tag">
-                    <div style={{backgroundColor: `${card.sbloccato ? 'var(--success-bootstrap)' : 'var(--danger-bootstrap)'}`}} className="inside">
-                      {card.sbloccato ? <FaLockOpen /> : <FaLock />}
+                    <div style={{backgroundColor: `${card.unblocked ? 'var(--success-bootstrap)' : 'var(--danger-bootstrap)'}`}} className="inside">
+                      {card.unblocked ? <FaLockOpen /> : <FaLock />}
                     </div>
                   </div>
                   <div className="title">

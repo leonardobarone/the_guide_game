@@ -16,73 +16,73 @@ const dbCards = [
         'id' : '1',
         'title' : 'Borboni',
         'img' : borboni,
-        'sbloccato' : true
+        'unblocked' : true
     },
     {
         'id' : '2',
         'title' : 'Elsa Morante',
         'img' : elsa,
-        'sbloccato' : true
+        'unblocked' : true
     },
     {
         'id' : '3',
         'title' : 'Giovanni da Procida',
         'img' : giovanni,
-        'sbloccato' : true
+        'unblocked' : true
     },
     {
         'id' : '4',
         'title' : 'Graziella',
         'img' : graziella,
-        'sbloccato' : true
+        'unblocked' : true
     },
     {
         'id' : '5',
         'title' : 'Innico D\'Avalos',
         'img' : innico,
-        'sbloccato' : true
+        'unblocked' : true
     },
     {
         'id' : '6',
         'title' : 'Madonnina',
         'img' : madonnina,
-        'sbloccato' : true
+        'unblocked' : true
     },
     {
         'id' : '7',
         'title' : 'Micenei',
         'img' : micenei,
-        'sbloccato' : true
+        'unblocked' : true
     },
     {
         'id' : '8',
         'title' : 'Mimante',
         'img' : mimante,
-        'sbloccato' : true
+        'unblocked' : true
     },
     {
         'id' : '9',
         'title' : 'San Michele Arcangelo',
         'img' : patrono,
-        'sbloccato' : true
+        'unblocked' : true
     },
     {
         'id' : '10',
         'title' : 'Il Postino',
         'img' : postino,
-        'sbloccato' : true
+        'unblocked' : true
     },
     {
         'id' : '11',
         'title' : 'Processione del Venerdì Santo',
         'img' : processione,
-        'sbloccato' : true
+        'unblocked' : true
     },
     {
         'id' : '12',
         'title' : 'Antonio Scialoja',
         'img' : scialoja,
-        'sbloccato' : false
+        'unblocked' : false
     },
 ];
 

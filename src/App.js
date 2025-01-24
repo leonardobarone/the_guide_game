@@ -4,7 +4,7 @@ import Account from "./pages/navbar/Account";
 import Task from "./pages/navbar/Task";
 import Regole from "./pages/Regole";
 import Place from "./pages/navbar/Place";
-import Quiz from "./pages/Quiz";
+import Quiz from "./pages/games/Quiz";
 import Error from "./pages/Error";
 import Header from "./components/Header";
 import Navbar from './components/Navbar';

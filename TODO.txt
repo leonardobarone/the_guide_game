@@ -1,1 +1,8 @@
 key prop in NumericKeyboard
+capire come fare isLoading
+
+
+
+// PROSSIMO STEP
+-> completare i quiz
+-> fare modale per la vittoria
