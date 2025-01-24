@@ -108,6 +108,7 @@ export default Quiz;
 
 const Wrapper = styled.main`
   margin-top: 60px;
+  margin-bottom: 195.4px;
   padding: 10px;
   height: calc(100vh - 255.4px);
   .card {
