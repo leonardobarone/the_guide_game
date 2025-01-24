@@ -17,11 +17,11 @@ const Quiz = ({ istructions, bgColor, correctAnswer, children }) => {
     setDataFromChild(data);
   }
 
-
+  
   // const [numero, setNumero] = useState('');
   const [modale, setModale] = useState(false);  
   const [isWin, setIsWin] = useState(false);  
-
+  
 
   
   useEffect(()=> {
@@ -110,7 +110,7 @@ const Wrapper = styled.main`
   margin-top: 60px;
   margin-bottom: 195.4px;
   padding: 10px;
-  height: calc(100vh - 255.4px);
+  height: calc(${window.innerHeight} - 255.4px);
   .card {
     position: relative;
     border-radius: 14px;
