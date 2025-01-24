@@ -5,7 +5,7 @@ import { useGlobalContext } from '../../context';
 import { IoIosHelpCircle } from "react-icons/io";
 import { MdOutlineArrowBack } from "react-icons/md";
 
-const Quiz = ({ bgImage, correctAnswer }) => {
+const Quiz = ({ istructions, bgColor, correctAnswer, children }) => {
 
   const {setCards, cards} = useGlobalContext();
 
@@ -52,27 +52,25 @@ const Quiz = ({ bgImage, correctAnswer }) => {
   // }
 
   return <Wrapper>
-    <div className="card" style={{backgroundImage : `url(${bgImage})`}}>
+    <div className="card" style={{backgroundColor : `${bgColor}`}}>
       <div className="boxTop">
         <div className="left">
           <MdOutlineArrowBack />
         </div>
         <div className="center">
-          Conta il numero dei merletti, moltiplicalo per il numero degli archi e per 8. 
+          {istructions}
         </div>
         <div className="right">
           <IoIosHelpCircle />
         </div>
       </div>
-      <div className="result">
-        {dataFromChild ? dataFromChild : '...'}
-      </div>
+      { children }
       <div className="tag">
         <button className='btn'>Prova</button>
       </div>
     </div>
     {/* <div style={{marginTop: '50px', display: 'flex', flexDirection: 'column', width: '100%', overflow: 'scroll', height: 'calc(100vh - 50px)', position: 'relative'}}>
-      <img className='quiz' src={bgImage} alt="" />
+      <img className='quiz' src={bgColor} alt="" />
       <h5>CURRENT NUMBER = {dataFromChild}</h5>
       <button className="btn">Prova</button> */}
       {/* <form action="">
@@ -108,13 +106,15 @@ export default Quiz;
 // IMPORTANTE NELL'INPUT!!!!!!!!!!!!
 // onChange={(e) => setNome(e.target.value)} 
 
-const Wrapper = styled.main`  
+const Wrapper = styled.main`
   margin-top: 60px;
+  margin-bottom: 210px;
   padding: 10px;
+  height: calc(100vh - 271px);
   .card {
     position: relative;
     border-radius: 14px;
-    height: 400px;
+    height: 100%;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -146,17 +146,6 @@ const Wrapper = styled.main`
         flex-basis: 70%;
         font-size: 12px;
       }
-    }
-    .result {
-      margin-top: 125px;
-      margin-left: 25px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 10px;
-      height: 30px;
-      width: 70px;
-      background-color: var(--bg-white);
     }
     .tag {
       border-top-right-radius: 18px;

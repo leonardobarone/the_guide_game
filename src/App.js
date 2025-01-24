@@ -11,8 +11,9 @@ import Navbar from './components/Navbar';
 import SingleTappa from "./pages/SingleTappa";
 import Home from "./pages/Home";
 
-import quiz from './images/quiz.png';
-import secondQuiz from './images/secondQuiz.jpg';
+import cannon from './images/games/cannon.png';
+import lace from './images/games/lace.png';
+import arch from './images/games/arch.png'
 
 function App() {
   return (
@@ -21,19 +22,35 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           
-          {/* Navbar */}
+          {/* Collegamenti Navbar */}
           <Route path="/mappa" element={<Mappa />} />
           <Route path="/regole" element={<Regole />} />
           <Route path="/profilo" element={<Account />} />
           <Route path="/obiettivi" element={<Task />} />
           <Route path="/tappe" element={<Place />} />
+            <Route path="/tappe/:id" element={<SingleTappa />} />
           
 
-          <Route path="/tappe/:id" element={<SingleTappa />} />
+
+          {/* Quiz Palazzo Merlato */}
+          <Route path="/quiz" element={<Quiz istructions={'Conta il numero dei merletti, moltiplicalo per il numero degli archi e poi per 8!'} bgColor={'#DD6C70'} correctAnswer={'2968'}>
+            <div style={{height: 'calc(100% - 95px)', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+              <img width={75} src={arch} alt="" />
+              <span style={{fontWeight: 'bold', fontSize: '30px', marginLeft: '10px'}}>X</span>
+              <img width={75} src={lace} alt="" />
+              <span style={{fontWeight: 'bold', fontSize: '30px',}}>=</span>
+            </div>
+          </Quiz>} />
+          
 
 
-          <Route path="/quiz" element={<Quiz bgImage={quiz} correctAnswer={'2968'} />} />
-          <Route path="/secondQuiz" element={<Quiz bgImage={secondQuiz} correctAnswer={'1785'} />} />
+          
+          {/* Quiz Belvedere Cannoni */}
+          <Route path="/secondQuiz" element={<Quiz istructions={'In che anno è stato costruito il cannone?'} bgColor={'#9CC4F8'} correctAnswer={'1785'}>
+            <div style={{height: 'calc(100% - 95px)', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+              <img width={150} src={cannon} alt="" />
+            </div>
+          </Quiz>} />
 
 
           

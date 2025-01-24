@@ -47,6 +47,11 @@ const NumericKeyboard = ({ sendDataToParent, rispostaCorretta }) => {
     return <>
             {/* <h6>CURRENT NUMBER = {numero}</h6> */}
         <Wrapper>
+            <div className="outsideInput">
+                <div className="insideInput">
+                    <span>{numero ? numero : '...'}</span>
+                </div>
+            </div>
             {
                 numbers.map((number, index) => {
                     let view = number;
@@ -83,6 +88,27 @@ const Wrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
+    .outsideInput {
+        flex-basis: 100%;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        padding: 3px 6px 6px 6px;
+    }
+    .insideInput {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--bg-white);
+        padding: 10px 8px;
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        color: var(--my-text);
+        span {
+            opacity: 0.3;
+        }
+    }
     .inner {
         flex-basis: 25%;
         display: flex;
