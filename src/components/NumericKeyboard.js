@@ -93,7 +93,7 @@ const Wrapper = styled.div`
         border-radius: 10px;
         display: flex;
         justify-content: center;
-        padding: 3px 6px 6px 6px;
+        padding: 0px 6px 6px 6px;
     }
     .insideInput {
         display: flex;
@@ -123,7 +123,7 @@ const Wrapper = styled.div`
                 background-color: var(--bg-white);
                 border-style: none;
                 border-radius: 10px;
-                padding: 10px 0px;
+                padding: 8px 0px;
                 font-size: 25px;
                 color: var(--my-text);
                 span {
