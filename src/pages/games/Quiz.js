@@ -110,7 +110,7 @@ const Wrapper = styled.main`
   margin-top: 60px;
   margin-bottom: 195.4px;
   padding: 10px;
-  height: calc(${window.innerHeight} - 255.4px);
+  height: calc(${window.innerHeight}px - 255.4px);
   .card {
     position: relative;
     border-radius: 14px;
