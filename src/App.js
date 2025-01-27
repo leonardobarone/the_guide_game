@@ -12,8 +12,8 @@ import SingleTappa from "./pages/SingleTappa";
 import Home from "./pages/Home";
 
 import cannon from './images/games/cannon.png';
-import lace from './images/games/lace.png';
-import arch from './images/games/arch.png'
+import lace from './images/games/lace.svg';
+import arch from './images/games/arch.svg'
 
 function App() {
   return (
@@ -35,10 +35,9 @@ function App() {
           {/* Quiz Palazzo Merlato */}
           <Route path="/quiz" element={<Quiz istructions={'Conta il numero dei merletti, moltiplicalo per il numero degli archi e poi per 8!'} bgColor={'#DD6C70'} correctAnswer={'2968'}>
             <div style={{height: 'calc(100% - 95px)', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-              <img width={75} src={arch} alt="" />
-              <span style={{fontWeight: 'bold', fontSize: '30px', marginLeft: '10px'}}>X</span>
-              <img width={75} src={lace} alt="" />
-              <span style={{fontWeight: 'bold', fontSize: '30px',}}>=</span>
+              <img width={90} src={arch} alt="" />
+              <span style={{fontWeight: 'bold', fontSize: '45px', marginLeft: '10px', color: 'white'}}>x</span>
+              <img width={90} src={lace} alt="" />
             </div>
           </Quiz>} />
           
