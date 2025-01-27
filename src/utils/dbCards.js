@@ -1,15 +1,15 @@
-import borboni from '../images/cards/borboni.png';
-import elsa from '../images/cards/elsa.png';
-import giovanni from '../images/cards/giovanni.png';
-import graziella from '../images/cards/graziella.png';
-import innico from '../images/cards/innico.png';
-import madonnina from '../images/cards/madonnina.png';
-import micenei from '../images/cards/micenei.png';
-import mimante from '../images/cards/mimante.png';
-import patrono from '../images/cards/patrono.png';
-import postino from '../images/cards/postino.png';
-import processione from '../images/cards/processione.png';
-import scialoia from '../images/cards/scialoia.png';
+import borboni from '../images/cards/borboni.webp';
+import elsa from '../images/cards/elsa.webp';
+import giovanni from '../images/cards/giovanni.webp';
+import graziella from '../images/cards/graziella.webp';
+import innico from '../images/cards/innico.webp';
+import madonnina from '../images/cards/madonnina.webp';
+import micenei from '../images/cards/micenei.webp';
+import mimante from '../images/cards/mimante.webp';
+import patrono from '../images/cards/patrono.webp';
+import postino from '../images/cards/postino.webp';
+import processione from '../images/cards/processione.webp';
+import scialoia from '../images/cards/scialoia.webp';
 
 const dbCards = [
     {

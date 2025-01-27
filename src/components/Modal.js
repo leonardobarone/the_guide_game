@@ -2,7 +2,7 @@
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
 
-const Modal = ({modal, setModal, victory}) => {
+const Modal = ({modal, setModal, victory, help}) => {
     const navigate = useNavigate();
     return (
       <Wrapper>

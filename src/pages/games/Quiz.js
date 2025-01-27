@@ -4,6 +4,7 @@ import NumericKeyboard from '../../components/NumericKeyboard';
 // HOOKS
 import { useState } from 'react';
 import { useGlobalContext } from '../../context';
+import { useNavigate } from 'react-router-dom';
 // STILE
 import styled from 'styled-components';
 // LOGHI
@@ -13,6 +14,7 @@ import { MdOutlineArrowBack } from "react-icons/md";
 const Quiz = ({ istructions, bgColor, correctAnswer, children }) => {
 
   // HOOKS
+  const navigate = useNavigate();
   const {setCards, cards} = useGlobalContext();
   const [dataFromChild, setDataFromChild] = useState("");  
   const [modal, setModal] = useState(false);  
@@ -61,7 +63,7 @@ const Quiz = ({ istructions, bgColor, correctAnswer, children }) => {
     <div className="card" style={{backgroundColor : `${bgColor}`}}>
       <div className="boxTop">
         <div className="left">
-          <MdOutlineArrowBack />
+          <MdOutlineArrowBack onClick={() => navigate('/')} />
         </div>
         <div className="center">
           {istructions}
