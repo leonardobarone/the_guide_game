@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
-import places from "../utils/places";
+import places from "../../utils/places";
 
-const SingleTappa = () => {
+const ItemPlace = () => {
   const {id} = useParams();
   const oggettoTrovato = places.find(oggetto => oggetto.id === id);
   
@@ -13,4 +13,4 @@ const SingleTappa = () => {
   )
 }
 
-export default SingleTappa;
+export default ItemPlace;

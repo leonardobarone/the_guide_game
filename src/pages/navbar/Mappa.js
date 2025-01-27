@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import { APIProvider, Map, AdvancedMarker, InfoWindow } from '@vis.gl/react-google-maps';
 import { Link } from 'react-router-dom';
-import games from '../utils/games';
-import icon from "../images/icon.png";
+import games from '../../utils/games';
+import icon from "../../images/icon.png";
 import { useState } from 'react';
 
 const Mappa = () => {

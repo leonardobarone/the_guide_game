@@ -1,8 +1,9 @@
 // STILE
 import styled from 'styled-components';
+import { useNavigate } from 'react-router-dom';
 
 const Modal = ({modal, setModal, victory}) => {
-
+    const navigate = useNavigate();
     return (
       <Wrapper>
         <div className={modal ? 'popup active' : 'popup'} id="popup"> 
@@ -12,7 +13,7 @@ const Modal = ({modal, setModal, victory}) => {
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum ratione voluptatem quos exercitationem! Quae omnis aliquam aliquid, porro adipisci ratione necessitatibus.</p>
                 <div className="controls">
                     <button onClick={() => setModal(!modal)} className='close-btn'>Close</button>
-                    <button onClick={() => setModal(!modal)} className='submit-btn'>Submit</button>
+                    <button onClick={() => navigate('/carte')} className='submit-btn'>Vedi gioco</button>
                 </div>
             </div>
         </div>

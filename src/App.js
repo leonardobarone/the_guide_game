@@ -1,14 +1,14 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Mappa from "./pages/Mappa";
+import Mappa from "./pages/navbar/Mappa";
 import Account from "./pages/navbar/Account";
-import Task from "./pages/navbar/Task";
-import Regole from "./pages/Regole";
+import Card from "./pages/navbar/Card";
+import Rule from "./pages/navbar/Rule";
 import Place from "./pages/navbar/Place";
 import Quiz from "./pages/games/Quiz";
 import Error from "./pages/Error";
 import Header from "./components/Header";
 import Navbar from './components/Navbar';
-import SingleTappa from "./pages/SingleTappa";
+import ItemPlace from "./pages/navbar/ItemPlace";
 import Home from "./pages/Home";
 import Debug from "./pages/Debug";
 
@@ -25,11 +25,11 @@ function App() {
           
           {/* Collegamenti Navbar */}
           <Route path="/mappa" element={<Mappa />} />
-          <Route path="/regole" element={<Regole />} />
+          <Route path="/regole" element={<Rule />} />
           <Route path="/profilo" element={<Account />} />
-          <Route path="/obiettivi" element={<Task />} />
-          <Route path="/tappe" element={<Place />} />
-            <Route path="/tappe/:id" element={<SingleTappa />} />
+          <Route path="/carte" element={<Card />} />
+          <Route path="/luoghi" element={<Place />} />
+            <Route path="/luoghi/:id" element={<ItemPlace />} />
           
 
 

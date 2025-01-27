@@ -4,7 +4,7 @@ import { FaLock } from "react-icons/fa";
 import { FaLockOpen } from "react-icons/fa";
 
 
-const Task = () => {
+const Card = () => {
     
   const {cards} = useGlobalContext();
 
@@ -34,7 +34,7 @@ const Task = () => {
     )
   }
   
-  export default Task;
+  export default Card;
   
   const Wrapper = styled.section`
 

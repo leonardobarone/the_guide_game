@@ -8,7 +8,7 @@ import { MdAccountCircle } from "react-icons/md";
 const links = [
     { 
         'id' : "1",
-        'text' : 'Account', 
+        'text' : 'Profilo', 
         'path' : '/profilo',
         'icon' : MdAccountCircle
     },
@@ -26,14 +26,14 @@ const links = [
     },
     { 
         'id' : "4",
-        'text' : 'Place', 
-        'path' : '/tappe',
+        'text' : 'Luoghi', 
+        'path' : '/luoghi',
         'icon' : FaCompass
     },
     { 
         'id' : "5",
-        'text' : 'Obiettivi', 
-        'path' : '/obiettivi',
+        'text' : 'Carte', 
+        'path' : '/carte',
         'icon' : GiOpenTreasureChest
     },
   ];
