@@ -9,7 +9,7 @@ import mimante from '../images/cards/mimante.png';
 import patrono from '../images/cards/patrono.png';
 import postino from '../images/cards/postino.png';
 import processione from '../images/cards/processione.png';
-import scialoja from '../images/cards/scialoja.png';
+import scialoia from '../images/cards/scialoia.png';
 
 const dbCards = [
     {
@@ -80,8 +80,8 @@ const dbCards = [
     },
     {
         'id' : '12',
-        'title' : 'Antonio Scialoja',
-        'img' : scialoja,
+        'title' : 'Antonio Scialoia',
+        'img' : scialoia,
         'unblocked' : false
     },
 ];
