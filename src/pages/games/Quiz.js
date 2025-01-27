@@ -1,5 +1,5 @@
 import NumericKeyboard from '../../components/NumericKeyboard';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import styled from 'styled-components';
 import { useGlobalContext } from '../../context';
 import { IoIosHelpCircle } from "react-icons/io";
@@ -13,6 +13,7 @@ const Quiz = ({ istructions, bgColor, correctAnswer, children }) => {
   let rispostaCorretta = correctAnswer;
   // debug
   const [dataFromChild, setDataFromChild] = useState("");
+
   function handleDataFromChild(data) {
     setDataFromChild(data);
   }
@@ -24,32 +25,36 @@ const Quiz = ({ istructions, bgColor, correctAnswer, children }) => {
   
 
   
-  useEffect(()=> {
+  // useEffect(()=> {
+  //   const newArray = [...cards];
+  //   if (dataFromChild === correctAnswer) {
+  //     newArray[newArray.length - 1].unblocked = true;
+  //     setCards(newArray);
+  //     setModale(true);
+  //     setIsWin(true);
+  //     setDataFromChild('')
+  //   } else if (dataFromChild.length === 4) {
+  //     setIsWin(false);
+  //     setModale(true)
+  //     setDataFromChild('')
+  //   }
+  // }, [dataFromChild, correctAnswer, cards, setCards])
+
+
+  const prova = () => {
     const newArray = [...cards];
     if (dataFromChild === correctAnswer) {
       newArray[newArray.length - 1].unblocked = true;
       setCards(newArray);
-      setModale(true);
+      setDataFromChild('');
       setIsWin(true);
-      setDataFromChild('')
-    } else if (dataFromChild.length === 4) {
+      setModale(true);
+    } else if (dataFromChild.length !== 0) {
+      setDataFromChild('');
       setIsWin(false);
-      setModale(true)
-      setDataFromChild('')
+      setModale(true); 
     }
-  }, [dataFromChild, correctAnswer, cards, setCards])
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   setModale(true);
-  //   if (numero === correctAnswer) {
-  //     setNumero('');
-  //     setIsWin(true);
-  //   } else {
-  //     setNumero('');
-  //     setIsWin(false);
-  //   }
-  // }
+  } 
 
   return <Wrapper>
     <div className="card" style={{backgroundColor : `${bgColor}`}}>
@@ -66,8 +71,14 @@ const Quiz = ({ istructions, bgColor, correctAnswer, children }) => {
       </div>
       { children }
       <div className="tag">
-        <button className='btn'>Prova</button>
+        <button onClick={prova} className='btn'>Prova</button>
       </div>
+        {/* MODALE  */}
+      <div style={modale ? {position: 'absolute', top: '0px', bottom: '0px', left: '0px', right: '0px', padding: '35px', backgroundColor: 'white', border: '1px solid black', margin: '45px'} : {display: 'none'}} className="modal">
+        <div>{isWin ? 'HAI INDOVINATO' : 'HAI SBAGLIATO'}</div>
+        {modale && <button style={{backgroundColor: 'blue', padding: '5px', marginTop: '10px'}} onClick={() => setModale(!modale)}>chiudi</button>}
+      </div>
+    
     </div>
     {/* <div style={{marginTop: '50px', display: 'flex', flexDirection: 'column', width: '100%', overflow: 'scroll', height: 'calc(100vh - 50px)', position: 'relative'}}>
       <img className='quiz' src={bgColor} alt="" />
@@ -78,13 +89,11 @@ const Quiz = ({ istructions, bgColor, correctAnswer, children }) => {
         <br />
         <button type="submit" onClick={handleSubmit}>Prova</button>      
       </form> */}
-      {/* <div style={modale ? {display: 'block'} : {display: 'none'}} className="modal">
-        <div>{isWin ? 'HAI INDOVINATO' : 'HAI SBAGLIATO'}</div>
-        {
-          isWin ?  : <button onClick={()=> setModale(false)}>TORNA INDIETRO</button>
-        }
-      </div> */}
-      <NumericKeyboard sendDataToParent={handleDataFromChild} rispostaCorretta={rispostaCorretta} />        
+      <NumericKeyboard 
+        sendDataToParent={handleDataFromChild} 
+        rispostaCorretta={rispostaCorretta}
+        getModale={modale}
+      />        
   </Wrapper>
 }
 

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { IoMdBackspace } from "react-icons/io";
 import { MdDelete } from "react-icons/md";
 
-const NumericKeyboard = ({ sendDataToParent, rispostaCorretta }) => {
+const NumericKeyboard = ({ sendDataToParent, getModale }) => {
     
     // debug
 
@@ -11,16 +11,30 @@ const NumericKeyboard = ({ sendDataToParent, rispostaCorretta }) => {
     
     const handleButtonClick = (value) => {
         let limit = numero.length + 1;
+        
         if (value === 'azzera' && numero !== '') {
             setNumero('');
-            sendDataToParent('')
-        } else if (value === 'indietro' && numero !== '') {;
+            sendDataToParent('');
+        } else if (value === 'indietro' && numero !== '') {
             setNumero(numero.slice(0, -1));
             sendDataToParent(numero.slice(0, -1));
         } else if (limit < 5 && value !== 'azzera' && value !== 'indietro') {
-            setNumero(prevNumero => prevNumero + value);
-            sendDataToParent(prevNumero => prevNumero + value);
-        } 
+            setNumero(prev => prev + value);
+            sendDataToParent(prev => prev + value);
+        }
+
+        
+        // if (value === 'azzera' && numero !== '') {
+        //     setNumero('');
+        //     sendDataToParent('')
+        // } else if (value === 'indietro' && numero !== '') {;
+        //     setNumero(numero.slice(0, -1));
+        //     sendDataToParent(numero.slice(0, -1));
+        // } else if (limit < 5 && value !== 'azzera' && value !== 'indietro') {
+        //     setNumero(prevNumero => prevNumero + value);
+        //     sendDataToParent(prevNumero => prevNumero + value);
+        // }
+
         // if (value === 'azzera') {
         //     alert('SONO QUI')
         //     setNumero('0');
@@ -38,10 +52,10 @@ const NumericKeyboard = ({ sendDataToParent, rispostaCorretta }) => {
     }
 
     useEffect(() => {
-        if (numero === rispostaCorretta || numero.length === 4) {
-            setNumero('')            
+        if (getModale) {
+            setNumero('')
         }
-    }, [numero, rispostaCorretta])
+    }, [getModale])
 
     const numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'indietro', 'azzera']; 
     return <>
