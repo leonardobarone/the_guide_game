@@ -47,7 +47,7 @@ function App() {
           {/* Quiz Belvedere Cannoni */}
           <Route path="/secondQuiz" element={<Quiz istructions={'In che anno è stato costruito il cannone?'} bgColor={'#9CC4F8'} correctAnswer={'1785'}>
             <div style={{height: 'calc(100% - 95px)', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-              <img width={150} src={cannon} alt="" />
+              <img width={90} src={cannon} alt="" />
             </div>
           </Quiz>} />
 
