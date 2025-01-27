@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 import { APIProvider, Map, AdvancedMarker, InfoWindow } from '@vis.gl/react-google-maps';
 import { Link } from 'react-router-dom';
-import games from '../../utils/games';
+import { useGlobalContext } from "../../context";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { useState } from 'react';
 
 const Mappa = () => {
-  const [selectedPlace, setSelectedPlace] = useState(null)
+  const {games} = useGlobalContext();
+  const [selectedGame, setSelectedGame] = useState(null)
 
   return <Wrapper>
     <APIProvider 
@@ -22,23 +23,25 @@ const Mappa = () => {
       >
         {/* INIZIO CICLO */}
         {
-          games.map((place, item) => {
-            return <AdvancedMarker
-                position={place}
-                key={item}
-                onClick={()=> setSelectedPlace(place)}
-              >
-                <FaMapMarkerAlt style={{fontSize: '33px', color: '#EA4335'}} />
-                {selectedPlace && <InfoWindow
-                  headerContent={<h2>{selectedPlace.name}</h2>}
-                  position={selectedPlace} 
-                  onCloseClick={()=> setSelectedPlace(null)}
+          games.map((game, item) => {
+            if (game.unblocked === true) {
+              return null;
+            } else {
+              return <AdvancedMarker
+                  position={game}
+                  key={item}
+                  onClick={()=> setSelectedGame(game)}
                 >
-                  {selectedPlace.game && 
-                    <Link className='link' to={selectedPlace.game}>GIOCA</Link>
-                  }
-                </InfoWindow>}
-              </AdvancedMarker>
+                  <FaMapMarkerAlt style={{fontSize: '33px', color: '#EA4335'}} />
+                  {selectedGame && <InfoWindow
+                    headerContent={<h2>{selectedGame.name}</h2>}
+                    position={selectedGame} 
+                    onCloseClick={()=> setSelectedGame(null)}
+                  >
+                   <Link className='link' to={selectedGame.path}>GIOCA</Link>                    
+                  </InfoWindow>}
+                </AdvancedMarker>
+            }
               
           })
         }
