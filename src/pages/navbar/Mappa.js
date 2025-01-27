@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { APIProvider, Map, AdvancedMarker, InfoWindow } from '@vis.gl/react-google-maps';
 import { Link } from 'react-router-dom';
 import games from '../../utils/games';
-import icon from "../../images/icon.png";
+import { FaMapMarkerAlt } from "react-icons/fa";
 import { useState } from 'react';
 
 const Mappa = () => {
@@ -28,11 +28,7 @@ const Mappa = () => {
                 key={item}
                 onClick={()=> setSelectedPlace(place)}
               >
-                <img 
-                  width={50} 
-                  src={icon} 
-                  alt="icon place description" 
-                />
+                <FaMapMarkerAlt style={{fontSize: '33px', color: '#EA4335'}} />
                 {selectedPlace && <InfoWindow
                   headerContent={<h2>{selectedPlace.name}</h2>}
                   position={selectedPlace} 
