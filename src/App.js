@@ -10,6 +10,7 @@ import Header from "./components/Header";
 import Navbar from './components/Navbar';
 import SingleTappa from "./pages/SingleTappa";
 import Home from "./pages/Home";
+import Debug from "./pages/Debug";
 
 import cannon from './images/games/cannon.png';
 import lace from './images/games/lace.svg';
@@ -53,6 +54,8 @@ function App() {
 
 
           
+          <Route path="/debug" element={<Debug />} />
+
           <Route path="*" element={<Error />} />
         </Routes>
       <Navbar />
