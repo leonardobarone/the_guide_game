@@ -8,12 +8,12 @@ import { useState } from 'react';
 const Mappa = () => {
   const [selectedPlace, setSelectedPlace] = useState(null)
 
-  return <>
+  return <Wrapper>
     <APIProvider 
       apiKey={"AIzaSyA7zTeRL20KTZpxmmgoSyDIBUZqgdxW1xk"} // process.env.API_KEY
       > 
       <Map
-        style={{width: '100%', marginTop: '50px', marginBottom: '75px', height: 'calc(100vh - 125px)'}}
+        className='mappa'
         defaultCenter={{lat: 40.75791635986094, lng: 14.014870424568413}}
         defaultZoom={13.25}
         gestureHandling={'greedy'} // ??
@@ -35,9 +35,7 @@ const Mappa = () => {
                   onCloseClick={()=> setSelectedPlace(null)}
                 >
                   {selectedPlace.game && 
-                    <Button>
-                      <Link className='link' to={selectedPlace.game}>GIOCA</Link>
-                    </Button>
+                    <Link className='link' to={selectedPlace.game}>GIOCA</Link>
                   }
                 </InfoWindow>}
               </AdvancedMarker>
@@ -47,12 +45,17 @@ const Mappa = () => {
         {/* FINE CICLO */}
       </Map>      
     </APIProvider>
-  </>;
+  </Wrapper>;
 }
 
 export default Mappa;
 
-const Button = styled.div`
+const Wrapper = styled.main`
+  .mappa {
+    margin-top: 60px;
+    margin-bottom: 80px;
+    height: calc(100vh - 140px);
+  }
   .link {
     display: inline-block;
     color: white;
