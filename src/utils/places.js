@@ -21,92 +21,92 @@ const places = [
       'id' : "1",
       'name' : 'vivara', 
       'img' : vivara,
-      'sbloccato' : true
+      'unblocked' : true
     },
     { 
       'id' : "2",
       'name' : 'chiesa chiaiolella',
       'img' : diFronteSanGiuseppe,
-      'sbloccato' : true
+      'unblocked' : true
     },
     { 
       'id' : "3",
       'name' : 'belvedere elsa morante', 
       'img' : belvedereElsa,
-      'sbloccato' : true
+      'unblocked' : true
     },
     { 
       'id' : "4",
       'name' : 'san giacomo', 
       'img' : sanGiacomo,
-      'sbloccato' : true
+      'unblocked' : true
     },
     { 
       'id' : "5",
       'name' : 'chiesa san leonardo', 
       'img' : sanLeonardo,
-      'sbloccato' : true
+      'unblocked' : true
     },
     { 
       'id' : "6",
       'name' : 'chiesa madonna delle grazie', 
       'img' : piazzaMartiri,
-      'sbloccato' : true
+      'unblocked' : true
     },
     { 
       'id' : "7",
       'name' : 'santa margherita nuova', 
       'img' : cannoni,
-      'sbloccato' : false
+      'unblocked' : false
     },
     { 
       'id' : "8",
       'name' : 'palazzo d\'avalos', 
       'img' : piazzaArmi,
-      'sbloccato' : true
+      'unblocked' : true
     },
     { 
       'id' : "9",
       'name' : 'palazzo della cultura', 
       'img' : palazzoCultura,
-      'sbloccato' : true
+      'unblocked' : true
     },
     { 
       'id' : "10",
       'name' : 'abbazia di san michele arcangelo', 
       'img' : sanMichele,
-      'sbloccato' : true
+      'unblocked' : true
     },
     { 
       'id' : "11",
       'name' : 'marina corricella', 
       'img' : corricella,
-      'sbloccato' : true
+      'unblocked' : true
     },
     { 
       'id' : "12",
       'name' : 'Palazzo Merlato', 
       'img' : palazzoMerlato,
       'game' : '/quiz',
-      'sbloccato' : true
+      'unblocked' : true
     },
     { 
       'id' : "13",
       'name' : 'chiesa marina grande', 
       'img' : marinaChiesa,
-      'sbloccato' : true
+      'unblocked' : true
     },
     { 
       'id' : "14",
       'name' : 'faro', 
       'img' : faro,
-      'sbloccato' : true
+      'unblocked' : true
     },
     { 
       'id' : "15",
       'name' : 'pozzo vecchio', 
       'img' : cimitero,
-      'sbloccato' : true
+      'unblocked' : true
     },
   ];
   

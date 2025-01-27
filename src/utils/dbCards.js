@@ -34,7 +34,7 @@ const dbCards = [
         'id' : '4',
         'title' : 'Graziella',
         'img' : graziella,
-        'unblocked' : true
+        'unblocked' : false
     },
     {
         'id' : '5',
