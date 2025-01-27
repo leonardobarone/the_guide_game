@@ -46,13 +46,13 @@ margin-bottom: 80px;
   flex-wrap: wrap;
   align-content: flex-start;
   .card {
-      flex-basis: 50%;
-      .body {
-        padding: 7px;
-        width: 100%;
-        height: 100%;
-        position: relative;
-        .title {
+    flex-basis: 50%;
+    .body {
+      padding: 7px;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      .title {
           position: absolute;
           bottom: 12px;
           left: 12px;
@@ -110,7 +110,7 @@ margin-bottom: 80px;
           border-radius: 10px;
           display: block;
           width: 100%;
-          height: 100%;
+          height: 250px;
           object-fit: cover;
           object-position: center;
         }

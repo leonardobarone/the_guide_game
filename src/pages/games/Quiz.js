@@ -27,15 +27,26 @@ const Quiz = ({ istructions, bgColor, correctAnswer, children }) => {
   }
 
   
+  function unblockById(array, id) {
+        const index = array.findIndex(item => item.id === id);
+
+        if (index !== -1) {
+            array[index].unblocked = true;
+        }
+    return array;
+  }
 
 
 
   const prova = () => {
-    const newArray = [...cards];
-    
+    let id;
+    if (correctAnswer === '1785') {
+      id = '4';
+    } else if (correctAnswer === '2968') {
+      id = '6';
+    }
     if (dataFromChild === correctAnswer) {
-      newArray[newArray.length - 1].unblocked = true;
-      setCards(newArray);
+      setCards(unblockById(cards, id));
       setDataFromChild('');
       setVictory(true);
       setModal(true);

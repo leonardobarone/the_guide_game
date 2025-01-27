@@ -16,19 +16,19 @@ const dbCards = [
         'id' : '1',
         'title' : 'Borboni',
         'img' : borboni,
-        'unblocked' : true
+        'unblocked' : false
     },
     {
         'id' : '2',
         'title' : 'Elsa Morante',
         'img' : elsa,
-        'unblocked' : true
+        'unblocked' : false
     },
     {
         'id' : '3',
         'title' : 'Giovanni da Procida',
         'img' : giovanni,
-        'unblocked' : true
+        'unblocked' : false
     },
     {
         'id' : '4',
@@ -40,43 +40,43 @@ const dbCards = [
         'id' : '5',
         'title' : 'Innico D\'Avalos',
         'img' : innico,
-        'unblocked' : true
+        'unblocked' : false
     },
     {
         'id' : '6',
         'title' : 'Madonnina',
         'img' : madonnina,
-        'unblocked' : true
+        'unblocked' : false
     },
     {
         'id' : '7',
         'title' : 'Micenei',
         'img' : micenei,
-        'unblocked' : true
+        'unblocked' : false
     },
     {
         'id' : '8',
         'title' : 'Mimante',
         'img' : mimante,
-        'unblocked' : true
+        'unblocked' : false
     },
     {
         'id' : '9',
         'title' : 'San Michele Arcangelo',
         'img' : patrono,
-        'unblocked' : true
+        'unblocked' : false
     },
     {
         'id' : '10',
         'title' : 'Il Postino',
         'img' : postino,
-        'unblocked' : true
+        'unblocked' : false
     },
     {
         'id' : '11',
         'title' : 'Processione del Venerdì Santo',
         'img' : processione,
-        'unblocked' : true
+        'unblocked' : false
     },
     {
         'id' : '12',
