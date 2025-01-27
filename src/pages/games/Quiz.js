@@ -1,58 +1,48 @@
+// COMPONENTS
+import Modal from '../../components/Modal';
 import NumericKeyboard from '../../components/NumericKeyboard';
+// HOOKS
 import { useState } from 'react';
-import styled from 'styled-components';
 import { useGlobalContext } from '../../context';
+// STILE
+import styled from 'styled-components';
+// LOGHI
 import { IoIosHelpCircle } from "react-icons/io";
 import { MdOutlineArrowBack } from "react-icons/md";
 
 const Quiz = ({ istructions, bgColor, correctAnswer, children }) => {
 
+  // HOOKS
   const {setCards, cards} = useGlobalContext();
-
-
+  const [dataFromChild, setDataFromChild] = useState("");  
+  const [modal, setModal] = useState(false);  
+  const [victory, setVictory] = useState(false);  
+  
+  // PROPS
   let rispostaCorretta = correctAnswer;
-  // debug
-  const [dataFromChild, setDataFromChild] = useState("");
+
 
   function handleDataFromChild(data) {
     setDataFromChild(data);
   }
 
   
-  // const [numero, setNumero] = useState('');
-  const [modale, setModale] = useState(false);  
-  const [isWin, setIsWin] = useState(false);  
-  
 
-  
-  // useEffect(()=> {
-  //   const newArray = [...cards];
-  //   if (dataFromChild === correctAnswer) {
-  //     newArray[newArray.length - 1].unblocked = true;
-  //     setCards(newArray);
-  //     setModale(true);
-  //     setIsWin(true);
-  //     setDataFromChild('')
-  //   } else if (dataFromChild.length === 4) {
-  //     setIsWin(false);
-  //     setModale(true)
-  //     setDataFromChild('')
-  //   }
-  // }, [dataFromChild, correctAnswer, cards, setCards])
 
 
   const prova = () => {
     const newArray = [...cards];
+    
     if (dataFromChild === correctAnswer) {
       newArray[newArray.length - 1].unblocked = true;
       setCards(newArray);
       setDataFromChild('');
-      setIsWin(true);
-      setModale(true);
+      setVictory(true);
+      setModal(true);
     } else if (dataFromChild.length !== 0) {
       setDataFromChild('');
-      setIsWin(false);
-      setModale(true); 
+      setVictory(false);
+      setModal(true); 
     }
   } 
 
@@ -73,47 +63,19 @@ const Quiz = ({ istructions, bgColor, correctAnswer, children }) => {
       <div className="tag">
         <button onClick={prova} className='btn'>Prova</button>
       </div>
-        {/* MODALE  */}
-      <div style={modale ? {position: 'absolute', top: '0px', bottom: '0px', left: '0px', right: '0px', padding: '35px', backgroundColor: 'white', border: '1px solid black', margin: '45px'} : {display: 'none'}} className="modal">
-        <div>{isWin ? 'HAI INDOVINATO' : 'HAI SBAGLIATO'}</div>
-        {modale && <button style={{backgroundColor: 'blue', padding: '5px', marginTop: '10px'}} onClick={() => setModale(!modale)}>chiudi</button>}
-      </div>
-    
+        {/* MODAL  */}
+        {modal && <Modal modal={modal} setModal={setModal} victory={victory} />}    
     </div>
-    {/* <div style={{marginTop: '50px', display: 'flex', flexDirection: 'column', width: '100%', overflow: 'scroll', height: 'calc(100vh - 50px)', position: 'relative'}}>
-      <img className='quiz' src={bgColor} alt="" />
-      <h5>CURRENT NUMBER = {dataFromChild}</h5>
-      <button className="btn">Prova</button> */}
-      {/* <form action="">
-        <input onChange={(e) => setNumero(e.target.value)} value={numero} name="numero" type="text" />
-        <br />
-        <button type="submit" onClick={handleSubmit}>Prova</button>      
-      </form> */}
+      
       <NumericKeyboard 
         sendDataToParent={handleDataFromChild} 
         rispostaCorretta={rispostaCorretta}
-        getModale={modale}
+        modal={modal}
       />        
   </Wrapper>
 }
 
 export default Quiz;
-
-
-// for = htmlFor della label (corrisponde all'id) 
-
-// PRIMO MODO: NEL FORM onSubmit={function}
-// E POI LA FUNZIONE: 
-
-// SECONDO MODO OPPURE SUL BUTTON:
-// onClick={function}
-
-// LA FUNZIONE E' SEMPRE QUESTA: 
-// function (event)
-// event.preventDefault(); importante per aspettare
-
-// IMPORTANTE NELL'INPUT!!!!!!!!!!!!
-// onChange={(e) => setNome(e.target.value)} 
 
 const Wrapper = styled.main`
   margin-top: 60px;

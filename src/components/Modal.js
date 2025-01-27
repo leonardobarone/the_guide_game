@@ -1,26 +1,18 @@
-import { useState } from 'react';
+// STILE
 import styled from 'styled-components';
 
-const Modal = () => {
-
-
-    const [modal, setModal] = useState(false);
-
+const Modal = ({modal, setModal, victory}) => {
 
     return (
       <Wrapper>
-        <div className="center">
-            <button id="open-popup" onClick={()=> setModal(!modal)}>Open Popup</button>
-        </div>
-        {/*  */}
         <div className={modal ? 'popup active' : 'popup'} id="popup"> 
             <div className="overlay"></div>
             <div className="popup-content">
-                <h2>This is popup title</h2>
+                <h2>{victory ? 'Hai vinto' : 'Hai perso'}</h2>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum ratione voluptatem quos exercitationem! Quae omnis aliquam aliquid, porro adipisci ratione necessitatibus.</p>
                 <div className="controls">
-                    <button onClick={() => setModal(false)} className='close-btn'>Close</button>
-                    <button onClick={() => setModal(false)} className='submit-btn'>Submit</button>
+                    <button onClick={() => setModal(!modal)} className='close-btn'>Close</button>
+                    <button onClick={() => setModal(!modal)} className='submit-btn'>Submit</button>
                 </div>
             </div>
         </div>
@@ -39,11 +31,13 @@ const Wrapper = styled.div`
     }
 
     .popup {
+        z-index: 10;
         position: fixed;
         top: -100vh;
         left: 0px;
         width: 100%;
         height: 100%;
+        transition: top 0ms ease-in-out 300ms;
     }
     
     .popup .overlay {

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { IoMdBackspace } from "react-icons/io";
 import { MdDelete } from "react-icons/md";
 
-const NumericKeyboard = ({ sendDataToParent, getModale }) => {
+const NumericKeyboard = ({ sendDataToParent, modal }) => {
     
     // debug
 
@@ -52,10 +52,10 @@ const NumericKeyboard = ({ sendDataToParent, getModale }) => {
     }
 
     useEffect(() => {
-        if (getModale) {
+        if (modal) {
             setNumero('')
         }
-    }, [getModale])
+    }, [modal])
 
     const numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'indietro', 'azzera']; 
     return <>
@@ -63,7 +63,7 @@ const NumericKeyboard = ({ sendDataToParent, getModale }) => {
         <Wrapper>
             <div className="outsideInput">
                 <div className="insideInput">
-                    <span>{numero ? numero : '...'}</span>
+                    <span>{numero ? numero : '|'}</span>
                 </div>
             </div>
             {
@@ -111,10 +111,10 @@ const Wrapper = styled.div`
     }
     .insideInput {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         background-color: var(--bg-white);
-        padding: 10px 8px;
+        padding: 10px 20px;
         width: 100%;
         height: 100%;
         border-radius: 8px;
