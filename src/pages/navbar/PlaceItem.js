@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useGlobalContext } from "../../context";
 
-const ItemPlace = () => {
+const PlaceItem = () => {
   const {places} = useGlobalContext();
   const {id} = useParams();
   const oggettoTrovato = places.find(oggetto => oggetto.id === id);
@@ -14,4 +14,4 @@ const ItemPlace = () => {
   )
 }
 
-export default ItemPlace;
+export default PlaceItem;

@@ -1,6 +1,6 @@
 // COMPONENTS
 import Modal from '../../components/Modal';
-import NumericKeyboard from '../../components/NumericKeyboard';
+import KeyboardNumeric from '../../components/KeyboardNumeric';
 // HOOKS
 import { useState } from 'react';
 import { useGlobalContext } from '../../context';
@@ -83,7 +83,7 @@ const Quiz = ({ istructions, bgColor, correctAnswer, children }) => {
         {modal && <Modal modal={modal} setModal={setModal} victory={victory} />}    
     </div>
       
-      <NumericKeyboard 
+      <KeyboardNumeric 
         sendDataToParent={handleDataFromChild} 
         rispostaCorretta={rispostaCorretta}
         modal={modal}

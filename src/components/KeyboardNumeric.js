@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { IoMdBackspace } from "react-icons/io";
 import { MdDelete } from "react-icons/md";
 
-const NumericKeyboard = ({ sendDataToParent, modal }) => {
+const KeyboardNumeric = ({ sendDataToParent, modal }) => {
     
     // debug
 
@@ -89,7 +89,7 @@ const NumericKeyboard = ({ sendDataToParent, modal }) => {
     </>
 }
 
-export default NumericKeyboard;
+export default KeyboardNumeric;
 
 const Wrapper = styled.div`
     padding: 7px 0px;

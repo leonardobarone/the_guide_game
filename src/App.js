@@ -8,9 +8,10 @@ import Quiz from "./pages/games/Quiz";
 import Error from "./pages/Error";
 import Header from "./components/Header";
 import Navbar from './components/Navbar';
-import ItemPlace from "./pages/navbar/ItemPlace";
+import PlaceItem from "./pages/navbar/PlaceItem";
 import Home from "./pages/Home";
 import Debug from "./pages/Debug";
+import PopupWin from "./pages/PopupWin";
 
 import cannon from './images/games/cannon.png';
 import lace from './images/games/lace.svg';
@@ -29,7 +30,7 @@ function App() {
           <Route path="/profilo" element={<Account />} />
           <Route path="/carte" element={<Card />} />
           <Route path="/luoghi" element={<Place />} />
-            <Route path="/luoghi/:id" element={<ItemPlace />} />
+            <Route path="/luoghi/:id" element={<PlaceItem />} />
           
 
 
@@ -55,6 +56,7 @@ function App() {
 
           
           <Route path="/debug" element={<Debug />} />
+          <Route path="/popup" element={<PopupWin />} />
 
           <Route path="*" element={<Error />} />
         </Routes>
