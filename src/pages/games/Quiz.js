@@ -10,6 +10,8 @@ import styled from 'styled-components';
 // LOGHI
 import { IoIosHelpCircle } from "react-icons/io";
 import { MdOutlineArrowBack } from "react-icons/md";
+// FUNZIONE HELPER
+import unblockById from '../../utils/unblockById';
 
 const Quiz = ({ istructions, bgColor, correctAnswer, children }) => {
 
@@ -29,14 +31,7 @@ const Quiz = ({ istructions, bgColor, correctAnswer, children }) => {
   }
 
   
-  function unblockById(array, id) {
-        const index = array.findIndex(item => item.id === id);
 
-        if (index !== -1) {
-            array[index].unblocked = true;
-        }
-    return array;
-  }
 
 
 

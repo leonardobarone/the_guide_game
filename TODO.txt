@@ -1,8 +1,9 @@
-key prop in NumericKeyboard
-capire come fare isLoading
+1. KEY PROP IN MUMERIC KEYBOARD
+2. CAPIRE E FARE IS LOADING
+3. QUIZ ABBASTANZA
+4. CARD FATTA BENE
 
 
-
-// PROSSIMO STEP
--> completare i quiz
--> fare modale per la vittoria
+FILE MANIFEST.JSON
+  "short_name": "React App",
+  "name": "Create React App Sample",
