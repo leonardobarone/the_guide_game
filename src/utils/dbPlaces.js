@@ -1,18 +1,31 @@
-import diFronteSanGiuseppe from '../images/places/diFronteSanGiuseppe.png'
-import belvedereElsa from '../images/places/belvedereElsa.png';
-import vivara from '../images/places/vivara.png';
-import sanGiacomo from '../images/places/sanGiacomo.png';
-import sanLeonardo from '../images/places/sanLeonardo.png';
-import piazzaMartiri from '../images/places/piazzaMartiri.png';
-import cannoni from '../images/places/cannoni.png';
-import piazzaArmi from '../images/places/piazzaArmi.png';
-import palazzoCultura from '../images/places/palazzoCultura.png';
-import sanMichele from '../images/places/sanMichele.png';
-import corricella from '../images/places/corricella.png';
-import palazzoMerlato from '../images/places/palazzoMerlato.png';
-import faro from '../images/places/faro.png';
-import marinaChiesa from '../images/places/marinaChiesa.png';
-import cimitero from '../images/places/cimitero.png';
+import chiaiaVisible from '../images/places/visible/chiaia.webp';
+import chiaiaHidden from '../images/places/hidden/chiaia.webp';
+import chiaiolellaVisible from '../images/places/visible/chiaiolella.webp';
+import chiaiolellaHidden from '../images/places/hidden/chiaiolella.webp';
+import vivaraVisible from '../images/places/visible/vivara.webp';
+import vivaraHidden from '../images/places/hidden/vivara.webp';
+import mamozioVisible from '../images/places/visible/mamozio.webp';
+import mamozioHidden from '../images/places/hidden/mamozio.webp';
+import canaleVisible from '../images/places/visible/canale.webp';
+import canaleHidden from '../images/places/hidden/canale.webp';
+import martiriVisible from '../images/places/visible/martiri.webp';
+import martiriHidden from '../images/places/hidden/martiri.webp';
+import cannoniVisible from '../images/places/visible/cannoni.webp';
+import cannoniHidden from '../images/places/hidden/cannoni.webp';
+import carcereVisible from '../images/places/visible/carcere.webp';
+import carcereHidden from '../images/places/hidden/carcere.webp';
+import culturaVisible from '../images/places/visible/cultura.webp';
+import culturaHidden from '../images/places/hidden/cultura.webp';
+import abbaziaVisible from '../images/places/visible/abbazia.webp';
+import abbaziaHidden from '../images/places/hidden/abbazia.webp';
+import corricellaVisible from '../images/places/visible/corricella.webp';
+import corricellaHidden from '../images/places/hidden/corricella.webp';
+import faroVisible from '../images/places/visible/faro.webp';
+import faroHidden from '../images/places/hidden/faro.webp';
+import marinaVisible from '../images/places/visible/marina.webp';
+import marinaHidden from '../images/places/hidden/marina.webp';
+import cimiteroVisible from '../images/places/visible/cimitero.webp';
+import cimiteroHidden from '../images/places/hidden/cimitero.webp';
 
 
 
@@ -20,92 +33,107 @@ const dbPlaces = [
     { 
       'id' : "1",
       'name' : 'vivara', 
-      'img' : vivara,
+      'imgVisible' : vivaraVisible,
+      'imgHidden' : vivaraHidden,
       'unblocked' : false
     },
     { 
       'id' : "2",
       'name' : 'chiesa chiaiolella',
-      'img' : diFronteSanGiuseppe,
+      'imgVisible' : chiaiolellaVisible,
+      'imgHidden' : chiaiolellaHidden,
       'unblocked' : false
     },
     { 
       'id' : "3",
       'name' : 'belvedere elsa morante', 
-      'img' : belvedereElsa,
+      'imgVisible' : chiaiaVisible,
+      'imgHidden' : chiaiaHidden,
       'unblocked' : false
     },
     { 
       'id' : "4",
       'name' : 'san giacomo', 
-      'img' : sanGiacomo,
+      'imgVisible' : mamozioVisible,
+      'imgHidden' : mamozioHidden,
       'unblocked' : false
     },
     { 
       'id' : "5",
       'name' : 'chiesa san leonardo', 
-      'img' : sanLeonardo,
+      'imgVisible' : canaleVisible,
+      'imgHidden' : canaleHidden,
       'unblocked' : false
     },
     { 
       'id' : "6",
       'name' : 'chiesa madonna delle grazie', 
-      'img' : piazzaMartiri,
+      'imgVisible' : martiriVisible,
+      'imgHidden' : martiriHidden,
       'unblocked' : false
     },
     { 
       'id' : "7",
       'name' : 'santa margherita nuova', 
-      'img' : cannoni,
+      'imgVisible' : cannoniVisible,
+      'imgHidden' : cannoniHidden,
       'unblocked' : false
     },
     { 
       'id' : "8",
       'name' : 'palazzo d\'avalos', 
-      'img' : piazzaArmi,
+      'imgVisible' : carcereVisible,
+      'imgHidden' : carcereHidden,
       'unblocked' : false
     },
     { 
       'id' : "9",
       'name' : 'palazzo della cultura', 
-      'img' : palazzoCultura,
+      'imgVisible' : culturaVisible,
+      'imgHidden' : culturaHidden,
       'unblocked' : false
     },
     { 
       'id' : "10",
       'name' : 'abbazia di san michele arcangelo', 
-      'img' : sanMichele,
+      'imgVisible' : abbaziaVisible,
+      'imgHidden' : abbaziaHidden,
       'unblocked' : false
     },
     { 
       'id' : "11",
       'name' : 'marina corricella', 
-      'img' : corricella,
+      'imgVisible' : corricellaVisible,
+      'imgHidden' : corricellaHidden,
       'unblocked' : false
     },
     { 
       'id' : "12",
       'name' : 'Palazzo Merlato', 
-      'img' : palazzoMerlato,
+      'imgVisible' : marinaVisible,
+      'imgHidden' : marinaHidden,
       'game' : '/quiz',
       'unblocked' : false
     },
     { 
       'id' : "13",
       'name' : 'chiesa marina grande', 
-      'img' : marinaChiesa,
+      'imgVisible' : marinaVisible,
+      'imgHidden' : marinaHidden,
       'unblocked' : false
     },
     { 
       'id' : "14",
       'name' : 'faro', 
-      'img' : faro,
+      'imgVisible' : faroVisible,
+      'imgHidden' : faroHidden,
       'unblocked' : false
     },
     { 
       'id' : "15",
       'name' : 'pozzo vecchio', 
-      'img' : cimitero,
+      'imgVisible' : cimiteroVisible,
+      'imgHidden' : cimiteroHidden,
       'unblocked' : false
     },
   ];

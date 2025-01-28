@@ -10,12 +10,11 @@ const Place = () => {
       {places.map((place) => {
         return <div key={place.id} className='containerCard'>
           <Link to={`/luoghi/${place.unblocked ? place.id : ''}`} className="card link">
-          {!place.unblocked ? <div className='bloccato'>DA FARE</div> : ''}
             <div className="left">
-              <img src={place.img} alt="" />
+              <img src={place.unblocked ? place.imgVisible : place.imgHidden} alt="" />
             </div>
             <div className="right">
-              <h5>{place.name.toUpperCase()}</h5>
+              <h5>{place.unblocked ? place.name.toUpperCase() : 'BLOCCATO'}</h5>
             </div>
           </Link>
         </div>
