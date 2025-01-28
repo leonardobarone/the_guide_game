@@ -77,8 +77,8 @@ const NumericKeyboard = ({ sendDataToParent, modal }) => {
                         view = number;
                     }
                     return (
-                        <div className='inner'>
-                            <button key={index} onClick={() => handleButtonClick(number)}>    
+                        <div key={index} className='inner'>
+                            <button onClick={() => handleButtonClick(number)}>    
                                 <span>{view}</span>
                             </button>
                         </div>
