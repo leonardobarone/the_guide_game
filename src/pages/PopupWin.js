@@ -1,16 +1,23 @@
 import { useState } from "react"
-import styled from "styled-components"
+import styled from "styled-components";
+import { useGlobalContext } from "../context";
 
 const PopupWin = () => {
+    const {cards, places} = useGlobalContext();
     const [active, setActive] = useState(false);
     
+    const card = cards.find(card => card.id === '4');
+    const place = places.find(place => place.id === '7');
+
     return <Wrapper>
             <button onClick={()=>setActive(!active)}>Prova Popup</button>
             <div className={active ? 'popupLeft active' : 'popupLeft'}>
-                Popup Left = Luogo Sbloccato
+                <img src={card.img} alt="" />
+                <div className="title">{card.title.toUpperCase()}</div>
             </div>
             <div className={active ? 'popupRight active' : 'popupRight'}>
-                Popup Right = Carta Sbloccata
+                <img src={place.img} alt="" />
+                <div className="name">{place.name.toUpperCase()}</div>
             </div>
     </Wrapper>
 }
@@ -27,8 +34,23 @@ const Wrapper = styled.main `
         position: fixed;
         height: 350px;
         width: 250px;
+        border-radius: 10px;
+        overflow: hidden;
     }
     .popupLeft {
+        .title {
+            position: absolute;
+            z-index: 50;
+            left: 0px;
+            bottom: 0px;
+            background-color: var(--bg-white);
+            width: 94%;
+            border-radius: 10px;
+            text-align: center;
+            padding: 5px;
+            font-size: 15px;
+            margin: 9px 7px;
+        }
         left: -100vw;
         top: 50%;
         transform: translate(-50%);
@@ -39,8 +61,19 @@ const Wrapper = styled.main `
             transform: translate(-50%, -50%);
             transition: left 0.8s ease-in-out;
         }
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
     }
     .popupRight {
+        .name {
+            text-align: center;
+            margin-top: 5px;
+        }
         left: 150vw;
         top: 45%;
         background-color: white;
@@ -49,6 +82,13 @@ const Wrapper = styled.main `
             left: 50%; 
             transform: translate(-50%, -50%);
             transition: left 0.8s ease-in-out;
+        }
+        img {
+            display: block;
+            width: 75%;
+            margin: 0 auto;
+            object-fit: cover;
+            object-position: center;
         }
     }
 
