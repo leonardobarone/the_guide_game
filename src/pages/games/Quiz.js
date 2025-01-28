@@ -15,7 +15,7 @@ const Quiz = ({ istructions, bgColor, correctAnswer, children }) => {
 
   // HOOKS
   const navigate = useNavigate();
-  const {setCards, cards, games, setGames} = useGlobalContext();
+  const {setCards, cards, games, setGames, places, setPlaces} = useGlobalContext();
   const [dataFromChild, setDataFromChild] = useState("");  
   const [modal, setModal] = useState(false);  
   const [victory, setVictory] = useState(false);  
@@ -43,14 +43,18 @@ const Quiz = ({ istructions, bgColor, correctAnswer, children }) => {
   const prova = () => {
     let idCard;
     let idGame;
+    let idPlace;
     if (correctAnswer === '1785') {
       idCard = '4';
       idGame = '9';
+      idPlace = '7';
     } else if (correctAnswer === '2968') {
       idCard = '6';
       idGame = '14';
+      idPlace = '13';
     }
     if (dataFromChild === correctAnswer) {
+      setPlaces(unblockById(places, idPlace));
       setGames(unblockById(games, idGame));
       setCards(unblockById(cards, idCard));
       setDataFromChild('');

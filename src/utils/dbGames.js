@@ -1,4 +1,4 @@
-const games = [
+const dbGames = [
     { 
       'id' : "1",
       'name' : 'cancello vivara', 
@@ -145,5 +145,5 @@ const games = [
     },
   ];
   
-  export default games;
+  export default dbGames;
   

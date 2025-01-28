@@ -1,7 +1,8 @@
 import { useParams } from "react-router-dom";
-import places from "../../utils/places";
+import { useGlobalContext } from "../../context";
 
 const ItemPlace = () => {
+  const {places} = useGlobalContext();
   const {id} = useParams();
   const oggettoTrovato = places.find(oggetto => oggetto.id === id);
   

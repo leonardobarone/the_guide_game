@@ -16,42 +16,42 @@ import cimitero from '../images/places/cimitero.png';
 
 
 
-const places = [
+const dbPlaces = [
     { 
       'id' : "1",
       'name' : 'vivara', 
       'img' : vivara,
-      'unblocked' : true
+      'unblocked' : false
     },
     { 
       'id' : "2",
       'name' : 'chiesa chiaiolella',
       'img' : diFronteSanGiuseppe,
-      'unblocked' : true
+      'unblocked' : false
     },
     { 
       'id' : "3",
       'name' : 'belvedere elsa morante', 
       'img' : belvedereElsa,
-      'unblocked' : true
+      'unblocked' : false
     },
     { 
       'id' : "4",
       'name' : 'san giacomo', 
       'img' : sanGiacomo,
-      'unblocked' : true
+      'unblocked' : false
     },
     { 
       'id' : "5",
       'name' : 'chiesa san leonardo', 
       'img' : sanLeonardo,
-      'unblocked' : true
+      'unblocked' : false
     },
     { 
       'id' : "6",
       'name' : 'chiesa madonna delle grazie', 
       'img' : piazzaMartiri,
-      'unblocked' : true
+      'unblocked' : false
     },
     { 
       'id' : "7",
@@ -63,52 +63,52 @@ const places = [
       'id' : "8",
       'name' : 'palazzo d\'avalos', 
       'img' : piazzaArmi,
-      'unblocked' : true
+      'unblocked' : false
     },
     { 
       'id' : "9",
       'name' : 'palazzo della cultura', 
       'img' : palazzoCultura,
-      'unblocked' : true
+      'unblocked' : false
     },
     { 
       'id' : "10",
       'name' : 'abbazia di san michele arcangelo', 
       'img' : sanMichele,
-      'unblocked' : true
+      'unblocked' : false
     },
     { 
       'id' : "11",
       'name' : 'marina corricella', 
       'img' : corricella,
-      'unblocked' : true
+      'unblocked' : false
     },
     { 
       'id' : "12",
       'name' : 'Palazzo Merlato', 
       'img' : palazzoMerlato,
       'game' : '/quiz',
-      'unblocked' : true
+      'unblocked' : false
     },
     { 
       'id' : "13",
       'name' : 'chiesa marina grande', 
       'img' : marinaChiesa,
-      'unblocked' : true
+      'unblocked' : false
     },
     { 
       'id' : "14",
       'name' : 'faro', 
       'img' : faro,
-      'unblocked' : true
+      'unblocked' : false
     },
     { 
       'id' : "15",
       'name' : 'pozzo vecchio', 
       'img' : cimitero,
-      'unblocked' : true
+      'unblocked' : false
     },
   ];
   
-  export default places;
+  export default dbPlaces;
   

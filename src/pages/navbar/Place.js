@@ -1,8 +1,11 @@
 import styled from 'styled-components';
 import { Link } from "react-router-dom";
-import places from "../../utils/places";
+import { useGlobalContext } from '../../context';
 
 const Place = () => {
+
+    const {places} = useGlobalContext();
+
     return <Wrapper style={{marginTop: '50px', marginBottom: '75px',}}>
       {places.map((place) => {
         return <div key={place.id} className='containerCard'>
