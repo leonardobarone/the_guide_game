@@ -13,7 +13,7 @@ const PopupWin = () => {
             <button onClick={()=>setActive(!active)}>Prova Popup</button>
             <div className={active ? 'popupLeft active' : 'popupLeft'}>
                 <img src={card.img} alt="" />
-                <div className="title">{card.title.toUpperCase()}</div>
+                <div className="name">{card.name.toUpperCase()}</div>
             </div>
             <div className={active ? 'popupRight active' : 'popupRight'}>
                 <img src={place.img} alt="" />
@@ -38,7 +38,7 @@ const Wrapper = styled.main `
         overflow: hidden;
     }
     .popupLeft {
-        .title {
+        .name {
             position: absolute;
             z-index: 50;
             left: 0px;

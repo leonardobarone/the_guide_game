@@ -14,73 +14,73 @@ import scialoia from '../images/cards/scialoia.webp';
 const dbCards = [
     {
         'id' : '1',
-        'title' : 'Borboni',
+        'name' : 'I Borbone',
         'img' : borboni,
         'unblocked' : false
     },
     {
         'id' : '2',
-        'title' : 'Elsa Morante',
+        'name' : 'Elsa Morante',
         'img' : elsa,
         'unblocked' : false
     },
     {
         'id' : '3',
-        'title' : 'Giovanni da Procida',
+        'name' : 'Giovanni da Procida',
         'img' : giovanni,
         'unblocked' : false
     },
     {
         'id' : '4',
-        'title' : 'Graziella',
+        'name' : 'Graziella',
         'img' : graziella,
         'unblocked' : false
     },
     {
         'id' : '5',
-        'title' : 'Innico D\'Avalos',
+        'name' : 'Innico D\'Avalos',
         'img' : innico,
         'unblocked' : false
     },
     {
         'id' : '6',
-        'title' : 'Madonnina',
+        'name' : 'Madonnina',
         'img' : madonnina,
         'unblocked' : false
     },
     {
         'id' : '7',
-        'title' : 'Micenei',
+        'name' : 'Micenei',
         'img' : micenei,
         'unblocked' : false
     },
     {
         'id' : '8',
-        'title' : 'Mimante',
+        'name' : 'Mimante',
         'img' : mimante,
         'unblocked' : false
     },
     {
         'id' : '9',
-        'title' : 'San Michele Arcangelo',
+        'name' : 'San Michele Arcangelo',
         'img' : patrono,
         'unblocked' : false
     },
     {
         'id' : '10',
-        'title' : 'Il Postino',
+        'name' : 'Il Postino',
         'img' : postino,
         'unblocked' : false
     },
     {
         'id' : '11',
-        'title' : 'Processione del Venerdì Santo',
+        'name' : 'Processione del Venerdì Santo',
         'img' : processione,
         'unblocked' : false
     },
     {
         'id' : '12',
-        'title' : 'Antonio Scialoia',
+        'name' : 'Antonio Scialoia',
         'img' : scialoia,
         'unblocked' : false
     },

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { useGlobalContext } from "../../context";
 import { FaLock } from "react-icons/fa";
 import { FaLockOpen } from "react-icons/fa";
-
+import unblocked from '../../images/cards/unblocked.webp'
 
 const Card = () => {
     
@@ -15,15 +15,18 @@ const Card = () => {
             return (
               <div key={card.id} className="card">
                 <div className="body">
-                  <img src={card.unblocked ? card.img : 'https://img.freepik.com/free-vector/padlock-coloured-outline_78370-548.jpg?semt=ais_hybrid'} alt="" />
+                  <img src={card.unblocked ? card.img : unblocked} alt="" />
                   <div className="tag">
                     <div style={{backgroundColor: `${card.unblocked ? 'var(--success-bootstrap)' : 'var(--danger-bootstrap)'}`}} className="inside">
                       {card.unblocked ? <FaLockOpen /> : <FaLock />}
                     </div>
                   </div>
-                  <div className="title">
-                    {card.title.toUpperCase()}
+                  <div className="name">
+                    {card.unblocked ? card.name.toUpperCase() : 'BLOCCATO'}
                   </div>
+                  {
+                    card.unblocked ? '' : <div className="question">?</div>
+                  }
                 </div>
               </div>
             )
@@ -52,7 +55,15 @@ margin-bottom: 80px;
       width: 100%;
       height: 100%;
       position: relative;
-      .title {
+      .question {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 75px;
+        font-weight: bold;
+      }
+      .name {
           position: absolute;
           bottom: 12px;
           left: 12px;
