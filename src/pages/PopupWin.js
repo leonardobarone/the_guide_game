@@ -24,13 +24,13 @@ const Wrapper = styled.main `
     position: relative;
     .popupLeft, .popupRight {
         border: 1px solid black;
-        position: absolute;
-        height: 300px;
-        width: 220px;
+        position: fixed;
+        height: 350px;
+        width: 250px;
     }
     .popupLeft {
-        left: -100vh;
-        top: 45%;
+        left: -100vw;
+        top: 50%;
         transform: translate(-50%);
         transition: left 0.8s ease-in-out;
         transition: transform 0.8s ease-in-out;
@@ -41,8 +41,8 @@ const Wrapper = styled.main `
         }
     }
     .popupRight {
-        left: 100vh;
-        top: 50%;
+        left: 150vw;
+        top: 45%;
         background-color: white;
         transform: translate(-50%, -50%);
         &.active {
