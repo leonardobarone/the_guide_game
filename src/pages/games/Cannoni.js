@@ -1,29 +1,31 @@
 // COMPONENTS
 import KeyboardNumeric from '../../components/KeyboardNumeric';
 import Popup from '../../components/Popup';
+
 // HOOKS
 import { useState } from 'react';
 import { useGlobalContext } from '../../context';
 import { useNavigate } from 'react-router-dom';
+
 // STILE
 import styled from 'styled-components';
+
 // LOGHI
 import { IoIosHelpCircle } from "react-icons/io";
 import { MdOutlineArrowBack } from "react-icons/md";
+import cannon from '../../images/games/cannon.png';
+
 // FUNZIONE HELPER
 import unblockById from '../../utils/unblockById';
 
-const Quiz = ({ istructions, bgColor, correctAnswer, children }) => {
+
+const Cannoni = () => {
 
   // HOOKS
   const navigate = useNavigate();
   const {setCards, cards, games, setGames, places, setPlaces} = useGlobalContext();
   const [dataFromChild, setDataFromChild] = useState(""); 
   const [popup, setPopup] = useState(false);   
-  
-  // PROPS
-  let rispostaCorretta = correctAnswer;
-
   function handleDataFromChild(data) {
     setDataFromChild(data);
   } 
@@ -32,46 +34,48 @@ const Quiz = ({ istructions, bgColor, correctAnswer, children }) => {
 
 
   const prova = () => {
-    let idCard;
-    let idGame;
-    let idPlace;
-    if (correctAnswer === '1785') {
-      idCard = '4';
-      idGame = '9';
-      idPlace = '7';
-    } else if (correctAnswer === '2968') {
-      idCard = '6';
-      idGame = '14';
-      idPlace = '13';
-    }
-    if (dataFromChild === correctAnswer) {
-      setPlaces(unblockById(places, idPlace));
-      setGames(unblockById(games, idGame));
-      setCards(unblockById(cards, idCard));
+    // if ('1785' === '1785') {
+    //   idCard = '4';
+    //   idGame = '9';
+    //   idPlace = '7';
+    // } else if ('1785' === '2968') {
+    //   idCard = '6';
+    //   idGame = '14';
+    //   idPlace = '13';
+    // }
+    if (dataFromChild === '1785') {
+        setCards(unblockById(cards, '4'));
+        setGames(unblockById(games, '9'));
+        setPlaces(unblockById(places, '7'));
       setDataFromChild('');
-      // setVictory(true);
+    //   setVictory(true);
       setPopup(true);
     } else if (dataFromChild.length !== 0) {
       setDataFromChild('');
-      // setVictory(false);
+    //   setVictory(false);
       setPopup(true); 
     }
   } 
 
   return <Wrapper>
-    <div className="card" style={{backgroundColor : `${bgColor}`}}>
+    <div className="card" style={{backgroundColor : '#9CC4F8'}}>
       <div className="boxTop">
         <div className="left">
           <MdOutlineArrowBack onClick={() => navigate('/')} />
         </div>
         <div className="center">
-          {istructions}
+            In che anno è stato costruito il cannone?
         </div>
         <div className="right">
           <IoIosHelpCircle />
         </div>
       </div>
-      { children }
+
+
+        <div style={{height: 'calc(100% - 95px)', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+            <img width={90} src={cannon} alt="" />
+        </div>
+
       <div className="tag">
         <button onClick={prova} className='btn'>Prova</button>
       </div>
@@ -81,13 +85,12 @@ const Quiz = ({ istructions, bgColor, correctAnswer, children }) => {
     
       <KeyboardNumeric 
         sendDataToParent={handleDataFromChild} 
-        rispostaCorretta={rispostaCorretta}
         popup={popup}
       />        
   </Wrapper>
 }
 
-export default Quiz;
+export default Cannoni;
 
 const Wrapper = styled.main`
   margin-top: 60px;

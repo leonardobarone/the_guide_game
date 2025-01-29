@@ -10,7 +10,7 @@ const Home = () => {
                   <Link to='/quiz'>Quiz Arcate</Link>
               </li>
               <li>
-                <Link to='/secondQuiz'>Quiz Cannoni</Link>
+                <Link to='/cannoni'>Quiz Cannoni</Link>
               </li>
           </ul>
         </div>

@@ -88,7 +88,7 @@ margin-bottom: 80px;
           right: 7px;
           background-color: var(--bg-white);
           padding: 4px 8px;
-          z-index: 3;
+          z-index: 1;
           /* border-bottom: 0.5 solid black;
           border-left: 0.5 solid black; */
           border-radius: 0 0 0 10px;

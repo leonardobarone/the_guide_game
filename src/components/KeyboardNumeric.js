@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { IoMdBackspace } from "react-icons/io";
 import { MdDelete } from "react-icons/md";
 
-const KeyboardNumeric = ({ sendDataToParent, modal }) => {
+const KeyboardNumeric = ({ sendDataToParent, popup }) => {
     
     const [numero, setNumero] = useState('');
     
@@ -23,10 +23,10 @@ const KeyboardNumeric = ({ sendDataToParent, modal }) => {
     }
 
     useEffect(() => {
-        if (modal) {
+        if (popup) {
             setNumero('')
         }
-    }, [modal])
+    }, [popup])
 
     const numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'indietro', 'azzera']; 
     return <>

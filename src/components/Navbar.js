@@ -22,7 +22,9 @@ const Navbar = () => {
     }
   }, [location.pathname]);
 
-  if (location.pathname === '/quiz' || location.pathname === '/secondQuiz') {
+  if (location.pathname === '/quiz' || 
+    location.pathname === '/secondQuiz' ||
+    location.pathname === '/cannoni') {
     return;
   }
 
