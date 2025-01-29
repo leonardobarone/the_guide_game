@@ -111,7 +111,6 @@ const dbPlaces = [
       'name' : 'Palazzo Merlato', 
       'imgVisible' : marinaVisible,
       'imgHidden' : marinaHidden,
-      'game' : '/quiz',
       'unblocked' : false
     },
     { 

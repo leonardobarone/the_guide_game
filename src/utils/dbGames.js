@@ -68,7 +68,7 @@ const dbGames = [
       'name' : 'cannoni', 
       'lat' : 40.76045522977777, 
       'lng' : 14.03256355435797,
-      'path' : '/secondQuiz',
+      'path' : '/cannoni',
       'unblocked' : false
     },
     { 
@@ -108,7 +108,7 @@ const dbGames = [
       'name' : 'Palazzo Merlato', 
       'lat' : 40.76560707054993, 
       'lng' : 14.025946693335339,
-      'path' : '/quiz',
+      'path' : '/merlato',
       'unblocked' : false
     },
     { 
