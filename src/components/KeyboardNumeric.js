@@ -65,7 +65,7 @@ const Wrapper = styled.div`
     padding: 7px 0px;
     background-color: var(--bg-gray);
     position: fixed;
-    z-index: 5;
+    z-index: 1;
     bottom: 0px;
     left: 0px;
     width: 100%;

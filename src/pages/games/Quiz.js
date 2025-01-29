@@ -1,5 +1,6 @@
 // COMPONENTS
 import KeyboardNumeric from '../../components/KeyboardNumeric';
+import Popup from '../../components/Popup';
 // HOOKS
 import { useState } from 'react';
 import { useGlobalContext } from '../../context';
@@ -18,12 +19,11 @@ const Quiz = ({ istructions, bgColor, correctAnswer, children }) => {
   const navigate = useNavigate();
   const {setCards, cards, games, setGames, places, setPlaces} = useGlobalContext();
   const [dataFromChild, setDataFromChild] = useState("");  
-  const [modal, setModal] = useState(false);  
-  const [victory, setVictory] = useState(false);  
+  const [popup, setPopup] = useState(false);  
+  // const [victry, setVictory] = useState(false);  
   
   // PROPS
   let rispostaCorretta = correctAnswer;
-
 
   function handleDataFromChild(data) {
     setDataFromChild(data);
@@ -50,12 +50,12 @@ const Quiz = ({ istructions, bgColor, correctAnswer, children }) => {
       setGames(unblockById(games, idGame));
       setCards(unblockById(cards, idCard));
       setDataFromChild('');
-      setVictory(true);
-      setModal(true);
+      // setVictory(true);
+      setPopup(true);
     } else if (dataFromChild.length !== 0) {
       setDataFromChild('');
-      setVictory(false);
-      setModal(true); 
+      // setVictory(false);
+      setPopup(true); 
     }
   } 
 
@@ -78,10 +78,12 @@ const Quiz = ({ istructions, bgColor, correctAnswer, children }) => {
       </div>
     </div>
       
+      <Popup popup={popup} setPopup={setPopup} />
+    
       <KeyboardNumeric 
         sendDataToParent={handleDataFromChild} 
         rispostaCorretta={rispostaCorretta}
-        modal={modal}
+        popup={popup}
       />        
   </Wrapper>
 }
