@@ -10,8 +10,6 @@ import Header from "./components/Header";
 import Navbar from './components/Navbar';
 import PlaceItem from "./pages/navbar/PlaceItem";
 import Home from "./pages/Home";
-import Debug from "./pages/Debug";
-import PopupWin from "./pages/PopupWin";
 
 import cannon from './images/games/cannon.png';
 import lace from './images/games/lace.svg';
@@ -54,9 +52,7 @@ function App() {
           </Quiz>} />
 
 
-          
-          <Route path="/debug" element={<Debug />} />
-          <Route path="/popup" element={<PopupWin />} />
+    
 
           <Route path="*" element={<Error />} />
         </Routes>

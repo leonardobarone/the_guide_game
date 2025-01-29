@@ -5,8 +5,6 @@ import { MdDelete } from "react-icons/md";
 
 const KeyboardNumeric = ({ sendDataToParent, modal }) => {
     
-    // debug
-
     const [numero, setNumero] = useState('');
     
     const handleButtonClick = (value) => {
@@ -22,33 +20,6 @@ const KeyboardNumeric = ({ sendDataToParent, modal }) => {
             setNumero(prev => prev + value);
             sendDataToParent(prev => prev + value);
         }
-
-        
-        // if (value === 'azzera' && numero !== '') {
-        //     setNumero('');
-        //     sendDataToParent('')
-        // } else if (value === 'indietro' && numero !== '') {;
-        //     setNumero(numero.slice(0, -1));
-        //     sendDataToParent(numero.slice(0, -1));
-        // } else if (limit < 5 && value !== 'azzera' && value !== 'indietro') {
-        //     setNumero(prevNumero => prevNumero + value);
-        //     sendDataToParent(prevNumero => prevNumero + value);
-        // }
-
-        // if (value === 'azzera') {
-        //     alert('SONO QUI')
-        //     setNumero('0');
-        //     return;
-        //   } else if (value === 'indietro') {
-        //     console.log('indietro button clicked!');
-        //   } else {
-        //     // Verifica se il numero inizia con zero per evitare zeri inutili
-        //     if (numero === '0') {
-        //       setNumero(value);
-        //     } else {
-        //       setNumero(numero + val!=ue);
-        //     }
-        //   }
     }
 
     useEffect(() => {
@@ -59,7 +30,6 @@ const KeyboardNumeric = ({ sendDataToParent, modal }) => {
 
     const numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'indietro', 'azzera']; 
     return <>
-            {/* <h6>CURRENT NUMBER = {numero}</h6> */}
         <Wrapper>
             <div className="outsideInput">
                 <div className="insideInput">

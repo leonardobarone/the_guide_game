@@ -28,7 +28,6 @@ import cimiteroVisible from '../images/places/visible/cimitero.webp';
 import cimiteroHidden from '../images/places/hidden/cimitero.webp';
 
 
-
 const dbPlaces = [
     { 
       'id' : "1",

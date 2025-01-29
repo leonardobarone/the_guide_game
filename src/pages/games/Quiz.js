@@ -1,5 +1,4 @@
 // COMPONENTS
-import Modal from '../../components/Modal';
 import KeyboardNumeric from '../../components/KeyboardNumeric';
 // HOOKS
 import { useState } from 'react';
@@ -28,9 +27,7 @@ const Quiz = ({ istructions, bgColor, correctAnswer, children }) => {
 
   function handleDataFromChild(data) {
     setDataFromChild(data);
-  }
-
-  
+  } 
 
 
 
@@ -79,8 +76,6 @@ const Quiz = ({ istructions, bgColor, correctAnswer, children }) => {
       <div className="tag">
         <button onClick={prova} className='btn'>Prova</button>
       </div>
-        {/* MODAL  */}
-        {modal && <Modal modal={modal} setModal={setModal} victory={victory} />}    
     </div>
       
       <KeyboardNumeric 
