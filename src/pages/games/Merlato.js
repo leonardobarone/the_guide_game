@@ -18,6 +18,7 @@ import arch from '../../images/games/arch.svg';
 
 // FUNZIONE HELPER
 import unblockById from '../../utils/unblockById';
+import findById from '../../utils/findById';
 
 
 const Merlato = () => {
@@ -27,27 +28,24 @@ const Merlato = () => {
   const {setCards, cards, games, setGames, places, setPlaces} = useGlobalContext();
   const [dataFromChild, setDataFromChild] = useState(""); 
   const [popup, setPopup] = useState(false);   
+  const [cardWon, setCardWon] = useState(null);   
+  const [placeWon, setPlaceWon] = useState({});   
+
   function handleDataFromChild(data) {
     setDataFromChild(data);
   } 
 
-
-
-
   const prova = () => {
-    // if ('1785' === '1785') {
-    //   idCard = '4';
-    //   idGame = '9';
-    //   idPlace = '7';
-    // } else if ('1785' === '2968') {
-    //   idCard = '6';
-    //   idGame = '14';
-    //   idPlace = '13';
-    // }
+
     if (dataFromChild === '2968') {
-        setCards(unblockById(cards, '6'));
-        setGames(unblockById(games, '14'));
-        setPlaces(unblockById(places, '13'));
+      // VINCERE
+      setCards(unblockById(cards, '6'));
+      setGames(unblockById(games, '14'));
+      setPlaces(unblockById(places, '13'));
+      // COSE VINTE
+      setCardWon(findById(cards, '6'))
+      setPlaceWon(findById(places, '13'))
+      // INPUT
       setDataFromChild('');
     //   setVictory(true);
       setPopup(true);
@@ -71,7 +69,6 @@ const Merlato = () => {
           <IoIosHelpCircle />
         </div>
       </div>
-
       
         <div style={{height: 'calc(100% - 95px)', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
           <img width={90} src={arch} alt="" />
