@@ -7,7 +7,7 @@ const Home = () => {
           <h1>Pagina Home</h1>
           <ul>
               <li>
-                  <Link to='/quiz'>Quiz Arcate</Link>
+                  <Link to='/merlato'>Quiz Palazzo Merlato</Link>
               </li>
               <li>
                 <Link to='/cannoni'>Quiz Cannoni</Link>

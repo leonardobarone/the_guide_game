@@ -4,17 +4,13 @@ import Account from "./pages/navbar/Account";
 import Card from "./pages/navbar/Card";
 import Rule from "./pages/navbar/Rule";
 import Place from "./pages/navbar/Place";
-import Quiz from "./pages/games/Quiz";
 import Error from "./pages/Error";
 import Header from "./components/Header";
 import Navbar from './components/Navbar';
 import PlaceItem from "./pages/navbar/PlaceItem";
 import Home from "./pages/Home";
-import Cannoni from "./pages/games/Cannoni"
-
-import cannon from './images/games/cannon.png';
-import lace from './images/games/lace.svg';
-import arch from './images/games/arch.svg'
+import Cannoni from "./pages/games/Cannoni";
+import Merlato from "./pages/games/Merlato";
 
 function App() {
   return (
@@ -33,28 +29,14 @@ function App() {
           
 
 
-          {/* Quiz Palazzo Merlato */}
-          <Route path="/quiz" element={<Quiz istructions={'Conta il numero dei merletti, moltiplicalo per il numero degli archi e poi per 8!'} bgColor={'#DD6C70'} correctAnswer={'2968'}>
-            <div style={{height: 'calc(100% - 95px)', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-              <img width={90} src={arch} alt="" />
-              <span style={{fontWeight: 'bold', fontSize: '45px', marginLeft: '10px', color: 'white'}}>x</span>
-              <img width={90} src={lace} alt="" />
-            </div>
-          </Quiz>} />
-          
-
 
           
-          {/* Quiz Belvedere Cannoni */}
-          <Route path="/secondQuiz" element={<Quiz istructions={'In che anno è stato costruito il cannone?'} bgColor={'#9CC4F8'} correctAnswer={'1785'}>
-            <div style={{height: 'calc(100% - 95px)', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-              <img width={90} src={cannon} alt="" />
-            </div>
-          </Quiz>} />
 
           {/* CANNONI NUOVO */}
           <Route path="/cannoni" element={<Cannoni />} />
 
+          {/* MERLATO NUOVO */}
+          <Route path="/merlato" element={<Merlato />} />
 
           <Route path="*" element={<Error />} />
         </Routes>
