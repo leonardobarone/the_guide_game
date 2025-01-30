@@ -23,6 +23,7 @@ const Place = () => {
   
   const Wrapper = styled.section`
   margin-top: 60px;
+  border: 1px solid black;
   margin-bottom: 80px;
   height: calc(100% - 140px);
   display: flex;
