@@ -1,16 +1,16 @@
 import styled from "styled-components";
-import prova from '../images/cards/elsa.webp';
+import unblocked from '../images/cards/unblocked.webp';
 
-const Popup = ({popup, setPopup}) => {
+const Popup = ({popup, setPopup, cardWon, placeWon}) => {
   return <Wrapper className={popup ? 'active' : ''}>
         <div className="top"></div>
         <div className="center">
-            <img src={prova} alt="" />
-            <h3>Congratulazioni!</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil corrupti architecto quas autem assumenda obcaecati consequuntur inventore et! Consectetur odio cupiditate culpa consequatur architecto dolor corporis saepe doloribus qui? Quos?</p>
+            <img src={cardWon ? cardWon.img : unblocked} alt="" />
+            <h3>{cardWon ? 'Congratulazioni!' : 'Ritenta!'}</h3>
+            <p>{cardWon ? `Hai sbloccato una nuovo carta speciale: ${cardWon.name}` : 'La data inserita non è corretta.'}</p>
         </div>
         <div className="bottom">
-            <button onClick={() => setPopup(false)}>CHIUDI</button>
+            <button onClick={() => setPopup(false)}>CONTINUA</button>
         </div>
     </Wrapper>
 }

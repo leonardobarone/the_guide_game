@@ -17,7 +17,7 @@ import cannon from '../../images/games/cannon.png';
 
 // FUNZIONE HELPER
 import unblockById from '../../utils/unblockById';
-
+import findById from '../../utils/findById';
 
 const Cannoni = () => {
 
@@ -36,7 +36,10 @@ const Cannoni = () => {
   const navigate = useNavigate();
   const {setCards, cards, games, setGames, places, setPlaces} = useGlobalContext();
   const [dataFromChild, setDataFromChild] = useState(""); 
-  const [popup, setPopup] = useState(false);   
+  const [popup, setPopup] = useState(false);  
+  const [cardWon, setCardWon] = useState(null);   
+  const [placeWon, setPlaceWon] = useState(null);   
+  
   function handleDataFromChild(data) {
     setDataFromChild(data);
   } 
@@ -46,14 +49,21 @@ const Cannoni = () => {
 
   const prova = () => {
     if (dataFromChild === '1785') {
+        // VINCERE
         setCards(unblockById(cards, '4'));
         setGames(unblockById(games, '9'));
         setPlaces(unblockById(places, '7'));
-      setDataFromChild('');
+        // COSE VINTE
+        setCardWon(findById(cards, '4'))
+        setPlaceWon(findById(places, '7'))
+        // SVUOTA INPUT
+        setDataFromChild('');
     //   setVictory(true);
       setPopup(true);
     } else if (dataFromChild.length !== 0) {
       setDataFromChild('');
+      setCardWon(null)
+      setPlaceWon(null)
     //   setVictory(false);
       setPopup(true); 
     }
@@ -83,7 +93,7 @@ const Cannoni = () => {
       </div>
     </div>
       
-      <Popup popup={popup} setPopup={setPopup} />
+      <Popup popup={popup} setPopup={setPopup} cardWon={cardWon} placeWon={placeWon} />
     
       <KeyboardNumeric 
         sendDataToParent={handleDataFromChild} 

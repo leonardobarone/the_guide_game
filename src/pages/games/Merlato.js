@@ -29,7 +29,7 @@ const Merlato = () => {
   const [dataFromChild, setDataFromChild] = useState(""); 
   const [popup, setPopup] = useState(false);   
   const [cardWon, setCardWon] = useState(null);   
-  const [placeWon, setPlaceWon] = useState({});   
+  const [placeWon, setPlaceWon] = useState(null);   
 
   // INIZIO PROVA HEIGHT
   const [height, setHeight] = useState(window.innerHeight - 255.4);
@@ -56,12 +56,14 @@ const Merlato = () => {
       // COSE VINTE
       setCardWon(findById(cards, '6'))
       setPlaceWon(findById(places, '13'))
-      // INPUT
+      // SVUOTA INPUT
       setDataFromChild('');
     //   setVictory(true);
       setPopup(true);
     } else if (dataFromChild.length !== 0) {
       setDataFromChild('');
+      setCardWon(null)
+      setPlaceWon(null)
     //   setVictory(false);
       setPopup(true); 
     }
@@ -92,7 +94,7 @@ const Merlato = () => {
       </div>
     </div>
       
-      <Popup popup={popup} setPopup={setPopup} />
+      <Popup popup={popup} setPopup={setPopup} cardWon={cardWon} placeWon={placeWon} />
     
       <KeyboardNumeric 
         sendDataToParent={handleDataFromChild} 
