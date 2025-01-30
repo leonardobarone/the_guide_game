@@ -1,18 +1,44 @@
 import styled from "styled-components";
 import unblocked from '../images/cards/unblocked.webp';
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-const Popup = ({popup, setPopup, cardWon, placeWon}) => {
-  return <Wrapper className={popup ? 'active' : ''}>
-        <div className="top"></div>
-        <div className="center">
-            <img src={cardWon ? cardWon.img : unblocked} alt="" />
-            <h3>{cardWon ? 'Congratulazioni!' : 'Ritenta!'}</h3>
-            <p>{cardWon ? `Hai sbloccato una nuovo carta speciale: ${cardWon.name}` : 'La data inserita non è corretta.'}</p>
-        </div>
-        <div className="bottom">
-            <button onClick={() => setPopup(false)}>CONTINUA</button>
-        </div>
-    </Wrapper>
+const Popup = ({popup, setPopup, cardWon, placeWon, victory}) => {
+
+    const navigate = useNavigate();
+    const [level, setLevel] = useState(1);
+
+    if (level === 1) {
+        return <Wrapper className={popup ? 'active' : ''}>
+            <div className="top"></div>
+            <div className="center">
+                <img src={cardWon ? cardWon.img : unblocked} alt="" />
+                <h3>{cardWon ? 'Congratulazioni!' : 'Ritenta!'}</h3>
+                <p>{cardWon ? `Hai sbloccato una nuova carta speciale: ${cardWon.name}` : 'La risposta è sbagliata!'}</p>
+            </div>
+            <div className="bottom">
+            {
+                victory ? <button onClick={() => setLevel(2)}>CONTINUA</button> : <button onClick={() => setPopup(false)}>CONTINUA</button>
+            }
+            </div>
+        </Wrapper>
+    } else if (level === 2) {
+        return <Wrapper className={popup ? 'active' : ''}>
+            <div className="top"></div>
+            <div className="center">
+                <img src={placeWon ? placeWon.imgVisible : placeWon.imgHidden} alt="" />
+                <h3>{placeWon ? 'Congratulazioni!' : 'Ritenta!'}</h3>
+                <p>{placeWon ? `Hai sbloccato un nuovo luogo: ${placeWon.name}` : 'La data inserita non è corretta.'}</p>
+            </div>
+            <div className="bottom">
+                <button onClick={() => navigate('/carte')}>CONTINUA</button>
+            </div>
+        </Wrapper>
+    } 
+    // else {
+    //     return <div>esci</div>
+    // }
+
 }
 
 export default Popup

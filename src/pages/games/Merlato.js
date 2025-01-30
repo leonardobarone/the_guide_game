@@ -3,7 +3,7 @@ import KeyboardNumeric from '../../components/KeyboardNumeric';
 import Popup from '../../components/Popup';
 
 // HOOKS
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { useGlobalContext } from '../../context';
 import { useNavigate } from 'react-router-dom';
 
@@ -30,6 +30,7 @@ const Merlato = () => {
   const [popup, setPopup] = useState(false);   
   const [cardWon, setCardWon] = useState(null);   
   const [placeWon, setPlaceWon] = useState(null);   
+  const [victory, setVictory] = useState(null);   
 
   // INIZIO PROVA HEIGHT
   const [height, setHeight] = useState(window.innerHeight - 255.4);
@@ -52,19 +53,19 @@ const Merlato = () => {
       // VINCERE
       setCards(unblockById(cards, '6'));
       setGames(unblockById(games, '14'));
-      setPlaces(unblockById(places, '13'));
+      setPlaces(unblockById(places, '12'));
       // COSE VINTE
       setCardWon(findById(cards, '6'))
-      setPlaceWon(findById(places, '13'))
+      setPlaceWon(findById(places, '12'))
       // SVUOTA INPUT
       setDataFromChild('');
-    //   setVictory(true);
+      setVictory(true);
       setPopup(true);
     } else if (dataFromChild.length !== 0) {
       setDataFromChild('');
       setCardWon(null)
       setPlaceWon(null)
-    //   setVictory(false);
+      setVictory(false);
       setPopup(true); 
     }
   } 
@@ -94,7 +95,7 @@ const Merlato = () => {
       </div>
     </div>
       
-      <Popup popup={popup} setPopup={setPopup} cardWon={cardWon} placeWon={placeWon} />
+      <Popup popup={popup} setPopup={setPopup} victory={victory} cardWon={cardWon} placeWon={placeWon} />
     
       <KeyboardNumeric 
         sendDataToParent={handleDataFromChild} 

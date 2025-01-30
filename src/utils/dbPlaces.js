@@ -108,27 +108,20 @@ const dbPlaces = [
     },
     { 
       'id' : "12",
-      'name' : 'Palazzo Merlato', 
-      'imgVisible' : marinaVisible,
-      'imgHidden' : marinaHidden,
-      'unblocked' : false
-    },
-    { 
-      'id' : "13",
       'name' : 'chiesa marina grande', 
       'imgVisible' : marinaVisible,
       'imgHidden' : marinaHidden,
       'unblocked' : false
     },
     { 
-      'id' : "14",
+      'id' : "13",
       'name' : 'faro', 
       'imgVisible' : faroVisible,
       'imgHidden' : faroHidden,
       'unblocked' : false
     },
     { 
-      'id' : "15",
+      'id' : "14",
       'name' : 'pozzo vecchio', 
       'imgVisible' : cimiteroVisible,
       'imgHidden' : cimiteroHidden,
