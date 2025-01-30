@@ -29,9 +29,6 @@ function App() {
           
 
 
-
-          
-
           {/* CANNONI NUOVO */}
           <Route path="/cannoni" element={<Cannoni />} />
 
