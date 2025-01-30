@@ -7,7 +7,7 @@ const Popup = ({popup, setPopup, cardWon, placeWon, victory}) => {
 
     const navigate = useNavigate();
     const [level, setLevel] = useState(1);
-
+    
     if (level === 1) {
         return <Wrapper className={popup ? 'active' : ''}>
             <div className="top"></div>

@@ -39,6 +39,7 @@ const Cannoni = () => {
   const [popup, setPopup] = useState(false);  
   const [cardWon, setCardWon] = useState(null);   
   const [placeWon, setPlaceWon] = useState(null);   
+  const [victory, setVictory] = useState(null);   
   
   function handleDataFromChild(data) {
     setDataFromChild(data);
@@ -58,14 +59,14 @@ const Cannoni = () => {
         setPlaceWon(findById(places, '7'))
         // SVUOTA INPUT
         setDataFromChild('');
-    //   setVictory(true);
-      setPopup(true);
+        setVictory(true);
+        setPopup(true);
     } else if (dataFromChild.length !== 0) {
-      setDataFromChild('');
-      setCardWon(null)
-      setPlaceWon(null)
-    //   setVictory(false);
-      setPopup(true); 
+        setDataFromChild('');
+        setCardWon(null)
+        setPlaceWon(null)
+        setVictory(false);
+        setPopup(true); 
     }
   } 
 
@@ -93,7 +94,7 @@ const Cannoni = () => {
       </div>
     </div>
       
-      <Popup popup={popup} setPopup={setPopup} cardWon={cardWon} placeWon={placeWon} />
+      <Popup popup={popup} setPopup={setPopup} cardWon={cardWon} victory={victory} placeWon={placeWon} />
     
       <KeyboardNumeric 
         sendDataToParent={handleDataFromChild} 
