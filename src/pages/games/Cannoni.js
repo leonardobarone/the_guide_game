@@ -3,7 +3,7 @@ import KeyboardNumeric from '../../components/KeyboardNumeric';
 import Popup from '../../components/Popup';
 
 // HOOKS
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useGlobalContext } from '../../context';
 import { useNavigate } from 'react-router-dom';
 
@@ -21,6 +21,17 @@ import unblockById from '../../utils/unblockById';
 
 const Cannoni = () => {
 
+  // INIZIO PROVA HEIGHT
+    const [height, setHeight] = useState(window.innerHeight - 255.4);
+    
+    useEffect(() => {
+      const updateHeight = () => setHeight(window.innerHeight - 255.4);
+  
+      window.addEventListener("resize", updateHeight);
+      return () => window.removeEventListener("resize", updateHeight);
+    }, []);
+    // INIZIO PROVA HEIGHT
+
   // HOOKS
   const navigate = useNavigate();
   const {setCards, cards, games, setGames, places, setPlaces} = useGlobalContext();
@@ -34,15 +45,6 @@ const Cannoni = () => {
 
 
   const prova = () => {
-    // if ('1785' === '1785') {
-    //   idCard = '4';
-    //   idGame = '9';
-    //   idPlace = '7';
-    // } else if ('1785' === '2968') {
-    //   idCard = '6';
-    //   idGame = '14';
-    //   idPlace = '13';
-    // }
     if (dataFromChild === '1785') {
         setCards(unblockById(cards, '4'));
         setGames(unblockById(games, '9'));
@@ -57,7 +59,7 @@ const Cannoni = () => {
     }
   } 
 
-  return <Wrapper>
+  return <Wrapper style={{ height: `${height}px`}}>
     <div className="card" style={{backgroundColor : '#9CC4F8'}}>
       <div className="boxTop">
         <div className="left">
@@ -96,7 +98,6 @@ const Wrapper = styled.main`
   margin-top: 60px;
   margin-bottom: 195.4px;
   padding: 10px;
-  height: calc(${window.innerHeight}px - 255.4px);
   .card {
     position: relative;
     border-radius: 14px;
