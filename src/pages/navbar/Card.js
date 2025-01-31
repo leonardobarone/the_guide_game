@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { useGlobalContext } from "../../context";
+import { useState } from "react";
 import { FaLock } from "react-icons/fa";
 import { FaLockOpen } from "react-icons/fa";
 import unblocked from '../../images/cards/unblocked.webp'
@@ -8,16 +9,32 @@ const Card = () => {
     
   const {cards} = useGlobalContext();
 
+  const [filtro, setFiltro] = useState('tutti');
+
+  const filteredCards = () => {
+    switch (filtro) {
+      case 'tutte' :
+        return cards;
+      case 'sbloccate' :
+        return cards.filter(card => card.unblocked === true);
+      case 'bloccate' : 
+        return cards.filter(card => card.unblocked === false);
+      default: 
+        return cards;
+    } 
+  }
+
     return (<Wrapper>
 
         <div className="buttons">
-          <div onClick={() => alert('mostra le carte ancora da ottenere')} className="btn active">Bloccate</div>
-          <div onClick={() => alert('mostra le carte già vinte')} className="btn">Sbloccate</div>
+          <div onClick={() => setFiltro('tutte')} className={filtro == 'tutte' ? 'btn active' : 'btn' }>Tutte</div>
+          <div onClick={() => setFiltro('bloccate')} className={filtro == 'bloccate' ? 'btn active' : 'btn' }>Bloccate</div>
+          <div onClick={() => setFiltro('sbloccate')} className={filtro == 'sbloccate' ? 'btn active' : 'btn' }>Sbloccate</div>
         </div>
 
       <div className="container">
         {
-          cards.map((card) => {
+          filteredCards().map((card) => {
             return (
               <div key={card.id} className="card">
                 <div className="body">
