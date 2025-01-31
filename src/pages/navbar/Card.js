@@ -9,6 +9,12 @@ const Card = () => {
   const {cards} = useGlobalContext();
 
     return (<Wrapper>
+
+        <div className="buttons">
+          <div onClick={() => alert('mostra le carte ancora da ottenere')} className="btn active">Bloccate</div>
+          <div onClick={() => alert('mostra le carte già vinte')} className="btn">Sbloccate</div>
+        </div>
+
       <div className="container">
         {
           cards.map((card) => {
@@ -40,6 +46,30 @@ const Card = () => {
   export default Card;
   
   const Wrapper = styled.section`
+  .buttons {
+    
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 14px 0px 7px 7px;
+    .btn {
+      font-size: 14px;
+      margin-right: 7px;
+      padding: 6px 18px;
+      cursor: pointer;
+      border-radius: 15px;
+      border: 1px solid lightgray;
+      background-color: var(--bg-gray);
+      &.active {
+        border: 1px solid lightgreen;
+        background-color: var(--success-bootstrap);
+        color: white;
+      }
+    }
+  }
+
+
+
 
 margin-top: 60px;
 margin-bottom: 80px;
