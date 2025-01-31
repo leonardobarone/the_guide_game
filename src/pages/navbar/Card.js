@@ -9,7 +9,7 @@ const Card = () => {
     
   const {cards} = useGlobalContext();
 
-  const [filtro, setFiltro] = useState('tutti');
+  const [filtro, setFiltro] = useState('tutte');
 
   const filteredCards = () => {
     switch (filtro) {
