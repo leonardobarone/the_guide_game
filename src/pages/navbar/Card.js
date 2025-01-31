@@ -61,7 +61,7 @@ const Card = () => {
       border: 1px solid lightgray;
       background-color: var(--bg-gray);
       &.active {
-        border: 1px solid lightgreen;
+        border: 1px solid transparent;
         background-color: var(--success-bootstrap);
         color: white;
       }
