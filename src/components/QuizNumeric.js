@@ -18,6 +18,7 @@ import { MdOutlineArrowBack } from "react-icons/md";
 // <utils>
 import unblockById from '../utils/unblockById';
 import findById from '../utils/findById';
+import timeById from '../utils/timeById';
 // </utils>
 
 const QuizNumeric = (props) => {
@@ -55,6 +56,7 @@ const QuizNumeric = (props) => {
     if (dataFromChild === answer) {
         // VINCERE
         setCards(unblockById(arrayCards, idCard));
+        setCards(timeById(arrayCards, idCard));
         setGames(unblockById(arrayGames, idGame));
         setPlaces(unblockById(arrayPlaces, idPlace));
         // COSE VINTE

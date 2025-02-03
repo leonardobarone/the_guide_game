@@ -12,6 +12,22 @@ const Card = () => {
   const [filtro, setFiltro] = useState('tutte');
 
   const filteredCards = () => {
+
+    cards.sort((a, b) => {
+      const timeA = a.time ? new Date(a.time.split('/').reverse().join('-')) : null;
+      const timeB = b.time ? new Date(b.time.split('/').reverse().join('-')) : null;
+    
+      if (timeA && timeB) {
+        return timeB.getTime() - timeA.getTime(); // Ordina per tempo decrescente (dal più recente al più vecchio)
+      } else if (timeA) {
+        return -1; // a viene prima se ha un orario
+      } else if (timeB) {
+        return 1; // b viene prima se ha un orario
+      } else {
+        return 0; // Mantieni l'ordine originale se entrambi non hanno orario
+      }
+    });
+    
     switch (filtro) {
       case 'tutte' :
         return cards;
@@ -27,9 +43,9 @@ const Card = () => {
     return (<Wrapper>
 
         <div className="buttons">
-          <div onClick={() => setFiltro('tutte')} className={filtro == 'tutte' ? 'btn active' : 'btn' }>Tutte</div>
-          <div onClick={() => setFiltro('bloccate')} className={filtro == 'bloccate' ? 'btn active' : 'btn' }>Bloccate</div>
-          <div onClick={() => setFiltro('sbloccate')} className={filtro == 'sbloccate' ? 'btn active' : 'btn' }>Sbloccate</div>
+          <div onClick={() => setFiltro('tutte')} className={filtro === 'tutte' ? 'btn active' : 'btn' }>Tutte</div>
+          <div onClick={() => setFiltro('bloccate')} className={filtro === 'bloccate' ? 'btn active' : 'btn' }>Bloccate</div>
+          <div onClick={() => setFiltro('sbloccate')} className={filtro === 'sbloccate' ? 'btn active' : 'btn' }>Sbloccate</div>
         </div>
 
       <div className="container">
@@ -133,8 +149,8 @@ margin-bottom: 80px;
           }
           
           position: absolute;
-          top: 7px;
-          right: 7px;
+          top: 5px;
+          right: 5px;
           background-color: var(--bg-white);
           padding: 4px 8px;
           z-index: 1;
