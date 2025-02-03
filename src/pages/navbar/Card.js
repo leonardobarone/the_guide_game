@@ -45,7 +45,7 @@ const Card = () => {
                     </div>
                   </div>
                   <div className="name">
-                    {card.unblocked ? card.name.toUpperCase() : 'BLOCCATO'}
+                    {card.name.toUpperCase()}
                   </div>
                   {
                     card.unblocked ? '' : <div className="question">?</div>
@@ -103,6 +103,8 @@ margin-bottom: 80px;
       height: 100%;
       position: relative;
       .question {
+        color: white;
+        text-shadow: 0px 4px 6px black;
         position: absolute;
         left: 50%;
         top: 50%;
