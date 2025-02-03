@@ -58,6 +58,7 @@ const QuizNumeric = (props) => {
         setCards(unblockById(arrayCards, idCard));
         setCards(timeById(arrayCards, idCard));
         setGames(unblockById(arrayGames, idGame));
+        setPlaces(timeById(arrayPlaces, idPlace));
         setPlaces(unblockById(arrayPlaces, idPlace));
         // COSE VINTE
         setCardWon(findById(arrayCards, idCard))
