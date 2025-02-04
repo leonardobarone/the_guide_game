@@ -90,7 +90,7 @@ const Card = () => {
       margin-right: 7px;
       padding: 6px 18px;
       cursor: pointer;
-      border-radius: 15px;
+      border-radius: 4px;
       border: 1px solid var(--gray);
       color: var(--purple);
       background-color: white;
@@ -105,7 +105,7 @@ const Card = () => {
 
 
 
-margin-top: 60px;
+margin-top: 45px;
 margin-bottom: 80px;
 .container {
   background-color: white;
@@ -120,30 +120,29 @@ margin-bottom: 80px;
       height: 100%;
       position: relative;
       .question {
-        color: white;
-        text-shadow: 0px 4px 6px black;
+        color: var(--red);
+        /* text-shadow: 0px 4px 6px black; */
         position: absolute;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        font-size: 75px;
-        font-weight: bold;
+        font-size: 150px;
       }
       .name {
           position: absolute;
           bottom: 12px;
           left: 12px;
           width: 88%;
-          border-radius: 10px;
+          border-radius: 4px;
           padding: 10px;
           text-align: center;
           font-size: 10px;
-          font-weight: bold;
           background-color: white;
+          letter-spacing: 1px;
         }
         .tag {
           .inside {
-            border-radius: 17px;
+            border-radius: 4px;
             color: white;
             font-size: 12px;
             padding: 4px 17px;
@@ -157,7 +156,7 @@ margin-bottom: 80px;
           z-index: 1;
           /* border-bottom: 0.5 solid black;
           border-left: 0.5 solid black; */
-          border-radius: 0 0 0 10px;
+          border-radius: 0 0 0 4px;
           
           &::after {
             width: 20px;
@@ -184,7 +183,7 @@ margin-bottom: 80px;
           }
         }
         img {
-          border-radius: 10px;
+          border-radius: 4px;
           display: block;
           width: 100%;
           height: 250px;
