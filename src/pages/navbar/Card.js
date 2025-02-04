@@ -80,7 +80,7 @@ const Card = () => {
   
   const Wrapper = styled.section`
   .buttons {
-    background-color: var(--bg);
+    background-color: white;
     
     display: flex;
     justify-content: flex-start;
@@ -106,7 +106,7 @@ const Card = () => {
 margin-top: 60px;
 margin-bottom: 80px;
 .container {
-  background-color: var(--bg);
+  background-color: white;
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
@@ -150,7 +150,7 @@ margin-bottom: 80px;
           position: absolute;
           top: 5px;
           right: 5px;
-          background-color: var(--bg);
+          background-color: white;
           padding: 4px 8px;
           z-index: 1;
           /* border-bottom: 0.5 solid black;
@@ -166,7 +166,7 @@ margin-bottom: 80px;
             top: 30px;
             right: 0rem;
             border-top-right-radius: 10px;
-            box-shadow: 4px -3px var(--bg);
+            box-shadow: 4px -3px white;
           }
           
           &::before {
@@ -178,7 +178,7 @@ margin-bottom: 80px;
             top: 0px;
             left: -20px;
             border-top-right-radius: 0.700rem;
-            box-shadow: 2px -5px var(--bg);
+            box-shadow: 2px -5px white;
           }
         }
         img {

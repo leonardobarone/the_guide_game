@@ -51,7 +51,7 @@ const Place = () => {
             <div className="imgContainer">
               <img src={place.unblocked ? place.imgVisible : place.imgHidden} alt="" />
             </div>
-            <h3 style={{backgroundColor: `${place.unblocked ? 'var(--success-bootstrap)' : 'var(--danger-bootstrap)'}`}}>{place.unblocked ? place.name : 'BLOCCATO'}</h3>
+            <h3 style={{backgroundColor: `${place.unblocked ? 'var(--green)' : 'var(--red)'}`}}>{place.unblocked ? place.name : 'BLOCCATO'}</h3>
           </div>
         </div>
       })}
@@ -78,7 +78,7 @@ const Place = () => {
       background-color: var(--bg-gray);
       &.active {
         border: 1px solid transparent;
-        background-color: var(--success-bootstrap);
+        background-color: var(--green);
         color: white;
       }
     }

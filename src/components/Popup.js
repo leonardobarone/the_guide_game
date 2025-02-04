@@ -64,7 +64,7 @@ const Wrapper = styled.div`
     .center {
         text-align: center;
         h3 {
-            color: var(--my-success);
+            color: var(--green);
             font-size: 20px;
             margin: 10px 0px 5px;
             letter-spacing: 0.6px;

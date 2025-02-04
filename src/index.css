@@ -10,10 +10,14 @@ body {
 }
 
 :root {
-  --bg: #f7feda;
-  --red: #ce5c49;
-  --green: #74b850;
   --gray: #dddfdf;
+  --purple: #513e5e;
+  --red: #E73A5E;
+  --green: #4EBDAB;
+
+
+
+  --bg: #f7feda;
   
   --bg-white: #fff;
   --bg-gray: #ebebeb;

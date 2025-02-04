@@ -68,13 +68,12 @@ const Wrapper = styled.nav`
     width: 100%;
     z-index: 10;
     height: 80px;
-    background: var(--bg-gray);
+    background: var(--gray);
     display: flex;
     justify-content: center;
     ul {
       position: relative;
       display: flex;
-      // db
       width: 100%;
       li {
         position: relative;
@@ -113,7 +112,7 @@ const Wrapper = styled.nav`
            }
           &:hover {
            .icon {
-            color: var(--success-bootstrap);
+            color: var(--purple);
             opacity: 1;
            } 
           }
@@ -122,7 +121,7 @@ const Wrapper = styled.nav`
           .link {
             .icon {
              opacity: 1;
-             color: var(--success-bootstrap);
+             color: var(--purple);
              transform: translateY(-8px);
            }
            .text {
@@ -160,7 +159,7 @@ const Wrapper = styled.nav`
           bottom: 13px;
           width: 85%;
           height: 18px;
-          background: var(--success-bootstrap);
+          background: var(--purple);
           border-radius: 10px;
         }
       }

@@ -1,13 +1,12 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import student from '../images/student.png'
+import waveTop from '../images/waveTop.svg'
 
 const Header = () => {
   return (
     <Wrapper>
         <Link className='link' to="/">
-            <img src={student} alt="" />
-            <h1>Procida Game</h1>
+            <h1><strong>Procida</strong> Game</h1>
         </Link>
     </Wrapper>
   )
@@ -16,37 +15,32 @@ const Header = () => {
 export default Header;
 
 const Wrapper = styled.header`
-    background-color: var(--bg-gray);
-    height: 60px;
-    padding-left: 10px;
-    font-size: 8px;
     position: fixed;
     top: 0px;
-    left: 0px;
+    z-index: 10;
     width: 100%;
-    z-index: 2;
+    height: 40px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    .link {
-      background-color: var(--bg-white);
-      text-decoration: none;
-      color: var(--my-text);
-      padding: 2px 5px;
-      border-radius: 17px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      img {
-        height: 27px;
-      }
-      h1 {
-        font-size: 14px;
-        font-weight: 550;
-        padding: 0px 4px 0px 7px;
-      }
+    background-color: var(--gray);
+    &::after {
+      content: '';
+      position: absolute;
+      background-image: url('${waveTop}');
+      background-size: cover;
+      width: 100%;
+      height: 20px;
+      bottom: -10px;
     }
-
+    .link {
+      h1 {
+        font-weight: lighter;
+        font-size: 20px;
+        color: var(--purple);
+      }
+      text-decoration: none;
+    }
 `;
 
 
