@@ -80,6 +80,7 @@ const Card = () => {
   
   const Wrapper = styled.section`
   .buttons {
+    background-color: var(--bg);
     
     display: flex;
     justify-content: flex-start;
@@ -91,10 +92,8 @@ const Card = () => {
       padding: 6px 18px;
       cursor: pointer;
       border-radius: 15px;
-      border: 1px solid lightgray;
-      background-color: var(--bg-gray);
+      background-color: white;
       &.active {
-        border: 1px solid transparent;
         background-color: var(--green);
         color: white;
       }
