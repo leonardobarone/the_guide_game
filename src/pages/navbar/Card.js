@@ -79,8 +79,7 @@ const Card = () => {
   export default Card;
   
   const Wrapper = styled.section`
-  .buttons {
-    background-color: white;
+.buttons {
     
     display: flex;
     justify-content: flex-start;
@@ -92,8 +91,11 @@ const Card = () => {
       padding: 6px 18px;
       cursor: pointer;
       border-radius: 15px;
+      border: 1px solid var(--gray);
+      color: var(--purple);
       background-color: white;
       &.active {
+        border: 1px solid transparent;
         background-color: var(--green);
         color: white;
       }

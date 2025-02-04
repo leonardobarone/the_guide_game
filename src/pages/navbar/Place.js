@@ -74,8 +74,9 @@ const Place = () => {
       padding: 6px 18px;
       cursor: pointer;
       border-radius: 15px;
-      border: 1px solid lightgray;
-      background-color: var(--bg-gray);
+      border: 1px solid var(--gray);
+      color: var(--purple);
+      background-color: white;
       &.active {
         border: 1px solid transparent;
         background-color: var(--green);
