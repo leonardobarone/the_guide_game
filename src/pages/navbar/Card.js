@@ -56,7 +56,7 @@ const Card = () => {
                 <div className="body">
                   <img src={card.unblocked ? card.img : unblocked} alt="" />
                   <div className="tag">
-                    <div style={{backgroundColor: `${card.unblocked ? 'var(--success-bootstrap)' : 'var(--danger-bootstrap)'}`}} className="inside">
+                    <div style={{backgroundColor: `${card.unblocked ? 'var(--green)' : 'var(--red)'}`}} className="inside">
                       {card.unblocked ? <FaLockOpen /> : <FaLock />}
                     </div>
                   </div>
@@ -95,7 +95,7 @@ const Card = () => {
       background-color: var(--bg-gray);
       &.active {
         border: 1px solid transparent;
-        background-color: var(--success-bootstrap);
+        background-color: var(--green);
         color: white;
       }
     }
@@ -107,7 +107,7 @@ const Card = () => {
 margin-top: 60px;
 margin-bottom: 80px;
 .container {
-  background-color: var(--bg-white);
+  background-color: var(--bg);
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
@@ -138,12 +138,12 @@ margin-bottom: 80px;
           text-align: center;
           font-size: 10px;
           font-weight: bold;
-          background-color: var(--bg-white);
+          background-color: white;
         }
         .tag {
           .inside {
             border-radius: 17px;
-            color: var(--bg-white);
+            color: white;
             font-size: 12px;
             padding: 4px 17px;
           }
@@ -151,7 +151,7 @@ margin-bottom: 80px;
           position: absolute;
           top: 5px;
           right: 5px;
-          background-color: var(--bg-white);
+          background-color: var(--bg);
           padding: 4px 8px;
           z-index: 1;
           /* border-bottom: 0.5 solid black;
@@ -167,7 +167,7 @@ margin-bottom: 80px;
             top: 30px;
             right: 0rem;
             border-top-right-radius: 10px;
-            box-shadow: 4px -3px var(--bg-white);
+            box-shadow: 4px -3px var(--bg);
           }
           
           &::before {
@@ -179,7 +179,7 @@ margin-bottom: 80px;
             top: 0px;
             left: -20px;
             border-top-right-radius: 0.700rem;
-            box-shadow: 2px -5px var(--bg-white);
+            box-shadow: 2px -5px var(--bg);
           }
         }
         img {
