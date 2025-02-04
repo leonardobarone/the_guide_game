@@ -42,6 +42,8 @@ const Card = () => {
 
     return (<Wrapper>
 
+        <h2>Le Mie <strong>Carte</strong></h2>
+
         <div className="buttons">
           <div onClick={() => setFiltro('tutte')} className={filtro === 'tutte' ? 'btn active' : 'btn' }>Tutte</div>
           <div onClick={() => setFiltro('bloccate')} className={filtro === 'bloccate' ? 'btn active' : 'btn' }>Bloccate</div>
@@ -80,7 +82,6 @@ const Card = () => {
   
   const Wrapper = styled.section`
 .buttons {
-    
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -107,6 +108,15 @@ const Card = () => {
 
 margin-top: 45px;
 margin-bottom: 80px;
+h2 {
+  strong {
+    color: var(--green);
+  }
+  font-size: 30px;
+  color: var(--purple);
+  font-weight: lighter;
+  padding: 18px 0px 0px 8px;
+}
 .container {
   background-color: white;
   display: flex;
@@ -138,21 +148,20 @@ margin-bottom: 80px;
           text-align: center;
           font-size: 10px;
           background-color: white;
-          letter-spacing: 0.3px;
         }
         .tag {
           .inside {
             border-radius: 4px;
             color: white;
             font-size: 12px;
-            padding: 4px 6px;
+            padding: 4px 7px;
           }
           
           position: absolute;
           top: 5px;
           right: 5px;
           background-color: white;
-          padding: 4px 8px;
+          padding: 4px 5px;
           z-index: 1;
           /* border-bottom: 0.5 solid black;
           border-left: 0.5 solid black; */
