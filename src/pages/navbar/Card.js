@@ -42,7 +42,7 @@ const Card = () => {
 
     return (<Wrapper>
 
-        <h2>Le Mie <strong>Carte</strong></h2>
+        <h2><strong>Le Mie </strong>Carte</h2>
 
         <div className="buttons">
           <div onClick={() => setFiltro('tutte')} className={filtro === 'tutte' ? 'btn active' : 'btn' }>Tutte</div>
@@ -63,7 +63,7 @@ const Card = () => {
                     </div>
                   </div>
                   <div className="name">
-                    {card.name.toUpperCase()}
+                    {card.name}
                   </div>
                   {
                     card.unblocked ? '' : <div className="question">?</div>
@@ -109,11 +109,11 @@ const Card = () => {
 margin-top: 45px;
 margin-bottom: 80px;
 h2 {
-  strong {
-    color: var(--green);
-  }
   font-size: 30px;
-  color: var(--purple);
+  strong {
+    color: var(--purple);
+  }
+  color: var(--green);
   font-weight: lighter;
   padding: 18px 0px 0px 8px;
 }
@@ -140,13 +140,14 @@ h2 {
       }
       .name {
           position: absolute;
+          text-transform: capitalize;
           bottom: 12px;
           left: 12px;
-          width: 88%;
+          width: calc(100% - 24px);
           border-radius: 4px;
-          padding: 10px;
+          padding: 7px 0px;
           text-align: center;
-          font-size: 10px;
+          font-size: 13px;
           background-color: white;
         }
         .tag {
