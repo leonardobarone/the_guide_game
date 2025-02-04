@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { Link, useLocation } from 'react-router-dom';
 import { useState, createElement, useEffect } from 'react';
 import links from '../utils/links';
+import waveBottom from '../images/waveBottom.svg'
 
 const Navbar = () => {
 
@@ -62,12 +63,21 @@ export default Navbar;
 const Wrapper = styled.nav`
 
   .navigation {
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: url('${waveBottom}');
+      background-size: cover;
+      width: 100%;
+      height: 20px;
+      top: -15px;
+    }
     position: fixed;
     bottom: 0px;
     left: 0px;
     width: 100%;
     z-index: 10;
-    height: 80px;
+    height: 60px;
     background: var(--gray);
     display: flex;
     justify-content: center;
@@ -92,8 +102,8 @@ const Wrapper = styled.nav`
           .icon {
             position: relative;
             display: block;
-            line-height: 85px;
-            font-size: 1.7em;
+            line-height: 60px;
+            font-size: 24px;
             transition: 0.5s;
             text-align: center;
             color: var(--my-text);
@@ -102,7 +112,7 @@ const Wrapper = styled.nav`
            .text {
             position: absolute;
             font-weight: 600;
-            font-size: 0.6em;
+            font-size: 8px;
             color: var(--bg-gray);
             text-transform: uppercase;
             transform: translateY(0px);
@@ -112,7 +122,7 @@ const Wrapper = styled.nav`
            }
           &:hover {
            .icon {
-            color: var(--purple);
+            color: var(--green);
             opacity: 1;
            } 
           }
@@ -121,7 +131,7 @@ const Wrapper = styled.nav`
           .link {
             .icon {
              opacity: 1;
-             color: var(--purple);
+             color: var(--green);
              transform: translateY(-8px);
            }
            .text {
@@ -156,10 +166,10 @@ const Wrapper = styled.nav`
         &::before {
           content: '';
           position: absolute;
-          bottom: 13px;
-          width: 80%;
-          height: 18px;
-          background: var(--purple);
+          bottom: 7px;
+          width: 75%;
+          height: 14px;
+          background: var(--green);
           border-radius: 4px;
         }
       }
