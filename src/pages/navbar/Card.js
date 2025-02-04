@@ -138,7 +138,7 @@ margin-bottom: 80px;
           text-align: center;
           font-size: 10px;
           background-color: white;
-          letter-spacing: 1px;
+          letter-spacing: 0.3px;
         }
         .tag {
           .inside {

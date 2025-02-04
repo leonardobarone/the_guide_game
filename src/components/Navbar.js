@@ -157,10 +157,10 @@ const Wrapper = styled.nav`
           content: '';
           position: absolute;
           bottom: 13px;
-          width: 85%;
+          width: 80%;
           height: 18px;
           background: var(--purple);
-          border-radius: 10px;
+          border-radius: 4px;
         }
       }
     }
