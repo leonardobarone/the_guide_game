@@ -145,7 +145,7 @@ margin-bottom: 80px;
             border-radius: 4px;
             color: white;
             font-size: 12px;
-            padding: 4px 17px;
+            padding: 4px 6px;
           }
           
           position: absolute;
