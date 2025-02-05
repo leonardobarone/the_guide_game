@@ -53,7 +53,7 @@ const Place = () => {
             <div className="imgContainer">
               <img src={place.unblocked ? place.imgVisible : place.imgHidden} alt="" />
             </div>
-            <h3 style={{backgroundColor: `${place.unblocked ? 'var(--green)' : 'var(--red)'}`}}>{place.unblocked ? place.name : 'BLOCCATO'}</h3>
+            <h3 style={{backgroundColor: `${place.unblocked ? 'var(--green)' : 'var(--red)'}`}}>{place.unblocked ? place.name : 'Bloccato'}</h3>
           </div>
         </div>
       })}
@@ -133,7 +133,7 @@ const Place = () => {
       margin-top: 10px;
       padding: 8px;
       text-align: center;
-      text-transform: uppercase;
+      text-transform: capitalize;
       font-size: 10px;
       font-weight: lighter;
       border-radius: 4px;
