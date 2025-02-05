@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { Link, useLocation } from 'react-router-dom';
 import { useState, createElement, useEffect } from 'react';
 import links from '../utils/links';
-import waveBottom from '../images/waveBottom.svg'
 
 const Navbar = () => {
 
