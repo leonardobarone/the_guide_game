@@ -4,6 +4,7 @@ import { useState } from "react";
 import { FaLock } from "react-icons/fa";
 import { FaLockOpen } from "react-icons/fa";
 import unblocked from '../../images/cards/unblocked.webp'
+import Title from "../../components/Title";
 
 const Card = () => {
     
@@ -42,7 +43,7 @@ const Card = () => {
 
     return (<Wrapper>
 
-        <h2><strong>Le Mie </strong>Carte</h2>
+        <Title one={'Le Mie '} two={'Carte'} />
 
         <div className="buttons">
           <div onClick={() => setFiltro('tutte')} className={filtro === 'tutte' ? 'btn active' : 'btn' }>Tutte</div>
@@ -108,15 +109,7 @@ const Card = () => {
 
 margin-top: 40px;
 margin-bottom: 60px;
-h2 {
-  font-size: 30px;
-  strong {
-    color: var(--purple);
-  }
-  color: var(--green);
-  font-weight: lighter;
-  padding: 14px 0px 0px 7px;
-}
+
 .container {
   background-color: white;
   display: flex;

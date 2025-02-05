@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { useGlobalContext } from '../../context';
 import { useState } from 'react';
+import Title from '../../components/Title';
 
 const Place = () => {
 
@@ -39,7 +40,7 @@ const Place = () => {
 
     return <Wrapper>
 
-        <h2><strong>I Miei </strong>Luoghi</h2>
+        <Title one={'I Miei '} two={'Luoghi'} />
 
         <div className="buttons">
           <div onClick={() => setFiltro('tutti')} className={filtro === 'tutti' ? 'btn active' : 'btn' }>Tutti</div>
@@ -66,15 +67,6 @@ const Place = () => {
 
 margin-top: 40px;
 margin-bottom: 60px;
-h2 {
-  font-size: 30px;
-  strong {
-    color: var(--purple);
-  }
-  color: var(--green);
-  font-weight: lighter;
-  padding: 14px 0px 0px 7px;
-}
 
 
 .buttons {
@@ -114,8 +106,6 @@ h2 {
   
   .cardInside {
     padding: 4px;
-    border: 1px solid var(--gray);
-    border-radius: 4px;
     height: 100%;
     display: flex;
     justify-content: space-between;
@@ -130,7 +120,8 @@ h2 {
     }
     h3 {
       margin-top: 10px;
-      padding: 8px;
+      margin: 10px 1px 0px 1px;
+      padding: 8px 0px;
       text-align: center;
       text-transform: capitalize;
       font-size: 13px;
