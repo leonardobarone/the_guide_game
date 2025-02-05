@@ -121,14 +121,14 @@ const Wrapper = styled.main`
   padding: 10px;
   .card {
     position: relative;
-    border-radius: 14px;
+    border-radius: 4px;
     height: 100%;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     padding: 8px;
     .boxTop {
-      border-radius: 21px;
+      border-radius: 4px;
       padding: 7px 3px;
       background-color: var(--bg-white);
       display: flex;
@@ -141,14 +141,14 @@ const Wrapper = styled.main`
         align-items: center;
       }
       .left {
-        border-radius: 100%;
+        border-radius: 4px;
         padding: 5px;
         border: 1px solid var(--my-text);
         opacity: 0.5;
       }
       .right {
         font-size: 35px;
-        color: var(--my-success);
+        color: var(--orange);
       }
       .center {
         flex-basis: 70%;
@@ -156,7 +156,7 @@ const Wrapper = styled.main`
       }
     }
     .tag {
-      border-top-right-radius: 18px;
+      border-top-right-radius: 4px;
       position: absolute;
       bottom: -1px;
       left: -1px;
@@ -170,7 +170,7 @@ const Wrapper = styled.main`
         background-color: transparent;
         top: 25px;
         right: -20px;
-        border-bottom-left-radius: 10px;
+        border-bottom-left-radius: 4px;
         box-shadow: -4px 3px var(--bg-white);
       }
       
@@ -182,17 +182,17 @@ const Wrapper = styled.main`
         background-color: transparent;
         top: -20px;
         left: 1px;
-        border-bottom-left-radius: 0.700rem;
+        border-bottom-left-radius: 4px;
         box-shadow: -6px 4px var(--bg-white);
       }
       .btn {
         display: inline-block;
-        background-color: var(--my-success);
+        background-color: var(--orange);
         color: white;
         font-weight: bold;
         padding: 10px 75px;
         border-style: none;
-        border-radius: 21px;
+        border-radius: 4px;
       }
     }
   }

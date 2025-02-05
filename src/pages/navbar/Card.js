@@ -176,7 +176,7 @@ h2 {
             background-color: transparent;
             top: 30px;
             right: 0rem;
-            border-top-right-radius: 10px;
+            border-top-right-radius: 4px;
             box-shadow: 4px -3px white;
           }
           
@@ -188,7 +188,7 @@ h2 {
             background-color: transparent;
             top: 0px;
             left: -20px;
-            border-top-right-radius: 0.700rem;
+            border-top-right-radius: 4px;
             box-shadow: 2px -5px white;
           }
         }

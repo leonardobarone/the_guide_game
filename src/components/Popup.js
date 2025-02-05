@@ -64,7 +64,7 @@ const Wrapper = styled.div`
     .center {
         text-align: center;
         h3 {
-            color: var(--green);
+            color: var(--orange);
             font-size: 20px;
             margin: 10px 0px 5px;
             letter-spacing: 0.6px;
@@ -88,7 +88,7 @@ const Wrapper = styled.div`
             border-style: none;
             width: 100%;
             color: white;
-            background-color: var(--my-success);
+            background-color: var(--orange);
         }
     }
 
