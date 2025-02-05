@@ -53,7 +53,7 @@ const Place = () => {
             <div className="imgContainer">
               <img src={place.unblocked ? place.imgVisible : place.imgHidden} alt="" />
             </div>
-            <h3 style={{backgroundColor: `${place.unblocked ? 'var(--green)' : 'var(--red)'}`}}>{place.unblocked ? place.name : 'Bloccato'}</h3>
+            <h3 style={{backgroundColor: `${place.unblocked ? 'var(--green)' : 'var(--red)'}`}}>{place.unblocked ? place.name : 'Bloccato' }</h3>
           </div>
         </div>
       })}
@@ -107,9 +107,9 @@ const Place = () => {
   align-content: flex-start;
   .cardOutside {
     flex-basis: 50%;
-    padding: 7px 7px;
+    padding: 8px 4px 8px 8px;
     &:nth-child(2n) {
-      padding: 7px 7px 7px 0px;
+      padding: 8px 8px 8px 4px;
     }
   }
   
@@ -134,7 +134,7 @@ const Place = () => {
       padding: 8px;
       text-align: center;
       text-transform: capitalize;
-      font-size: 10px;
+      font-size: 13px;
       font-weight: lighter;
       border-radius: 4px;
       color: white;
