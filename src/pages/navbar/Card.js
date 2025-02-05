@@ -107,7 +107,7 @@ const Card = () => {
 
 
 margin-top: 40px;
-margin-bottom: 80px;
+margin-bottom: 60px;
 h2 {
   font-size: 30px;
   strong {
@@ -115,7 +115,7 @@ h2 {
   }
   color: var(--green);
   font-weight: lighter;
-  padding: 18px 0px 0px 8px;
+  padding: 14px 0px 0px 7px;
 }
 .container {
   background-color: white;

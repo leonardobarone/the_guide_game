@@ -2,7 +2,6 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Mappa from "./pages/navbar/Mappa";
 import Account from "./pages/navbar/Account";
 import Card from "./pages/navbar/Card";
-import Rule from "./pages/navbar/Rule";
 import Place from "./pages/navbar/Place";
 import Error from "./pages/Error";
 import Header from "./components/Header";
@@ -21,7 +20,6 @@ function App() {
           
           {/* Collegamenti Navbar */}
           <Route path="/mappa" element={<Mappa />} />
-          <Route path="/regole" element={<Rule />} />
           <Route path="/profilo" element={<Account />} />
           <Route path="/carte" element={<Card />} />
           <Route path="/luoghi" element={<Place />} />

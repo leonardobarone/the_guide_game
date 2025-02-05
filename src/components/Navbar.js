@@ -63,15 +63,6 @@ export default Navbar;
 const Wrapper = styled.nav`
 
   .navigation {
-    &::before {
-      content: '';
-      position: absolute;
-      background-image: url('${waveBottom}');
-      background-size: cover;
-      width: 100%;
-      height: 50px;
-      top: -35px;
-    }
     position: fixed;
     bottom: 0px;
     left: 0px;
@@ -132,7 +123,7 @@ const Wrapper = styled.nav`
             .icon {
              opacity: 1;
              color: var(--green);
-             transform: translateY(-4px);
+             transform: translateY(-3px);
            }
            .text {
             opacity: 1;

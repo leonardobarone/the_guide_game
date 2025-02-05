@@ -56,7 +56,7 @@ export default Mappa;
 const Wrapper = styled.main`
   .mappa {
     margin-top: 40px;
-    margin-bottom: 6px;
+    margin-bottom: 60px;
     height: calc(100vh - 100px);
   }
   .link {

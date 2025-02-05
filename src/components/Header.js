@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import waveTop from '../images/waveTop.svg'
 
 const Header = () => {
   return (
@@ -24,15 +23,6 @@ const Wrapper = styled.header`
     justify-content: center;
     align-items: center;
     background-color: var(--gray);
-    &::after {
-      content: '';
-      position: absolute;
-      background-image: url('${waveTop}');
-      background-size: cover;
-      width: 100%;
-      height: 20px;
-      bottom: -10px;
-    }
     .link {
       h1 {
         font-weight: lighter;
