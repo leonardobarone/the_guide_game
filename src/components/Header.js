@@ -17,7 +17,7 @@ export default Header;
 const Wrapper = styled.header`
     position: fixed;
     top: 0px;
-    z-index: 10;
+    z-index: 3;
     width: 100%;
     height: 40px;
     display: flex;

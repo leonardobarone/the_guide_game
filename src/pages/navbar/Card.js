@@ -106,8 +106,8 @@ const Card = () => {
 
 
 
-margin-top: 45px;
-margin-bottom: 70px;
+margin-top: 40px;
+margin-bottom: 80px;
 h2 {
   font-size: 30px;
   strong {

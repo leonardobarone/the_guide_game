@@ -69,8 +69,8 @@ const Wrapper = styled.nav`
       background-image: url('${waveBottom}');
       background-size: cover;
       width: 100%;
-      height: 20px;
-      top: -15px;
+      height: 50px;
+      top: -35px;
     }
     position: fixed;
     bottom: 0px;
@@ -88,7 +88,7 @@ const Wrapper = styled.nav`
       li {
         position: relative;
         list-style: none;
-        width: calc(100% / 5);
+        width: calc(100% / 4);
         height: 80px;
         .link {
           position: relative;
@@ -132,7 +132,7 @@ const Wrapper = styled.nav`
             .icon {
              opacity: 1;
              color: var(--green);
-             transform: translateY(-8px);
+             transform: translateY(-4px);
            }
            .text {
             opacity: 1;
@@ -149,13 +149,13 @@ const Wrapper = styled.nav`
         &:nth-child(4).active ~ .indicator {
           transform: translateX(calc(300%));
         }
-        &:nth-child(5).active ~ .indicator {
+        /* &:nth-child(5).active ~ .indicator {
           transform: translateX(calc(400%));
-        }
+        } */
       }
       .indicator {
         position: absolute;
-        width: calc(100% / 5);
+        width: calc(100% / 4);
         height: 100%;
         display: flex;
         justify-content: center;
@@ -167,7 +167,7 @@ const Wrapper = styled.nav`
           content: '';
           position: absolute;
           bottom: 7px;
-          width: 75%;
+          width: 50%;
           height: 14px;
           background: var(--green);
           border-radius: 4px;

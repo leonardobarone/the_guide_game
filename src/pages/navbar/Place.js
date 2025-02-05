@@ -39,6 +39,8 @@ const Place = () => {
 
     return <Wrapper>
 
+        <h2><strong>I Miei </strong>Luoghi</h2>
+
         <div className="buttons">
           <div onClick={() => setFiltro('tutti')} className={filtro === 'tutti' ? 'btn active' : 'btn' }>Tutti</div>
           <div onClick={() => setFiltro('bloccati')} className={filtro === 'bloccati' ? 'btn active' : 'btn' }>Bloccati</div>
@@ -62,8 +64,21 @@ const Place = () => {
   
   const Wrapper = styled.section`
 
+  margin-top: 40px;
+  margin-bottom: 80px;
+  
+  h2 {
+    font-size: 30px;
+    strong {
+      color: var(--purple);
+    }
+    color: var(--green);
+    font-weight: lighter;
+    padding: 18px 0px 0px 8px;
+  }
+
+
 .buttons {
-    
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -73,7 +88,7 @@ const Place = () => {
       margin-right: 7px;
       padding: 6px 18px;
       cursor: pointer;
-      border-radius: 15px;
+      border-radius: 4px;
       border: 1px solid var(--gray);
       color: var(--purple);
       background-color: white;
@@ -86,18 +101,22 @@ const Place = () => {
   }
 
 
-  margin-top: 60px;
-  margin-bottom: 80px;
   height: calc(100% - 140px);
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
   .cardOutside {
     flex-basis: 50%;
-    padding: 10px;
+    padding: 7px 7px;
+    &:nth-child(2n) {
+      padding: 7px 7px 7px 0px;
+    }
   }
   
   .cardInside {
+    padding: 4px;
+    border: 1px solid var(--gray);
+    border-radius: 4px;
     height: 100%;
     display: flex;
     justify-content: space-between;
@@ -107,15 +126,17 @@ const Place = () => {
     }
     img {
       display: block;
-      width: 85%;
+      width: 90%;
       margin: 0 auto;
     }
     h3 {
-      padding: 7px;
+      margin-top: 10px;
+      padding: 8px;
       text-align: center;
       text-transform: uppercase;
       font-size: 10px;
-      border-radius: 15px;
+      font-weight: lighter;
+      border-radius: 4px;
       color: white;
     }
   }
