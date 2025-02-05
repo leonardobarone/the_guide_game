@@ -3,18 +3,30 @@ import { APIProvider, Map, AdvancedMarker, InfoWindow } from '@vis.gl/react-goog
 import { Link } from 'react-router-dom';
 import { useGlobalContext } from "../../context";
 import { FaMapMarkerAlt } from "react-icons/fa";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const Mappa = () => {
   const {games} = useGlobalContext();
-  const [selectedGame, setSelectedGame] = useState(null)
+
+  const [selectedGame, setSelectedGame] = useState(null);
+    // INIZIO PROVA HEIGHT
+    const [height, setHeight] = useState(window.innerHeight - 100);
+    
+    useEffect(() => {
+      const updateHeight = () => setHeight(window.innerHeight - 100);
+  
+      window.addEventListener("resize", updateHeight);
+      return () => window.removeEventListener("resize", updateHeight);
+    }, []);
+    // INIZIO PROVA HEIGHT
 
   return <Wrapper>
     <APIProvider 
       apiKey={"AIzaSyA7zTeRL20KTZpxmmgoSyDIBUZqgdxW1xk"} // process.env.API_KEY
       > 
       <Map
-        className='mappa'
+        // className='mappa'
+        style={{height: `${height}px`, marginTop: '40px', marginBottom: '60px'}}
         defaultCenter={{lat: 40.75791635986094, lng: 14.014870424568413}}
         defaultZoom={13.25}
         gestureHandling={'greedy'} // ??
@@ -54,11 +66,6 @@ const Mappa = () => {
 export default Mappa;
 
 const Wrapper = styled.main`
-  .mappa {
-    margin-top: 40px;
-    margin-bottom: 60px;
-    height: calc(100vh - 100px);
-  }
   .link {
     display: inline-block;
     color: white;
