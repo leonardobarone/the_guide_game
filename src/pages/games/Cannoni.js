@@ -15,7 +15,7 @@ const Cannoni = () => {
       'idPlace' : '7',
       'arrayGames' : games,
       'idGame' : '9',
-      'hex' : '#9CC4F8'
+      'hex' : '#89B8F6'
     }
 
   
