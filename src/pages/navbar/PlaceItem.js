@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useGlobalContext } from "../../context";
+import grid from '../../images/grid.svg'
 
 const PlaceItem = () => {
   const {places} = useGlobalContext();
@@ -8,7 +9,8 @@ const PlaceItem = () => {
   
   return (
     <div style={{marginTop: '50px', marginBottom: '75px'}}>
-      <img width={'100%'} src={oggettoTrovato.img} alt="" />
+      <img width={'250'} src={oggettoTrovato.imgVisible} alt="" />
+      <img src={grid} alt="" />
       <h2 style={{textAlign: 'center', textTransform: 'capitalize'}}>{oggettoTrovato.name}</h2>
     </div>
   )
