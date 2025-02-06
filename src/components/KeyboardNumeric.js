@@ -83,6 +83,11 @@ const Wrapper = styled.div`
             background-color: white;
             width: 100%;
             height: 100%;
+            color: var(--purple);
+            &:active {
+                border: 1px solid var(--green);
+                color: var(--green);
+            }
         }
     }
     .keyboard {
@@ -105,6 +110,7 @@ const Wrapper = styled.div`
                 justify-content: center;
                 align-items: center;
                 border-radius: 4px;
+                color: var(--purple);
             }
         }
     }
