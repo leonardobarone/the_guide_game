@@ -21,7 +21,7 @@ const Account = () => {
               
               
             <li>
-              <Link className="link">
+              <Link to={'/luoghi'} className="link">
                 <div className="columnLeft">
                   <div className="sx">
                     <MdPlace className="icon" />
@@ -40,7 +40,7 @@ const Account = () => {
 
                          
             <li>
-              <Link className="link">
+              <Link to={'/carte'} className="link">
                 <div className="columnLeft">
                   <div className="sx">
                     <TbCardsFilled className="icon" />
