@@ -1,9 +1,12 @@
 // Loghi
-import { GiOpenTreasureChest } from "react-icons/gi";
+import { TbCardsFilled } from "react-icons/tb";
 // import { FaBook } from "react-icons/fa";
-import { FaCompass } from "react-icons/fa";
-import { GiTreasureMap } from "react-icons/gi";
+import { MdPlace } from "react-icons/md";
+import { IoMap } from "react-icons/io5";
+
+// import { GiTreasureMap } from "react-icons/gi";
 import { MdAccountCircle } from "react-icons/md";
+
 
 const links = [
     { 
@@ -22,19 +25,19 @@ const links = [
         'id' : "3",
         'text' : 'Mappa', 
         'path' : '/mappa',
-        'icon' : GiTreasureMap
+        'icon' : IoMap
     },
     { 
         'id' : "4",
         'text' : 'Luoghi', 
         'path' : '/luoghi',
-        'icon' : FaCompass
+        'icon' : MdPlace
     },
     { 
         'id' : "5",
         'text' : 'Carte', 
         'path' : '/carte',
-        'icon' : GiOpenTreasureChest
+        'icon' : TbCardsFilled
     },
   ];
 

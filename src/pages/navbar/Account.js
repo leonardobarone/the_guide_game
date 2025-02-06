@@ -1,11 +1,86 @@
 import styled from "styled-components";
-import waveTop from '../../images/waveTop.svg';
-
+import { Link } from "react-router-dom";
+import student from '../../images/student.png';
+import { TbCardsFilled } from "react-icons/tb";
+import { MdPlace } from "react-icons/md";
+import { MdKeyboardArrowRight } from "react-icons/md";
 
 const Account = () => {
     return (
       <Wrapper>
-        
+        {/* <Title one={'La Mia'} two={'Home'} /> */}
+        <div className="infoHome">
+          <img src={student} className="icon" alt="" />
+          <div className="name">Leonardo Barone</div>
+          <div className="email">leonardobarone26@gmail.com</div>
+        </div>
+        <div className="options">
+          <ul>
+              
+              
+              
+              
+            <li>
+              <Link className="link">
+                <div className="columnLeft">
+                  <div className="sx">
+                    <MdPlace className="icon" />
+                  </div>
+                  <div className="dx">
+                    <div className="title">Luoghi</div>
+                    <div className="subtitle">7 / 15</div>
+                  </div>
+                </div>
+                <div className="columnRight">
+                  <MdKeyboardArrowRight className="icon" />
+                </div>
+              </Link>
+            </li>
+           
+
+                         
+            <li>
+              <Link className="link">
+                <div className="columnLeft">
+                  <div className="sx">
+                    <TbCardsFilled className="icon" />
+                  </div>
+                  <div className="dx">
+                    <div className="title">Carte</div>
+                    <div className="subtitle">2 / 10</div>
+                  </div>
+                </div>
+                <div className="columnRight">
+                  <MdKeyboardArrowRight className="icon" />
+                </div>
+              </Link>
+            </li>
+           
+            
+            
+
+            
+            
+            
+            
+            
+            <li>
+              <Link className="link">
+                Dark Mode (?)
+              </Link>
+            </li>
+            <li>
+              <Link className="link">
+                Regole
+              </Link>
+            </li>
+            <li>
+              <Link className="link">
+                Log Out
+              </Link>
+            </li>
+          </ul>
+        </div>
       </Wrapper>
     )
   }
@@ -13,21 +88,75 @@ const Account = () => {
 export default Account;
   
 const Wrapper = styled.main`
-  background-color: var(--gray);
   margin-top: 40px;
   margin-bottom: 60px;
-  position: relative;
-  height: 300px;
-  &::after {
-    content: '';
-    background-image: url(${waveTop});
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    bottom: -25px;
-    left: 0px;
-    height: 25px;
-    position: absolute;
+  .infoHome {
+    margin-top: 55px;
+    border: 1px solid black;
+    padding: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .icon {
+      height: 65px;
+    }
+    .name {
+      font-size: 20px;
+      margin: 2px 0px;
+      color: var(--purple);
+    }
+    .email {
+      color: var(--green);
+      font-size: 14px;
+    }
+  }
+  .options {
+    margin-top: 15px;
+    border: 1px solid red;
+    padding: 7px;
+    ul {
+      list-style: none;
+      li {
+        &:not(:last-child) {
+          margin-bottom: 7px;
+        }
+        &:not(:last-child) .link {
+          border: 1px solid var(--gray);
+        }
+        &:last-child .link {
+          border: 1px solid pink // diventerà transparent;
+        }
+        .link {
+          color: black;
+          border-radius: 4px;
+          padding: 10px;
+          text-decoration: none;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .icon {
+            display: block;
+            height: 100%;
+            font-size: 25px;
+          }
+          .columnLeft {
+            .sx {
+              margin-right: 15px;
+            }
+            .title {
+              font-size: 15px;
+              font-weight: bold;
+            }
+            .subtitle {
+              margin-top: 3px;
+              font-size: 10px;
+            }
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+    }
   }
 `
