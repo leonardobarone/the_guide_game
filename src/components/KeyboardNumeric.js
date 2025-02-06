@@ -69,13 +69,13 @@ const Wrapper = styled.div`
     left: 0px;
     width: 100%;
     .boxSearch {
-        padding: 7px;
+        height: 40px;
+        padding: 7px 7px 3px 7px;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100%;
-        height: 50px;
         .inSearch {
+            border-radius: 4px;
             display: flex;
             justify-content: flex-start;
             align-items: center;
@@ -86,11 +86,11 @@ const Wrapper = styled.div`
         }
     }
     .keyboard {
-        padding: 0px 4px 7px 4px;
+        height: 40px;
+        padding: 0px 4px 4px 4px;
         display: flex;
         flex-wrap: wrap;
         align-content: flex-start;
-        height: 50px;
         .inner {
             height: 100%;
             flex-basis: calc(100% / 12);
@@ -98,7 +98,7 @@ const Wrapper = styled.div`
             justify-content: center;
             align-items: center;
             div {
-                height: 36px;
+                height: calc(100% - 6px);
                 width: calc(100% - 6px);
                 background-color: white;
                 display: flex;
