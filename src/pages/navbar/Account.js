@@ -102,7 +102,8 @@ const Wrapper = styled.main`
     }
     .name {
       font-size: 20px;
-      margin: 2px 0px;
+      font-weight: bold;
+      margin: 5px 0px 2px 0px;
       color: var(--purple);
     }
     .email {
@@ -139,19 +140,29 @@ const Wrapper = styled.main`
             font-size: 25px;
           }
           .columnLeft {
+            .icon {
+              color: var(--purple);
+            }
             .sx {
               margin-right: 15px;
             }
             .title {
+              color: var(--purple);
               font-size: 15px;
               font-weight: bold;
             }
             .subtitle {
+              color: var(--green);
               margin-top: 3px;
               font-size: 10px;
             }
             display: flex;
             align-items: center;
+          }
+          .columnRight {
+            .icon {
+              color: var(--green);
+            }
           }
         }
       }
