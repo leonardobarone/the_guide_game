@@ -1,6 +1,6 @@
 // Loghi
 import { TbCardsFilled } from "react-icons/tb";
-// import { FaBook } from "react-icons/fa";
+
 import { MdPlace } from "react-icons/md";
 import { IoMap } from "react-icons/io5";
 

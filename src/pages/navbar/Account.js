@@ -5,6 +5,8 @@ import { TbCardsFilled } from "react-icons/tb";
 import { MdPlace } from "react-icons/md";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { LuLogOut } from "react-icons/lu";
+import { FaBook } from "react-icons/fa";
+import { MdDarkMode } from "react-icons/md";
 
 
 const Account = () => {
@@ -64,18 +66,45 @@ const Account = () => {
             
             
             
-            
-            
+    
             <li>
               <Link className="link">
-                Dark Mode (?)
+                <div className="columnLeft">
+                  <div className="sx">
+                    <MdDarkMode className="icon" />
+                  </div>
+                  <div className="dx">
+                    <div className="title">Dark Mode</div>
+                    <div className="subtitle">Passa alla modalità notte</div>
+                  </div>
+                </div>
+                <div className="columnRight">
+                  <MdKeyboardArrowRight className="icon" />
+                </div>
               </Link>
             </li>
+    
+    
+    
+    
+    
             <li>
               <Link className="link">
-                Regole
+                <div className="columnLeft">
+                  <div className="sx">
+                    <FaBook className="icon" />
+                  </div>
+                  <div className="dx">
+                    <div className="title">Regole</div>
+                    <div className="subtitle">Come si gioca</div>
+                  </div>
+                </div>
+                <div className="columnRight">
+                  <MdKeyboardArrowRight className="icon" />
+                </div>
               </Link>
             </li>
+           
 
 
 
