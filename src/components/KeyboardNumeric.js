@@ -28,33 +28,33 @@ const KeyboardNumeric = ({ sendDataToParent, popup }) => {
         }
     }, [popup])
 
-    const numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'indietro', 'azzera']; 
+    const numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'azzera', 'indietro']; 
     return <>
         <Wrapper>
-            <div className="outsideInput">
-                <div className="insideInput">
-                    <span>{numero ? numero : '|'}</span>
+            <div className="boxSearch">
+                <div className="inSearch">
+                    <div>{numero ? numero : ''}</div>
                 </div>
             </div>
-            {
-                numbers.map((number, index) => {
-                    let view = number;
-                    if (number === 'indietro') {
-                        view = <IoMdBackspace />
-                    } else if (number === 'azzera') {
-                        view = <MdDelete />
-                    } else {
-                        view = number;
-                    }
-                    return (
-                        <div key={index} className='inner'>
-                            <button onClick={() => handleButtonClick(number)}>    
-                                <span>{view}</span>
-                            </button>
-                        </div>
-                    )
-                })
-            }
+            <div className="keyboard">
+                {
+                    numbers.map((number, index) => {
+                        let view = number;
+                        if (number === 'indietro') {
+                            view = <IoMdBackspace />
+                        } else if (number === 'azzera') {
+                            view = <MdDelete />
+                        } else {
+                            view = number;
+                        }
+                        return (
+                            <div key={index} className='inner'>
+                                    <div key={index} onClick={() => handleButtonClick(number)} >{view}</div>
+                            </div>
+                        )
+                    })
+                }
+            </div>
         </Wrapper>
     </>
 }
@@ -62,62 +62,55 @@ const KeyboardNumeric = ({ sendDataToParent, popup }) => {
 export default KeyboardNumeric;
 
 const Wrapper = styled.div`
-    padding: 7px 0px;
-    background-color: var(--bg-gray);
+    background-color: var(--gray);
     position: fixed;
     z-index: 1;
     bottom: 0px;
     left: 0px;
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    .outsideInput {
-        flex-basis: 100%;
-        border-radius: 10px;
+    .boxSearch {
+        padding: 7px;
         display: flex;
         justify-content: center;
-        padding: 0px 6px 6px 6px;
-    }
-    .insideInput {
-        display: flex;
-        justify-content: flex-start;
         align-items: center;
-        background-color: var(--bg-white);
-        padding: 10px 20px;
         width: 100%;
-        height: 100%;
-        border-radius: 8px;
-        color: var(--my-text);
-        span {
-            opacity: 0.3;
+        height: 50px;
+        .inSearch {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding-left: 7px;
+            background-color: white;
+            width: 100%;
+            height: 100%;
         }
     }
-    .inner {
-        flex-basis: 25%;
+    .keyboard {
+        padding: 0px 4px 7px 4px;
         display: flex;
-        justify-content: center;
-        align-items: center;
-            button {
+        flex-wrap: wrap;
+        align-content: flex-start;
+        height: 50px;
+        .inner {
+            height: 100%;
+            flex-basis: calc(100% / 12);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            div {
+                height: 36px;
+                width: calc(100% - 6px);
+                background-color: white;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                width: 87%;
-                height: 87%;
-                background-color: var(--bg-white);
-                border-style: none;
-                border-radius: 10px;
-                padding: 8px 0px;
-                font-size: 25px;
-                color: var(--my-text);
-                span {
-                    opacity: 0.3;
-                }
+                border-radius: 4px;
             }
-            /* &:nth-child(3n) {
-            border-right: 0px;
-        } */
+        }
     }
+
+
+ 
 `;
 
 
