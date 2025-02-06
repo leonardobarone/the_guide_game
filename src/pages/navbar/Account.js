@@ -7,9 +7,16 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 import { LuLogOut } from "react-icons/lu";
 import { FaBook } from "react-icons/fa";
 import { MdDarkMode } from "react-icons/md";
+import { useGlobalContext } from "../../context";
 
 
 const Account = () => {
+
+    const {cards, places} = useGlobalContext();
+    
+    const unblockedCards = cards.filter(obj => obj.unblocked === true);
+    const unblockedPlaces = places.filter(obj => obj.unblocked === true);
+
     return (
       <Wrapper>
         {/* <Title one={'La Mia'} two={'Home'} /> */}
@@ -32,7 +39,7 @@ const Account = () => {
                   </div>
                   <div className="dx">
                     <div className="title">Luoghi</div>
-                    <div className="subtitle">7 / 15</div>
+                    <div className="subtitle">{unblockedPlaces.length} / {places.length}</div>
                   </div>
                 </div>
                 <div className="columnRight">
@@ -51,7 +58,7 @@ const Account = () => {
                   </div>
                   <div className="dx">
                     <div className="title">Carte</div>
-                    <div className="subtitle">2 / 10</div>
+                    <div className="subtitle">{unblockedCards.length} / {cards.length}</div>
                   </div>
                 </div>
                 <div className="columnRight">
