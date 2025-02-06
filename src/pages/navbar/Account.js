@@ -4,6 +4,8 @@ import student from '../../images/student.png';
 import { TbCardsFilled } from "react-icons/tb";
 import { MdPlace } from "react-icons/md";
 import { MdKeyboardArrowRight } from "react-icons/md";
+import { LuLogOut } from "react-icons/lu";
+
 
 const Account = () => {
     return (
@@ -74,11 +76,31 @@ const Account = () => {
                 Regole
               </Link>
             </li>
+
+
+
+
             <li>
-              <Link className="link">
-                Log Out
+              <Link to={'/'} className="link">
+                <div className="columnLeft">
+                  <div className="sx">
+                    <LuLogOut className="icon" />
+                  </div>
+                  <div className="dx">
+                    <div className="title">Log Out</div>
+                    <div className="subtitle">Esci dal gioco</div>
+                  </div>
+                </div>
+                <div className="columnRight">
+                  <MdKeyboardArrowRight className="icon" />
+                </div>
               </Link>
             </li>
+
+
+
+
+
           </ul>
         </div>
       </Wrapper>
@@ -124,7 +146,15 @@ const Wrapper = styled.main`
           border: 1px solid var(--gray);
         }
         &:last-child .link {
-          border: 1px solid pink // diventerà transparent;
+          .columnLeft .icon, .title {
+            color: var(--red) !important;
+          }
+          .columnRight .icon, .columnLeft .subtitle {
+            color: var(--red) !important;
+            opacity: 0.7;
+          }
+          background-color: #FFF3F3;
+          border: 1px solid transparent // diventerà transparent;
         }
         .link {
           color: black;
@@ -140,6 +170,8 @@ const Wrapper = styled.main`
             font-size: 25px;
           }
           .columnLeft {
+            display: flex;
+            align-items: center;
             .icon {
               color: var(--purple);
             }
@@ -156,8 +188,6 @@ const Wrapper = styled.main`
               margin-top: 3px;
               font-size: 10px;
             }
-            display: flex;
-            align-items: center;
           }
           .columnRight {
             .icon {
