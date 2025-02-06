@@ -92,7 +92,6 @@ const Wrapper = styled.main`
   margin-bottom: 60px;
   .infoHome {
     margin-top: 55px;
-    border: 1px solid black;
     padding: 7px;
     display: flex;
     flex-direction: column;
@@ -113,7 +112,6 @@ const Wrapper = styled.main`
   }
   .options {
     margin-top: 15px;
-    border: 1px solid red;
     padding: 7px;
     ul {
       list-style: none;
