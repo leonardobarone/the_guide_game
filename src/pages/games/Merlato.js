@@ -14,6 +14,13 @@ const Merlato = () => {
         'answer' : '2968',
         'arrayCards' : cards,
         'idCard' : '6',
+
+
+
+
+
+
+        
         'arrayPlaces' : places,
         'idPlace' : '12',
         'arrayGames' : games,

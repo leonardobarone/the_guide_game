@@ -84,10 +84,6 @@ const Wrapper = styled.div`
             width: 100%;
             height: 100%;
             color: var(--purple);
-            &:active {
-                border: 1px solid var(--green);
-                color: var(--green);
-            }
         }
     }
     .keyboard {

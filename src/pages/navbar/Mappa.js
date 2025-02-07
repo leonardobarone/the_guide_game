@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { APIProvider, Map, AdvancedMarker, InfoWindow } from '@vis.gl/react-google-maps';
 import { Link } from 'react-router-dom';
 import { useGlobalContext } from "../../context";
-import { FaMapMarkerAlt } from "react-icons/fa";
+import { MdLocationPin } from "react-icons/md";
 import { useState, useEffect } from 'react';
 
 const Mappa = () => {
@@ -44,7 +44,7 @@ const Mappa = () => {
                   key={item}
                   onClick={()=> setSelectedGame(game)}
                 >
-                  <FaMapMarkerAlt style={{fontSize: '33px', color: '#EA4335'}} />
+                  <MdLocationPin style={{fontSize: '33px', color: 'var(--purple)'}} />
                   {selectedGame && <InfoWindow
                     headerContent={<h2>{selectedGame.name}</h2>}
                     position={selectedGame} 
