@@ -71,7 +71,8 @@ margin-bottom: 60px;
 
 .buttons {
     display: flex;
-    justify-content: flex-start;
+    width: 100%;
+    justify-content: center;
     align-items: center;
     padding: 14px 0px 7px 7px;
     .btn {

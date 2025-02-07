@@ -8,6 +8,7 @@ import { LuLogOut } from "react-icons/lu";
 import { FaBook } from "react-icons/fa";
 import { MdDarkMode } from "react-icons/md";
 import { useGlobalContext } from "../../context";
+import Title from "../../components/Title";
 
 
 const Account = () => {
@@ -21,11 +22,11 @@ const Account = () => {
     
     return (
       <Wrapper>
-        {/* <Title one={'La Mia'} two={'Home'} /> */}
+        <Title one={'La Mia'} two={'Home'} />
         <div className="infoHome">
           <img src={student} className="icon" alt="" />
-          <div className="name">Leonardo Barone</div>
-          <div className="email">leonardobarone26@gmail.com</div>
+          <div className="name">Arturo Gerace</div>
+          <div className="email">arturogerace@gmail.com</div>
         </div>
         <div className="options">
           <ul>
@@ -151,7 +152,7 @@ const Wrapper = styled.main`
   margin-top: 40px;
   margin-bottom: 60px;
   .infoHome {
-    margin-top: 55px;
+    margin-top: 15px;
     padding: 7px;
     display: flex;
     flex-direction: column;

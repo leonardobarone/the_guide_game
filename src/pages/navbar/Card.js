@@ -84,7 +84,7 @@ const Card = () => {
   const Wrapper = styled.section`
 .buttons {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     padding: 14px 0px 7px 7px;
     .btn {
