@@ -26,7 +26,7 @@ const Cannoni = () => {
       <QuizNumeric infoQuizNumeric={quizNumericCannoni} >
 
 
-        <div style={{height: 'calc(100% - 95px)', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+        <div style={{height: 'calc(100% - 102px)', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
             <img width={90} src={cannon} alt="" />
         </div> 
       </QuizNumeric>
