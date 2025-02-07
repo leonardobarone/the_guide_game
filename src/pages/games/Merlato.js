@@ -29,18 +29,15 @@ const Merlato = () => {
       <QuizNumeric infoQuizNumeric={quizNumericMerlato} >
 
         <Wrapper>
-            <div className="row">
+          <div>
               <img src={arch} alt="" />
-              <div className="operator">x</div>
-            </div>
-            <div className="row">
-              <img src={lace} alt="" />
-              <div className="operator">x</div>
-            </div>
-            <div className="row">
-              <div className="num">8</div>
-              <div className="operator">=</div>
-            </div>
+          </div>
+          <div className="operator">x</div>
+          <div>
+            <img src={lace} alt="" />
+          </div>
+          <div className="operator">x</div>
+          <div className="num">8</div>
         </Wrapper>
       </QuizNumeric>
     </div>
@@ -53,40 +50,35 @@ export default Merlato;
 const Wrapper = styled.div`
   height: calc(100% - 87px);
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  .row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .num {
-    height: 100px;
-    font-size: 75px;
-    width: 100px;
-    color: white;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
   img {
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 75px;
     display: block;
     object-fit: cover;
     object-position: center;
   }
+  .num {
+    height: 75px;
+    width: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: white;
+    font-weight: bold;
+  }
+  
   .operator {
-    height: 100px;
-    width: 25px;
+    height: 75px;
+    width: 20px;
     font-size: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
+    font-weight: bold;
   }
 
 `
