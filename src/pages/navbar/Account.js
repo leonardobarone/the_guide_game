@@ -17,6 +17,8 @@ const Account = () => {
     const unblockedCards = cards.filter(obj => obj.unblocked === true);
     const unblockedPlaces = places.filter(obj => obj.unblocked === true);
 
+
+    
     return (
       <Wrapper>
         {/* <Title one={'La Mia'} two={'Home'} /> */}
