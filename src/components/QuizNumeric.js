@@ -1,6 +1,7 @@
 // <components>
 import KeyboardNumeric from '../components/KeyboardNumeric';
 import Popup from '../components/Popup';
+import Title from '../components/Title';
 // </components>
 
 // <hooks>
@@ -22,13 +23,13 @@ import timeById from '../utils/timeById';
 // </utils>
 
 const QuizNumeric = (props) => {
-    const { question, answer, arrayCards, idCard, arrayPlaces, idPlace, arrayGames, idGame, hex } = props.infoQuizNumeric;
+    const { question, answer, arrayCards, idCard, arrayPlaces, idPlace, arrayGames, idGame, hex, one, two } = props.infoQuizNumeric;
 
   // INIZIO PROVA HEIGHT
-    const [height, setHeight] = useState(window.innerHeight - 120);
+    const [height, setHeight] = useState(window.innerHeight - 199.4);
     
     useEffect(() => {
-      const updateHeight = () => setHeight(window.innerHeight - 120);
+      const updateHeight = () => setHeight(window.innerHeight - 199.4);
   
       window.addEventListener("resize", updateHeight);
       return () => window.removeEventListener("resize", updateHeight);
@@ -78,6 +79,7 @@ const QuizNumeric = (props) => {
 
   return (
     <Wrapper style={{ height: `${height}px`}}>
+      <Title one={one} two={two} />
     <div className="card" style={{backgroundColor : `${hex}`}}>
       <div className="boxTop">
         <div className="left">
@@ -118,8 +120,9 @@ export default QuizNumeric;
 const Wrapper = styled.main`
   margin-top: 40px;
   margin-bottom: 80px;
-  padding: 10px;
+  /* padding: 0px 7px; */
   .card {
+    margin: 14px 7px 7px 7px;
     position: relative;
     border-radius: 4px;
     height: 100%;

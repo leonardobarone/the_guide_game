@@ -17,7 +17,9 @@ const Merlato = () => {
         'idPlace' : '12',
         'arrayGames' : games,
         'idGame' : '14',
-        'hex' : '#DD6C70'
+        'hex' : '#DD6C70',
+        'one' : 'Palazzo',
+        'two' : 'Merlato'
     }
 
   
