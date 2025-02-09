@@ -1,53 +1,80 @@
 import styled from "styled-components";
-import unblocked from '../images/cards/unblocked.webp';
+// import unblocked from '../images/cards/unblocked.webp';
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import cloudPurpleLeft from '../images/popup/cloudPurpleLeft.png';
+import cloudPurpleRight from '../images/popup/cloudPurpleRight.png';
+import cloudGray from '../images/popup/cloudGray.png';
+import loser from '../images/popup/loser.png';
+import sun from '../images/popup/sun.png';
 
 const Popup = ({popup, setPopup, cardWon, placeWon, victory}) => {
 
+
+    // console.log("popup: " + popup)
+    // console.log('carta vinta: ' + cardWon)
+    // console.log('luogo vinto:' + placeWon)
+    // console.log('vinto qualcosa:' + victory)
+
+    
     const navigate = useNavigate();
     const [level, setLevel] = useState(1);
+    const [show, setShow] = useState(false);
+
     
-    if (level === 1) {
-        return <Wrapper className={popup ? 'active' : ''}>
-            <div className="top"></div>
-            <div className="center">
-                <img src={cardWon ? cardWon.img : unblocked} alt="" />
-                <h3>{cardWon ? 'Congratulazioni!' : 'Ritenta!'}</h3>
-                <p>{cardWon ? `Hai sbloccato una nuova carta speciale: ${cardWon.name}` : 'La risposta è sbagliata!'}</p>
-            </div>
-            <div className="bottom">
+    const secondoLivello = () => {
+        if (cardWon && level === 1) {
+            setLevel(prev => prev + 1);            
+            setShow(true);
+        } else {
+            setShow(false)
+            setLevel(1);
+            setPopup(false)
+        }
+    }
+
+    // Si è attivato il popup e hai perso (entrambi le condizioni sono vere)
+
+        return <FirstLevel key="first" className={popup ? 'active' : ''}>
+            <img className="cloudPurpleLeft" src={cloudPurpleLeft} alt="" />
+            <img className="cloudPurpleRight" src={cloudPurpleRight} alt="" />
+            <img className="cloudGray" src={cloudGray} alt="" />
             {
-                victory ? <button onClick={() => setLevel(2)}>CONTINUA</button> : <button onClick={() => setPopup(false)}>CONTINUA</button>
+                victory && !cardWon ? <img className="sun" src={sun} alt="" /> : '' 
             }
+            {
+                cardWon && victory ? <img className="cardWon" src={cardWon.img} alt="" /> : ''  
+            }
+            {
+                !victory ? <img className="loser" src={loser} alt="" /> : ''
+            }
+            <div className="text">
+                <div className="title">Hai sbagliato!</div>
+                <div className="description">Prova ancora! Roma non è stata costruita in un giorno.</div>
             </div>
-        </Wrapper>
-    } else if (level === 2) {
-        return <Wrapper className={popup ? 'active' : ''}>
-            <div className="top"></div>
-            <div className="center">
-                <img src={placeWon ? placeWon.imgVisible : placeWon.imgHidden} alt="" />
-                <h3>{placeWon ? 'Congratulazioni!' : 'Ritenta!'}</h3>
-                <p>{placeWon ? `Hai sbloccato un nuovo luogo: ${placeWon.name}` : 'La data inserita non è corretta.'}</p>
-            </div>
-            <div className="bottom">
-                <button onClick={() => navigate('/carte')}>CONTINUA</button>
-            </div>
-        </Wrapper>
-    } 
-    // else {
-    //     return <div>esci</div>
-    // }
+            <div className="boxBtn">
+                <button onClick={secondoLivello}>Chiudi</button>  
+            </div>          
+            <SecondLevel className={show ? 'active' : ''}>{level}
+                <img className="cloudPurpleLeft" src={cloudPurpleLeft} alt="" />
+                <img className="cloudPurpleRight" src={cloudPurpleRight} alt="" />
+                <img className="cloudGray" src={cloudGray} alt="" />
+                <img className="placeWon" src={placeWon ? placeWon.imgVisible : ''} alt="" />
+                <div className="text">
+                    <div className="title">Hai sbagliato!</div>
+                    <div className="description">Prova ancora! Roma non è stata costruita in un giorno.</div>
+                </div>
+                <div className="boxBtn">
+                    <button onClick={() => navigate('/profilo')}>Chiudi</button>  
+                </div>  
+            </SecondLevel>
+        </FirstLevel>
 
 }
 
 export default Popup
 
-const Wrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+const FirstLevel = styled.div`
     background-color: white;
     position: fixed;
     transform: translate(0%, 100%);
@@ -57,39 +84,135 @@ const Wrapper = styled.div`
     left: 0;
     right: 0;
     transition: transform 0.5s ease-in-out;
-    padding: 0px 5px 5px;
     &.active {
       transform: translate(0%, 0%);
     }
-    .center {
-        text-align: center;
-        h3 {
-            color: var(--orange);
-            font-size: 20px;
-            margin: 10px 0px 5px;
-            letter-spacing: 0.6px;
+    .cloudPurpleLeft {
+        left: 0%;
+        top: 0%;
+        z-index: 3;
+        position: absolute;
+        width: 225px;
+    }
+    .cloudPurpleRight {
+        width: 350px;
+        right: 0px;
+        bottom: 100px;
+        position: absolute;
+    }
+    .cloudGray {
+        width: 325px;
+        left: 0px;
+        bottom: 10%;
+        position: absolute;
+    }
+    .loser {
+        position: absolute;
+        z-index: 10;
+        top: 50px;
+        right: -10px;
+        width: 250px;
+    }
+    .text {
+        width: 250px;
+        position: absolute;
+        display: inline-block;
+        bottom: 270px;
+        left: 15px;
+        .title {
+            color: var(--purple);
+            font-size: 35px;
+            font-weight: bold;
         }
-        p {
-            padding: 0px 13px;
-            font-size: 13px;
-        }
-        img {
-            display: inline-block;
-            border-radius: 10px;
-            width: 220px;
+        .description {
+            font-size: 18px;
+            color: var(--green);
         }
     }
-    .bottom {
+    .boxBtn {
         width: 100%;
-        button {
-            display: block;
-            padding: 15px 0px;
-            border-radius: 15px;
-            border-style: none;
-            width: 100%;
-            color: white;
-            background-color: var(--orange);
-        }
+        bottom: 14px;
+        position: absolute;
+    }
+    button {
+        background-color: var(--purple);
+        color: white;
+        border-style: none;
+        width: 95%;
+        padding: 10px;
+        border-radius: 4px;
+        display: block;
+        margin: 0 auto;
+    }
+    .cardWon {
+        top: 60px;
+        right: 30px;
+        position: absolute;
+        width: 150px;
+        border-radius: 4px;
+    }
+    .sun {
+        width: 300px;
+        top: 20px;
+        right: -40px;
+        position: absolute;
+    }
+`
+
+const SecondLevel = styled.div`
+    background-color: white;
+    .cloudPurpleLeft {
+        left: 0%;
+        top: 0%;
+        z-index: 3;
+        position: absolute;
+        width: 225px;
+    }
+    .cloudPurpleRight {
+        width: 350px;
+        right: 0px;
+        bottom: 100px;
+        position: absolute;
+    }
+    .cloudGray {
+        width: 325px;
+        left: 0px;
+        bottom: 10%;
+        position: absolute;
     }
 
+    .boxBtn {
+        width: 100%;
+        bottom: 14px;
+        position: absolute;
+    }
+    button {
+        background-color: var(--purple);
+        color: white;
+        border-style: none;
+        width: 95%;
+        padding: 10px;
+        border-radius: 4px;
+        display: block;
+        margin: 0 auto;
+    }
+    .placeWon {
+        top: 90px;
+        right: 20px;
+        position: absolute;
+        width: 180px;
+        border-radius: 4px;
+    }
+    position: fixed;
+    transform: translate(0%, 100%);
+    z-index: 4;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: transform 0.5s ease-in-out;
+    &.active {
+      transform: translate(0%, 0%);
+    }
+    
 `
