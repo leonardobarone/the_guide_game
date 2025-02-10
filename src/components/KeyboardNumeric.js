@@ -166,7 +166,7 @@ const Wrapper = styled.div`
                     color: var(--green);
                     top: 2px;
                     font-size: 20px;
-                    right: -7px;
+                    right: -5px;
                     position: absolute;
                     animation: tikTok 0.9s infinite;
                 }
