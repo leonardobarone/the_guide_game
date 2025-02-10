@@ -7,7 +7,7 @@ const Cannoni = () => {
 
     
     const quizNumericCannoni = {
-      'question' : 'In che anno è stato costruito il cannone?',
+      'question' : "In quest'oasi di pace troverete uno strumento di guerra. In che anno è stato costruito?",
       'answer' : '1785',
       'arrayCards' : cards,
       'idCard' : '4',

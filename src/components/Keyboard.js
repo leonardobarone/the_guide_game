@@ -2,26 +2,26 @@ import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { IoMdBackspace } from "react-icons/io";
 
-const KeyboardNumeric = ({ sendDataToParent, popup }) => {
+const Keyboard = ({ sendDataToParent, popup }) => {
     
-    const [numero, setNumero] = useState('');
+    const [parola, setParola] = useState('');
     
     const handleButtonClick = (value) => {
-        let limit = numero.length + 1;
+        let limit = parola.length + 1;
         
         
-        if (value === 'indietro' && numero !== '') {
-            setNumero(numero.slice(0, -1));
-            sendDataToParent(numero.slice(0, -1));
+        if (value === 'indietro' && parola !== '') {
+            setParola(parola.slice(0, -1));
+            sendDataToParent(parola.slice(0, -1));
         } else if (limit < 15 && value !== 'indietro') {
-            setNumero(prev => prev + value);
+            setParola(prev => prev + value);
             sendDataToParent(prev => prev + value);
         }
     }
 
     useEffect(() => {
         if (popup) {
-            setNumero('')
+            setParola('')
         }
     }, [popup])
 
@@ -36,7 +36,7 @@ const KeyboardNumeric = ({ sendDataToParent, popup }) => {
         <Wrapper>
             <div className="top">
                 <div className="search">
-                    <span>{numero}</span>
+                    <span>{parola}</span>
                 </div>
             </div>
             <div className="tastiera">
@@ -99,7 +99,7 @@ const KeyboardNumeric = ({ sendDataToParent, popup }) => {
 
             {/* <div className="boxSearch">
                 <div className="inSearch">
-                    <div>{numero ? numero : ''}</div>
+                    <div>{parola ? parola : ''}</div>
                 </div>
             </div>
             <div className="keyboard">
@@ -125,7 +125,7 @@ const KeyboardNumeric = ({ sendDataToParent, popup }) => {
     </>
 }
 
-export default KeyboardNumeric;
+export default Keyboard;
 
 const Wrapper = styled.div`
     @keyframes tikTok {
@@ -164,7 +164,7 @@ const Wrapper = styled.div`
                 &::after {
                     content: '|';
                     color: var(--green);
-                    top: 2px;
+                    top: 3px;
                     font-size: 20px;
                     right: -5px;
                     position: absolute;

@@ -10,7 +10,7 @@ const Merlato = () => {
 
     
     const quizNumericMerlato = {
-        'question' : 'Conta il numero dei merletti, moltiplicalo per il numero degli archi e poi per 8!',
+        'question' : 'Il Palazzo fa da cornice ai saluti. Gli archi e i merli moltiplicandosi, li osservano, e moltiplicandosi nuovamente per 8 ti danno il risultato di questo livello!',
         'answer' : '2968',
         'arrayCards' : cards,
         'idCard' : '6',        

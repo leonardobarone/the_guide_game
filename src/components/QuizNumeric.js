@@ -1,5 +1,5 @@
 // <components>
-import KeyboardNumeric from '../components/KeyboardNumeric';
+import Keyboard from './Keyboard';
 import Popup from '../components/Popup';
 import Title from '../components/Title';
 // </components>
@@ -96,7 +96,7 @@ const QuizNumeric = (props) => {
         victory={victory} 
         placeWon={placeWon} 
     />
-    <KeyboardNumeric 
+    <Keyboard 
         sendDataToParent={handleDataFromChild} 
         popup={popup}
     />        
@@ -121,7 +121,6 @@ const Wrapper = styled.main`
     .domanda {
       border-radius: 4px;
       padding: 14px;
-      text-align: center;
       background-color: white;
       font-size: 12px;
     }
