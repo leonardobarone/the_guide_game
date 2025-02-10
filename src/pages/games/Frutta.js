@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Keyboard from "../../components/Keyboard";
+import Title from "../../components/Title";
 import { useState } from "react";
 
 const Frutta = () => {
@@ -12,6 +13,7 @@ const Frutta = () => {
     } 
     
   return <Wrapper>
+    <Title one={'Frutta '} two={'Mista'} />
     ciao, questo è il quiz della frutta {dataFromChild} {popup ? 'true' : 'false'}
     <Keyboard sendDataToParent={handleDataFromChild} popup={popup} />
   </Wrapper>
