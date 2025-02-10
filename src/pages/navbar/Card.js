@@ -168,9 +168,9 @@ margin-bottom: 60px;
             position: absolute;
             background-color: transparent;
             top: 30px;
-            right: 0rem;
+            right: 2px;
             border-top-right-radius: 4px;
-            box-shadow: 4px -3px white;
+            box-shadow: 2px -2px white;
           }
           
           &::before {
@@ -179,7 +179,7 @@ margin-bottom: 60px;
             content: '';
             position: absolute;
             background-color: transparent;
-            top: 0px;
+            top: 2px;
             left: -20px;
             border-top-right-radius: 4px;
             box-shadow: 2px -5px white;
