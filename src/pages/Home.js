@@ -12,6 +12,9 @@ const Home = () => {
               <li>
                 <Link to='/cannoni'>Quiz Cannoni</Link>
               </li>
+              <li>
+                <Link to='/frutta'>Quiz Frutta</Link>
+              </li>
           </ul>
         </div>
 

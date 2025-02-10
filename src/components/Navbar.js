@@ -25,7 +25,9 @@ const Navbar = () => {
   if (
       location.pathname === '/merlato' ||
       location.pathname === '/cannoni' ||
-      location.pathname === '/debug') {
+      location.pathname === '/debug' || 
+      location.pathname === '/frutta' 
+    ) {
     return;
   }
 

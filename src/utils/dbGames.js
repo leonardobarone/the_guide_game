@@ -116,7 +116,7 @@ const dbGames = [
       'name' : 'frutta mista', 
       'lat' : 40.76549026088297, 
       'lng' : 14.027197943823944,
-      'path' : null,
+      'path' : '/frutta',
       'unblocked' : false
     },
     { 

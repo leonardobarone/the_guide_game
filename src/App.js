@@ -10,6 +10,7 @@ import PlaceItem from "./pages/navbar/PlaceItem";
 import Home from "./pages/Home";
 import Cannoni from "./pages/games/Cannoni";
 import Merlato from "./pages/games/Merlato";
+import Frutta from "./pages/games/Frutta";
 
 function App() {
   return (
@@ -27,11 +28,14 @@ function App() {
           
 
 
-          {/* CANNONI NUOVO */}
+          {/* GUERRA E PACE */}
           <Route path="/cannoni" element={<Cannoni />} />
 
-          {/* MERLATO NUOVO */}
+          {/* ARRIVI E PARTENZE */}
           <Route path="/merlato" element={<Merlato />} />
+
+          {/* FRUTTA */}
+          <Route path="/frutta" element={<Frutta />} />
 
           <Route path="*" element={<Error />} />
         </Routes>
