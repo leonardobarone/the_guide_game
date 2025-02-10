@@ -149,7 +149,7 @@ const Wrapper = styled.div`
     background-color: var(--gray);
     position: fixed;
     width: 100%;
-    z-index: 5;
+    z-index: 2;
     left: 0;
     bottom: 0;
     .tastiera {
