@@ -12,8 +12,6 @@ import { useNavigate } from 'react-router-dom';
 
 // <style>
 import styled from 'styled-components';
-import { IoIosHelpCircle } from "react-icons/io";
-import { MdOutlineArrowBack } from "react-icons/md";
 // </style>
 
 // <utils>
@@ -37,7 +35,6 @@ const QuizNumeric = (props) => {
     // INIZIO PROVA HEIGHT
 
   // HOOKS
-  const navigate = useNavigate();
   const {setCards, setGames, setPlaces} = useGlobalContext();
   const [dataFromChild, setDataFromChild] = useState(""); 
   const [popup, setPopup] = useState(false);  
@@ -81,16 +78,8 @@ const QuizNumeric = (props) => {
     <Wrapper style={{ height: `${height}px`}}>
       <Title one={one} two={two} />
     <div className="card" style={{backgroundColor : `${hex}`}}>
-      <div className="boxTop">
-        <div className="left">
-          <MdOutlineArrowBack onClick={() => navigate('/')} />
-        </div>
-        <div className="center">
-            {question}
-        </div>
-        <div className="right">
-          <IoIosHelpCircle />
-        </div>
+      <div className="domanda">
+        {question}
       </div>
 
 
@@ -129,34 +118,13 @@ const Wrapper = styled.main`
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 8px;
-    .boxTop {
+    padding: 7px;
+    .domanda {
       border-radius: 4px;
-      padding: 7px 3px;
-      background-color: var(--bg-white);
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      .right, .left {
-        flex-basis: 5%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .left {
-        border-radius: 4px;
-        padding: 5px;
-        border: 1px solid var(--my-text);
-        opacity: 0.5;
-      }
-      .right {
-        font-size: 35px;
-        color: var(--orange);
-      }
-      .center {
-        flex-basis: 70%;
-        font-size: 12px;
-      }
+      padding: 14px;
+      text-align: center;
+      background-color: white;
+      font-size: 12px;
     }
     .tag {
       border-top-right-radius: 4px;
