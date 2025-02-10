@@ -38,14 +38,14 @@ const dbPlaces = [
     },
     { 
       'id' : "2",
-      'name' : 'chiesa chiaiolella',
+      'name' : 'chiaiolella',
       'imgVisible' : chiaiolellaVisible,
       'imgHidden' : chiaiolellaHidden,
       'unblocked' : false
     },
     { 
       'id' : "3",
-      'name' : 'belvedere elsa morante', 
+      'name' : 'belvedere chiaia', 
       'imgVisible' : chiaiaVisible,
       'imgHidden' : chiaiaHidden,
       'unblocked' : false
@@ -59,56 +59,56 @@ const dbPlaces = [
     },
     { 
       'id' : "5",
-      'name' : 'chiesa san leonardo', 
+      'name' : 'san leonardo', 
       'imgVisible' : canaleVisible,
       'imgHidden' : canaleHidden,
       'unblocked' : false
     },
     { 
       'id' : "6",
-      'name' : 'chiesa madonna delle grazie', 
+      'name' : 'piazza dei martiri', 
       'imgVisible' : martiriVisible,
       'imgHidden' : martiriHidden,
       'unblocked' : false
     },
     { 
       'id' : "7",
-      'name' : 'santa margherita nuova', 
+      'name' : 'santa margherita', 
       'imgVisible' : cannoniVisible,
       'imgHidden' : cannoniHidden,
       'unblocked' : false
     },
     { 
       'id' : "8",
-      'name' : 'palazzo d\'avalos', 
+      'name' : 'piazza d\'armi', 
       'imgVisible' : carcereVisible,
       'imgHidden' : carcereHidden,
       'unblocked' : false
     },
     { 
       'id' : "9",
-      'name' : 'palazzo della cultura', 
+      'name' : 'terra murata', 
       'imgVisible' : culturaVisible,
       'imgHidden' : culturaHidden,
       'unblocked' : false
     },
     { 
       'id' : "10",
-      'name' : 'abbazia di san michele arcangelo', 
+      'name' : 'abbazia di san michele', 
       'imgVisible' : abbaziaVisible,
       'imgHidden' : abbaziaHidden,
       'unblocked' : false
     },
     { 
       'id' : "11",
-      'name' : 'marina corricella', 
+      'name' : 'corricella', 
       'imgVisible' : corricellaVisible,
       'imgHidden' : corricellaHidden,
       'unblocked' : false
     },
     { 
       'id' : "12",
-      'name' : 'chiesa marina grande', 
+      'name' : 'marina grande', 
       'imgVisible' : marinaVisible,
       'imgHidden' : marinaHidden,
       'unblocked' : false
