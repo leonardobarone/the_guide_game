@@ -39,7 +39,7 @@ const KeyboardNumeric = ({ sendDataToParent, popup }) => {
         <Wrapper>
             <div className="top">
                 <div className="search">
-                    Qui ci va il numero {numero}
+                    {numero}
                 </div>
             </div>
             <div className="tastiera">
@@ -135,13 +135,15 @@ const Wrapper = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 35px;
+        height: 40px;
         .search {
+            color: var(--purple);
+            margin-top: 2px;
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 85%;
-            height: 85%;
+            width: 98%;
+            height: 78%;
             border-radius: 4px;
             background-color: white;
         }
