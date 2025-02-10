@@ -200,6 +200,9 @@ const Wrapper = styled.div`
                 flex-basis: calc((100% / 10) * 4);
             }
         }
+        .btns5 {
+            margin-bottom: 2px;
+        }
     }
     /* background-color: var(--gray);
     position: fixed;
