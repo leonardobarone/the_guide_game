@@ -2,11 +2,6 @@ import styled from "styled-components";
 // import unblocked from '../images/cards/unblocked.webp';
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import cloudPurpleLeft from '../images/popup/cloudPurpleLeft.png';
-import cloudPurpleRight from '../images/popup/cloudPurpleRight.png';
-import cloudGray from '../images/popup/cloudGray.png';
-import loser from '../images/popup/loser.png';
-import sun from '../images/popup/sun.png';
 
 const Popup = ({popup, setPopup, cardWon, placeWon, victory}) => {
 
@@ -23,7 +18,7 @@ const Popup = ({popup, setPopup, cardWon, placeWon, victory}) => {
 
     
     const secondoLivello = () => {
-        if (cardWon && level === 1) {
+        if (cardWon && placeWon && level === 1) {
             setLevel(prev => prev + 1);            
             setShow(true);
         } else {
@@ -35,39 +30,16 @@ const Popup = ({popup, setPopup, cardWon, placeWon, victory}) => {
 
     // Si è attivato il popup e hai perso (entrambi le condizioni sono vere)
 
-        return <FirstLevel key="first" className={popup ? 'active' : ''}>
-            <img className="cloudPurpleLeft" src={cloudPurpleLeft} alt="" />
-            <img className="cloudPurpleRight" src={cloudPurpleRight} alt="" />
-            <img className="cloudGray" src={cloudGray} alt="" />
-            {
-                victory && !cardWon ? <img className="sun" src={sun} alt="" /> : '' 
-            }
-            {
-                cardWon && victory ? <img className="cardWon" src={cardWon.img} alt="" /> : ''  
-            }
-            {
-                !victory ? <img className="loser" src={loser} alt="" /> : ''
-            }
-            <div className="text">
-                <div className="title">Hai sbagliato!</div>
-                <div className="description">Prova ancora! Roma non è stata costruita in un giorno.</div>
-            </div>
-            <div className="boxBtn">
-                <button onClick={secondoLivello}>Chiudi</button>  
-            </div>          
-            <SecondLevel className={show ? 'active' : ''}>{level}
-                <img className="cloudPurpleLeft" src={cloudPurpleLeft} alt="" />
-                <img className="cloudPurpleRight" src={cloudPurpleRight} alt="" />
-                <img className="cloudGray" src={cloudGray} alt="" />
-                <img className="placeWon" src={placeWon ? placeWon.imgVisible : ''} alt="" />
-                <div className="text">
-                    <div className="title">Hai sbagliato!</div>
-                    <div className="description">Prova ancora! Roma non è stata costruita in un giorno.</div>
-                </div>
-                <div className="boxBtn">
+        return <FirstLevel className={popup ? 'active' : ''}>
+            {!victory ? <h3>Hai sbagliato</h3> : null}
+            {victory && !cardWon ? <h3>Hai indovinato</h3> : null}
+            {victory && cardWon ? <h3>Hai indovinato e vinto una carta!</h3> : null}
+            <button onClick={secondoLivello}>Chiudi</button>
+
+            {placeWon ? <SecondLevel className={show ? 'active' : ''}>
+                   <h3>Hai vinto anche un luogo</h3>
                     <button onClick={() => navigate('/profilo')}>Chiudi</button>  
-                </div>  
-            </SecondLevel>
+            </SecondLevel> : null}
         </FirstLevel>
 
 }
@@ -75,7 +47,7 @@ const Popup = ({popup, setPopup, cardWon, placeWon, victory}) => {
 export default Popup
 
 const FirstLevel = styled.div`
-    background-color: white;
+    background-color: var(--purple);
     position: fixed;
     transform: translate(0%, 100%);
     z-index: 3;
@@ -87,122 +59,10 @@ const FirstLevel = styled.div`
     &.active {
       transform: translate(0%, 0%);
     }
-    .cloudPurpleLeft {
-        left: 0%;
-        top: 0%;
-        z-index: 3;
-        position: absolute;
-        width: 225px;
-    }
-    .cloudPurpleRight {
-        width: 350px;
-        right: 0px;
-        bottom: 100px;
-        position: absolute;
-    }
-    .cloudGray {
-        width: 325px;
-        left: 0px;
-        bottom: 10%;
-        position: absolute;
-    }
-    .loser {
-        position: absolute;
-        z-index: 10;
-        top: 50px;
-        right: -10px;
-        width: 250px;
-    }
-    .text {
-        width: 250px;
-        position: absolute;
-        display: inline-block;
-        bottom: 270px;
-        left: 15px;
-        .title {
-            color: var(--purple);
-            font-size: 35px;
-            font-weight: bold;
-        }
-        .description {
-            font-size: 18px;
-            color: var(--green);
-        }
-    }
-    .boxBtn {
-        width: 100%;
-        bottom: 14px;
-        position: absolute;
-    }
-    button {
-        background-color: var(--purple);
-        color: white;
-        border-style: none;
-        width: 95%;
-        padding: 10px;
-        border-radius: 4px;
-        display: block;
-        margin: 0 auto;
-    }
-    .cardWon {
-        top: 60px;
-        right: 30px;
-        position: absolute;
-        width: 150px;
-        border-radius: 4px;
-    }
-    .sun {
-        width: 300px;
-        top: 20px;
-        right: -40px;
-        position: absolute;
-    }
 `
 
 const SecondLevel = styled.div`
-    background-color: white;
-    .cloudPurpleLeft {
-        left: 0%;
-        top: 0%;
-        z-index: 3;
-        position: absolute;
-        width: 225px;
-    }
-    .cloudPurpleRight {
-        width: 350px;
-        right: 0px;
-        bottom: 100px;
-        position: absolute;
-    }
-    .cloudGray {
-        width: 325px;
-        left: 0px;
-        bottom: 10%;
-        position: absolute;
-    }
-
-    .boxBtn {
-        width: 100%;
-        bottom: 14px;
-        position: absolute;
-    }
-    button {
-        background-color: var(--purple);
-        color: white;
-        border-style: none;
-        width: 95%;
-        padding: 10px;
-        border-radius: 4px;
-        display: block;
-        margin: 0 auto;
-    }
-    .placeWon {
-        top: 90px;
-        right: 20px;
-        position: absolute;
-        width: 180px;
-        border-radius: 4px;
-    }
+    background-color: var(--green);
     position: fixed;
     transform: translate(0%, 100%);
     z-index: 4;
