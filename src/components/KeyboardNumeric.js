@@ -28,10 +28,79 @@ const KeyboardNumeric = ({ sendDataToParent, popup }) => {
         }
     }, [popup])
 
-    const numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'azzera', 'indietro']; 
+    
+    const btns1 = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
+    const btns2 = ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p'];
+    const btns3 = ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l'];
+    const btns4 = ['z', 'x', 'c', 'v', 'b', 'n', 'm', 'indietro'];
+    const btns5 = [' '];
+
     return <>
         <Wrapper>
-            <div className="boxSearch">
+            <div className="top">
+                <div className="search">
+                    Qui ci va il numero {numero}
+                </div>
+            </div>
+            <div className="tastiera">
+                <div className="btns1">
+                    {btns1.map((btn, i) => {
+                        return <div className='out' key={i}>
+                            <div className='in' onClick={() => handleButtonClick(btn)}>
+                                {btn}
+                            </div>
+                        </div>
+                    })}
+                </div>
+                <div className="btns2">
+                    {btns2.map((btn, i) => {
+                        return <div className='out' key={i}>
+                            <div className='in' onClick={() => handleButtonClick(btn)}>
+                                {btn}
+                            </div>
+                        </div>
+                    })}
+                </div>
+                <div className="btns3">
+                    <div className='halfY'></div>
+                    {btns3.map((btn, i) => {
+                        return <div className='out' key={i}>
+                            <div className='in' onClick={() => handleButtonClick(btn)}>
+                                {btn}
+                            </div>
+                        </div>
+                    })}
+                </div>
+                <div className="btns4">
+                    <div className='halfLeftBack'></div>
+                    {btns4.map((btn, i) => {
+                        let view = btn; 
+                        if (btn === 'indietro') {
+                            view = <IoMdBackspace />
+                        } else {
+                            view = btn;
+                        }
+                        return <div className={ btn === 'indietro' ? 'arrow' : 'out'} key={i}>
+                            <div className='in' onClick={() => handleButtonClick(btn)}>
+                                {view}
+                            </div>
+                        </div>
+                    })}
+                    <div className='halfRight'></div>
+                </div>
+                <div className="btns5">
+                    <div className='halfLeftSpace'></div>
+                    {btns5.map((btn, i) => {
+                        return <div className='space' key={i}>
+                            <div className='in' onClick={() => handleButtonClick(btn)}>
+                                {btn}
+                            </div>
+                        </div>
+                    })}
+                </div>
+            </div>
+
+            {/* <div className="boxSearch">
                 <div className="inSearch">
                     <div>{numero ? numero : ''}</div>
                 </div>
@@ -54,7 +123,7 @@ const KeyboardNumeric = ({ sendDataToParent, popup }) => {
                         )
                     })
                 }
-            </div>
+            </div> */}
         </Wrapper>
     </>
 }
@@ -62,7 +131,71 @@ const KeyboardNumeric = ({ sendDataToParent, popup }) => {
 export default KeyboardNumeric;
 
 const Wrapper = styled.div`
+    .top {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 35px;
+        .search {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 85%;
+            height: 85%;
+            border-radius: 4px;
+            background-color: white;
+        }
+    }
     background-color: var(--gray);
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    left: 0;
+    bottom: 0;
+    .tastiera {
+        .btns1, .btns2, .btns3, .btns4, .btns5 {
+            display: flex;
+            .out {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-basis: calc(100% / 10);
+                height: 35px;
+            }
+            .in {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 85%;
+                height: 85%;
+                background-color: white;
+                color: var(--purple);
+                border-radius: 4px;
+            }
+            .halfY {
+                flex-basis: calc((100% / 10) / 2);
+            }
+            .halfLeftBack {
+                flex-basis: calc(100% / 10);
+            }
+            .halfLeftSpace {
+                flex-basis: calc((100% / 10) * 3);
+            }
+            .arrow, .space {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 35px;
+            }
+            .arrow {
+                flex-basis: calc((100% / 10) * 2);
+            }
+            .space {
+                flex-basis: calc((100% / 10) * 4);
+            }
+        }
+    }
+    /* background-color: var(--gray);
     position: fixed;
     z-index: 1;
     bottom: 0px;
@@ -87,21 +220,19 @@ const Wrapper = styled.div`
         }
     }
     .keyboard {
-        height: 40px;
         padding: 0px 4px 4px 4px;
         display: flex;
         flex-wrap: wrap;
         align-content: flex-start;
         .inner {
-            height: 100%;
-            flex-basis: calc(100% / 12);
+            flex-basis: calc(100% / 10);
             display: flex;
             justify-content: center;
             align-items: center;
             div {
-                height: calc(100% - 6px);
-                width: calc(100% - 6px);
-                background-color: white;
+                height: 30px;
+                width: calc(100%);
+                background-color: red;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -109,7 +240,7 @@ const Wrapper = styled.div`
                 color: var(--purple);
             }
         }
-    }
+    } */
 
 
  

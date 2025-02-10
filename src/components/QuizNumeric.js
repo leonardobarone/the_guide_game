@@ -26,10 +26,10 @@ const QuizNumeric = (props) => {
     const { question, answer, arrayCards, idCard, arrayPlaces, idPlace, arrayGames, idGame, hex, one, two } = props.infoQuizNumeric;
 
   // INIZIO PROVA HEIGHT
-    const [height, setHeight] = useState(window.innerHeight - 199.4);
+    const [height, setHeight] = useState(window.innerHeight - 320);
     
     useEffect(() => {
-      const updateHeight = () => setHeight(window.innerHeight - 199.4);
+      const updateHeight = () => setHeight(window.innerHeight - 320);
   
       window.addEventListener("resize", updateHeight);
       return () => window.removeEventListener("resize", updateHeight);
@@ -119,7 +119,7 @@ export default QuizNumeric;
 
 const Wrapper = styled.main`
   margin-top: 40px;
-  margin-bottom: 80px;
+  margin-bottom: 210px;
   /* padding: 0px 7px; */
   .card {
     margin: 14px 7px 7px 7px;
