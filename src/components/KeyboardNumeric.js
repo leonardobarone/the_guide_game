@@ -30,9 +30,9 @@ const KeyboardNumeric = ({ sendDataToParent, popup }) => {
 
     
     const btns1 = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
-    const btns2 = ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p'];
-    const btns3 = ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l'];
-    const btns4 = ['z', 'x', 'c', 'v', 'b', 'n', 'm', 'indietro'];
+    const btns2 = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'];
+    const btns3 = ['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L'];
+    const btns4 = ['Z', 'X', 'C', 'V', 'B', 'N', 'M', 'indietro'];
     const btns5 = [' '];
 
     return <>
@@ -189,6 +189,10 @@ const Wrapper = styled.div`
             }
             .arrow {
                 flex-basis: calc((100% / 10) * 2);
+                .in {
+                    color: white;
+                    background-color: var(--green);
+                }
             }
             .space {
                 flex-basis: calc((100% / 10) * 4);
