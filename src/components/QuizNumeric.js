@@ -26,10 +26,10 @@ const QuizNumeric = (props) => {
     const { question, answer, arrayCards, idCard, arrayPlaces, idPlace, arrayGames, idGame, hex, one, two } = props.infoQuizNumeric;
 
   // INIZIO PROVA HEIGHT
-    const [height, setHeight] = useState(window.innerHeight - 320);
+    const [height, setHeight] = useState(window.innerHeight - 330);
     
     useEffect(() => {
-      const updateHeight = () => setHeight(window.innerHeight - 320);
+      const updateHeight = () => setHeight(window.innerHeight - 330);
   
       window.addEventListener("resize", updateHeight);
       return () => window.removeEventListener("resize", updateHeight);
