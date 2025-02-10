@@ -13,21 +13,14 @@ const Merlato = () => {
         'question' : 'Conta il numero dei merletti, moltiplicalo per il numero degli archi e poi per 8!',
         'answer' : '2968',
         'arrayCards' : cards,
-        'idCard' : '6',
-
-
-
-
-
-
-        
+        'idCard' : '6',        
         'arrayPlaces' : places,
         'idPlace' : '12',
         'arrayGames' : games,
         'idGame' : '14',
         'hex' : '#DD6C70',
-        'one' : 'Palazzo',
-        'two' : 'Merlato'
+        'one' : 'Arrivi e ',
+        'two' : 'Partenze'
     }
 
   

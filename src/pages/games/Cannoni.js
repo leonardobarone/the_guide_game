@@ -16,8 +16,8 @@ const Cannoni = () => {
       'arrayGames' : games,
       'idGame' : '9',
       'hex' : '#89B8F6',
-      'one' : 'Belvedere',
-      'two' : 'Cannoni'
+      'one' : 'Guerra e ',
+      'two' : 'Pace'
     }
 
   

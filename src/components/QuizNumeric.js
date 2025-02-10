@@ -82,7 +82,6 @@ const QuizNumeric = (props) => {
         {question}
       </div>
 
-
         {props.children}
 
       <div className="tag">

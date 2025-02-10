@@ -36,7 +36,7 @@ const KeyboardNumeric = ({ sendDataToParent, popup }) => {
         <Wrapper>
             <div className="top">
                 <div className="search">
-                    {numero}
+                    <span>{numero}</span>
                 </div>
             </div>
             <div className="tastiera">
@@ -128,12 +128,24 @@ const KeyboardNumeric = ({ sendDataToParent, popup }) => {
 export default KeyboardNumeric;
 
 const Wrapper = styled.div`
+    @keyframes tikTok {
+        0% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
     .top {
         display: flex;
         justify-content: center;
         align-items: center;
         height: 40px;
         .search {
+            white-space: pre-wrap;
             color: var(--purple);
             margin-top: 2px;
             display: flex;
@@ -143,6 +155,22 @@ const Wrapper = styled.div`
             height: 78%;
             border-radius: 4px;
             background-color: white;
+            span {
+                position: relative;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &::after {
+                    content: '|';
+                    color: var(--green);
+                    top: 2px;
+                    font-size: 20px;
+                    right: -7px;
+                    position: absolute;
+                    animation: tikTok 0.9s infinite;
+                }
+            }
         }
     }
     background-color: var(--gray);
