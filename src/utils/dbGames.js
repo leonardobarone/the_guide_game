@@ -1,7 +1,7 @@
 const dbGames = [
     { 
       'id' : "1",
-      'name' : 'cancello vivara', 
+      'name' : 'culla della civiltà', 
       'lat' : 40.74816780827766, 
       'lng' : 13.99802003277768,
       'path' : null,
@@ -9,7 +9,7 @@ const dbGames = [
     },
     { 
       'id' : "2",
-      'name' : 'centro chiaiolella', 
+      'name' : 'soprannomi di famiglia', 
       'lat' : 40.74907731485705, // 
       'lng' : 14.004420630163029,
       'path' : null,
@@ -17,7 +17,7 @@ const dbGames = [
     },
     { 
       'id' : "3",
-      'name' : 'di fronte san giuseppe', 
+      'name' : 'il cruciverba di san giuseppe', 
       'lat' : 40.749785120321306, 
       'lng' : 14.006396901037244,
       'path' : null,
@@ -25,7 +25,7 @@ const dbGames = [
     },
     { 
       'id' : "4",
-      'name' : 'belvedere elsa', 
+      'name' : 'infinito', 
       'lat' : 40.75442782491175, 
       'lng' : 14.019288058490305,
       'path' : null,
@@ -49,7 +49,7 @@ const dbGames = [
     },
     { 
       'id' : "7",
-      'name' : 'piazza martiri', 
+      'name' : 'la vendetta dei borbone', 
       'lat' : 40.76209727290956, 
       'lng' : 14.030961605019023,
       'path' : null,
@@ -57,7 +57,7 @@ const dbGames = [
     },
     { 
       'id' : "8",
-      'name' : 'piazza martiri chiesa', 
+      'name' : 'ave maria', 
       'lat' : 40.762092701859885, 
       'lng' : 14.031217755984029,
       'path' : null,
@@ -65,7 +65,7 @@ const dbGames = [
     },
     { 
       'id' : "9",
-      'name' : 'cannoni', 
+      'name' : 'guerra e pace', 
       'lat' : 40.76045522977777, 
       'lng' : 14.03256355435797,
       'path' : '/cannoni',
@@ -73,7 +73,7 @@ const dbGames = [
     },
     { 
       'id' : "10",
-      'name' : 'piazza d\'armi', 
+      'name' : 'le porte della città antica', 
       'lat' : 40.761381645738474, 
       'lng' : 14.033831568670061,
       'path' : null,
@@ -81,7 +81,7 @@ const dbGames = [
     },
     { 
       'id' : "11",
-      'name' : 'incrocio palazzo cultura', 
+      'name' : 'il tetto del mondo', 
       'lat' : 40.761431419915354, 
       'lng' : 14.034814598270996,
       'path' : null,
@@ -89,7 +89,7 @@ const dbGames = [
     },
     { 
       'id' : "12",
-      'name' : 'chiesa san michele', 
+      'name' : 'defende nos in proelio', 
       'lat' : 40.76114699555021, 
       'lng' : 14.03477034182453,
       'path' : null,
@@ -97,7 +97,7 @@ const dbGames = [
     },
     { 
       'id' : "13",
-      'name' : 'corricella lato gioco', 
+      'name' : 'come un pittore', 
       'lat' : 40.761668965789724, 
       'lng' : 14.031122853540293,
       'path' : null,
@@ -105,7 +105,7 @@ const dbGames = [
     },
     { 
       'id' : "14",
-      'name' : 'Palazzo Merlato', 
+      'name' : 'arrivi e partenze', 
       'lat' : 40.76560707054993, 
       'lng' : 14.025946693335339,
       'path' : '/merlato',
@@ -113,7 +113,7 @@ const dbGames = [
     },
     { 
       'id' : "15",
-      'name' : 'marina quadro parcheggio', 
+      'name' : 'frutta mista', 
       'lat' : 40.76549026088297, 
       'lng' : 14.027197943823944,
       'path' : null,
@@ -121,7 +121,7 @@ const dbGames = [
     },
     { 
       'id' : "16",
-      'name' : 'marina quadrillo', 
+      'name' : 'borgo dei marinai', 
       'lat' : 40.765394793342516, 
       'lng' : 14.029477741369188,
       'path' : null,
@@ -129,7 +129,7 @@ const dbGames = [
     },
     { 
       'id' : "17",
-      'name' : 'faro', 
+      'name' : 'paludi', 
       'lat' : 40.76948312980451, 
       'lng' : 14.015236440057858,
       'path' : null,
@@ -137,7 +137,7 @@ const dbGames = [
     },
     { 
       'id' : "18",
-      'name' : 'cimitero lato scesa', 
+      'name' : 'la cripta nascosta', 
       'lat' : 40.76310198032642, 
       'lng' : 14.011398610432943,
       'path' : null,

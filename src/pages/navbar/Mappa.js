@@ -46,7 +46,7 @@ const Mappa = () => {
                 >
                   <MdLocationPin style={{fontSize: '33px', color: 'var(--purple)'}} />
                   {selectedGame && <InfoWindow
-                    headerContent={<h2>{selectedGame.name}</h2>}
+                    headerContent={<h2 style={{textTransform: 'capitalize'}} >{selectedGame.name}</h2>}
                     position={selectedGame} 
                     onCloseClick={()=> setSelectedGame(null)}
                   >
