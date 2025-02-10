@@ -169,7 +169,7 @@ margin-bottom: 60px;
             background-color: transparent;
             top: 30px;
             right: 2px;
-            border-top-right-radius: 6px;
+            border-top-right-radius: 8px;
             box-shadow: 2px -2px white;
           }
           
