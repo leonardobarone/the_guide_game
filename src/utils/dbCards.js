@@ -70,7 +70,7 @@ const dbCards = [
     },
     {
         'id' : '8',
-        'name' : 'Mimante',
+        'name' : 'mimante',
         'description' : "Mimante è uno dei Giganti della mitologia greca e giace sotto l’isola di Procida. Appare nella Gigantomachia, ossia la titanica battaglia tra gli Dei dell'Olimpo e i Giganti per il dominio del mondo. Fu lo sfidante di Efesto, il fabbro degli dei, che lo sconfisse grazie alle armi da lui prodotte. Poi, dopo averlo tramortito, lo scagliò in mare e gli lanciò addosso una massa di ferro fuso che diventò l’Isola di Procida.",
         'img' : mimante,
         'unblocked' : false,
