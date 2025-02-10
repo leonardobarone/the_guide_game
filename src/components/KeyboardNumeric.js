@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { IoMdBackspace } from "react-icons/io";
-import { MdDelete } from "react-icons/md";
 
 const KeyboardNumeric = ({ sendDataToParent, popup }) => {
     
@@ -10,13 +9,11 @@ const KeyboardNumeric = ({ sendDataToParent, popup }) => {
     const handleButtonClick = (value) => {
         let limit = numero.length + 1;
         
-        if (value === 'azzera' && numero !== '') {
-            setNumero('');
-            sendDataToParent('');
-        } else if (value === 'indietro' && numero !== '') {
+        
+        if (value === 'indietro' && numero !== '') {
             setNumero(numero.slice(0, -1));
             sendDataToParent(numero.slice(0, -1));
-        } else if (limit < 5 && value !== 'azzera' && value !== 'indietro') {
+        } else if (limit < 15 && value !== 'indietro') {
             setNumero(prev => prev + value);
             sendDataToParent(prev => prev + value);
         }
