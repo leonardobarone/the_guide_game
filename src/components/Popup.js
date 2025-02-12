@@ -69,7 +69,7 @@ const Popup = ({popup, setPopup, cardWon, placeWon, victory}) => {
                 </div>
                 <div className="center">
                         <h3>COMPLIMENTI</h3>
-                        <p>HAI SBLOCCATO "{cardWon ? cardWon.name.toUpperCase() : null}"</p>
+                        <p>HAI SBLOCCATO <br/>{cardWon ? cardWon.name.toUpperCase() : null}</p>
                     </div>
                 <div className="bottom">
                     <button onClick={secondoLivello}>CHIUDI</button>
@@ -79,11 +79,11 @@ const Popup = ({popup, setPopup, cardWon, placeWon, victory}) => {
             {placeWon ? <SecondLevel className={show ? 'active' : ''}>
                 <div className="box">
                     <div className="top">
-                        <img className="place" src={placeWon ? placeWon.imgVisible : null} alt="" />
+                        <img className="place outlined" src={placeWon ? placeWon.imgVisible : null} alt="" />
                     </div>
                     <div className="center">
                             <h3>COMPLIMENTI</h3>
-                            <p>HAI SBLOCCATO "{placeWon ? placeWon.name.toUpperCase() : null}"</p>
+                            <p>HAI SBLOCCATO <br/>{placeWon ? placeWon.name.toUpperCase() : null}</p>
                         </div>
                     <div className="bottom">
                         <button onClick={()=> navigate('/profilo')}>CHIUDI</button>
@@ -123,9 +123,20 @@ const FirstLevel = styled.div`
         align-items: center;
         justify-content: space-around;
         .top {
+            img.place.outlined {
+                -webkit-filter: drop-shadow(4px 4px 0 white)
+                    drop-shadow(-4px 4px 0 white)
+                    drop-shadow(4px -4px 0 white)
+                    drop-shadow(-4px -4px 0 white);
+
+                    filter: drop-shadow(4px 4px 0 white)
+                    drop-shadow(-4px 4px 0 white)
+                    drop-shadow(4px -4px 0 white)
+                    drop-shadow(-4px -4px 0 white); 
+            }
             img.sad {
                 width: 150px;
-                border: 5px solid white;
+                border: 4px solid white;
                 border-radius: 50%;
             }
             img.card {
@@ -136,9 +147,10 @@ const FirstLevel = styled.div`
                 border-radius: 4px;
                 height: 250px;
                 width: 175px;
-                border: 5px solid white;
+                border: 4px solid white;
             }
             img.place {
+                display: block;
                 height: 200px;
                 width: 200px;
                 border-radius: 4px;
