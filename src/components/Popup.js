@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import sad from '../images/popup/sad.png'
+import glasses from '../images/popup/glasses.png'
+
 
 const Popup = ({popup, setPopup, cardWon, placeWon, victory}) => {
 
@@ -30,11 +32,12 @@ const Popup = ({popup, setPopup, cardWon, placeWon, victory}) => {
     }
 
     // Si è attivato il popup e hai perso (entrambi le condizioni sono vere)
-
-        return <FirstLevel className={popup ? 'active' : ''}>
-            {!victory ? <div className="wrong">
+    return <FirstLevel className={popup ? 'active' : ''}>
+            
+            {/* HAI PERSO */}
+            {!victory ? <div className="box">
                 <div className="top">
-                    <img src={sad} alt="" />
+                    <img className="sad" src={sad} alt="" />
                 </div>
                 <div className="center">
                         <h3>RITENTA</h3>
@@ -44,13 +47,48 @@ const Popup = ({popup, setPopup, cardWon, placeWon, victory}) => {
                     <button onClick={secondoLivello}>CHIUDI</button>
                 </div>
             </div> : null}
-
-            {victory && !cardWon ? <h3>Hai indovinato</h3> : null}
-            {victory && cardWon ? <h3>Hai indovinato e vinto una carta!</h3> : null}
+            
+            {/* HAI VINTO  */}
+            {victory && !cardWon ? <div className="box">
+                <div className="top">
+                    <img className="sad" src={glasses} alt="" />
+                </div>
+                <div className="center">
+                        <h3>COMPLIMENTI</h3>
+                        <p>HAI SUPERATO IL LIVELLO</p>
+                    </div>
+                <div className="bottom">
+                    <button className="bnt" onClick={secondoLivello}>CHIUDI</button>
+                </div>
+            </div> : null}
+            
+            {/* HAI VINTO UNA CARTA */}
+            {victory && cardWon ? <div className="box">
+                <div className="top">
+                    <img className="card" src={cardWon ? cardWon.img : null} alt="" />
+                </div>
+                <div className="center">
+                        <h3>COMPLIMENTI</h3>
+                        <p>HAI SBLOCCATO "{cardWon ? cardWon.name.toUpperCase() : null}"</p>
+                    </div>
+                <div className="bottom">
+                    <button onClick={secondoLivello}>CHIUDI</button>
+                </div>
+            </div> : null}
 
             {placeWon ? <SecondLevel className={show ? 'active' : ''}>
-                   <h3>Hai vinto anche un luogo</h3>
-                    <button onClick={() => navigate('/profilo')}>Chiudi</button>  
+                <div className="box">
+                    <div className="top">
+                        <img className="place" src={placeWon ? placeWon.imgVisible : null} alt="" />
+                    </div>
+                    <div className="center">
+                            <h3>COMPLIMENTI</h3>
+                            <p>HAI SBLOCCATO "{placeWon ? placeWon.name.toUpperCase() : null}"</p>
+                        </div>
+                    <div className="bottom">
+                        <button onClick={secondoLivello}>CHIUDI</button>
+                    </div>
+                </div>
             </SecondLevel> : null}
         </FirstLevel>
 
@@ -74,22 +112,38 @@ const FirstLevel = styled.div`
     &.active {
         transform: translate(0%, 0%);
     }
-    .wrong {
-        padding: 14px;
+    .box {
         background-color: var(--gray);
+        padding: 14px;
         border-radius: 4px;
         height: 80%;
         width: 80%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-around;
         .top {
-            margin-top: 50px;
-            img {
+            img.sad {
                 width: 150px;
                 border: 5px solid white;
                 border-radius: 50%;
+            }
+            img.card {
+                object-fit: cover;
+                object-position: center;
+                padding: 0px;
+                display: block;
+                border-radius: 4px;
+                height: 250px;
+                width: 175px;
+                border: 5px solid white;
+            }
+            img.place {
+                height: 200px;
+                width: 200px;
+                border-radius: 4px;
+                object-fit: cover;
+                object-position: center;
             }
         }
         .center {
@@ -107,26 +161,27 @@ const FirstLevel = styled.div`
             }
         }
         .bottom {
-            width: 75%;
-            margin-bottom: 25px;
-            /* border: 1px solid black; */
-            button {
-                font-family: "Mitr", serif;
-                border-radius: 4px;
-                font-size: 20px;
-                width: 100%;
-                padding: 5px 0px;
-                display: block;
-                background-color: var(--green);
-                border-style: none;
-                color: white;
-            }
-        }
-    }
+                width: 75%;
+                    button {
+                    font-family: "Mitr", serif;
+                    border-radius: 4px;
+                    font-size: 20px;
+                    width: 100%;
+                    padding: 5px 0px;
+                    display: block;
+                    background-color: var(--green);
+                    border-style: none;
+                    color: white;
+                    }
+                
+        }}
 `
 
 const SecondLevel = styled.div`
     background-color: var(--green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: fixed;
     transform: translate(0%, 100%);
     z-index: 4;
