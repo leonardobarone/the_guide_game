@@ -167,7 +167,7 @@ margin-bottom: 60px;
             content: '';
             position: absolute;
             background-color: transparent;
-            top: 30px;
+            top: 34px;
             right: 2px;
             border-top-right-radius: 8px;
             box-shadow: 2px -2px white;

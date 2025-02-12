@@ -152,7 +152,7 @@ const Wrapper = styled.main`
   margin-top: 40px;
   margin-bottom: 60px;
   .infoHome {
-    margin-top: 15px;
+    margin-top: 7px;
     padding: 7px;
     display: flex;
     flex-direction: column;
@@ -164,8 +164,10 @@ const Wrapper = styled.main`
     .name {
       font-size: 20px;
       font-weight: bold;
-      margin: 5px 0px 2px 0px;
       color: var(--purple);
+      margin-top: 10px;
+      margin-bottom: 3px;
+      line-height: 16px;
     }
     .email {
       color: var(--green);
@@ -173,7 +175,7 @@ const Wrapper = styled.main`
     }
   }
   .options {
-    margin-top: 15px;
+    margin-top: 7px;
     padding: 7px;
     ul {
       list-style: none;
@@ -220,6 +222,7 @@ const Wrapper = styled.main`
             .title {
               color: var(--purple);
               font-size: 15px;
+              line-height: 13px;
               font-weight: bold;
             }
             .subtitle {

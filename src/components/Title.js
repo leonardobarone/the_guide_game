@@ -17,5 +17,5 @@ text-align: center;
   }
   color: var(--green);
   font-weight: lighter;
-  padding: 14px 0px 0px 7px;
+  padding: 7px 0px 0px;
 `
