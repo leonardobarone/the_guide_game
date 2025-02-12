@@ -164,7 +164,7 @@ const Wrapper = styled.div`
                 &::after {
                     content: '|';
                     color: var(--green);
-                    top: 3px;
+                    top: 0px;
                     font-size: 20px;
                     right: -5px;
                     position: absolute;

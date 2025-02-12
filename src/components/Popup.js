@@ -58,7 +58,7 @@ const Popup = ({popup, setPopup, cardWon, placeWon, victory}) => {
                         <p>HAI SUPERATO IL LIVELLO</p>
                     </div>
                 <div className="bottom">
-                    <button className="bnt" onClick={secondoLivello}>CHIUDI</button>
+                    <button className="bnt" onClick={()=> navigate('/profilo')}>CHIUDI</button>
                 </div>
             </div> : null}
             
@@ -86,7 +86,7 @@ const Popup = ({popup, setPopup, cardWon, placeWon, victory}) => {
                             <p>HAI SBLOCCATO "{placeWon ? placeWon.name.toUpperCase() : null}"</p>
                         </div>
                     <div className="bottom">
-                        <button onClick={secondoLivello}>CHIUDI</button>
+                        <button onClick={()=> navigate('/profilo')}>CHIUDI</button>
                     </div>
                 </div>
             </SecondLevel> : null}
