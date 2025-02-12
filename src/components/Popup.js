@@ -124,12 +124,14 @@ const FirstLevel = styled.div`
         justify-content: space-around;
         .top {
             img.place.outlined {
-                -webkit-filter: drop-shadow(4px 4px 0 white)
+                -webkit-filter: 
+                    drop-shadow(4px 4px 0 white)
                     drop-shadow(-4px 4px 0 white)
                     drop-shadow(4px -4px 0 white)
                     drop-shadow(-4px -4px 0 white);
 
-                    filter: drop-shadow(4px 4px 0 white)
+                filter: 
+                    drop-shadow(4px 4px 0 white)
                     drop-shadow(-4px 4px 0 white)
                     drop-shadow(4px -4px 0 white)
                     drop-shadow(-4px -4px 0 white); 
