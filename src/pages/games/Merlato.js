@@ -47,8 +47,9 @@ const Merlato = () => {
 export default Merlato;
 
 
-const Wrapper = styled.div`
-  height: calc(100% - 114.8px);
+const Wrapper = styled.div` 
+  /* border: 1px solid black; */
+  height: calc(100% - 140px);
   display: flex;
   justify-content: center;
   align-items: center;
