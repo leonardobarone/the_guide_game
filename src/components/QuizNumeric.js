@@ -155,10 +155,10 @@ const Wrapper = styled.main`
         box-shadow: -6px 4px var(--bg-white);
       }
       .btn {
+        font-family: "Mitr", serif;
         display: inline-block;
         background-color: var(--orange);
         color: white;
-        font-weight: bold;
         padding: 10px 75px;
         border-style: none;
         border-radius: 4px;
