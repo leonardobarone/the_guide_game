@@ -1,7 +1,7 @@
 import QuizNumeric from "../../components/QuizNumeric";
 import { useGlobalContext } from "../../context";
-import lace from '../../images/games/lace.svg';
-import arch from '../../images/games/arch.svg';
+import lace from '../../images/games/merlato/lace.svg';
+import arch from '../../images/games/merlato/arch.svg';
 import styled from "styled-components";
 import findById from "../../utils/findById";
 

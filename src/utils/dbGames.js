@@ -119,7 +119,7 @@ const dbGames = [
     },
     { 
       'id' : "15",
-      'name' : 'frutta mista', 
+      'name' : 'fruit jackpot', 
       'lat' : 40.76549026088297, 
       'lng' : 14.027197943823944,
       'path' : '/frutta',

@@ -1,6 +1,6 @@
 import QuizNumeric from "../../components/QuizNumeric";
 import { useGlobalContext } from "../../context";
-import cannon from '../../images/games/cannon.png';
+import cannon from '../../images/games/cannoni/cannon.png';
 import findById from "../../utils/findById";
 
 const Cannoni = () => {

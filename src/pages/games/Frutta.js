@@ -16,7 +16,7 @@ const Frutta = () => {
 
     
   return <Wrapper>
-    <Title name={'frutta mista'} />
+    <Title name={'fruit jackpot'} />
     <div className="base">
         <button onClick={()=> setActive(!active)}>Prova</button>
         <div className={active ? 'letter-first active' : 'letter-first'}>
