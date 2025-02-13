@@ -7,15 +7,15 @@ import chiaiolellaHidden from '../images/places/hidden/chiaiolella.webp';
 import chiaiolellaBorder from '../images/places/border/chiaiolella.png';
 
 import vivaraVisible from '../images/places/visible/vivara.webp';
-import vivaraHidden from '../images/places/hidden/vivara.webp';
+import vivaraHidden from '../images/places/hidden/vivara.png';
 import vivaraBorder from '../images/places/border/vivara.png';
 
 import mamozioVisible from '../images/places/visible/mamozio.webp';
-import mamozioHidden from '../images/places/hidden/mamozio.webp';
+import mamozioHidden from '../images/places/hidden/mamozio.png';
 import mamozioBorder from '../images/places/border/mamozio.png';
 
 import canaleVisible from '../images/places/visible/canale.webp';
-import canaleHidden from '../images/places/hidden/canale.webp';
+import canaleHidden from '../images/places/hidden/canale.png';
 import canaleBorder from '../images/places/border/canale.png';
 
 import martiriVisible from '../images/places/visible/martiri.webp';
@@ -23,7 +23,7 @@ import martiriHidden from '../images/places/hidden/martiri.webp';
 import martiriBorder from '../images/places/border/martiri.png';
 
 import cannoniVisible from '../images/places/visible/cannoni.webp';
-import cannoniHidden from '../images/places/hidden/cannoni.webp';
+import cannoniHidden from '../images/places/hidden/cannoni.png';
 import cannoniBorder from '../images/places/border/cannoni.png';
 
 import carcereVisible from '../images/places/visible/carcere.webp';
@@ -35,7 +35,7 @@ import culturaHidden from '../images/places/hidden/cultura.webp';
 import culturaBorder from '../images/places/border/cultura.png';
 
 import abbaziaVisible from '../images/places/visible/abbazia.webp';
-import abbaziaHidden from '../images/places/hidden/abbazia.webp';
+import abbaziaHidden from '../images/places/hidden/abbazia.png';
 import abbaziaBorder from '../images/places/border/abbazia.png';
 
 import corricellaVisible from '../images/places/visible/corricella.webp';
