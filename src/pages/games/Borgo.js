@@ -11,14 +11,6 @@ const Borgo = () => {
   return <Wrapper>
     <Title name={game.name} />
     <div className="container">
-      <div>catena1</div>
-      <div>catena2</div>
-      <div>catena3</div>
-      <div>catena4</div>
-      <div>croce1</div>
-      <div>croce2</div>
-      <div>croce3</div>
-      <div>croce4</div>
       <div>lupo1</div>
       <div>lupo2</div>
       <div>lupo3</div>
@@ -27,6 +19,14 @@ const Borgo = () => {
       <div>madonna2</div>
       <div>madonna3</div>
       <div>madonna4</div>
+      <div>croce1</div>
+      <div>croce2</div>
+      <div>croce3</div>
+      <div>croce4</div>
+      <div>catena1</div>
+      <div>catena2</div>
+      <div>catena3</div>
+      <div>catena4</div>
     </div>
   </Wrapper>
 }
