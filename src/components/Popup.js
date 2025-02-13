@@ -7,14 +7,6 @@ import glasses from '../images/popup/glasses.png'
 
 
 const Popup = ({popup, setPopup, cardWon, placeWon, victory}) => {
-
-
-    // console.log("popup: " + popup)
-    // console.log('carta vinta: ' + cardWon)
-    // console.log('luogo vinto:' + placeWon)
-    // console.log('vinto qualcosa:' + victory)
-
-    
     const navigate = useNavigate();
     const [level, setLevel] = useState(1);
     const [show, setShow] = useState(false);

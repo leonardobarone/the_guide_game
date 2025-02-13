@@ -11,7 +11,6 @@ function timeById(array, id) {
     const secondi = data.getSeconds().toString().padStart(2, '0');
 
     const dataOraStringa = `${giorno}/${mese}/${anno} ${ora}:${minuti}:${secondi}`;
-    // console.log(dataOraStringa); // Output: "16/05/2024 10:30:00"
     
     if (index !== -1) {
         array[index].time = dataOraStringa;
