@@ -12,22 +12,19 @@ const Cannoni = () => {
     const quizNumericCannoni = {
       'question' : "In quest'oasi di pace troverete uno strumento di guerra. In che anno è stato costruito?",
       'answer' : '1785',
-      'arrayCards' : cards,
-      'idCard' : card.id,
-      'arrayPlaces' : places,
-      'idPlace' : place.id,
-      'arrayGames' : games,
-      'idGame' : game.id,
       'hex' : '#89B8F6',
-      'name' : game.name,
+      'cards' : cards,
+      'places' : places,
+      'games' : games,
+      'card' : card,
+      'place' : place,
+      'game' : game,
     }
 
   
   return (
     <div>
       <QuizNumeric infoQuizNumeric={quizNumericCannoni} >
-
-
         <div style={{height: 'calc(100% - 102px)', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
             <img width={90} src={cannon} alt="" />
         </div> 

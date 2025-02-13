@@ -15,14 +15,13 @@ const Merlato = () => {
     const quizNumericMerlato = {
         'question' : 'Il Palazzo fa da cornice ai saluti. Gli archi e i merli moltiplicandosi, li osservano, e moltiplicandosi nuovamente per 8 ti danno il risultato di questo livello!',
         'answer' : '2968',
-        'arrayCards' : cards,
-        'idCard' : card.id,        
-        'arrayPlaces' : places,
-        'idPlace' : place.id,
-        'arrayGames' : games,
-        'idGame' : game.id,
         'hex' : '#DD6C70',
-        'name' : game.name,
+        'card' : card,
+        'place' : place,
+        'game' : game,
+        'cards' : cards,
+        'places' : places,
+        'games' : games,
     }
 
   

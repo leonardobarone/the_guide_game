@@ -7,7 +7,6 @@ import Title from '../components/Title';
 // <hooks>
 import { useState, useEffect } from 'react';
 import { useGlobalContext } from '../context';
-import { useNavigate } from 'react-router-dom';
 // </hooks>
 
 // <style>
@@ -21,7 +20,7 @@ import timeById from '../utils/timeById';
 // </utils>
 
 const QuizNumeric = (props) => {
-    const { question, name, answer, arrayCards, idCard, arrayPlaces, idPlace, arrayGames, idGame, hex, one, two } = props.infoQuizNumeric;
+    const { cards, places, games, game, place, card, question, answer, hex } = props.infoQuizNumeric;
 
   // INIZIO PROVA HEIGHT
     const [height, setHeight] = useState(window.innerHeight - 350);
@@ -53,14 +52,14 @@ const QuizNumeric = (props) => {
   const prova = () => {
     if (dataFromChild === answer) {
         // VINCERE
-        setCards(unblockById(arrayCards, idCard));
-        setCards(timeById(arrayCards, idCard));
-        setGames(unblockById(arrayGames, idGame));
-        setPlaces(timeById(arrayPlaces, idPlace));
-        setPlaces(unblockById(arrayPlaces, idPlace));
+        setCards(unblockById(cards, card.id));
+        setCards(timeById(cards, card.id));
+        setGames(unblockById(games, game.id));
+        setPlaces(timeById(places, place.id));
+        setPlaces(unblockById(places, place.id));
         // COSE VINTE
-        setCardWon(findById(arrayCards, idCard))
-        setPlaceWon(findById(arrayPlaces, idPlace))
+        setCardWon(findById(cards, card.id))
+        setPlaceWon(findById(places, place.id))
         // SVUOTA INPUT
         setDataFromChild('');
         setVictory(true);
@@ -76,7 +75,7 @@ const QuizNumeric = (props) => {
 
   return (
     <Wrapper style={{ height: `${height}px`}}>
-      <Title name={name} />
+      <Title name={game.name} />
     <div className="card" style={{backgroundColor : `${hex}`}}>
       <div className="domanda">
         {question}
