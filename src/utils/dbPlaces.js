@@ -1,31 +1,59 @@
 import chiaiaVisible from '../images/places/visible/chiaia.webp';
 import chiaiaHidden from '../images/places/hidden/chiaia.webp';
+import chiaiaBorder from '../images/places/border/chiaia.png';
+
 import chiaiolellaVisible from '../images/places/visible/chiaiolella.webp';
 import chiaiolellaHidden from '../images/places/hidden/chiaiolella.webp';
+import chiaiolellaBorder from '../images/places/border/chiaiolella.png';
+
 import vivaraVisible from '../images/places/visible/vivara.webp';
 import vivaraHidden from '../images/places/hidden/vivara.webp';
+import vivaraBorder from '../images/places/border/vivara.png';
+
 import mamozioVisible from '../images/places/visible/mamozio.webp';
 import mamozioHidden from '../images/places/hidden/mamozio.webp';
+import mamozioBorder from '../images/places/border/mamozio.png';
+
 import canaleVisible from '../images/places/visible/canale.webp';
 import canaleHidden from '../images/places/hidden/canale.webp';
+import canaleBorder from '../images/places/border/canale.png';
+
 import martiriVisible from '../images/places/visible/martiri.webp';
 import martiriHidden from '../images/places/hidden/martiri.webp';
+import martiriBorder from '../images/places/border/martiri.png';
+
 import cannoniVisible from '../images/places/visible/cannoni.webp';
 import cannoniHidden from '../images/places/hidden/cannoni.webp';
+import cannoniBorder from '../images/places/border/cannoni.png';
+
 import carcereVisible from '../images/places/visible/carcere.webp';
 import carcereHidden from '../images/places/hidden/carcere.webp';
+import carcereBorder from '../images/places/border/carcere.png';
+
 import culturaVisible from '../images/places/visible/cultura.webp';
 import culturaHidden from '../images/places/hidden/cultura.webp';
+import culturaBorder from '../images/places/border/cultura.png';
+
 import abbaziaVisible from '../images/places/visible/abbazia.webp';
 import abbaziaHidden from '../images/places/hidden/abbazia.webp';
+import abbaziaBorder from '../images/places/border/abbazia.png';
+
 import corricellaVisible from '../images/places/visible/corricella.webp';
 import corricellaHidden from '../images/places/hidden/corricella.webp';
+import corricellaBorder from '../images/places/border/corricella.png';
+
 import faroVisible from '../images/places/visible/faro.webp';
 import faroHidden from '../images/places/hidden/faro.webp';
+import faroBorder from '../images/places/border/faro.png';
+
 import marinaVisible from '../images/places/visible/marina.webp';
 import marinaHidden from '../images/places/hidden/marina.webp';
+import marinaBorder from '../images/places/border/marina.png';
+
 import cimiteroVisible from '../images/places/visible/cimitero.webp';
 import cimiteroHidden from '../images/places/hidden/cimitero.webp';
+import cimiteroBorder from '../images/places/border/cimitero.png';
+
 
 
 const dbPlaces = [
@@ -34,6 +62,7 @@ const dbPlaces = [
       'name' : 'vivara', 
       'imgVisible' : vivaraVisible,
       'imgHidden' : vivaraHidden,
+      'imgBorder' : vivaraBorder,
       'unblocked' : false
     },
     { 
@@ -41,6 +70,7 @@ const dbPlaces = [
       'name' : 'chiaiolella',
       'imgVisible' : chiaiolellaVisible,
       'imgHidden' : chiaiolellaHidden,
+      'imgBorder' : chiaiolellaBorder,
       'unblocked' : false
     },
     { 
@@ -48,6 +78,7 @@ const dbPlaces = [
       'name' : 'belvedere chiaia', 
       'imgVisible' : chiaiaVisible,
       'imgHidden' : chiaiaHidden,
+      'imgBorder' : chiaiaBorder,
       'unblocked' : false
     },
     { 
@@ -55,6 +86,7 @@ const dbPlaces = [
       'name' : 'san giacomo', 
       'imgVisible' : mamozioVisible,
       'imgHidden' : mamozioHidden,
+      'imgBorder' : mamozioBorder,
       'unblocked' : false
     },
     { 
@@ -62,6 +94,7 @@ const dbPlaces = [
       'name' : 'san leonardo', 
       'imgVisible' : canaleVisible,
       'imgHidden' : canaleHidden,
+      'imgBorder' : canaleBorder,
       'unblocked' : false
     },
     { 
@@ -69,6 +102,7 @@ const dbPlaces = [
       'name' : 'piazza dei martiri', 
       'imgVisible' : martiriVisible,
       'imgHidden' : martiriHidden,
+      'imgBorder' : martiriBorder,
       'unblocked' : false
     },
     { 
@@ -76,6 +110,7 @@ const dbPlaces = [
       'name' : 'santa margherita', 
       'imgVisible' : cannoniVisible,
       'imgHidden' : cannoniHidden,
+      'imgBorder' : cannoniBorder,
       'unblocked' : false
     },
     { 
@@ -83,6 +118,7 @@ const dbPlaces = [
       'name' : 'piazza d\'armi', 
       'imgVisible' : carcereVisible,
       'imgHidden' : carcereHidden,
+      'imgBorder' : carcereBorder,
       'unblocked' : false
     },
     { 
@@ -90,6 +126,7 @@ const dbPlaces = [
       'name' : 'terra murata', 
       'imgVisible' : culturaVisible,
       'imgHidden' : culturaHidden,
+      'imgBorder' : culturaBorder,
       'unblocked' : false
     },
     { 
@@ -97,6 +134,7 @@ const dbPlaces = [
       'name' : 'abbazia di san michele', 
       'imgVisible' : abbaziaVisible,
       'imgHidden' : abbaziaHidden,
+      'imgBorder' : abbaziaBorder,
       'unblocked' : false
     },
     { 
@@ -104,6 +142,7 @@ const dbPlaces = [
       'name' : 'corricella', 
       'imgVisible' : corricellaVisible,
       'imgHidden' : corricellaHidden,
+      'imgBorder' : corricellaBorder,
       'unblocked' : false
     },
     { 
@@ -111,6 +150,7 @@ const dbPlaces = [
       'name' : 'marina grande', 
       'imgVisible' : marinaVisible,
       'imgHidden' : marinaHidden,
+      'imgBorder' : marinaBorder,
       'unblocked' : false
     },
     { 
@@ -118,6 +158,7 @@ const dbPlaces = [
       'name' : 'faro', 
       'imgVisible' : faroVisible,
       'imgHidden' : faroHidden,
+      'imgBorder' : faroBorder,
       'unblocked' : false
     },
     { 
@@ -125,6 +166,7 @@ const dbPlaces = [
       'name' : 'pozzo vecchio', 
       'imgVisible' : cimiteroVisible,
       'imgHidden' : cimiteroHidden,
+      'imgBorder' : cimiteroBorder,
       'unblocked' : false
     },
   ];

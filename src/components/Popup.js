@@ -79,7 +79,7 @@ const Popup = ({popup, setPopup, cardWon, placeWon, victory}) => {
             {placeWon ? <SecondLevel className={show ? 'active' : ''}>
                 <div className="box">
                     <div className="top">
-                        <img className="place outlined" src={placeWon ? placeWon.imgVisible : null} alt="" />
+                        <img className="place outlined" src={placeWon ? placeWon.imgBorder : null} alt="" />
                     </div>
                     <div className="center">
                             <h3>COMPLIMENTI</h3>
@@ -123,7 +123,7 @@ const FirstLevel = styled.div`
         align-items: center;
         justify-content: space-around;
         .top {
-            img.place.outlined {
+            /* img.place.outlined {
                 -webkit-filter: 
                     drop-shadow(4px 4px 0 white)
                     drop-shadow(-4px 4px 0 white)
@@ -135,7 +135,7 @@ const FirstLevel = styled.div`
                     drop-shadow(-4px 4px 0 white)
                     drop-shadow(4px -4px 0 white)
                     drop-shadow(-4px -4px 0 white); 
-            }
+                } */
             img.sad {
                 width: 150px;
                 border: 4px solid white;
