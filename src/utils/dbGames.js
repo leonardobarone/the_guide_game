@@ -130,7 +130,7 @@ const dbGames = [
       'name' : 'borgo dei marinai', 
       'lat' : 40.765394793342516, 
       'lng' : 14.029477741369188,
-      'path' : null,
+      'path' : '/borgo',
       'unblocked' : false
     },
     { 
