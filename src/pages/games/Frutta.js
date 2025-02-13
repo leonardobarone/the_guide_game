@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Keyboard from "../../components/Keyboard";
-// import Title from "../../components/Title";
+import Title from "../../components/Title";
 import { useState } from "react";
 
 const Frutta = () => {
@@ -16,7 +16,7 @@ const Frutta = () => {
 
     
   return <Wrapper>
-    {/* <Title one={'Frutta '} two={'Mista'} /> */}
+    <Title name={'frutta mista'} />
     <div className="base">
         <button onClick={()=> setActive(!active)}>Prova</button>
         <div className={active ? 'letter-first active' : 'letter-first'}>

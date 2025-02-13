@@ -43,7 +43,7 @@ const Card = () => {
 
     return (<Wrapper>
 
-        <Title one={'Le Mie '} two={'Carte'} />
+        <Title name={'le mie carte'} />
 
         <div className="buttons">
           <div onClick={() => setFiltro('tutte')} className={filtro === 'tutte' ? 'btn active' : 'btn' }>Tutte</div>

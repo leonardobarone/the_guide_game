@@ -3,7 +3,7 @@ import Title from '../../components/Title';
 
 const Borgo = () => {
   return <Wrapper>
-    <Title one={'Borgo dei '} two={'Marinai'} />
+    <Title name={'borgo dei marinai'} />
   </Wrapper>
 }
 

@@ -22,7 +22,7 @@ const Account = () => {
     
     return (
       <Wrapper>
-        <Title one={'La Mia'} two={'Home'} />
+        <Title name={'la mia home'} />
         <div className="infoHome">
           <img src={student} className="icon" alt="" />
           <div className="name">Arturo Gerace</div>

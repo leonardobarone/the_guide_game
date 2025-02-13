@@ -3,31 +3,32 @@ import { useGlobalContext } from "../../context";
 import lace from '../../images/games/lace.svg';
 import arch from '../../images/games/arch.svg';
 import styled from "styled-components";
+import findById from "../../utils/findById";
 
 
 const Merlato = () => {
     const {cards, games, places} = useGlobalContext();
-
+    const game = findById(games, '14');
+    const place = findById(places, '12');
+    const card = findById(cards, '6');
     
     const quizNumericMerlato = {
         'question' : 'Il Palazzo fa da cornice ai saluti. Gli archi e i merli moltiplicandosi, li osservano, e moltiplicandosi nuovamente per 8 ti danno il risultato di questo livello!',
         'answer' : '2968',
         'arrayCards' : cards,
-        'idCard' : '6',        
+        'idCard' : card.id,        
         'arrayPlaces' : places,
-        'idPlace' : '12',
+        'idPlace' : place.id,
         'arrayGames' : games,
-        'idGame' : '14',
+        'idGame' : game.id,
         'hex' : '#DD6C70',
-        'one' : 'Arrivi e ',
-        'two' : 'Partenze'
+        'name' : game.name,
     }
 
   
   return (
     <div>
       <QuizNumeric infoQuizNumeric={quizNumericMerlato} >
-
         <Wrapper>
           <div>
               <img src={arch} alt="" />

@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Error = () => {
   return <Wrapper>
-    <Title one={'Page Not Found'} two={'404'} />
+    <Title name={'pagina non trovata'} />
   </Wrapper>
 }
 

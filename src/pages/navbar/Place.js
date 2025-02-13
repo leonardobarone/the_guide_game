@@ -40,7 +40,7 @@ const Place = () => {
 
     return <Wrapper>
 
-        <Title one={'I Miei '} two={'Luoghi'} />
+        <Title name={'i miei luoghi'} />
 
         <div className="buttons">
           <div onClick={() => setFiltro('tutti')} className={filtro === 'tutti' ? 'btn active' : 'btn' }>Tutti</div>

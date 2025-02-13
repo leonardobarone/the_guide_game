@@ -21,7 +21,7 @@ import timeById from '../utils/timeById';
 // </utils>
 
 const QuizNumeric = (props) => {
-    const { question, answer, arrayCards, idCard, arrayPlaces, idPlace, arrayGames, idGame, hex, one, two } = props.infoQuizNumeric;
+    const { question, name, answer, arrayCards, idCard, arrayPlaces, idPlace, arrayGames, idGame, hex, one, two } = props.infoQuizNumeric;
 
   // INIZIO PROVA HEIGHT
     const [height, setHeight] = useState(window.innerHeight - 350);
@@ -76,7 +76,7 @@ const QuizNumeric = (props) => {
 
   return (
     <Wrapper style={{ height: `${height}px`}}>
-      <Title one={one} two={two} />
+      <Title name={name} />
     <div className="card" style={{backgroundColor : `${hex}`}}>
       <div className="domanda">
         {question}
