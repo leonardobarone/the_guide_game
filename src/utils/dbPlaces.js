@@ -6,23 +6,23 @@ import chiaiolellaVisible from '../images/places/visible/chiaiolella.webp';
 import chiaiolellaHidden from '../images/places/hidden/chiaiolella.webp';
 import chiaiolellaBorder from '../images/places/border/chiaiolella.png';
 
-import vivaraVisible from '../images/places/visible/vivara.webp';
+import vivaraVisible from '../images/places/visible/vivara.png';
 import vivaraHidden from '../images/places/hidden/vivara.png';
 import vivaraBorder from '../images/places/border/vivara.png';
 
-import mamozioVisible from '../images/places/visible/mamozio.webp';
+import mamozioVisible from '../images/places/visible/mamozio.png';
 import mamozioHidden from '../images/places/hidden/mamozio.png';
 import mamozioBorder from '../images/places/border/mamozio.png';
 
-import canaleVisible from '../images/places/visible/canale.webp';
+import canaleVisible from '../images/places/visible/canale.png';
 import canaleHidden from '../images/places/hidden/canale.png';
 import canaleBorder from '../images/places/border/canale.png';
 
-import martiriVisible from '../images/places/visible/martiri.webp';
+import martiriVisible from '../images/places/visible/martiri.png';
 import martiriHidden from '../images/places/hidden/martiri.webp';
 import martiriBorder from '../images/places/border/martiri.png';
 
-import cannoniVisible from '../images/places/visible/cannoni.webp';
+import cannoniVisible from '../images/places/visible/cannoni.png';
 import cannoniHidden from '../images/places/hidden/cannoni.png';
 import cannoniBorder from '../images/places/border/cannoni.png';
 
@@ -34,7 +34,7 @@ import culturaVisible from '../images/places/visible/cultura.webp';
 import culturaHidden from '../images/places/hidden/cultura.webp';
 import culturaBorder from '../images/places/border/cultura.png';
 
-import abbaziaVisible from '../images/places/visible/abbazia.webp';
+import abbaziaVisible from '../images/places/visible/abbazia.png';
 import abbaziaHidden from '../images/places/hidden/abbazia.png';
 import abbaziaBorder from '../images/places/border/abbazia.png';
 
@@ -50,7 +50,7 @@ import marinaVisible from '../images/places/visible/marina.webp';
 import marinaHidden from '../images/places/hidden/marina.webp';
 import marinaBorder from '../images/places/border/marina.png';
 
-import cimiteroVisible from '../images/places/visible/cimitero.webp';
+import cimiteroVisible from '../images/places/visible/cimitero.png';
 import cimiteroHidden from '../images/places/hidden/cimitero.webp';
 import cimiteroBorder from '../images/places/border/cimitero.png';
 

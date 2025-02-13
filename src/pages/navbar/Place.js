@@ -64,7 +64,6 @@ const Place = () => {
   export default Place;
   
   const Wrapper = styled.section`
-
 margin-top: 40px;
 margin-bottom: 60px;
 
