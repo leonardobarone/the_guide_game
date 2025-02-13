@@ -10,9 +10,6 @@ const Cannoni = () => {
     const card = findById(cards, '4');
     
     const quizNumericCannoni = {
-      'question' : "In quest'oasi di pace troverete uno strumento di guerra. In che anno è stato costruito?",
-      'answer' : '1785',
-      'hex' : '#89B8F6',
       'cards' : cards,
       'places' : places,
       'games' : games,

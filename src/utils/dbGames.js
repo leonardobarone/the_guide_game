@@ -69,7 +69,10 @@ const dbGames = [
       'lat' : 40.76045522977777, 
       'lng' : 14.03256355435797,
       'path' : '/cannoni',
-      'unblocked' : false
+      'unblocked' : false,
+      'question' : "In quest'oasi di pace troverete uno strumento di guerra. In che anno è stato costruito?",
+      'answer' : '1785',
+      'hex' : '#89B8F6',
     },
     { 
       'id' : "10",
@@ -109,7 +112,10 @@ const dbGames = [
       'lat' : 40.76560707054993, 
       'lng' : 14.025946693335339,
       'path' : '/merlato',
-      'unblocked' : false
+      'unblocked' : false,
+      'question' : 'Il Palazzo fa da cornice ai saluti. Gli archi e i merli moltiplicandosi, li osservano, e moltiplicandosi nuovamente per 8 ti danno il risultato di questo livello!',
+      'answer' : '2968',
+      'hex' : '#DD6C70',
     },
     { 
       'id' : "15",

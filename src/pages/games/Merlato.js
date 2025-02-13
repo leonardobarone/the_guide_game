@@ -13,9 +13,6 @@ const Merlato = () => {
     const card = findById(cards, '6');
     
     const quizNumericMerlato = {
-        'question' : 'Il Palazzo fa da cornice ai saluti. Gli archi e i merli moltiplicandosi, li osservano, e moltiplicandosi nuovamente per 8 ti danno il risultato di questo livello!',
-        'answer' : '2968',
-        'hex' : '#DD6C70',
         'card' : card,
         'place' : place,
         'game' : game,
