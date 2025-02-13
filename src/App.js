@@ -11,6 +11,7 @@ import Home from "./pages/Home";
 import Cannoni from "./pages/games/Cannoni";
 import Merlato from "./pages/games/Merlato";
 import Frutta from "./pages/games/Frutta";
+import Borgo from "./pages/games/Borgo";
 
 function App() {
   return (
@@ -28,14 +29,18 @@ function App() {
           
 
 
-          {/* GUERRA E PACE */}
+          {/* CANNONI */}
           <Route path="/cannoni" element={<Cannoni />} />
 
-          {/* ARRIVI E PARTENZE */}
+          {/* MERLATO */}
           <Route path="/merlato" element={<Merlato />} />
 
           {/* FRUTTA */}
           <Route path="/frutta" element={<Frutta />} />
+
+          
+          {/* BORGO */}
+          <Route path="/borgo" element={<Borgo />} />
 
           <Route path="*" element={<Error />} />
         </Routes>

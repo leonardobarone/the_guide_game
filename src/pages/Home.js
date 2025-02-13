@@ -15,6 +15,9 @@ const Home = () => {
               <li>
                 <Link to='/frutta'>Quiz Frutta</Link>
               </li>
+              <li>
+                <Link to='/borgo'>Quiz Borgo</Link>
+              </li>
           </ul>
         </div>
 
