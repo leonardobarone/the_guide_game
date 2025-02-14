@@ -232,14 +232,15 @@ const Wrapper = styled.main`
         justify-content: center;
         align-items: center;
         width: 25%;
+        padding: 3px;
         img {
           border-radius: 7px;
-          padding: 3px;
           display: block;
           width: 100%;
+          border: 3px solid transparent;
           &.active {
             padding: 0px;
-            border: 2px solid red;
+            border: 3px solid var(--green);
           }
         }
       }
