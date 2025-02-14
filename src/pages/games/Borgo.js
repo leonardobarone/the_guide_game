@@ -7,26 +7,90 @@ import findById from '../../utils/findById'
 const Borgo = () => {
   const { games } = useGlobalContext();
   const game = findById(games, '16');
+  const boxes = [
+    {
+      "id" : "1",
+      "name" : "lupo1",
+    }, 
+    {
+      "id" : "2",
+      "name" : "lupo2",
+    }, 
+    {
+      "id" : "3",
+      "name" : "lupo3",
+    }, 
+    {
+      "id" : "4",
+      "name" : "lupo4",
+    },
+    {
+      "id" : "5",
+      "name" : "madonna1",
+    }, 
+    {
+      "id" : "6",
+      "name" : "madonna2",
+    }, 
+    {
+      "id" : "7",
+      "name" : "madonna3",
+    }, 
+    {
+      "id" : "8",
+      "name" : "madonna4",
+    }, 
+    {
+      "id" : "9",
+      "name" : "croce1",
+    }, 
+    {
+      "id" : "10",
+      "name" : "croce2",
+    }, 
+    {
+      "id" : "11",
+      "name" : "croce3",
+    }, 
+    {
+      "id" : "12",
+      "name" : "croce4",
+    }, 
+    {
+      "id" : "13",
+      "name" : "catena1",
+    }, 
+    {
+      "id" : "14",
+      "name" : "catena2",
+    }, 
+    {
+      "id" : "15",
+      "name" : "catena3",
+    }, 
+    {
+      "id" : "16",
+      "name" : "catena4",
+    }, 
+  ];
+
+  const cliccato = (num) => {
+    alert(num);
+  }
 
   return <Wrapper>
     <Title name={game.name} />
     <div className="container">
-      <div>lupo1</div>
-      <div>lupo2</div>
-      <div>lupo3</div>
-      <div>lupo4</div>
-      <div>madonna1</div>
-      <div>madonna2</div>
-      <div>madonna3</div>
-      <div>madonna4</div>
-      <div>croce1</div>
-      <div>croce2</div>
-      <div>croce3</div>
-      <div>croce4</div>
-      <div>catena1</div>
-      <div>catena2</div>
-      <div>catena3</div>
-      <div>catena4</div>
+      {
+        boxes.map((box) => {
+          return <div 
+            key={box.id}
+            onClick={() => cliccato(box.id)}
+          >
+            {box.name}
+          </div>
+        })
+      }
     </div>
   </Wrapper>
 }
