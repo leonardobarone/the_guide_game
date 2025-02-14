@@ -226,13 +226,15 @@ const Wrapper = styled.main`
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
+      padding: 4px;
       div {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 25%;
         img {
-          padding: 2px;
+          border-radius: 7px;
+          padding: 3px;
           display: block;
           width: 100%;
           &.active {
@@ -246,7 +248,7 @@ const Wrapper = styled.main`
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 5px;
+      padding: 4px 7px 7px;
       button {
         background-color: var(--orange);
         border-style: none;
