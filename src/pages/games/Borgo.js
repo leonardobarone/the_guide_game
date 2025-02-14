@@ -216,7 +216,6 @@ export default Borgo;
 
 const Wrapper = styled.main`
     margin-top: 40px;
-    border: 1px solid black;
     .container {
       display: flex;
       justify-content: center;
@@ -226,7 +225,6 @@ const Wrapper = styled.main`
         display: flex;
         justify-content: center;
         align-items: center;
-        border: 1px solid black;
         width: 25%;
         img {
           padding: 2px;
