@@ -157,6 +157,7 @@ const Wrapper = styled.main`
       .btn {
         font-family: "Mitr", serif;
         display: inline-block;
+        font-weight: lighter;
         background-color: var(--orange);
         color: white;
         padding: 10px 75px;

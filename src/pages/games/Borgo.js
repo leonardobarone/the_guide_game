@@ -199,6 +199,11 @@ const Borgo = () => {
         })
       }
     </div>
+    <div className="containerButton">
+      <button>Prova</button>
+    </div>
+      <div>PULSANTE ANCORA FUNZIONANTE, QUESTO PER NON FARVI DIRE: HO CLICCATO MA NON SUCCEDE NIENTE</div>
+      <hr />
     <div>
       VALORE PRIMA RIGA: {array[1]}
       <br/>
@@ -235,6 +240,20 @@ const Wrapper = styled.main`
             border: 2px solid red;
           }
         }
+      }
+    }
+    .containerButton {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5px;
+      button {
+        background-color: var(--orange);
+        border-style: none;
+        width: 100%;
+        padding: 10px 0px;
+        border-radius: 4px;
+        color: white;
       }
     }
 `
