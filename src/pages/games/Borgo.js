@@ -3,7 +3,22 @@ import Title from '../../components/Title';
 import { useGlobalContext } from "../../context";
 import findById from '../../utils/findById'
 import { useState, useEffect } from "react";
-
+import lupo1 from '../../images/games/borgo/lupo1.png';
+import lupo2 from '../../images/games/borgo/lupo2.png';
+import lupo3 from '../../images/games/borgo/lupo3.png';
+import lupo4 from '../../images/games/borgo/lupo4.png';
+import madonna1 from '../../images/games/borgo/madonna1.png';
+import madonna2 from '../../images/games/borgo/madonna2.png';
+import madonna3 from '../../images/games/borgo/madonna3.png';
+import madonna4 from '../../images/games/borgo/madonna4.png';
+import croce1 from '../../images/games/borgo/croce1.png';
+import croce2 from '../../images/games/borgo/croce2.png';
+import croce3 from '../../images/games/borgo/croce3.png';
+import croce4 from '../../images/games/borgo/croce4.png';
+import catena1 from '../../images/games/borgo/catena1.png';
+import catena2 from '../../images/games/borgo/catena2.png';
+import catena3 from '../../images/games/borgo/catena3.png';
+import catena4 from '../../images/games/borgo/catena4.png';
 
 const Borgo = () => {
   const { games } = useGlobalContext();
@@ -15,18 +30,22 @@ const Borgo = () => {
     {
       "id" : "1",
       "name" : "lupo1",
+      "img" :  lupo1
     }, 
     {
       "id" : "2",
       "name" : "lupo2",
+      "img" :  lupo2
     }, 
     {
       "id" : "3",
       "name" : "lupo3",
+      "img" :  lupo3
     }, 
     {
       "id" : "4",
       "name" : "lupo4",
+      "img" :  lupo4
     },
   ];
 
@@ -34,18 +53,22 @@ const Borgo = () => {
     {
       "id" : "1",
       "name" : "madonna1",
+      "img" : madonna1
     }, 
     {
       "id" : "2",
       "name" : "madonna2",
+      "img" : madonna2
     }, 
     {
       "id" : "3",
       "name" : "madonna3",
+      "img" : madonna3
     }, 
     {
       "id" : "4",
       "name" : "madonna4",
+      "img" : madonna4
     },
   ];
   
@@ -53,18 +76,22 @@ const Borgo = () => {
     {
       "id" : "1",
       "name" : "croce1",
+      "img" : croce1
     }, 
     {
       "id" : "2",
       "name" : "croce2",
+      "img" : croce2
     }, 
     {
       "id" : "3",
       "name" : "croce3",
+      "img" : croce3
     }, 
     {
       "id" : "4",
       "name" : "croce4",
+      "img" : croce4
     },
   ];
 
@@ -72,18 +99,22 @@ const Borgo = () => {
     {
       "id" : "1",
       "name" : "catena1",
+      "img" : catena1
     }, 
     {
       "id" : "2",
       "name" : "catena2",
+      "img" : catena2
     }, 
     {
       "id" : "3",
       "name" : "catena3",
+      "img" : catena3
     }, 
     {
       "id" : "4",
       "name" : "catena4",
+      "img" : catena4
     },
   ];
 
@@ -96,7 +127,8 @@ const Borgo = () => {
   }
 
   useEffect(() => {
-    console.log("Stato (dopo il re-rendering):", array); // Valore aggiornato
+    console.log("Stato (dopo il re-rendering):", array);
+    console.log(array[1]) // Valore aggiornato
   }, [array]);
 
 
@@ -106,11 +138,15 @@ const Borgo = () => {
       {
         boxes1.map((box) => {
           return <div 
-            // className={arr.find(elm => elm === box.id) ? 'active' : ''}
             key={box.id}
             onClick={() => cliccato(box.id, "1")}
           >
-            {box.name}
+            <img 
+              className={array["1"] == box.id ? 'active' : ''}
+              src={box.img} 
+              alt="" 
+            />
+            {/* {box.name} */}
           </div>
         })
       }
@@ -121,7 +157,12 @@ const Borgo = () => {
             key={box.id}
             onClick={() => cliccato(box.id, "2")}
           >
-            {box.name}
+            <img 
+              className={array["2"] == box.id ? 'active' : ''}
+              src={box.img} 
+              alt="" 
+            />
+            {/* {box.name} */}
           </div>
         })
       }
@@ -132,7 +173,12 @@ const Borgo = () => {
             key={box.id}
             onClick={() => cliccato(box.id, "3")}
           >
-            {box.name}
+            <img 
+              className={array["3"] == box.id ? 'active' : ''}
+              src={box.img} 
+              alt="" 
+            />
+            {/* {box.name} */}
           </div>
         })
       }
@@ -143,7 +189,12 @@ const Borgo = () => {
             key={box.id}
             onClick={() => cliccato(box.id, "4")}
           >
-            {box.name}
+            <img 
+              className={array["4"] == box.id ? 'active' : ''}
+              src={box.img} 
+              alt="" 
+            />
+            {/* {box.name} */}
           </div>
         })
       }
@@ -177,8 +228,14 @@ const Wrapper = styled.main`
         align-items: center;
         border: 1px solid black;
         width: 25%;
-        &.active {
-          border: 3px solid red;
+        img {
+          padding: 2px;
+          display: block;
+          width: 100%;
+          &.active {
+            padding: 0px;
+            border: 2px solid red;
+          }
         }
       }
     }
