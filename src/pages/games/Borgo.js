@@ -202,7 +202,7 @@ const Borgo = () => {
     <div className="containerButton">
       <button>Prova</button>
     </div>
-      <div>PULSANTE ANCORA FUNZIONANTE, QUESTO PER NON FARVI DIRE: HO CLICCATO MA NON SUCCEDE NIENTE</div>
+      <div>PULSANTE ANCORA NON FUNZIONANTE, QUESTO PER NON FARVI DIRE: HO CLICCATO MA NON SUCCEDE NIENTE</div>
       <hr />
     <div>
       VALORE PRIMA RIGA: {array[1]}
