@@ -52,11 +52,11 @@ const QuizNumeric = (props) => {
   const prova = () => {
     if (dataFromChild === game.answer) {
         // VINCERE
+        setGames(unblockById(games, game.id));
         setCards(unblockById(cards, card.id));
         setCards(timeById(cards, card.id));
-        setGames(unblockById(games, game.id));
-        setPlaces(timeById(places, place.id));
         setPlaces(unblockById(places, place.id));
+        setPlaces(timeById(places, place.id));
         // COSE VINTE
         setCardWon(findById(cards, card.id))
         setPlaceWon(findById(places, place.id))

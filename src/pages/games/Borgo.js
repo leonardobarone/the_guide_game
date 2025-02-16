@@ -2,7 +2,9 @@ import styled from "styled-components";
 import Title from '../../components/Title';
 import { useGlobalContext } from "../../context";
 import findById from '../../utils/findById'
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import unblockById from '../../utils/unblockById';
+import Popup from "../../components/Popup";
 import lupo1 from '../../images/games/borgo/lupo1.png';
 import lupo2 from '../../images/games/borgo/lupo2.png';
 import lupo3 from '../../images/games/borgo/lupo3.png';
@@ -21,10 +23,11 @@ import catena3 from '../../images/games/borgo/catena3.png';
 import catena4 from '../../images/games/borgo/catena4.png';
 
 const Borgo = () => {
-  const { games } = useGlobalContext();
+  const { games, setGames } = useGlobalContext();
   const game = findById(games, '16');
   const [array, setArray] = useState({});
-  // const [arrResult] = useState(['2', '4', '1', '1']);
+  const [popup, setPopup] = useState(false);
+  const [victory, setVictory] = useState(false);
 
   const boxes1 = [
     {
@@ -126,14 +129,29 @@ const Borgo = () => {
     });
   }
 
-  useEffect(() => {
-    console.log("Stato (dopo il re-rendering):", array);
-    console.log(array[1]) // Valore aggiornato
-  }, [array]);
+  
+
+
+  const prova = () => {
+    if (array["1"] && array["2"] && array["3"] && array["4"]) {
+      if (array["1"] === "1" && array["2"] === "2" && array["3"] === "2" && array["4"] === "4" ) {
+        setVictory(true);
+        setPopup(true);
+        setGames(unblockById(games, game.id));
+        setArray({})
+      } else {
+        setPopup(true);
+        setArray({})
+      }
+    }
+  }
 
 
   return <Wrapper>
     <Title name={game.name} />
+    <div className="question">
+      Qui ci vuole il testo del quiz.<br />Per vincere inserire 1 - 2 - 2 - 4.
+    </div>
     <div className="container">
       {
         boxes1.map((box) => {
@@ -142,7 +160,7 @@ const Borgo = () => {
             onClick={() => cliccato(box.id, "1")}
           >
             <img 
-              className={array["1"] == box.id ? 'active' : ''}
+              className={array["1"] == box.id ? 'active1' : ''}
               src={box.img} 
               alt="" 
             />
@@ -158,7 +176,7 @@ const Borgo = () => {
             onClick={() => cliccato(box.id, "2")}
           >
             <img 
-              className={array["2"] == box.id ? 'active' : ''}
+              className={array["2"] == box.id ? 'active2' : ''}
               src={box.img} 
               alt="" 
             />
@@ -174,7 +192,7 @@ const Borgo = () => {
             onClick={() => cliccato(box.id, "3")}
           >
             <img 
-              className={array["3"] == box.id ? 'active' : ''}
+              className={array["3"] == box.id ? 'active3' : ''}
               src={box.img} 
               alt="" 
             />
@@ -190,7 +208,7 @@ const Borgo = () => {
             onClick={() => cliccato(box.id, "4")}
           >
             <img 
-              className={array["4"] == box.id ? 'active' : ''}
+              className={array["4"] == box.id ? 'active4' : ''}
               src={box.img} 
               alt="" 
             />
@@ -200,20 +218,15 @@ const Borgo = () => {
       }
     </div>
     <div className="containerButton">
-      <button>Prova</button>
+      <button onClick={prova}>Prova</button>
     </div>
-      <div>PULSANTE ANCORA NON FUNZIONANTE, QUESTO PER NON FARVI DIRE: HO CLICCATO MA NON SUCCEDE NIENTE</div>
-      <hr />
-    <div>
-      VALORE PRIMA RIGA: {array[1]}
-      <br/>
-      VALORE SECONDA RIGA: {array[2]}
-      <br/>
-      VALORE TERZA RIGA: {array[3]}
-      <br/>
-      VALORE QUARTA RIGA: {array[4]}
-      <br/> 
-    </div>
+    <Popup 
+        popup={popup} 
+        setPopup={setPopup} 
+        victory={victory} 
+        // cardWon={cardWon} 
+        // placeWon={placeWon} 
+    />
   </Wrapper>
 }
 
@@ -221,6 +234,12 @@ export default Borgo;
 
 const Wrapper = styled.main`
     margin-top: 40px;
+    .question {
+      font-weight: lighter;
+      color: var(--purple);
+      padding: 0px 10px;
+      line-height: 20px;
+    }
     .container {
       display: flex;
       justify-content: center;
@@ -238,9 +257,20 @@ const Wrapper = styled.main`
           display: block;
           width: 100%;
           border: 3px solid transparent;
-          &.active {
+          &.active1, &.active2, &.active3, &.active4 {
             padding: 0px;
+          }
+          &.active1 {
             border: 3px solid var(--green);
+          }
+          &.active2 {
+            border: 3px solid var(--orange);
+          }
+          &.active3 {
+            border: 3px solid var(--red);
+          }
+          &.active4 {
+            border: 3px solid var(--purple);
           }
         }
       }
