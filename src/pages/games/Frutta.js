@@ -24,7 +24,7 @@ const Frutta = () => {
     } 
 
     const arr = [
-        arancia, banana, bar, big, ciliegia, cocomero, limone, nespola, arancia, sette, banana, bar, big, ciliegia, sette, cocomero, limone, nespola, sette, banana, bar, big, ciliegia, cocomero, limone, nespola, sette
+        arancia, banana, ciliegia, big, bar, cocomero, limone, nespola, arancia, sette, banana, bar, big, ciliegia, sette, cocomero, limone, nespola, sette, banana, bar, big, ciliegia, cocomero, limone, nespola, sette
     ]
 
 
@@ -46,6 +46,9 @@ const Frutta = () => {
         <div className={`letter-second ${win === 'no' ? 'lose' : ''} ${win === 'yes' ? 'win' : '' }`}>                    
             {
                 arr.map((img, i) => {
+                    if (i === 0) {
+                        return;
+                    }
                     return <img key={i} src={img} /> 
                 })
             }
@@ -53,6 +56,9 @@ const Frutta = () => {
         <div className={`letter-third ${win === 'no' ? 'lose' : ''} ${win === 'yes' ? 'win' : '' }`}>
             {
                 arr.map((img, i) => {
+                    if (i === 0 || i === 1) {
+                        return;
+                    }
                     return <img key={i} src={img} /> 
                 })
             }
