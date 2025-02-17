@@ -40,7 +40,7 @@ const Frutta = () => {
         },
         {
             'posizione' : 'quarta',
-            'src' : limone
+            'src' : banana
         },
         {
             'posizione' : 'quinta',
@@ -161,6 +161,12 @@ const Frutta = () => {
     <Title name={'fruit jackpot'} />
 
     <div className="base">
+        {/* {dataFromChild[0]}
+        {dataFromChild[1]}
+        {dataFromChild[2]}
+        {dataFromChild[3]}
+        {dataFromChild[4]}
+        {dataFromChild[5]} */}
         <button onClick={vincere}>Vinci</button>
         <button onClick={perdere}>Perdi</button>
         <button onClick={()=> setWin('')}>Azzera</button></div>
@@ -194,6 +200,17 @@ const Frutta = () => {
                     return <img key={i} src={img.src} /> 
                 })
             }
+        </div>
+    </div>
+    <div className="base letters">
+        <div>
+            {dataFromChild[0]} 
+        </div>
+        <div>
+            {dataFromChild[1]} 
+        </div>
+        <div>
+            {dataFromChild[2]} 
         </div>
     </div>
     <div className="base">
@@ -235,6 +252,17 @@ const Frutta = () => {
             }
         </div>
     </div>
+    <div className="base letters">
+        <div>
+            {dataFromChild[3]} 
+        </div>
+        <div>
+            {dataFromChild[4]} 
+        </div>
+        <div>
+            {dataFromChild[5]} 
+        </div>
+    </div>
     {/* ciao, questo è il quiz della frutta {dataFromChild} {popup ? 'true' : 'false'} */}
     <Popup 
         popup={popup} 
@@ -255,6 +283,17 @@ const Wrapper = styled.main`
         display: flex;
         justify-content: center;
         align-items: center;
+        &.letters {
+            div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid black;
+                width: 80px;
+                height: 80px;
+                font-size: 50px;
+            }
+        }
     }
     .letter-one, .letter-two, .letter-three, .letter-four, .letter-five, .letter-six {
         display: flex;
@@ -300,23 +339,23 @@ const Wrapper = styled.main`
         animation: scroll 2.5s 1s linear forwards;
     }
     .letter-two.win img {
-        --ch: 12; // 5
+        --ch: 11; // 5
         animation: scroll 3s 1s linear forwards;
     }
     .letter-three.win img {
-        --ch: 12; // 5
+        --ch: 10; // 5
         animation: scroll 2.75s 1s linear forwards;
     }
     .letter-four.win img {
-        --ch:12; // 5
+        --ch:9; // 5
         animation: scroll 2.25s 1s linear forwards;
     }
     .letter-five.win img {
-        --ch: 12; // 5
+        --ch: 8; // 5
         animation: scroll 3.5s 1s linear forwards;
     }
     .letter-six.win img {
-        --ch: 12; // 5
+        --ch: 7; // 5
         animation: scroll 2.25s 1s linear forwards;
     }
 
