@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Keyboard from "../../components/Keyboard";
 import Title from "../../components/Title";
+import Popup from "../../components/Popup";
 import { useState } from "react";
 import arancia from '../../images/games/frutta/arancia.png';
 import banana from '../../images/games/frutta/banana.png';
@@ -17,6 +18,7 @@ const Frutta = () => {
 
     const [dataFromChild, setDataFromChild] = useState("");
     const [popup, setPopup] = useState(false); 
+    const [victory, setVictory] = useState(false);
     const [win, setWin] = useState('');
 
     function handleDataFromChild(data) {
@@ -134,14 +136,23 @@ const Frutta = () => {
         },
     ]
 
-
+    const perdere = () => {
+        setWin('no');
+        setTimeout(function() {
+            setPopup(true);
+            setTimeout(function() {
+                setWin('')
+              }, 2000); 
+          }, 3700);
+    }
 
     
   return <Wrapper>
     <Title name={'fruit jackpot'} />
+
     <div className="base">
         <button onClick={()=> setWin('yes')}>Vinci</button>
-        <button onClick={()=> setWin('no')}>Perdi</button>
+        <button onClick={perdere}>Perdi</button>
         <button onClick={()=> setWin('')}>Azzera</button></div>
     <div className="base">
         {/* 1 POSIZIONE */}
@@ -215,6 +226,13 @@ const Frutta = () => {
         </div>
     </div>
     {/* ciao, questo è il quiz della frutta {dataFromChild} {popup ? 'true' : 'false'} */}
+    <Popup 
+        popup={popup} 
+        setPopup={setPopup} 
+        // cardWon={cardWon} 
+        victory={victory} 
+        // placeWon={placeWon} 
+    />
     <Keyboard sendDataToParent={handleDataFromChild} popup={popup} />
   </Wrapper>
 }
