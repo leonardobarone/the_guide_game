@@ -142,7 +142,7 @@ const Frutta = () => {
             setPopup(true);
             setTimeout(function() {
                 setWin('')
-              }, 2000); 
+              }, 500); 
           }, 3700);
     }
 
