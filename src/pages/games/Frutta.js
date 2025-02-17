@@ -146,12 +146,22 @@ const Frutta = () => {
           }, 3700);
     }
 
+    const vincere = () => {
+        setWin('yes');
+        setTimeout(function() {
+            setPopup(true);
+            setVictory(true);
+            setTimeout(function() {
+                setWin('')
+              }, 500); 
+          }, 3700);
+    }
     
   return <Wrapper>
     <Title name={'fruit jackpot'} />
 
     <div className="base">
-        <button onClick={()=> setWin('yes')}>Vinci</button>
+        <button onClick={vincere}>Vinci</button>
         <button onClick={perdere}>Perdi</button>
         <button onClick={()=> setWin('')}>Azzera</button></div>
     <div className="base">
