@@ -24,7 +24,33 @@ const Frutta = () => {
     } 
 
     const arr = [
-        arancia, banana, ciliegia, big, bar, cocomero, limone, nespola, arancia, sette, banana, bar, big, ciliegia, sette, cocomero, limone, nespola, sette, banana, bar, big, ciliegia, cocomero, limone, nespola, sette
+        arancia, 
+        banana, 
+        ciliegia, 
+        big, 
+        cocomero, // perso 1
+        bar, 
+        limone, 
+        nespola, 
+        arancia, 
+        sette, // vinto 1 
+        banana, // perso 2 
+        bar, 
+        big, 
+        ciliegia, 
+        cocomero,  
+        sette, // vinto 2 
+        limone, 
+        nespola, // perso 3 
+        bar, 
+        banana, 
+        sette, // vinto 3 
+        big, 
+        ciliegia, 
+        cocomero, 
+        limone, 
+        nespola, 
+        sette
     ]
 
 
