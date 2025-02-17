@@ -24,33 +24,114 @@ const Frutta = () => {
     } 
 
     const arr = [
-        arancia, 
-        banana, 
-        ciliegia, 
-        big, 
-        cocomero, // perso 1
-        bar, 
-        limone, 
-        nespola, 
-        arancia, 
-        sette, // vinto 1 
-        banana, // perso 2 
-        bar, 
-        big, 
-        ciliegia, 
-        cocomero,  
-        sette, // vinto 2 
-        limone, 
-        nespola, // perso 3 
-        bar, 
-        banana, 
-        sette, // vinto 3 
-        big, 
-        ciliegia, 
-        cocomero, 
-        limone, 
-        nespola, 
-        sette
+        {
+            'posizione' : 'prima',
+            'src' : nespola
+        },
+        {
+            'posizione' : 'seconda',
+            'src' : limone
+        },
+        {
+            'posizione' : 'terza',
+            'src' : cocomero
+        },
+        {
+            'posizione' : 'quarta',
+            'src' : limone
+        },
+        {
+            'posizione' : 'quinta',
+            'src' : cocomero
+        },
+        {
+            'posizione' : 'sesta',
+            'src' : arancia
+        }, 
+        {
+            'posizione' : 'perso',
+            'src' : limone
+        }, 
+        {
+            'posizione' : 'perso',
+            'src' : nespola
+        }, 
+        {
+            'posizione' : 'perso',
+            'src' : arancia
+        }, 
+        {
+            'posizione' : 'perso',
+            'src' : sette
+        }, 
+        {
+            'posizione' : 'perso',
+            'src' : banana
+        }, 
+        {
+            'posizione' : 'perso',
+            'src' : big
+        }, 
+        {
+            'posizione' : 'vinto',
+            'src' : sette
+        }, 
+        {
+            'posizione' : 'vinto',
+            'src' : sette
+        }, 
+        {
+            'posizione' : 'vinto',
+            'src' : sette
+        },  
+        {
+            'posizione' : 'vinto',
+            'src' : sette
+        }, 
+        {
+            'posizione' : 'vinto',
+            'src' : sette
+        }, 
+        {
+            'posizione' : 'vinto',
+            'src' : sette
+        }, 
+        {
+            'posizione' : '',
+            'src' : bar
+        }, 
+        {
+            'posizione' : '',
+            'src' : banana
+        }, 
+        {
+            'posizione' : '',
+            'src' : sette
+        }, 
+        {
+            'posizione' : '',
+            'src' : big
+        }, 
+        {
+            'posizione' : '',
+            'src' : ciliegia
+        }, 
+        {
+            'posizione' : '',
+            'src' : cocomero
+        }, 
+        {
+            'posizione' : '',
+            'src' : limone
+        }, 
+        {
+            'posizione' : '',
+            'src' : nespola
+        }, 
+        {
+            'posizione' : '',
+            'src' : sette
+        },
     ]
 
 
@@ -61,31 +142,74 @@ const Frutta = () => {
     <div className="base">
         <button onClick={()=> setWin('yes')}>Vinci</button>
         <button onClick={()=> setWin('no')}>Perdi</button>
-        <button onClick={()=> setWin('')}>Azzera</button>
-        <div className={`letter-first ${win === 'no' ? 'lose' : ''} ${win === 'yes' ? 'win' : '' }`}>
+        <button onClick={()=> setWin('')}>Azzera</button></div>
+    <div className="base">
+        {/* 1 POSIZIONE */}
+        <div className={`letter-one ${win === 'no' ? 'lose' : ''} ${win === 'yes' ? 'win' : '' }`}>
             {
                 arr.map((img, i) => {
-                    return <img key={i} src={img} /> 
+                    return <img key={i} src={img.src} /> 
                 })
             }
         </div>
-        <div className={`letter-second ${win === 'no' ? 'lose' : ''} ${win === 'yes' ? 'win' : '' }`}>                    
+        {/* 2 POSIZIONE */}
+        <div className={`letter-two ${win === 'no' ? 'lose' : ''} ${win === 'yes' ? 'win' : '' }`}>                    
             {
                 arr.map((img, i) => {
-                    if (i === 0) {
+                    if (img.posizione === 'prima') {
                         return;
-                    }
-                    return <img key={i} src={img} /> 
+                    } 
+                    return <img key={i} src={img.src} /> 
                 })
             }
         </div>
-        <div className={`letter-third ${win === 'no' ? 'lose' : ''} ${win === 'yes' ? 'win' : '' }`}>
+        {/* 3 POSIZIONE */}
+        <div className={`letter-three ${win === 'no' ? 'lose' : ''} ${win === 'yes' ? 'win' : '' }`}>
             {
                 arr.map((img, i) => {
-                    if (i === 0 || i === 1) {
+                    if (img.posizione === 'prima' || img.posizione === 'seconda') {
                         return;
-                    }
-                    return <img key={i} src={img} /> 
+                    } 
+                    return <img key={i} src={img.src} /> 
+                })
+            }
+        </div>
+    </div>
+    <div className="base">
+        {/* 4 POSIZIONE */}
+        <div className={`letter-four ${win === 'no' ? 'lose' : ''} ${win === 'yes' ? 'win' : '' }`}>
+            {
+                arr.map((img, i) => {
+                    if (img.posizione === 'prima' || img.posizione === 'seconda' ||
+                        img.posizione === 'terza' ) {
+                        return;
+                    } 
+                    return <img key={i} src={img.src} /> 
+                })
+            }
+        </div>
+        {/* 5 POSIZIONE */}
+        <div className={`letter-five ${win === 'no' ? 'lose' : ''} ${win === 'yes' ? 'win' : '' }`}>                    
+            {
+                arr.map((img, i) => {
+                    if (img.posizione === 'prima' || img.posizione === 'seconda' ||
+                        img.posizione === 'terza' || img.posizione === 'quarta') {
+                        return;
+                    } 
+                    return <img key={i} src={img.src} /> 
+                })
+            }
+        </div>
+        <div className={`letter-six ${win === 'no' ? 'lose' : ''} ${win === 'yes' ? 'win' : '' }`}>
+            {/* 6 POSIZIONE */}
+            {
+                arr.map((img, i) => {
+                    if (img.posizione === 'prima' || img.posizione === 'seconda' ||
+                        img.posizione === 'terza' || img.posizione === 'quarta' || 
+                        img.posizione === 'quinta') {
+                        return;
+                    } 
+                    return <img key={i} src={img.src} /> 
                 })
             }
         </div>
@@ -104,7 +228,7 @@ const Wrapper = styled.main`
         justify-content: center;
         align-items: center;
     }
-    .letter-first, .letter-second, .letter-third {
+    .letter-one, .letter-two, .letter-three, .letter-four, .letter-five, .letter-six {
         display: flex;
         flex-direction: column;
         border: 1px solid black;
@@ -115,30 +239,57 @@ const Wrapper = styled.main`
         text-align: center;
         overflow: hidden;
     }
-    .letter-first.lose img {
-        --ch: 4; // 5
-        animation: scroll 1s 1s linear forwards;
-    }
-    .letter-second.lose img {
-        --ch: 9; // 5
-        animation: scroll 2s 1s linear forwards;
-    }
-    .letter-third.lose img {
-        --ch: 15; // 5
-        animation: scroll 4s 1S linear forwards;
-    }
 
-    .letter-first.win img {
-        --ch: 9; // 5
+    .letter-one.lose img {
+        --ch: 6;
+        animation: scroll 1.5s 1s linear forwards;
+    }
+    .letter-two.lose img {
+        --ch: 6;
         animation: scroll 2s 1s linear forwards;
     }
-    .letter-second.win img {
-        --ch: 14; // 5
-        animation: scroll 3s 1s linear forwards;
+    .letter-three.lose img {
+        --ch: 6;
+        animation: scroll 1.75s 1s linear forwards;
     }
-    .letter-third.win img {
-        --ch: 18; // 5
-        animation: scroll 5s 1S linear forwards;
+    .letter-four.lose img {
+        --ch: 6;
+        animation: scroll 1.25s 1s linear forwards;
+    }
+    .letter-five.lose img {
+        --ch: 6;
+        animation: scroll 2.5s 1s linear forwards;
+    }
+    .letter-six.lose img {
+        --ch: 6;
+        animation: scroll 1.25s 1s linear forwards;
+    }
+    
+    
+    
+    .letter-one.win img {
+        --ch:12; // 5
+        animation: scroll 1.5s 1s linear forwards;
+    }
+    .letter-two.win img {
+        --ch: 12; // 5
+        animation: scroll 2s 1s linear forwards;
+    }
+    .letter-three.win img {
+        --ch: 12; // 5
+        animation: scroll 1.75s 1s linear forwards;
+    }
+    .letter-four.win img {
+        --ch:12; // 5
+        animation: scroll 1.25s 1s linear forwards;
+    }
+    .letter-five.win img {
+        --ch: 12; // 5
+        animation: scroll 2.5s 1s linear forwards;
+    }
+    .letter-six.win img {
+        --ch: 12; // 5
+        animation: scroll 1.25s 1s linear forwards;
     }
 
     @keyframes scroll {
