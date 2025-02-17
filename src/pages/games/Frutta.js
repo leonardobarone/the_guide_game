@@ -151,10 +151,10 @@ const Frutta = () => {
         setTimeout(function() {
             setPopup(true);
             setVictory(true);
-            setTimeout(function() {
-                setWin('')
-              }, 500); 
-          }, 3700);
+            // setTimeout(function() {
+            //     setWin('')
+            //   }, 500); 
+          }, 4700);
     }
     
   return <Wrapper>
@@ -297,27 +297,27 @@ const Wrapper = styled.main`
     
     .letter-one.win img {
         --ch:12; // 5
-        animation: scroll 1.5s 1s linear forwards;
+        animation: scroll 2.5s 1s linear forwards;
     }
     .letter-two.win img {
         --ch: 12; // 5
-        animation: scroll 2s 1s linear forwards;
+        animation: scroll 3s 1s linear forwards;
     }
     .letter-three.win img {
         --ch: 12; // 5
-        animation: scroll 1.75s 1s linear forwards;
+        animation: scroll 2.75s 1s linear forwards;
     }
     .letter-four.win img {
         --ch:12; // 5
-        animation: scroll 1.25s 1s linear forwards;
+        animation: scroll 2.25s 1s linear forwards;
     }
     .letter-five.win img {
         --ch: 12; // 5
-        animation: scroll 2.5s 1s linear forwards;
+        animation: scroll 3.5s 1s linear forwards;
     }
     .letter-six.win img {
         --ch: 12; // 5
-        animation: scroll 1.25s 1s linear forwards;
+        animation: scroll 2.25s 1s linear forwards;
     }
 
     @keyframes scroll {
