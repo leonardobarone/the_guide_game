@@ -160,7 +160,7 @@ const Borgo = () => {
             onClick={() => cliccato(box.id, "1")}
           >
             <img 
-              className={array["1"] == box.id ? 'active1' : ''}
+              className={array["1"] === box.id ? 'active1' : ''}
               src={box.img} 
               alt="" 
             />
@@ -176,7 +176,7 @@ const Borgo = () => {
             onClick={() => cliccato(box.id, "2")}
           >
             <img 
-              className={array["2"] == box.id ? 'active2' : ''}
+              className={array["2"] === box.id ? 'active2' : ''}
               src={box.img} 
               alt="" 
             />
@@ -187,12 +187,12 @@ const Borgo = () => {
       {
         boxes3.map((box) => {
           return <div 
-            // className={arr.find(elm => elm === box.id) ? 'active' : ''}
+            // className={arr.find(elm => elm ==== box.id) ? 'active' : ''}
             key={box.id}
             onClick={() => cliccato(box.id, "3")}
           >
             <img 
-              className={array["3"] == box.id ? 'active3' : ''}
+              className={array["3"] === box.id ? 'active3' : ''}
               src={box.img} 
               alt="" 
             />
@@ -203,12 +203,12 @@ const Borgo = () => {
       {
         boxes4.map((box) => {
           return <div 
-            // className={arr.find(elm => elm === box.id) ? 'active' : ''}
+            // className={arr.find(elm => elm ==== box.id) ? 'active' : ''}
             key={box.id}
             onClick={() => cliccato(box.id, "4")}
           >
             <img 
-              className={array["4"] == box.id ? 'active4' : ''}
+              className={array["4"] === box.id ? 'active4' : ''}
               src={box.img} 
               alt="" 
             />
