@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Keyboard from "../../components/Keyboard";
 import Title from "../../components/Title";
 import Popup from "../../components/Popup";
+import unblockById from '../../utils/unblockById';
 import findById from "../../utils/findById";
 import { useState } from "react";
 import { useGlobalContext } from "../../context";
@@ -18,7 +19,7 @@ import sette from '../../images/games/frutta/sette.png';
 
 const Frutta = () => {
 
-    const {games} = useGlobalContext();
+    const {games, setGames} = useGlobalContext();
     const game = findById(games, '15');
     const [dataFromChild, setDataFromChild] = useState("");
     const [popup, setPopup] = useState(false); 
@@ -149,6 +150,7 @@ const Frutta = () => {
                 setTimeout(function() {
                     setPopup(true);
                     setVictory(true);
+                    setGames(unblockById(games, game.id));
                     setTimeout(function() {
                         setDataFromChild('')
                         setWin('')
