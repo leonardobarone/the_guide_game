@@ -72,7 +72,6 @@ const dbGames = [
       'unblocked' : false,
       'question' : "In quest'oasi di pace troverete uno strumento di guerra. In che anno è stato costruito?",
       'answer' : '1785',
-      'hex' : '#89B8F6',
     },
     { 
       'id' : "10",
@@ -115,7 +114,6 @@ const dbGames = [
       'unblocked' : false,
       'question' : 'Il Palazzo fa da cornice ai saluti. Gli archi e i merli moltiplicandosi, li osservano, e moltiplicandosi nuovamente per 8 ti danno il risultato di questo livello!',
       'answer' : '2968',
-      'hex' : '#DD6C70',
     },
     { 
       'id' : "15",
@@ -132,6 +130,7 @@ const dbGames = [
       'lat' : 40.765394793342516, 
       'lng' : 14.029477741369188,
       'path' : '/borgo',
+      'answer' : '1224',
       'unblocked' : false
     },
     { 

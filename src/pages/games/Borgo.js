@@ -134,10 +134,21 @@ const Borgo = () => {
 
   const prova = () => {
     if (array["1"] && array["2"] && array["3"] && array["4"]) {
-      if (array["1"] === "1" && array["2"] === "2" && array["3"] === "2" && array["4"] === "4" ) {
-        setVictory(true);
-        setPopup(true);
+      if (array["1"] === game.answer[0] && array["2"] === game.answer[1] && array["3"] === game.answer[2] && array["4"] === game.answer[3] ) {
+        
+        
+        // VINCE SENZA PREMIO 
         setGames(unblockById(games, game.id));
+        setVictory(true);
+        // VINCE CON UN PREMIO
+        // console.log(game)
+        // setCards(unblockById(cards, card.id));
+        // setCards(timeById(cards, card.id));
+        // setPlaces(unblockById(places, place.id));
+        // setPlaces(timeById(places, place.id));
+        
+        
+        setPopup(true);
         setArray({})
       } else {
         setPopup(true);

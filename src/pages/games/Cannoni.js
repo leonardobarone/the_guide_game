@@ -16,6 +16,7 @@ const Cannoni = () => {
       'card' : card,
       'place' : place,
       'game' : game,
+       'hex' : '#89B8F6'
     }
 
   

@@ -19,6 +19,7 @@ const Merlato = () => {
         'cards' : cards,
         'places' : places,
         'games' : games,
+        'hex' : '#DD6C70'
     }
 
   
