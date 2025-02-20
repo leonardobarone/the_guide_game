@@ -2,28 +2,27 @@ import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { IoMdBackspace } from "react-icons/io";
 
-const Keyboard = ({ sendDataToParent, popup }) => {
+const Keyboard = ({ sendDataToParent, popup, limit, boxVisible}) => {
     
     const [parola, setParola] = useState('');
     
     const handleButtonClick = (value) => {
-        let limit = parola.length + 1;
-        
+        let countLimit = parola.length + 1;
         
         if (value === 'indietro' && parola !== '') {
             setParola(parola.slice(0, -1));
             sendDataToParent(parola.slice(0, -1));
-        } else if (limit < 15 && value !== 'indietro') {
+        } else if (countLimit <= limit && value !== 'indietro') {
             setParola(prev => prev + value);
             sendDataToParent(prev => prev + value);
         }
     }
-
+    
     useEffect(() => {
         if (popup) {
             setParola('')
         }
-    }, [popup])
+    }, [popup, parola])
 
     
     const btns1 = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
@@ -34,12 +33,14 @@ const Keyboard = ({ sendDataToParent, popup }) => {
 
     return <>
         <Wrapper>
-            <div className="top">
+            {
+                !boxVisible ? <div className="top">
                 <div className="search">
                     <span>{parola}</span>
                 </div>
-            </div>
-            <div className="tastiera">
+            </div> : null
+            }
+            <div className="tastiera" style={{padding: !boxVisible ? '' : '2px 0px 0px'}}>
                 <div className="btns1">
                     {btns1.map((btn, i) => {
                         return <div className='out' key={i}>
@@ -97,30 +98,6 @@ const Keyboard = ({ sendDataToParent, popup }) => {
                 </div>
             </div>
 
-            {/* <div className="boxSearch">
-                <div className="inSearch">
-                    <div>{parola ? parola : ''}</div>
-                </div>
-            </div>
-            <div className="keyboard">
-                {
-                    numbers.map((number, index) => {
-                        let view = number;
-                        if (number === 'indietro') {
-                            view = <IoMdBackspace />
-                        } else if (number === 'azzera') {
-                            view = <MdDelete />
-                        } else {
-                            view = number;
-                        }
-                        return (
-                            <div key={index} className='inner'>
-                                    <div key={index} onClick={() => handleButtonClick(number)} >{view}</div>
-                            </div>
-                        )
-                    })
-                }
-            </div> */}
         </Wrapper>
     </>
 }

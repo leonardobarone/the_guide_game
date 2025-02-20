@@ -123,6 +123,7 @@ const dbGames = [
       'lat' : 40.76549026088297, 
       'lng' : 14.027197943823944,
       'path' : '/frutta',
+      'answer' : '462027',
       'unblocked' : false
     },
     { 

@@ -98,6 +98,7 @@ const QuizNumeric = (props) => {
     <Keyboard 
         sendDataToParent={handleDataFromChild} 
         popup={popup}
+        limit={4}
     />        
   </Wrapper>)
 }

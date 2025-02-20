@@ -2,7 +2,9 @@ import styled from "styled-components";
 import Keyboard from "../../components/Keyboard";
 import Title from "../../components/Title";
 import Popup from "../../components/Popup";
+import findById from "../../utils/findById";
 import { useState } from "react";
+import { useGlobalContext } from "../../context";
 import arancia from '../../images/games/frutta/arancia.png';
 import banana from '../../images/games/frutta/banana.png';
 import bar from '../../images/games/frutta/bar.png';
@@ -16,6 +18,8 @@ import sette from '../../images/games/frutta/sette.png';
 
 const Frutta = () => {
 
+    const {games} = useGlobalContext();
+    const game = findById(games, '15');
     const [dataFromChild, setDataFromChild] = useState("");
     const [popup, setPopup] = useState(false); 
     const [victory, setVictory] = useState(false);
@@ -136,46 +140,46 @@ const Frutta = () => {
         },
     ]
 
-    const perdere = () => {
-        setWin('no');
-        setTimeout(function() {
-            setPopup(true);
-            setTimeout(function() {
-                setWin('')
-              }, 500); 
-          }, 3700);
-    }
 
-    const vincere = () => {
-        setWin('yes');
-        setTimeout(function() {
-            setPopup(true);
-            setVictory(true);
-            // setTimeout(function() {
-            //     setWin('')
-            //   }, 500); 
-          }, 4700);
+    const prova = () => {
+        if (dataFromChild.length === 6) {
+            // HAI VINTO
+            if (dataFromChild === game.answer) {
+                setWin('yes');
+                setTimeout(function() {
+                    setPopup(true);
+                    setVictory(true);
+                    setTimeout(function() {
+                        setDataFromChild('')
+                        setWin('')
+                      }, 500); 
+                  }, 4700);
+            // HAI PERSO
+            } else {
+                setWin('no');
+                setTimeout(function() {
+                    setPopup(true);
+                    setTimeout(function() {
+                        setWin('')
+                        setDataFromChild('')
+                      }, 500); 
+                  }, 3700);
+            }
+        } 
     }
     
   return <Wrapper>
-    <Title name={'fruit jackpot'} />
-
+    <Title name={game.name} />
+    462027
     <div className="base">
-        {/* {dataFromChild[0]}
-        {dataFromChild[1]}
-        {dataFromChild[2]}
-        {dataFromChild[3]}
-        {dataFromChild[4]}
-        {dataFromChild[5]} */}
-        <button onClick={vincere}>Vinci</button>
-        <button onClick={perdere}>Perdi</button>
-        <button onClick={()=> setWin('')}>Azzera</button></div>
+        <button onClick={prova}>Prova</button>
+        </div>
     <div className="base">
         {/* 1 POSIZIONE */}
         <div className={`letter-one ${win === 'no' ? 'lose' : ''} ${win === 'yes' ? 'win' : '' }`}>
             {
                 arr.map((img, i) => {
-                    return <img key={i} src={img.src} /> 
+                    return <img key={i} src={img.src} alt={img.name} /> 
                 })
             }
         </div>
@@ -184,9 +188,9 @@ const Frutta = () => {
             {
                 arr.map((img, i) => {
                     if (img.posizione === 'prima') {
-                        return;
+                        return null;
                     } 
-                    return <img key={i} src={img.src} /> 
+                    return <img key={i} src={img.src} alt={img.name} /> 
                 })
             }
         </div>
@@ -195,9 +199,9 @@ const Frutta = () => {
             {
                 arr.map((img, i) => {
                     if (img.posizione === 'prima' || img.posizione === 'seconda') {
-                        return;
+                        return null;
                     } 
-                    return <img key={i} src={img.src} /> 
+                    return <img key={i} src={img.src} alt={img.name} /> 
                 })
             }
         </div>
@@ -220,9 +224,9 @@ const Frutta = () => {
                 arr.map((img, i) => {
                     if (img.posizione === 'prima' || img.posizione === 'seconda' ||
                         img.posizione === 'terza' ) {
-                        return;
+                        return null;
                     } 
-                    return <img key={i} src={img.src} /> 
+                    return <img key={i} src={img.src} alt={img.name} /> 
                 })
             }
         </div>
@@ -232,9 +236,9 @@ const Frutta = () => {
                 arr.map((img, i) => {
                     if (img.posizione === 'prima' || img.posizione === 'seconda' ||
                         img.posizione === 'terza' || img.posizione === 'quarta') {
-                        return;
+                        return null;
                     } 
-                    return <img key={i} src={img.src} /> 
+                    return <img key={i} src={img.src} alt={img.name} /> 
                 })
             }
         </div>
@@ -245,9 +249,9 @@ const Frutta = () => {
                     if (img.posizione === 'prima' || img.posizione === 'seconda' ||
                         img.posizione === 'terza' || img.posizione === 'quarta' || 
                         img.posizione === 'quinta') {
-                        return;
+                        return null;
                     } 
-                    return <img key={i} src={img.src} /> 
+                    return <img key={i} src={img.src} alt={img.name} /> 
                 })
             }
         </div>
@@ -271,7 +275,7 @@ const Frutta = () => {
         victory={victory} 
         // placeWon={placeWon} 
     />
-    <Keyboard sendDataToParent={handleDataFromChild} popup={popup} />
+    <Keyboard sendDataToParent={handleDataFromChild} popup={popup} limit={6} boxVisible />
   </Wrapper>
 }
 
