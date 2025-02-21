@@ -4,6 +4,8 @@ import Title from "../../components/Title";
 import Popup from "../../components/Popup";
 import unblockById from '../../utils/unblockById';
 import findById from "../../utils/findById";
+import timeById from "../../utils/timeById";
+import checkAwards from "../../utils/checkAwards";
 import { useState } from "react";
 import { useGlobalContext } from "../../context";
 import arancia from '../../images/games/frutta/arancia.png';
@@ -19,12 +21,20 @@ import sette from '../../images/games/frutta/sette.png';
 
 const Frutta = () => {
 
-    const {games, setGames} = useGlobalContext();
+    
+
+    const {games, setGames, cards, setCards, places, setPlaces} = useGlobalContext();
     const game = findById(games, '15');
     const [dataFromChild, setDataFromChild] = useState("");
     const [popup, setPopup] = useState(false); 
     const [victory, setVictory] = useState(false);
     const [win, setWin] = useState('');
+    const [cardWon, setCardWon] = useState(null);  
+    const [placeWon, setPlaceWon] = useState(null);   
+
+
+
+
 
     function handleDataFromChild(data) {
         setDataFromChild(data);
@@ -146,6 +156,19 @@ const Frutta = () => {
         if (dataFromChild.length === 6) {
             // HAI VINTO
             if (dataFromChild === game.answer) {
+                
+                if (checkAwards(games, game.card, true)) {
+                    setCards(unblockById(cards, game.card));
+                    setCards(timeById(cards, game.card));
+                    setCardWon(findById(cards, game.card))
+                  }        
+                  
+                  if (checkAwards(games, game.place, false)) {
+                    setPlaces(unblockById(places, game.place));
+                    setPlaces(timeById(places, game.place));
+                    setPlaceWon(findById(places, game.place))
+                  }    
+                
                 setWin('yes');
                 setTimeout(function() {
                     setPopup(true);
@@ -273,9 +296,9 @@ const Frutta = () => {
     <Popup 
         popup={popup} 
         setPopup={setPopup} 
-        // cardWon={cardWon} 
+        cardWon={cardWon} 
         victory={victory} 
-        // placeWon={placeWon} 
+        placeWon={placeWon} 
     />
     <Keyboard sendDataToParent={handleDataFromChild} popup={popup} limit={6} boxVisible />
   </Wrapper>

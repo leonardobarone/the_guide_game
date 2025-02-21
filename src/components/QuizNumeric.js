@@ -14,6 +14,7 @@ import styled from 'styled-components';
 // </style>
 
 // <utils>
+import checkAwards from '../utils/checkAwards';
 import unblockById from '../utils/unblockById';
 import findById from '../utils/findById';
 import timeById from '../utils/timeById';
@@ -51,16 +52,32 @@ const QuizNumeric = (props) => {
 
   const prova = () => {
     if (dataFromChild === game.answer) {
-        // VINCERE
-        setGames(unblockById(games, game.id));
-        setCards(unblockById(cards, card.id));
-        setCards(timeById(cards, card.id));
-        setPlaces(unblockById(places, place.id));
-        setPlaces(timeById(places, place.id));
-        // COSE VINTE
-        setCardWon(findById(cards, card.id))
-        setPlaceWon(findById(places, place.id))
+      
+        if (game.id === '14') {
+          if (checkAwards(games, game.card, true)) {
+            setCards(unblockById(cards, game.card));
+            setCards(timeById(cards, game.card));
+            setCardWon(findById(cards, game.card))
+          }        
+          
+          if (checkAwards(games, game.place, false)) {
+            setPlaces(unblockById(places, game.place));
+            setPlaces(timeById(places, game.place));
+            setPlaceWon(findById(places, game.place))
+          }
+        } else {
+          setCards(unblockById(cards, card.id));
+          setCards(timeById(cards, card.id));
+          setPlaces(unblockById(places, place.id));
+          setPlaces(timeById(places, place.id));
+
+          setCardWon(findById(cards, card.id))
+          setPlaceWon(findById(places, place.id))
+        }
+        
+        
         // SVUOTA INPUT
+        setGames(unblockById(games, game.id));
         setDataFromChild('');
         setVictory(true);
         setPopup(true);

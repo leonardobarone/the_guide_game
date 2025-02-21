@@ -114,6 +114,8 @@ const dbGames = [
       'unblocked' : false,
       'question' : 'Il Palazzo fa da cornice ai saluti. Gli archi e i merli moltiplicandosi, li osservano, e moltiplicandosi nuovamente per 8 ti danno il risultato di questo livello!',
       'answer' : '2968',
+      'card' : '6',
+      'place' : '12'
     },
     { 
       'id' : "15",
@@ -122,7 +124,9 @@ const dbGames = [
       'lng' : 14.027197943823944,
       'path' : '/frutta',
       'answer' : '462027',
-      'unblocked' : false
+      'unblocked' : false,
+      'card' : '6',
+      'place' : '12'
     },
     { 
       'id' : "16",
@@ -131,7 +135,9 @@ const dbGames = [
       'lng' : 14.029477741369188,
       'path' : '/borgo',
       'answer' : '1224',
-      'unblocked' : false
+      'unblocked' : false,
+      'card' : '6',
+      'place' : '12'
     },
     { 
       'id' : "17",

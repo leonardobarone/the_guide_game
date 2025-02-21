@@ -4,6 +4,8 @@ import { useGlobalContext } from "../../context";
 import findById from '../../utils/findById'
 import { useState } from "react";
 import unblockById from '../../utils/unblockById';
+import timeById from '../../utils/timeById';
+import checkAwards from "../../utils/checkAwards";
 import Popup from "../../components/Popup";
 import lupo1 from '../../images/games/borgo/lupo1.png';
 import lupo2 from '../../images/games/borgo/lupo2.png';
@@ -23,11 +25,13 @@ import catena3 from '../../images/games/borgo/catena3.png';
 import catena4 from '../../images/games/borgo/catena4.png';
 
 const Borgo = () => {
-  const { games, setGames } = useGlobalContext();
+  const { games, setGames, cards, setCards, places, setPlaces } = useGlobalContext();
   const game = findById(games, '16');
   const [array, setArray] = useState({});
   const [popup, setPopup] = useState(false);
   const [victory, setVictory] = useState(false);
+  const [cardWon, setCardWon] = useState(null);  
+  const [placeWon, setPlaceWon] = useState(null);   
 
   const boxes1 = [
     {
@@ -137,15 +141,27 @@ const Borgo = () => {
       if (array["1"] === game.answer[0] && array["2"] === game.answer[1] && array["3"] === game.answer[2] && array["4"] === game.answer[3] ) {
         
         
-        // VINCE SENZA PREMIO 
-        setGames(unblockById(games, game.id));
+        
+        if (checkAwards(games, game.card, true)) {
+          setCards(unblockById(cards, game.card));
+          setCards(timeById(cards, game.card));
+          setCardWon(findById(cards, game.card))
+        }        
+        
+        if (checkAwards(games, game.place, false)) {
+          setPlaces(unblockById(places, game.place));
+          setPlaces(timeById(places, game.place));
+          setPlaceWon(findById(places, game.place))
+        }
+
+        
+        
         setVictory(true);
-        // VINCE CON UN PREMIO
-        // console.log(game)
-        // setCards(unblockById(cards, card.id));
-        // setCards(timeById(cards, card.id));
-        // setPlaces(unblockById(places, place.id));
-        // setPlaces(timeById(places, place.id));
+        setGames(unblockById(games, game.id));
+        
+          
+
+      
         
         
         setPopup(true);
@@ -235,8 +251,8 @@ const Borgo = () => {
         popup={popup} 
         setPopup={setPopup} 
         victory={victory} 
-        // cardWon={cardWon} 
-        // placeWon={placeWon} 
+        cardWon={cardWon} 
+        placeWon={placeWon} 
     />
   </Wrapper>
 }
