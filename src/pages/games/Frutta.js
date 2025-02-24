@@ -321,6 +321,13 @@ const Wrapper = styled.main`
         margin: 7px;
         padding: 7px;
         background-color: #ffce1f;
+        .descrizione {
+            line-height: 15px;
+            font-size: 12px;
+            background-color: white;
+            border-radius: 4px;
+            padding: 14px;
+        }
     }
     .base {
         display: flex;
