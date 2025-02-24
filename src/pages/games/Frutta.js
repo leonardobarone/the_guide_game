@@ -153,7 +153,7 @@ const Frutta = () => {
 
 
     const prova = () => {
-        if (dataFromChild.length === 6) {
+        if (dataFromChild.length === 5) {
             // HAI VINTO
             if (dataFromChild === game.answer) {
                 
@@ -195,10 +195,12 @@ const Frutta = () => {
     
   return <Wrapper>
     <Title name={game.name} />
-    462027
+    46207
     <div className="base">
         <button onClick={prova}>Prova</button>
-        </div>
+    </div>
+    
+    
     <div className="base">
         {/* 1 POSIZIONE */}
         <div className={`letter-one ${win === 'no' ? 'lose' : ''} ${win === 'yes' ? 'win' : '' }`}>
@@ -230,37 +232,12 @@ const Frutta = () => {
                 })
             }
         </div>
-    </div>
-    <div className="base letters">
-        <div>
-            {dataFromChild[0]} 
-        </div>
-        <div>
-            {dataFromChild[1]} 
-        </div>
-        <div>
-            {dataFromChild[2]} 
-        </div>
-    </div>
-    <div className="base">
         {/* 4 POSIZIONE */}
         <div className={`letter-four ${win === 'no' ? 'lose' : ''} ${win === 'yes' ? 'win' : '' }`}>
             {
                 arr.map((img, i) => {
                     if (img.posizione === 'prima' || img.posizione === 'seconda' ||
                         img.posizione === 'terza' ) {
-                        return null;
-                    } 
-                    return <img key={i} src={img.src} alt={img.name} /> 
-                })
-            }
-        </div>
-        {/* 5 POSIZIONE */}
-        <div className={`letter-five ${win === 'no' ? 'lose' : ''} ${win === 'yes' ? 'win' : '' }`}>                    
-            {
-                arr.map((img, i) => {
-                    if (img.posizione === 'prima' || img.posizione === 'seconda' ||
-                        img.posizione === 'terza' || img.posizione === 'quarta') {
                         return null;
                     } 
                     return <img key={i} src={img.src} alt={img.name} /> 
@@ -283,16 +260,22 @@ const Frutta = () => {
     </div>
     <div className="base letters">
         <div>
+            {dataFromChild[0]} 
+        </div>
+        <div>
+            {dataFromChild[1]} 
+        </div>
+        <div>
+            {dataFromChild[2]} 
+        </div>
+        <div>
             {dataFromChild[3]} 
         </div>
         <div>
             {dataFromChild[4]} 
         </div>
-        <div>
-            {dataFromChild[5]} 
-        </div>
     </div>
-    {/* ciao, questo è il quiz della frutta {dataFromChild} {popup ? 'true' : 'false'} */}
+
     <Popup 
         popup={popup} 
         setPopup={setPopup} 
@@ -300,7 +283,7 @@ const Frutta = () => {
         victory={victory} 
         placeWon={placeWon} 
     />
-    <Keyboard sendDataToParent={handleDataFromChild} popup={popup} limit={6} boxVisible />
+    <Keyboard sendDataToParent={handleDataFromChild} popup={popup} limit={5} boxVisible />
   </Wrapper>
 }
 
