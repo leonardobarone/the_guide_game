@@ -292,8 +292,10 @@ const Frutta = () => {
             </div>
         </div>
 
-        <div className="base">
-            <span><button onClick={prova}>SPIN</button></span>
+        <div className="base buttonContainer">
+            <div className="p-absolute">
+                <button onClick={prova}>SPIN</button>
+            </div>
         </div>
     
     </div>
@@ -328,34 +330,45 @@ const Wrapper = styled.main`
             border-radius: 4px;
             padding: 14px;
         }
+        .center {
+            .letters {
+                div {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 30px;
+                    width: 20%;
+                    color:  #f1323a;
+                }
+            }
+        }
+        .buttonContainer {
+            border: 1px solid black;
+            height: 30px;
+            position: relative;
+            .p-absolute {
+                position: absolute;
+                left: 0px;
+                bottom: 0px;
+                button {
+                    font-size: 16px;
+                    font-weight: bold;
+                    background-color: #f1323a;
+                    padding: 5px 25px;
+                    border-style: none;
+                    /* border: 2px solid black; */
+                    border-radius: 4px;
+                    color: white;
+                }
+            }
+        }
     }
     .base {
         display: flex;
         justify-content: center;
         align-items: center;
-        span {
-            border-radius: 8px;
-            /* border: 2px solid white;
-            outline: 2px solid #e69834; */
-            button {
-                font-size: 16px;
-                font-weight: bold;
-                background-color: #f1323a;
-                padding: 5px 25px;
-                border-style: none;
-                /* border: 2px solid black; */
-                border-radius: 4px;
-                color: white;
-            }
-        }
-        &.letters {
-            div {
-                text-align: center;
-                width: 20%;
-                border: 1px solid black;
-            }
-        }
     }
+
     .letter-one, .letter-two, .letter-three, .letter-four {
         margin-right: 3.5px;
     }
