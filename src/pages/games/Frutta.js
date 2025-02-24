@@ -195,85 +195,97 @@ const Frutta = () => {
     
   return <Wrapper>
     <Title name={game.name} />
-    46207
-    <div className="base">
-        <button onClick={prova}>Prova</button>
-    </div>
     
     
-    <div className="base">
-        {/* 1 POSIZIONE */}
-        <div className={`letter-one ${win === 'no' ? 'lose' : ''} ${win === 'yes' ? 'win' : '' }`}>
-            {
-                arr.map((img, i) => {
-                    return <img key={i} src={img.src} alt={img.name} /> 
-                })
-            }
+    
+    <div className="contenitore">
+        
+        <div className="descrizione">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis ut veritatis tenetur,  46207
         </div>
-        {/* 2 POSIZIONE */}
-        <div className={`letter-two ${win === 'no' ? 'lose' : ''} ${win === 'yes' ? 'win' : '' }`}>                    
-            {
-                arr.map((img, i) => {
-                    if (img.posizione === 'prima') {
-                        return null;
-                    } 
-                    return <img key={i} src={img.src} alt={img.name} /> 
-                })
-            }
+
+        <div className="center">
+            <div className="base">
+                {/* 1 POSIZIONE */}
+                <div className={`letter-one ${win === 'no' ? 'lose' : ''} ${win === 'yes' ? 'win' : '' }`}>
+                    {
+                        arr.map((img, i) => {
+                            return <img key={i} src={img.src} alt={img.name} /> 
+                        })
+                    }
+                </div>
+                {/* 2 POSIZIONE */}
+                <div className={`letter-two ${win === 'no' ? 'lose' : ''} ${win === 'yes' ? 'win' : '' }`}>                    
+                    {
+                        arr.map((img, i) => {
+                            if (img.posizione === 'prima') {
+                                return null;
+                            } 
+                            return <img key={i} src={img.src} alt={img.name} /> 
+                        })
+                    }
+                </div>
+                {/* 3 POSIZIONE */}
+                <div className={`letter-three ${win === 'no' ? 'lose' : ''} ${win === 'yes' ? 'win' : '' }`}>
+                    {
+                        arr.map((img, i) => {
+                            if (img.posizione === 'prima' || img.posizione === 'seconda') {
+                                return null;
+                            } 
+                            return <img key={i} src={img.src} alt={img.name} /> 
+                        })
+                    }
+                </div>
+                {/* 4 POSIZIONE */}
+                <div className={`letter-four ${win === 'no' ? 'lose' : ''} ${win === 'yes' ? 'win' : '' }`}>
+                    {
+                        arr.map((img, i) => {
+                            if (img.posizione === 'prima' || img.posizione === 'seconda' ||
+                                img.posizione === 'terza' ) {
+                                return null;
+                            } 
+                            return <img key={i} src={img.src} alt={img.name} /> 
+                        })
+                    }
+                </div>
+                <div className={`letter-five ${win === 'no' ? 'lose' : ''} ${win === 'yes' ? 'win' : '' }`}>
+                    {/* 6 POSIZIONE */}
+                    {
+                        arr.map((img, i) => {
+                            if (img.posizione === 'prima' || img.posizione === 'seconda' ||
+                                img.posizione === 'terza' || img.posizione === 'quarta' || 
+                                img.posizione === 'quinta') {
+                                return null;
+                            } 
+                            return <img key={i} src={img.src} alt={img.name} /> 
+                        })
+                    }
+                </div>
+            </div>
+        
+            <div className="base letters">
+                <div>
+                    {dataFromChild[0] ? dataFromChild[0] : 'P'} 
+                </div>
+                <div>
+                    {dataFromChild[1] ? dataFromChild[1] : 'R'} 
+                </div>
+                <div>
+                    {dataFromChild[2] ? dataFromChild[2] : 'O'} 
+                </div>
+                <div>
+                    {dataFromChild[3] ? dataFromChild[3] : 'V'} 
+                </div>
+                <div>
+                    {dataFromChild[4] ? dataFromChild[4] : 'A'} 
+                </div>
+            </div>
         </div>
-        {/* 3 POSIZIONE */}
-        <div className={`letter-three ${win === 'no' ? 'lose' : ''} ${win === 'yes' ? 'win' : '' }`}>
-            {
-                arr.map((img, i) => {
-                    if (img.posizione === 'prima' || img.posizione === 'seconda') {
-                        return null;
-                    } 
-                    return <img key={i} src={img.src} alt={img.name} /> 
-                })
-            }
+
+        <div className="base">
+            <span><button onClick={prova}>SPIN</button></span>
         </div>
-        {/* 4 POSIZIONE */}
-        <div className={`letter-four ${win === 'no' ? 'lose' : ''} ${win === 'yes' ? 'win' : '' }`}>
-            {
-                arr.map((img, i) => {
-                    if (img.posizione === 'prima' || img.posizione === 'seconda' ||
-                        img.posizione === 'terza' ) {
-                        return null;
-                    } 
-                    return <img key={i} src={img.src} alt={img.name} /> 
-                })
-            }
-        </div>
-        <div className={`letter-six ${win === 'no' ? 'lose' : ''} ${win === 'yes' ? 'win' : '' }`}>
-            {/* 6 POSIZIONE */}
-            {
-                arr.map((img, i) => {
-                    if (img.posizione === 'prima' || img.posizione === 'seconda' ||
-                        img.posizione === 'terza' || img.posizione === 'quarta' || 
-                        img.posizione === 'quinta') {
-                        return null;
-                    } 
-                    return <img key={i} src={img.src} alt={img.name} /> 
-                })
-            }
-        </div>
-    </div>
-    <div className="base letters">
-        <div>
-            {dataFromChild[0]} 
-        </div>
-        <div>
-            {dataFromChild[1]} 
-        </div>
-        <div>
-            {dataFromChild[2]} 
-        </div>
-        <div>
-            {dataFromChild[3]} 
-        </div>
-        <div>
-            {dataFromChild[4]} 
-        </div>
+    
     </div>
 
     <Popup 
@@ -291,32 +303,57 @@ export default Frutta
 
 const Wrapper = styled.main`
     margin-top: 40px;
+    .contenitore {
+        height: 350px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 4px;
+        margin: 7px;
+        padding: 7px;
+        background-color: #ffce1f;
+    }
     .base {
         display: flex;
         justify-content: center;
         align-items: center;
+        span {
+            border-radius: 8px;
+            /* border: 2px solid white;
+            outline: 2px solid #e69834; */
+            button {
+                font-size: 16px;
+                font-weight: bold;
+                background-color: #f1323a;
+                padding: 5px 25px;
+                border-style: none;
+                /* border: 2px solid black; */
+                border-radius: 4px;
+                color: white;
+            }
+        }
         &.letters {
             div {
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                text-align: center;
+                width: 20%;
                 border: 1px solid black;
-                width: 80px;
-                height: 80px;
-                font-size: 50px;
             }
         }
     }
-    .letter-one, .letter-two, .letter-three, .letter-four, .letter-five, .letter-six {
+    .letter-one, .letter-two, .letter-three, .letter-four {
+        margin-right: 3.5px;
+    }
+    .letter-one, .letter-two, .letter-three, .letter-four, .letter-five {
         display: flex;
         flex-direction: column;
-        border: 1px solid black;
-        height: 80px;
-        width: 80px;
-        font-size: 50px;
-        color: blue;
-        text-align: center;
+        height: 90px;
         overflow: hidden;
+        border: 3px solid #e69834;
+        border-radius: 4px;
+        img {
+            padding: 11.5px 0px;
+            background-color: white;
+        }
     }
 
     .letter-one.lose img {
@@ -339,10 +376,7 @@ const Wrapper = styled.main`
         --ch: 6;
         animation: scroll 2.5s 1s linear forwards;
     }
-    .letter-six.lose img {
-        --ch: 6;
-        animation: scroll 1.25s 1s linear forwards;
-    }
+
     
     
     
@@ -366,10 +400,7 @@ const Wrapper = styled.main`
         --ch: 8; // 5
         animation: scroll 3.5s 1s linear forwards;
     }
-    .letter-six.win img {
-        --ch: 7; // 5
-        animation: scroll 2.25s 1s linear forwards;
-    }
+
 
     @keyframes scroll {
         to {
