@@ -6,7 +6,7 @@ import unblockById from '../../utils/unblockById';
 import findById from "../../utils/findById";
 import timeById from "../../utils/timeById";
 import checkAwards from "../../utils/checkAwards";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useGlobalContext } from "../../context";
 import arancia from '../../images/games/frutta/arancia.png';
 import banana from '../../images/games/frutta/banana.png';
@@ -32,6 +32,16 @@ const Frutta = () => {
     const [cardWon, setCardWon] = useState(null);  
     const [placeWon, setPlaceWon] = useState(null);   
 
+      // INIZIO PROVA HEIGHT
+        const [height, setHeight] = useState(window.innerHeight - 300);
+        
+        useEffect(() => {
+          const updateHeight = () => setHeight(window.innerHeight - 350);
+      
+          window.addEventListener("resize", updateHeight);
+          return () => window.removeEventListener("resize", updateHeight);
+        }, []);
+        // INIZIO PROVA HEIGHT
 
 
 
@@ -198,7 +208,7 @@ const Frutta = () => {
     
     
     
-    <div className="contenitore">
+    <div className="contenitore" style={{ height: `${height}px`}}>
         
         <div className="descrizione">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis ut veritatis tenetur,  46207
@@ -304,7 +314,6 @@ export default Frutta
 const Wrapper = styled.main`
     margin-top: 40px;
     .contenitore {
-        height: 350px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
