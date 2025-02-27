@@ -2,6 +2,7 @@ import QuizNumeric from "../../components/QuizNumeric";
 import { useGlobalContext } from "../../context";
 import cannon from '../../images/games/cannoni/cannon.png';
 import findById from "../../utils/findById";
+import Error from "../Error";
 
 const Cannoni = () => {
     const {cards, games, places} = useGlobalContext();
@@ -22,11 +23,13 @@ const Cannoni = () => {
   
   return (
     <div>
-      <QuizNumeric infoQuizNumeric={quizNumericCannoni} >
-        <div style={{height: 'calc(100% - 102px)', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-            <img width={90} src={cannon} alt="" />
-        </div> 
-      </QuizNumeric>
+      {game.unblocked ? <Error /> : (
+        <QuizNumeric infoQuizNumeric={quizNumericCannoni} >
+          <div style={{height: 'calc(100% - 102px)', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+              <img width={90} src={cannon} alt="" />
+          </div> 
+        </QuizNumeric>
+      )}
     </div>
   )
 }

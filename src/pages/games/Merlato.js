@@ -4,7 +4,7 @@ import lace from '../../images/games/merlato/lace.svg';
 import arch from '../../images/games/merlato/arch.svg';
 import styled from "styled-components";
 import findById from "../../utils/findById";
-
+import Error from "../Error";
 
 const Merlato = () => {
     const {cards, games, places} = useGlobalContext();
@@ -25,19 +25,23 @@ const Merlato = () => {
   
   return (
     <div>
-      <QuizNumeric infoQuizNumeric={quizNumericMerlato} >
-        <Wrapper>
-          <div>
-              <img src={arch} alt="" />
-          </div>
-          <div className="operator">x</div>
-          <div>
-            <img src={lace} alt="" />
-          </div>
-          <div className="operator">x</div>
-          <div className="num">8</div>
-        </Wrapper>
-      </QuizNumeric>
+      {
+        game.unblocked ? <Error /> : (
+          <QuizNumeric infoQuizNumeric={quizNumericMerlato} >
+            <Wrapper>
+              <div>
+                  <img src={arch} alt="" />
+              </div>
+              <div className="operator">x</div>
+              <div>
+                <img src={lace} alt="" />
+              </div>
+              <div className="operator">x</div>
+              <div className="num">8</div>
+            </Wrapper>
+          </QuizNumeric>
+        )
+      }
     </div>
   )
 }

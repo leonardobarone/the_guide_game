@@ -23,6 +23,7 @@ import catena1 from '../../images/games/borgo/catena1.png';
 import catena2 from '../../images/games/borgo/catena2.png';
 import catena3 from '../../images/games/borgo/catena3.png';
 import catena4 from '../../images/games/borgo/catena4.png';
+import Error from "../Error";
 
 const Borgo = () => {
   const { games, cards, setCards, places, setPlaces } = useGlobalContext();
@@ -173,88 +174,94 @@ const Borgo = () => {
   }
 
 
-  return <Wrapper>
-    <Title name={game.name} />
-    <div className="question">
-      Qui ci vuole il testo del quiz.<br />Per vincere inserire 1 - 2 - 2 - 4.
-    </div>
-    <div className="container">
-      {
-        boxes1.map((box) => {
-          return <div 
-            key={box.id}
-            onClick={() => cliccato(box.id, "1")}
-          >
-            <img 
-              className={array["1"] === box.id ? 'active1' : ''}
-              src={box.img} 
-              alt="" 
-            />
-            {/* {box.name} */}
-          </div>
-        })
-      }
-      {
-        boxes2.map((box) => {
-          return <div 
-            // className={arr.find(elm => elm === box.id) ? 'active' : ''}
-            key={box.id}
-            onClick={() => cliccato(box.id, "2")}
-          >
-            <img 
-              className={array["2"] === box.id ? 'active2' : ''}
-              src={box.img} 
-              alt="" 
-            />
-            {/* {box.name} */}
-          </div>
-        })
-      }
-      {
-        boxes3.map((box) => {
-          return <div 
-            // className={arr.find(elm => elm ==== box.id) ? 'active' : ''}
-            key={box.id}
-            onClick={() => cliccato(box.id, "3")}
-          >
-            <img 
-              className={array["3"] === box.id ? 'active3' : ''}
-              src={box.img} 
-              alt="" 
-            />
-            {/* {box.name} */}
-          </div>
-        })
-      }
-      {
-        boxes4.map((box) => {
-          return <div 
-            // className={arr.find(elm => elm ==== box.id) ? 'active' : ''}
-            key={box.id}
-            onClick={() => cliccato(box.id, "4")}
-          >
-            <img 
-              className={array["4"] === box.id ? 'active4' : ''}
-              src={box.img} 
-              alt="" 
-            />
-            {/* {box.name} */}
-          </div>
-        })
-      }
-    </div>
-    <div className="containerButton">
-      <button onClick={prova}>Prova</button>
-    </div>
-    <Popup 
-        popup={popup} 
-        setPopup={setPopup} 
-        victory={victory} 
-        cardWon={cardWon} 
-        placeWon={placeWon} 
-        game={game}
-    />
-  </Wrapper>
+  return <>
+  {
+    game.unblocked ? <Error /> : (
+      <Wrapper>
+        <Title name={game.name} />
+        <div className="question">
+          Qui ci vuole il testo del quiz.<br />Per vincere inserire 1 - 2 - 2 - 4.
+        </div>
+        <div className="container">
+          {
+            boxes1.map((box) => {
+              return <div 
+                key={box.id}
+                onClick={() => cliccato(box.id, "1")}
+              >
+                <img 
+                  className={array["1"] === box.id ? 'active1' : ''}
+                  src={box.img} 
+                  alt="" 
+                />
+                {/* {box.name} */}
+              </div>
+            })
+          }
+          {
+            boxes2.map((box) => {
+              return <div 
+                // className={arr.find(elm => elm === box.id) ? 'active' : ''}
+                key={box.id}
+                onClick={() => cliccato(box.id, "2")}
+              >
+                <img 
+                  className={array["2"] === box.id ? 'active2' : ''}
+                  src={box.img} 
+                  alt="" 
+                />
+                {/* {box.name} */}
+              </div>
+            })
+          }
+          {
+            boxes3.map((box) => {
+              return <div 
+                // className={arr.find(elm => elm ==== box.id) ? 'active' : ''}
+                key={box.id}
+                onClick={() => cliccato(box.id, "3")}
+              >
+                <img 
+                  className={array["3"] === box.id ? 'active3' : ''}
+                  src={box.img} 
+                  alt="" 
+                />
+                {/* {box.name} */}
+              </div>
+            })
+          }
+          {
+            boxes4.map((box) => {
+              return <div 
+                // className={arr.find(elm => elm ==== box.id) ? 'active' : ''}
+                key={box.id}
+                onClick={() => cliccato(box.id, "4")}
+              >
+                <img 
+                  className={array["4"] === box.id ? 'active4' : ''}
+                  src={box.img} 
+                  alt="" 
+                />
+                {/* {box.name} */}
+              </div>
+            })
+          }
+        </div>
+        <div className="containerButton">
+          <button onClick={prova}>Prova</button>
+        </div>
+        <Popup 
+            popup={popup} 
+            setPopup={setPopup} 
+            victory={victory} 
+            cardWon={cardWon} 
+            placeWon={placeWon} 
+            game={game}
+        />
+      </Wrapper>
+    )
+  }
+  </>
 }
 
 export default Borgo;
