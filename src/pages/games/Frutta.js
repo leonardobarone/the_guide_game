@@ -33,10 +33,10 @@ const Frutta = () => {
     const [placeWon, setPlaceWon] = useState(null);   
 
       // INIZIO PROVA HEIGHT
-        const [height, setHeight] = useState(window.innerHeight - 300);
+        const [height, setHeight] = useState(window.innerHeight - 290);
         
         useEffect(() => {
-          const updateHeight = () => setHeight(window.innerHeight - 350);
+          const updateHeight = () => setHeight(window.innerHeight - 290);
       
           window.addEventListener("resize", updateHeight);
           return () => window.removeEventListener("resize", updateHeight);
