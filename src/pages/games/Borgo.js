@@ -25,7 +25,7 @@ import catena3 from '../../images/games/borgo/catena3.png';
 import catena4 from '../../images/games/borgo/catena4.png';
 
 const Borgo = () => {
-  const { games, setGames, cards, setCards, places, setPlaces } = useGlobalContext();
+  const { games, cards, setCards, places, setPlaces } = useGlobalContext();
   const game = findById(games, '16');
   const [array, setArray] = useState({});
   const [popup, setPopup] = useState(false);
@@ -157,7 +157,6 @@ const Borgo = () => {
         
         
         setVictory(true);
-        setGames(unblockById(games, game.id));
         
           
 
@@ -253,6 +252,7 @@ const Borgo = () => {
         victory={victory} 
         cardWon={cardWon} 
         placeWon={placeWon} 
+        game={game}
     />
   </Wrapper>
 }

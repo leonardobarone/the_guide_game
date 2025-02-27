@@ -1,12 +1,15 @@
 import styled from "styled-components";
 // import unblocked from '../images/cards/unblocked.webp';
+import { useGlobalContext } from "../context";
+import unblockById from "../utils/unblockById";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import sad from '../images/popup/sad.png'
 import glasses from '../images/popup/glasses.png'
 
 
-const Popup = ({popup, setPopup, cardWon, placeWon, victory}) => {
+const Popup = ({popup, setPopup, cardWon, placeWon, victory, game}) => {
+    const { games, setGames } = useGlobalContext();
     const navigate = useNavigate();
     const [level, setLevel] = useState(1);
     const [show, setShow] = useState(false);
@@ -14,6 +17,7 @@ const Popup = ({popup, setPopup, cardWon, placeWon, victory}) => {
     
     const secondoLivello = () => {
         if (cardWon && placeWon && level === 1) {
+            setGames(unblockById(games, game.id));
             setLevel(prev => prev + 1);            
             setShow(true);
         } else {
@@ -21,6 +25,11 @@ const Popup = ({popup, setPopup, cardWon, placeWon, victory}) => {
             setLevel(1);
             setPopup(false)
         }
+    }
+
+    const vaiESblocca = () => {
+        setGames(unblockById(games, game.id));
+        navigate('/profilo');
     }
 
     // Si è attivato il popup e hai perso (entrambi le condizioni sono vere)
@@ -50,7 +59,7 @@ const Popup = ({popup, setPopup, cardWon, placeWon, victory}) => {
                         <p>HAI SUPERATO IL LIVELLO</p>
                     </div>
                 <div className="bottom">
-                    <button className="bnt" onClick={()=> navigate('/profilo')}>CHIUDI</button>
+                    <button className="bnt" onClick={vaiESblocca}>CHIUDI</button>
                 </div>
             </div> : null}
             
@@ -78,7 +87,7 @@ const Popup = ({popup, setPopup, cardWon, placeWon, victory}) => {
                             <p>HAI SBLOCCATO <br/>{placeWon ? placeWon.name.toUpperCase() : null}</p>
                         </div>
                     <div className="bottom">
-                        <button onClick={()=> navigate('/profilo')}>CHIUDI</button>
+                        <button onClick={vaiESblocca}>CHIUDI</button>
                     </div>
                 </div>
             </SecondLevel> : null}

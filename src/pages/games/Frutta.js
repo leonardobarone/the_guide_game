@@ -23,7 +23,7 @@ const Frutta = () => {
 
     
 
-    const {games, setGames, cards, setCards, places, setPlaces} = useGlobalContext();
+    const {games, cards, setCards, places, setPlaces} = useGlobalContext();
     const game = findById(games, '15');
     const [dataFromChild, setDataFromChild] = useState("");
     const [popup, setPopup] = useState(false); 
@@ -183,7 +183,6 @@ const Frutta = () => {
                 setTimeout(function() {
                     setPopup(true);
                     setVictory(true);
-                    setGames(unblockById(games, game.id));
                     setTimeout(function() {
                         setDataFromChild('')
                         setWin('')
@@ -305,7 +304,8 @@ const Frutta = () => {
         setPopup={setPopup} 
         cardWon={cardWon} 
         victory={victory} 
-        placeWon={placeWon} 
+        placeWon={placeWon}
+        game={game} 
     />
     <Keyboard sendDataToParent={handleDataFromChild} popup={popup} limit={5} boxVisible />
   </Wrapper>
@@ -426,7 +426,7 @@ const Wrapper = styled.main`
         animation: scroll 2.25s 1s linear forwards;
     }
     .letter-five.win img {
-        --ch: 8; // 5
+        --ch: 7; // 5
         animation: scroll 3.5s 1s linear forwards;
     }
 

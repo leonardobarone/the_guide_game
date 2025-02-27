@@ -35,7 +35,7 @@ const QuizNumeric = (props) => {
     // INIZIO PROVA HEIGHT
 
   // HOOKS
-  const {setCards, setGames, setPlaces} = useGlobalContext();
+  const {setCards, setPlaces} = useGlobalContext();
   const [dataFromChild, setDataFromChild] = useState(""); 
   const [popup, setPopup] = useState(false);  
   const [cardWon, setCardWon] = useState(null);   
@@ -77,7 +77,6 @@ const QuizNumeric = (props) => {
         
         
         // SVUOTA INPUT
-        setGames(unblockById(games, game.id));
         setDataFromChild('');
         setVictory(true);
         setPopup(true);
@@ -110,7 +109,8 @@ const QuizNumeric = (props) => {
         setPopup={setPopup} 
         cardWon={cardWon} 
         victory={victory} 
-        placeWon={placeWon} 
+        placeWon={placeWon}
+        game={game} 
     />
     <Keyboard 
         sendDataToParent={handleDataFromChild} 
