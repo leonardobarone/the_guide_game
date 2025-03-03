@@ -248,7 +248,7 @@ const Borgo = () => {
           }
         </div>
         <div className="containerButton">
-          <button onClick={prova}>Prova</button>
+          <button onClick={prova}>GIOCA</button>
         </div>
         <Popup 
             popup={popup} 
@@ -315,6 +315,7 @@ const Wrapper = styled.main`
       align-items: center;
       padding: 4px 7px 7px;
       button {
+        letter-spacing: 1px;
         background-color: var(--orange);
         border-style: none;
         width: 100%;

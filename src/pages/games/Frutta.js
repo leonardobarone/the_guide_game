@@ -294,7 +294,7 @@ const Frutta = () => {
 
                 <div className="base buttonContainer">
                     <div className="p-absolute">
-                        <button onClick={prova} className="btn">SPIN</button>
+                        <button onClick={prova} className="btn">GIOCA</button>
                     </div>
                 </div>
             
@@ -374,6 +374,7 @@ const Wrapper = styled.main`
                     padding: 10px 75px;
                     border-style: none;
                     border-radius: 4px;
+        letter-spacing: 1px;
                     &::after {
                         width: 20px;
                         height: 20px;

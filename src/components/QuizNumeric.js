@@ -100,7 +100,7 @@ const QuizNumeric = (props) => {
         {props.children}
 
       <div className="tag">
-        <button onClick={prova} className='btn'>Prova</button>
+        <button onClick={prova} className='btn'>GIOCA</button>
       </div>
     </div>
       
@@ -174,6 +174,7 @@ const Wrapper = styled.main`
       }
       .btn {
         font-family: "Mitr", serif;
+        letter-spacing: 1px;
         display: inline-block;
         font-weight: lighter;
         background-color: var(--orange);
