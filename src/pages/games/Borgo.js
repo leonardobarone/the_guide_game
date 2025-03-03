@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Title from '../../components/Title';
 import { useGlobalContext } from "../../context";
 import findById from '../../utils/findById'
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import unblockById from '../../utils/unblockById';
 import timeById from '../../utils/timeById';
 import checkAwards from "../../utils/checkAwards";
@@ -32,7 +32,18 @@ const Borgo = () => {
   const [popup, setPopup] = useState(false);
   const [victory, setVictory] = useState(false);
   const [cardWon, setCardWon] = useState(null);  
-  const [placeWon, setPlaceWon] = useState(null);   
+  const [placeWon, setPlaceWon] = useState(null);  
+  
+  // INIZIO PROVA HEIGHT
+    const [height, setHeight] = useState(window.innerHeight - 110);
+    
+    useEffect(() => {
+      const updateHeight = () => setHeight(window.innerHeight - 110);
+  
+      window.addEventListener("resize", updateHeight);
+      return () => window.removeEventListener("resize", updateHeight);
+    }, []);
+    // INIZIO PROVA HEIGHT
 
   const boxes1 = [
     {
@@ -179,76 +190,78 @@ const Borgo = () => {
     game.unblocked ? <Error /> : (
       <Wrapper>
         <Title name={game.name} />
-        <div className="question">
-          Qui ci vuole il testo del quiz.<br />Per vincere inserire 1 - 2 - 2 - 4.
-        </div>
-        <div className="container">
-          {
-            boxes1.map((box) => {
-              return <div 
-                key={box.id}
-                onClick={() => cliccato(box.id, "1")}
-              >
-                <img 
-                  className={array["1"] === box.id ? 'active1' : ''}
-                  src={box.img} 
-                  alt="" 
-                />
-                {/* {box.name} */}
-              </div>
-            })
-          }
-          {
-            boxes2.map((box) => {
-              return <div 
-                // className={arr.find(elm => elm === box.id) ? 'active' : ''}
-                key={box.id}
-                onClick={() => cliccato(box.id, "2")}
-              >
-                <img 
-                  className={array["2"] === box.id ? 'active2' : ''}
-                  src={box.img} 
-                  alt="" 
-                />
-                {/* {box.name} */}
-              </div>
-            })
-          }
-          {
-            boxes3.map((box) => {
-              return <div 
-                // className={arr.find(elm => elm ==== box.id) ? 'active' : ''}
-                key={box.id}
-                onClick={() => cliccato(box.id, "3")}
-              >
-                <img 
-                  className={array["3"] === box.id ? 'active3' : ''}
-                  src={box.img} 
-                  alt="" 
-                />
-                {/* {box.name} */}
-              </div>
-            })
-          }
-          {
-            boxes4.map((box) => {
-              return <div 
-                // className={arr.find(elm => elm ==== box.id) ? 'active' : ''}
-                key={box.id}
-                onClick={() => cliccato(box.id, "4")}
-              >
-                <img 
-                  className={array["4"] === box.id ? 'active4' : ''}
-                  src={box.img} 
-                  alt="" 
-                />
-                {/* {box.name} */}
-              </div>
-            })
-          }
-        </div>
-        <div className="containerButton">
-          <button onClick={prova}>GIOCA</button>
+        <div className="bigContainer" style={{ height: `${height}px`}}>
+          <div className="question">
+            Qui ci vuole il testo del quiz.<br />Per vincere inserire 1 - 2 - 2 - 4.
+          </div>
+          <div className="container">
+            {
+              boxes1.map((box) => {
+                return <div 
+                  key={box.id}
+                  onClick={() => cliccato(box.id, "1")}
+                >
+                  <img 
+                    className={array["1"] === box.id ? 'active1' : ''}
+                    src={box.img} 
+                    alt="" 
+                  />
+                  {/* {box.name} */}
+                </div>
+              })
+            }
+            {
+              boxes2.map((box) => {
+                return <div 
+                  // className={arr.find(elm => elm === box.id) ? 'active' : ''}
+                  key={box.id}
+                  onClick={() => cliccato(box.id, "2")}
+                >
+                  <img 
+                    className={array["2"] === box.id ? 'active2' : ''}
+                    src={box.img} 
+                    alt="" 
+                  />
+                  {/* {box.name} */}
+                </div>
+              })
+            }
+            {
+              boxes3.map((box) => {
+                return <div 
+                  // className={arr.find(elm => elm ==== box.id) ? 'active' : ''}
+                  key={box.id}
+                  onClick={() => cliccato(box.id, "3")}
+                >
+                  <img 
+                    className={array["3"] === box.id ? 'active3' : ''}
+                    src={box.img} 
+                    alt="" 
+                  />
+                  {/* {box.name} */}
+                </div>
+              })
+            }
+            {
+              boxes4.map((box) => {
+                return <div 
+                  // className={arr.find(elm => elm ==== box.id) ? 'active' : ''}
+                  key={box.id}
+                  onClick={() => cliccato(box.id, "4")}
+                >
+                  <img 
+                    className={array["4"] === box.id ? 'active4' : ''}
+                    src={box.img} 
+                    alt="" 
+                  />
+                  {/* {box.name} */}
+                </div>
+              })
+            }
+          </div>
+          <div className="containerButton">
+            <button onClick={prova}>GIOCA</button>
+          </div>
         </div>
         <Popup 
             popup={popup} 
@@ -268,18 +281,29 @@ export default Borgo;
 
 const Wrapper = styled.main`
     margin-top: 40px;
+    .bigContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 7px;
+      margin: 7px;
+      border-radius: 4px;
+      background-color: #7BC872;
+    }
     .question {
       font-weight: lighter;
-      color: var(--purple);
-      padding: 0px 10px;
-      line-height: 20px;
+      border-radius: 4px;
+      background-color: white;
+      padding: 14px;
+      font-size: 12px;
+      line-height: 15px;
+      padding: 14px;
     }
     .container {
       display: flex;
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
-      padding: 4px;
       div {
         display: flex;
         justify-content: center;

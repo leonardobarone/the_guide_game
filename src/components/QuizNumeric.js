@@ -136,6 +136,7 @@ const Wrapper = styled.main`
     background-repeat: no-repeat;
     padding: 7px;
     .domanda {
+      font-weight: lighter;
       border-radius: 4px;
       padding: 14px;
       line-height: 15px;

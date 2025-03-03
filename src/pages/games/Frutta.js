@@ -328,6 +328,7 @@ const Wrapper = styled.main`
         padding: 7px;
         background-color: #ffce1f;
         .descrizione {
+            font-weight: lighter;
             line-height: 15px;
             font-size: 12px;
             background-color: white;
@@ -339,7 +340,7 @@ const Wrapper = styled.main`
                 margin-top: 10px;
                 div {
                     background-color: white;
-                    border: 3px solid     #e69834;
+                    border: 3px solid var(--orange);
                     border-radius: 4px;
                     display: flex;
                     justify-content: center;
@@ -416,7 +417,7 @@ const Wrapper = styled.main`
         flex-direction: column;
         height: 70px;
         overflow: hidden;
-        border: 3px solid     #e69834;
+        border: 3px solid var(--orange);
         border-radius: 4px;
         img {
             padding: 2px 0px;
