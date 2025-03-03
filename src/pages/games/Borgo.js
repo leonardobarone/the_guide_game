@@ -197,7 +197,8 @@ const Borgo = () => {
           <div className="container">
             {
               boxes1.map((box) => {
-                return <div 
+                return <div
+                  className="hr" 
                   key={box.id}
                   onClick={() => cliccato(box.id, "1")}
                 >
@@ -212,7 +213,8 @@ const Borgo = () => {
             }
             {
               boxes2.map((box) => {
-                return <div 
+                return <div
+                  className="hr" 
                   // className={arr.find(elm => elm === box.id) ? 'active' : ''}
                   key={box.id}
                   onClick={() => cliccato(box.id, "2")}
@@ -228,7 +230,8 @@ const Borgo = () => {
             }
             {
               boxes3.map((box) => {
-                return <div 
+                return <div
+                  className="hr" 
                   // className={arr.find(elm => elm ==== box.id) ? 'active' : ''}
                   key={box.id}
                   onClick={() => cliccato(box.id, "3")}
@@ -244,7 +247,7 @@ const Borgo = () => {
             }
             {
               boxes4.map((box) => {
-                return <div 
+                return <div
                   // className={arr.find(elm => elm ==== box.id) ? 'active' : ''}
                   key={box.id}
                   onClick={() => cliccato(box.id, "4")}
@@ -259,8 +262,10 @@ const Borgo = () => {
               })
             }
           </div>
-          <div className="containerButton">
-            <button onClick={prova}>GIOCA</button>
+          <div className="buttonContainer">
+            <div className="p-absolute">
+              <button onClick={prova} className="btn">GIOCA</button>
+            </div>
           </div>
         </div>
         <Popup 
@@ -304,6 +309,11 @@ const Wrapper = styled.main`
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
+      .hr {
+        padding-bottom: 10px;
+        margin-bottom: 5px;
+        border-bottom: 1px solid var(--purple);
+      }
       div {
         display: flex;
         justify-content: center;
@@ -314,38 +324,70 @@ const Wrapper = styled.main`
           border-radius: 7px;
           display: block;
           width: 100%;
-          border: 3px solid transparent;
+          background-color: white;
           &.active1, &.active2, &.active3, &.active4 {
             padding: 0px;
           }
           &.active1 {
-            border: 3px solid var(--green);
+            background-color: var(--green);
           }
           &.active2 {
-            border: 3px solid var(--orange);
+            background-color: var(--orange);
           }
           &.active3 {
-            border: 3px solid var(--red);
+            background-color: var(--red);
           }
           &.active4 {
-            border: 3px solid var(--purple);
+            background-color: var(--purple);
           }
         }
       }
     }
-    .containerButton {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 4px 7px 7px;
-      button {
-        letter-spacing: 1px;
-        background-color: var(--orange);
-        border-style: none;
-        width: 100%;
-        padding: 10px 0px;
-        border-radius: 4px;
-        color: white;
-      }
-    }
+
+      .buttonContainer {
+            height: 47px;
+            position: relative;
+            .p-absolute {
+                border-radius: 4px;
+                position: absolute;
+                background-color: white;
+                padding: 4px;
+                left: -7px;
+                bottom: -7px;
+                .btn {
+                    font-family: "Mitr", serif;
+                    display: inline-block;
+                    font-weight: lighter;
+                    background-color: var(--orange);
+                    color: white;
+                    padding: 10px 75px;
+                    border-style: none;
+                    border-radius: 4px;
+                    letter-spacing: 1px;
+                    &::after {
+                        width: 20px;
+                        height: 20px;
+                        content: '';
+                        position: absolute;
+                        background-color: transparent;
+                        top: 29px;
+                        right: -20px;
+                        border-bottom-left-radius: 4px;
+                        box-shadow: -3px 2px white;
+                    }
+                    
+                    &::before {
+                        content: '';
+                        width: 20px;
+                        height: 20px;
+                        position: absolute;
+                        background-color: transparent;
+                        top: -20px;
+                        left: 0px;
+                        border-bottom-left-radius: 4px;
+                        box-shadow: -6px 4px white;
+                    }
+                }
+            }
+        }
 `
