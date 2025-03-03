@@ -321,7 +321,7 @@ const Wrapper = styled.main`
         width: 25%;
         padding: 3px;
         img {
-          border-radius: 7px;
+          border-radius: 4px;
           display: block;
           width: 100%;
           background-color: white;
