@@ -339,15 +339,15 @@ const Wrapper = styled.main`
                 margin-top: 10px;
                 div {
                     background-color: white;
-                    border: 3px solid #e69834;
+                    border: 3px solid     #e69834;
                     border-radius: 4px;
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     height: 30px;
-                    font-size: 25px;
+                    font-size: 40px;
                     width: calc(100% / 5);
-                    color:  var(--purple);
+                    color: var(--purple);
                     height: 65px;
                     &:not(:last-child) {
                         margin-right: 3.5px;
@@ -416,7 +416,7 @@ const Wrapper = styled.main`
         flex-direction: column;
         height: 70px;
         overflow: hidden;
-        border: 3px solid #e69834;
+        border: 3px solid     #e69834;
         border-radius: 4px;
         img {
             padding: 2px 0px;
