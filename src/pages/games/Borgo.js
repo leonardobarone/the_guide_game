@@ -310,9 +310,8 @@ const Wrapper = styled.main`
       align-items: center;
       flex-wrap: wrap;
       .hr {
-        padding-bottom: 10px;
-        margin-bottom: 5px;
-        border-bottom: 1px solid var(--purple);
+        padding-bottom: 6px;
+        margin-bottom: 3px;
       }
       div {
         display: flex;
