@@ -275,26 +275,26 @@ const Frutta = () => {
                 
                     <div className="base letters">
                         <div>
-                            {dataFromChild[0] ? dataFromChild[0] : 'P'} 
+                            {dataFromChild[0]} 
                         </div>
                         <div>
-                            {dataFromChild[1] ? dataFromChild[1] : 'R'} 
+                            {dataFromChild[1]} 
                         </div>
                         <div>
-                            {dataFromChild[2] ? dataFromChild[2] : 'O'} 
+                            {dataFromChild[2]} 
                         </div>
                         <div>
-                            {dataFromChild[3] ? dataFromChild[3] : 'V'} 
+                            {dataFromChild[3]} 
                         </div>
                         <div>
-                            {dataFromChild[4] ? dataFromChild[4] : 'A'} 
+                            {dataFromChild[4]} 
                         </div>
                     </div>
                 </div>
 
                 <div className="base buttonContainer">
                     <div className="p-absolute">
-                        <button onClick={prova}>SPIN</button>
+                        <button onClick={prova} className="btn">SPIN</button>
                     </div>
                 </div>
             
@@ -336,33 +336,67 @@ const Wrapper = styled.main`
         }
         .center {
             .letters {
+                margin-top: 10px;
                 div {
+                    background-color: white;
+                    border: 3px solid #e69834;
+                    border-radius: 4px;
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     height: 30px;
-                    width: 20%;
-                    color:  #f1323a;
+                    font-size: 25px;
+                    width: calc(100% / 5);
+                    color:  var(--purple);
+                    height: 65px;
+                    &:not(:last-child) {
+                        margin-right: 3.5px;
+                    }
                 }
             }
         }
         .buttonContainer {
-            border: 1px solid black;
-            height: 30px;
+            height: 47px;
             position: relative;
             .p-absolute {
+                border-radius: 4px;
                 position: absolute;
-                left: 0px;
-                bottom: 0px;
-                button {
-                    font-size: 16px;
-                    font-weight: bold;
-                    background-color: #f1323a;
-                    padding: 5px 25px;
-                    border-style: none;
-                    /* border: 2px solid black; */
-                    border-radius: 4px;
+                background-color: white;
+                padding: 4px;
+                left: -7px;
+                bottom: -7px;
+                .btn {
+                    font-family: "Mitr", serif;
+                    display: inline-block;
+                    font-weight: lighter;
+                    background-color: var(--orange);
                     color: white;
+                    padding: 10px 75px;
+                    border-style: none;
+                    border-radius: 4px;
+                    &::after {
+                        width: 20px;
+                        height: 20px;
+                        content: '';
+                        position: absolute;
+                        background-color: transparent;
+                        top: 29px;
+                        right: -20px;
+                        border-bottom-left-radius: 4px;
+                        box-shadow: -3px 2px white;
+                    }
+                    
+                    &::before {
+                        content: '';
+                        width: 20px;
+                        height: 20px;
+                        position: absolute;
+                        background-color: transparent;
+                        top: -20px;
+                        left: 0px;
+                        border-bottom-left-radius: 4px;
+                        box-shadow: -6px 4px white;
+                    }
                 }
             }
         }
@@ -379,12 +413,12 @@ const Wrapper = styled.main`
     .letter-one, .letter-two, .letter-three, .letter-four, .letter-five {
         display: flex;
         flex-direction: column;
-        height: 90px;
+        height: 70px;
         overflow: hidden;
         border: 3px solid #e69834;
         border-radius: 4px;
         img {
-            padding: 11.5px 0px;
+            padding: 2px 0px;
             background-color: white;
         }
     }
