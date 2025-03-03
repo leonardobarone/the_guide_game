@@ -340,7 +340,6 @@ const Wrapper = styled.main`
                 margin-top: 10px;
                 div {
                     background-color: white;
-                    border: 3px solid var(--orange);
                     border-radius: 4px;
                     display: flex;
                     justify-content: center;
@@ -349,9 +348,9 @@ const Wrapper = styled.main`
                     font-size: 40px;
                     width: calc(100% / 5);
                     color: var(--purple);
-                    height: 65px;
+                    height: 66px;
                     &:not(:last-child) {
-                        margin-right: 3.5px;
+                        margin-right: 8px;
                     }
                 }
             }
@@ -410,17 +409,16 @@ const Wrapper = styled.main`
     }
 
     .letter-one, .letter-two, .letter-three, .letter-four {
-        margin-right: 3.5px;
+        margin-right: 8px;
     }
     .letter-one, .letter-two, .letter-three, .letter-four, .letter-five {
         display: flex;
         flex-direction: column;
         height: 70px;
         overflow: hidden;
-        border: 3px solid var(--orange);
         border-radius: 4px;
         img {
-            padding: 2px 0px;
+            padding: 4px 0px;
             background-color: white;
         }
     }
