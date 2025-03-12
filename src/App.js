@@ -12,6 +12,7 @@ import Cannoni from "./pages/games/Cannoni";
 import Merlato from "./pages/games/Merlato";
 import Frutta from "./pages/games/Frutta";
 import Borgo from "./pages/games/Borgo";
+import Porte from "./pages/games/Porte";
 
 function App() {
   return (
@@ -41,6 +42,9 @@ function App() {
           
           {/* BORGO */}
           <Route path="/borgo" element={<Borgo />} />
+
+          {/* PORTE */}
+          <Route path="/porte" element={<Porte />} />
 
           <Route path="*" element={<Error />} />
         </Routes>
