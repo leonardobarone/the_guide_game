@@ -149,7 +149,7 @@ const Account = () => {
 export default Account;
   
 const Wrapper = styled.main`
-  margin-top: 40px;
+  margin-top: 50px;
   margin-bottom: 60px;
   .infoHome {
     margin-top: 7px;

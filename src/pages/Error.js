@@ -10,6 +10,6 @@ const Error = () => {
 export default Error;
 
 const Wrapper = styled.main`
-  margin-top: 40px;
+  margin-top: 50px;
   margin-bottom: 60px;
 `

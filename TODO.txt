@@ -1,0 +1,10 @@
+MANDATORY
+
+loading
+breakpoint
+i18n
+
+games
+
+
+OPTIONAL

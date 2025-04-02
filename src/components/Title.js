@@ -14,9 +14,9 @@ const Title = ({name}) => {
 export default Title
 
 const Wrapper = styled.h2`
-width: 100%;
-text-align: center;
-  font-size: 30px;
+  width: 100%;
+  text-align: center;
+  font-size: 25px;
   strong {
     color: var(--purple);
     text-transform: capitalize;

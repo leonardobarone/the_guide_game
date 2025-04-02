@@ -10,10 +10,10 @@ const Mappa = () => {
 
   const [selectedGame, setSelectedGame] = useState(null);
     // INIZIO PROVA HEIGHT
-    const [height, setHeight] = useState(window.innerHeight - 100);
+    const [height, setHeight] = useState(window.innerHeight - 110);
     
     useEffect(() => {
-      const updateHeight = () => setHeight(window.innerHeight - 100);
+      const updateHeight = () => setHeight(window.innerHeight - 110);
   
       window.addEventListener("resize", updateHeight);
       return () => window.removeEventListener("resize", updateHeight);
@@ -26,7 +26,7 @@ const Mappa = () => {
       > 
       <Map
         // className='mappa'
-        style={{height: `${height}px`, marginTop: '40px', marginBottom: '60px'}}
+        style={{height: `${height}px`, marginTop: '50px', marginBottom: '60px'}}
         defaultCenter={{lat: 40.75791635986094, lng: 14.014870424568413}}
         defaultZoom={13.25}
         gestureHandling={'greedy'} // ??

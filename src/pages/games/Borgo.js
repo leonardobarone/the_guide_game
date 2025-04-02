@@ -35,10 +35,10 @@ const Borgo = () => {
   const [placeWon, setPlaceWon] = useState(null);  
   
   // INIZIO PROVA HEIGHT
-    const [height, setHeight] = useState(window.innerHeight - 110);
+    const [height, setHeight] = useState(window.innerHeight - 120);
     
     useEffect(() => {
-      const updateHeight = () => setHeight(window.innerHeight - 110);
+      const updateHeight = () => setHeight(window.innerHeight - 120);
   
       window.addEventListener("resize", updateHeight);
       return () => window.removeEventListener("resize", updateHeight);
@@ -285,7 +285,7 @@ const Borgo = () => {
 export default Borgo;
 
 const Wrapper = styled.main`
-    margin-top: 40px;
+    margin-top: 50px;
     .bigContainer {
       display: flex;
       flex-direction: column;

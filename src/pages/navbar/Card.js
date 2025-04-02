@@ -82,6 +82,9 @@ const Card = () => {
   export default Card;
   
   const Wrapper = styled.section`
+
+margin-top: 50px;
+margin-bottom: 60px;
 .buttons {
     display: flex;
     justify-content: center;
@@ -107,8 +110,6 @@ const Card = () => {
 
 
 
-margin-top: 40px;
-margin-bottom: 60px;
 
 .container {
   background-color: white;
