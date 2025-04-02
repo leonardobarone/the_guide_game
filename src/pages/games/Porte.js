@@ -8,10 +8,10 @@ const Porte = () => {
   const [six, setSix] = useState(['1', '2', '3', '4', '5', '6']);
 
   // INIZIO PROVA HEIGHT
-  const [height, setHeight] = useState(window.innerHeight - 175);
+  const [height, setHeight] = useState(window.innerHeight - 120);
     
   useEffect(() => {
-    const updateHeight = () => setHeight(window.innerHeight - 175);
+    const updateHeight = () => setHeight(window.innerHeight - 120);
 
     window.addEventListener("resize", updateHeight);
     return () => window.removeEventListener("resize", updateHeight);
@@ -21,7 +21,6 @@ const Porte = () => {
   const formaRisultato = (value) => {
     setResult(prev => prev + value);
     setSix((prevSix) => prevSix.map((elm) => (elm === value ? "" : elm)));
-
   }
   
   useEffect(() => {
