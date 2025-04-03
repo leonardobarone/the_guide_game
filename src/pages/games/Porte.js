@@ -84,14 +84,14 @@ const Porte = () => {
             {top.map((num, index) => (
               <div key={index} onClick={() => handleSelectTop(index)}>
                 
-                {<img style={{width: '60px'}} src={porteImages[num]} alt="" /> || ""} {/* Mostra il numero se presente, altrimenti mostra ( ) */}
+                {num ? <img src={porteImages[num]} alt="" /> : <div className="empty">{index + 1}</div>} {/* Mostra il numero se presente, altrimenti mostra ( ) */}
               </div>
             ))}
           </div>
           <div className="bottom">
             {six.map((num, index) => (
               <div key={index} onClick={() => handleSelectBottom(num)}>
-                <img style={{width: '60px'}} src={porteImages[num]} alt="" />
+                <img src={porteImages[num]} alt="" />
               </div>
             ))}
           </div>
@@ -127,19 +127,33 @@ const Wrapper = styled.section`
       line-height: 15px;
     }
     .top, .bottom {
-      border: 1px solid black;
       height: 100px;
       display: flex;
       justify-content: center;
       align-items: center;
       div {
+        .empty {
+          background-color: white;
+          height: 90%;
+          width: 90%;
+          border-radius: 4px;
+          color: var(--purple);
+        }
+        img {
+          background-color: white;
+          padding: 2px;
+          object-fit: cover;
+          object-position: center;
+          height: 90%;
+          border-radius: 4px;
+          width: 90%;
+        }
         font-size: 30px;
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100%;
         width: 100%;
-        border: 1px solid red;
         width: calc(100% / 6);
         text-align: center;
         cursor: pointer;
