@@ -1,8 +1,22 @@
 import styled from "styled-components";
 import { useState, useEffect } from "react";
 import Title from '../../components/Title';
+import porte1 from '../../images/games/porte/1.png';
+import porte2 from '../../images/games/porte/2.png';
+import porte3 from '../../images/games/porte/3.png';
+import porte4 from '../../images/games/porte/4.png';
+import porte5 from '../../images/games/porte/5.png';
+import porte6 from '../../images/games/porte/6.png';
 
 const Porte = () => {
+  const porteImages = {
+    1: porte1,
+    2: porte2,
+    3: porte3,
+    4: porte4,
+    5: porte5,
+    6: porte6,
+  };
   const [six, setSix] = useState([1, 2, 3, 4, 5, 6]); // Numeri iniziali nella riga inferiore
   const [top, setTop] = useState(Array(6).fill(null)); // Riga superiore, inizialmente vuota
   const [selectedValue, setSelectedValue] = useState(null); // Il valore selezionato dalla riga inferiore
@@ -69,14 +83,15 @@ const Porte = () => {
           <div className="top">
             {top.map((num, index) => (
               <div key={index} onClick={() => handleSelectTop(index)}>
-                {num || ""} {/* Mostra il numero se presente, altrimenti mostra ( ) */}
+                
+                {<img style={{width: '50px'}} src={porteImages[num]} alt="" /> || ""} {/* Mostra il numero se presente, altrimenti mostra ( ) */}
               </div>
             ))}
           </div>
           <div className="bottom">
             {six.map((num, index) => (
               <div key={index} onClick={() => handleSelectBottom(num)}>
-                {num}
+                <img style={{width: '50px'}} src={porteImages[num]} alt="" />
               </div>
             ))}
           </div>
@@ -113,7 +128,7 @@ const Wrapper = styled.section`
     }
     .top, .bottom {
       border: 1px solid black;
-      height: 50px;
+      height: 100px;
       display: flex;
       justify-content: center;
       align-items: center;
