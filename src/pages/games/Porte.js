@@ -63,13 +63,13 @@ const Porte = () => {
       <Title name={'Le porte della città antica'} />
       <div className="bigContainer" style={{ height: `${height}px` }}>
         <div className="question">
-          Metti in ordine le porte della città antica
+          Metti in ordine le porte della città antica 513 264
         </div>
         <div className="container">
           <div className="top">
             {top.map((num, index) => (
               <div key={index} onClick={() => handleSelectTop(index)}>
-                {num || "( )"} {/* Mostra il numero se presente, altrimenti mostra ( ) */}
+                {num || ""} {/* Mostra il numero se presente, altrimenti mostra ( ) */}
               </div>
             ))}
           </div>
