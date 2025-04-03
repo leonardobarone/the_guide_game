@@ -84,14 +84,14 @@ const Porte = () => {
             {top.map((num, index) => (
               <div key={index} onClick={() => handleSelectTop(index)}>
                 
-                {<img style={{width: '50px'}} src={porteImages[num]} alt="" /> || ""} {/* Mostra il numero se presente, altrimenti mostra ( ) */}
+                {<img style={{width: '60px'}} src={porteImages[num]} alt="" /> || ""} {/* Mostra il numero se presente, altrimenti mostra ( ) */}
               </div>
             ))}
           </div>
           <div className="bottom">
             {six.map((num, index) => (
               <div key={index} onClick={() => handleSelectBottom(num)}>
-                <img style={{width: '50px'}} src={porteImages[num]} alt="" />
+                <img style={{width: '60px'}} src={porteImages[num]} alt="" />
               </div>
             ))}
           </div>
