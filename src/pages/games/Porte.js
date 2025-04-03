@@ -8,6 +8,8 @@ import porte4 from '../../images/games/porte/4.png';
 import porte5 from '../../images/games/porte/5.png';
 import porte6 from '../../images/games/porte/6.png';
 
+// import Popup from "../../components/Popup";
+
 const Porte = () => {
   const porteImages = {
     1: porte1,
@@ -69,6 +71,8 @@ const Porte = () => {
       alert('Hai vinto!');
     } else if (isTopFull) {
       alert('Hai perso!');
+      setTop(Array(6).fill(null));
+      setSix([1, 2, 3, 4, 5, 6]);
     }
   }
 
