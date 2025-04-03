@@ -78,7 +78,7 @@ const dbGames = [
       'name' : 'le porte della città antica', 
       'lat' : 40.761381645738474, 
       'lng' : 14.033831568670061,
-      'path' : null,
+      'path' : '/porte',
       'unblocked' : false
     },
     { 

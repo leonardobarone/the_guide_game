@@ -7,8 +7,12 @@ import porte3 from '../../images/games/porte/3.png';
 import porte4 from '../../images/games/porte/4.png';
 import porte5 from '../../images/games/porte/5.png';
 import porte6 from '../../images/games/porte/6.png';
-
-// import Popup from "../../components/Popup";
+import findById from "../../utils/findById";
+import { useGlobalContext } from "../../context";
+import Popup from "../../components/Popup";
+import Error from "../Error";
+import timeById from "../../utils/timeById";
+import unblockById from "../../utils/unblockById";
 
 const Porte = () => {
   const porteImages = {
@@ -19,6 +23,19 @@ const Porte = () => {
     5: porte5,
     6: porte6,
   };
+
+  const {cards, games, places, setCards, setPlaces} = useGlobalContext();
+
+  const [popup, setPopup] = useState(false);  
+  const [victory, setVictory] = useState(null);  
+  const [cardWon, setCardWon] = useState(null);   
+  const [placeWon, setPlaceWon] = useState(null);   
+
+  const game = findById(games, '10');
+  const place = findById(places, '8');
+  const card = findById(cards, '5');
+  
+
   const [six, setSix] = useState([1, 2, 3, 4, 5, 6]); // Numeri iniziali nella riga inferiore
   const [top, setTop] = useState(Array(6).fill(null)); // Riga superiore, inizialmente vuota
   const [selectedValue, setSelectedValue] = useState(null); // Il valore selezionato dalla riga inferiore
@@ -68,17 +85,35 @@ const Porte = () => {
     const areArraysEqual = arrayToWin.length === top.length && arrayToWin.every((el, index) => el === top[index]);
     
     if (isTopFull && areArraysEqual) {
-      alert('Hai vinto!');
-    } else if (isTopFull) {
-      alert('Hai perso!');
+
+      setCards(unblockById(cards, card.id));
+      setCards(timeById(cards, card.id));
+      setPlaces(unblockById(places, place.id));
+      setPlaces(timeById(places, place.id));
+
+      setCardWon(findById(cards, card.id))
+      setPlaceWon(findById(places, place.id))
+      
+      
       setTop(Array(6).fill(null));
+      setSelectedValue(null);
+      setSix([1, 2, 3, 4, 5, 6]);
+    
+      setVictory(true);
+      setPopup(true);
+    } else if (isTopFull) {
+      setVictory(false);
+      setPopup(true); 
+
+      setTop(Array(6).fill(null));
+      setSelectedValue(null);
       setSix([1, 2, 3, 4, 5, 6]);
     }
   }
 
   return (
-    <Wrapper>
-      <Title name={'Le porte della città antica'} />
+    game.unblocked ? <Error /> : (<Wrapper>
+      <Title name={game.name} />
       <div className="bigContainer" style={{ height: `${height}px` }}>
         <div className="question">
           Metti in ordine le porte della città antica 513 264
@@ -106,7 +141,15 @@ const Porte = () => {
           </div>
         </div>
       </div>
-    </Wrapper>
+      <Popup 
+          popup={popup} 
+          setPopup={setPopup} 
+          cardWon={cardWon} 
+          victory={victory} 
+          placeWon={placeWon}
+          game={game} 
+      />
+    </Wrapper>)
   );
 };
 

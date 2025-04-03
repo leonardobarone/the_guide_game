@@ -38,9 +38,9 @@ const QuizNumeric = (props) => {
   const {setCards, setPlaces} = useGlobalContext();
   const [dataFromChild, setDataFromChild] = useState(""); 
   const [popup, setPopup] = useState(false);  
+  const [victory, setVictory] = useState(null);   
   const [cardWon, setCardWon] = useState(null);   
   const [placeWon, setPlaceWon] = useState(null);   
-  const [victory, setVictory] = useState(null);   
   
   function handleDataFromChild(data) {
     setDataFromChild(data);
