@@ -1,14 +1,27 @@
-MANDATORY
-
+# MANDATORY
 loading
+- cards
+- places
 breakpoint
-i18n
+i18n (ma se non ho i testi in italiano)
+firebase + payment
 
-games
+# GAMES
+1. gioco vivara
+2. gioco family + gioco santuario
+3. gioco panchina
+4. gioco statua
+5. gioco 15 + gioco data
+6. gioco mestieri
+7. gioco parole in ordine
+8. gioco 15 + gioco numero civico
+9. gioco colori
+10. gioco tombino
+11. gioco cripta 
 
+# OPTIONAL
 
-????????
-
-
-
-OPTIONAL
+# PEPPE
+testi domande
+testi places (ce li ho)
+testi cards 
