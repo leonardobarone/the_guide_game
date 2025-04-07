@@ -226,6 +226,29 @@ const Wrapper = styled.section`
           border-style: none;
           border-radius: 4px;
           letter-spacing: 1px;
+          &::after {
+              width: 20px;
+              height: 20px;
+              content: '';
+              position: absolute;
+              background-color: transparent;
+              top: 29px;
+              right: -20px;
+              border-bottom-left-radius: 4px;
+              box-shadow: -3px 2px white;
+          }
+          
+          &::before {
+              content: '';
+              width: 20px;
+              height: 20px;
+              position: absolute;
+              background-color: transparent;
+              top: -20px;
+              left: 0px;
+              border-bottom-left-radius: 4px;
+              box-shadow: -6px 4px white;
+          }
         }
       }
     }
