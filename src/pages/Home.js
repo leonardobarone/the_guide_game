@@ -21,6 +21,9 @@ const Home = () => {
               <li>
                 <Link to='/porte'>Quiz Porte</Link>
               </li>
+              <li>
+                <Link to='/san_leonardo_2'>Quiz 15</Link>
+              </li>
           </ul>
         </div>
 

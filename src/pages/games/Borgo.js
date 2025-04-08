@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Title from '../../components/Title';
 import { useGlobalContext } from "../../context";
 import findById from '../../utils/findById'
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import unblockById from '../../utils/unblockById';
 import timeById from '../../utils/timeById';
 import checkAwards from "../../utils/checkAwards";
@@ -24,6 +24,7 @@ import catena2 from '../../images/games/borgo/catena2.png';
 import catena3 from '../../images/games/borgo/catena3.png';
 import catena4 from '../../images/games/borgo/catena4.png';
 import Error from "../Error";
+import useHeight from "../../utils/useHeight";
 
 const Borgo = () => {
   const { games, cards, setCards, places, setPlaces } = useGlobalContext();
@@ -34,16 +35,8 @@ const Borgo = () => {
   const [cardWon, setCardWon] = useState(null);  
   const [placeWon, setPlaceWon] = useState(null);  
   
-  // INIZIO PROVA HEIGHT
-    const [height, setHeight] = useState(window.innerHeight - 120);
-    
-    useEffect(() => {
-      const updateHeight = () => setHeight(window.innerHeight - 120);
-  
-      window.addEventListener("resize", updateHeight);
-      return () => window.removeEventListener("resize", updateHeight);
-    }, []);
-    // INIZIO PROVA HEIGHT
+  // Per calcolare l'altezza
+  const height = useHeight(120);
 
   const boxes1 = [
     {

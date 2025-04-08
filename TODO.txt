@@ -1,27 +1,25 @@
-# MANDATORY
-loading
-- cards
-- places
-breakpoint
-i18n (ma se non ho i testi in italiano)
-firebase + payment
+LOADING (DOVE CI SONO IMMAGINI)
+BREAKPOINT (OVUNQUE)
+I18N (VEDERE BENE I CONTEXT DA USARE)
+FIREBASE (AUTENTICAZIONE E PAGAMENTO)
 
-# GAMES
-1. gioco vivara
-2. gioco family + gioco santuario
-3. gioco panchina
-4. gioco statua
-5. gioco 15 + gioco data
-6. gioco mestieri
-7. gioco parole in ordine
-8. gioco 15 + gioco numero civico
-9. gioco colori
-10. gioco tombino
-11. gioco cripta 
+GIOCO VIVARA
+GIOCO FAMILY + GIOCO SANTUARIO
+GIOCO PANCHINA
+GIOCO STATUA
+GIOCO 15 + GIOCO DATA 
+GIOCO MESTIERI
+GIOCO PAROLE IN ORDINE 
+GIOCO 15 + GIOCO NUMERO CIVICO
+GIOCO COLORI 
+GIOCO TOMBINO 
+GIOCO CRIPTA
 
-# OPTIONAL
+TESTI DOMANDE (ITA E ING)
+TESTI LUOGHI 
+TESTI CARTE 
 
-# PEPPE
-testi domande
-testi places (ce li ho)
-testi cards 
+
+[REFACTORING]
+ALTEZZA
+CSS DOMANDA STANDARD

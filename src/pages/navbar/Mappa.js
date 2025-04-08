@@ -3,22 +3,15 @@ import { APIProvider, Map, AdvancedMarker, InfoWindow } from '@vis.gl/react-goog
 import { Link } from 'react-router-dom';
 import { useGlobalContext } from "../../context";
 import { MdLocationPin } from "react-icons/md";
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+import useHeight from '../../utils/useHeight';
 
 const Mappa = () => {
   const {games} = useGlobalContext();
-
   const [selectedGame, setSelectedGame] = useState(null);
-    // INIZIO PROVA HEIGHT
-    const [height, setHeight] = useState(window.innerHeight - 110);
-    
-    useEffect(() => {
-      const updateHeight = () => setHeight(window.innerHeight - 110);
   
-      window.addEventListener("resize", updateHeight);
-      return () => window.removeEventListener("resize", updateHeight);
-    }, []);
-    // INIZIO PROVA HEIGHT
+  // Per calcolare l'altezza
+  const height = useHeight(110);
 
   return <Wrapper>
     <APIProvider 

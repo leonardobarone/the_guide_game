@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Title from '../../components/Title';
 import porte1 from '../../images/games/porte/1.png';
 import porte2 from '../../images/games/porte/2.png';
@@ -13,6 +13,7 @@ import Popup from "../../components/Popup";
 import Error from "../Error";
 import timeById from "../../utils/timeById";
 import unblockById from "../../utils/unblockById";
+import useHeight from "../../utils/useHeight";
 
 const Porte = () => {
   const porteImages = {
@@ -40,13 +41,8 @@ const Porte = () => {
   const [top, setTop] = useState(Array(6).fill(null)); // Riga superiore, inizialmente vuota
   const [selectedValue, setSelectedValue] = useState(null); // Il valore selezionato dalla riga inferiore
 
-  // Gestione altezza
-  const [height, setHeight] = useState(window.innerHeight - 120);
-  useEffect(() => {
-    const updateHeight = () => setHeight(window.innerHeight - 120);
-    window.addEventListener("resize", updateHeight);
-    return () => window.removeEventListener("resize", updateHeight);
-  }, []);
+  // Per calcolare l'altezza
+  const height = useHeight(120);
 
   // Funzione per selezionare un numero dalla riga inferiore
   const handleSelectBottom = (value) => {

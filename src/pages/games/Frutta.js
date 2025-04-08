@@ -6,7 +6,7 @@ import unblockById from '../../utils/unblockById';
 import findById from "../../utils/findById";
 import timeById from "../../utils/timeById";
 import checkAwards from "../../utils/checkAwards";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useGlobalContext } from "../../context";
 import arancia from '../../images/games/frutta/arancia.png';
 import banana from '../../images/games/frutta/banana.png';
@@ -18,6 +18,7 @@ import limone from '../../images/games/frutta/limone.png';
 import nespola from '../../images/games/frutta/nespola.png';
 import sette from '../../images/games/frutta/sette.png';
 import Error from "../Error";
+import useHeight from "../../utils/useHeight";
 
 const Frutta = () => {
 
@@ -32,16 +33,8 @@ const Frutta = () => {
     const [cardWon, setCardWon] = useState(null);  
     const [placeWon, setPlaceWon] = useState(null);   
 
-      // INIZIO PROVA HEIGHT
-        const [height, setHeight] = useState(window.innerHeight - 300);
-        
-        useEffect(() => {
-          const updateHeight = () => setHeight(window.innerHeight - 300);
-      
-          window.addEventListener("resize", updateHeight);
-          return () => window.removeEventListener("resize", updateHeight);
-        }, []);
-        // INIZIO PROVA HEIGHT
+    // Per calcolare l'altezza
+    const height = useHeight(300);
 
 
 

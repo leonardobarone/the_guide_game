@@ -5,8 +5,9 @@ import Title from '../components/Title';
 // </components>
 
 // <hooks>
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useGlobalContext } from '../context';
+import useHeight from '../utils/useHeight';
 // </hooks>
 
 // <style>
@@ -23,16 +24,8 @@ import timeById from '../utils/timeById';
 const QuizNumeric = (props) => {
     const { cards, places, games, game, place, card, hex } = props.infoQuizNumeric;
 
-  // INIZIO PROVA HEIGHT
-    const [height, setHeight] = useState(window.innerHeight - 340);
-    
-    useEffect(() => {
-      const updateHeight = () => setHeight(window.innerHeight - 340);
-  
-      window.addEventListener("resize", updateHeight);
-      return () => window.removeEventListener("resize", updateHeight);
-    }, []);
-    // INIZIO PROVA HEIGHT
+  // Per calcolare l'altezza
+  const height = useHeight(340);
 
   // HOOKS
   const {setCards, setPlaces} = useGlobalContext();

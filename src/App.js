@@ -1,11 +1,14 @@
+// Per Router
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+// Components
+import Header from "./components/Header";
+import Navbar from './components/Navbar';
+// Pages
 import Mappa from "./pages/navbar/Mappa";
 import Account from "./pages/navbar/Account";
 import Card from "./pages/navbar/Card";
 import Place from "./pages/navbar/Place";
 import Error from "./pages/Error";
-import Header from "./components/Header";
-import Navbar from './components/Navbar';
 import PlaceItem from "./pages/navbar/PlaceItem";
 import Home from "./pages/Home";
 import Cannoni from "./pages/games/Cannoni";
@@ -13,6 +16,7 @@ import Merlato from "./pages/games/Merlato";
 import Frutta from "./pages/games/Frutta";
 import Borgo from "./pages/games/Borgo";
 import Porte from "./pages/games/Porte";
+import SanLeonardo2 from "./pages/games/SanLeonardo2";
 
 function App() {
   return (
@@ -28,23 +32,23 @@ function App() {
           <Route path="/luoghi" element={<Place />} />
             <Route path="/luoghi/:id" element={<PlaceItem />} />
           
-
-
-          {/* CANNONI */}
+          {/* Gioco Cannoni */}
           <Route path="/cannoni" element={<Cannoni />} />
 
-          {/* MERLATO */}
+          {/* Gioco Palazzo Merlato */}
           <Route path="/merlato" element={<Merlato />} />
 
-          {/* FRUTTA */}
+          {/* Gioco Frutta */}
           <Route path="/frutta" element={<Frutta />} />
 
-          
-          {/* BORGO */}
+          {/* Gioco Borgo */}
           <Route path="/borgo" element={<Borgo />} />
 
-          {/* PORTE */}
+          {/* Gioco Porte */}
           <Route path="/porte" element={<Porte />} />
+
+          {/* Gioco 15 San Leonardo */}
+          <Route path="san_leonardo_2" element={<SanLeonardo2 />} />
 
           <Route path="*" element={<Error />} />
         </Routes>

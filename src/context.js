@@ -4,22 +4,9 @@ import dbCards from './utils/dbCards';
 import dbGames from './utils/dbGames';
 import dbPlaces from './utils/dbPlaces';
 
-// Prova Auth
-// import { auth } from './firebase/firebase';
-// import { onAuthStateChanged } from 'firebase/auth';
-
 const AppContext = createContext();
 
 const AppProvider = ({children}) => {
-
-    // Prova Auth
-    // const [currentUser, setCurrentUser] = useState(null);
-    // const [userLoggedIn, setUserLoggedIn] = useState(false);
-    // const [loading, setLoading] = useState(true);
-    // useEffect(()=> {
-    //     const unsubscribe = onAuthStateChanged(auth, initializeUser);
-    //     return unsubscribe;
-    // })
 
     const [cards, setCards] = useState(dbCards);
     const [games, setGames] = useState(dbGames);
