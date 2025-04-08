@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Title from '../../components/Title';
 import porte1 from '../../images/games/porte/1.png';
 import porte2 from '../../images/games/porte/2.png';
