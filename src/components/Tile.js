@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
-const Tile = ({number}) => {
-  return <Wrapper className={`number ${number.value === 16 ? 'disabled' : ''} slot--${number.index}`}>
+const Tile = ({number, moveTile}) => {
+  return <Wrapper onClick={() => moveTile(number)} className={`number ${number.value === 16 ? 'disabled' : ''} slot--${number.index}`}>
     {number.value === 16 ? '' : number.value}
   </Wrapper>
 }
