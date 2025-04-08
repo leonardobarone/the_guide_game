@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import useHeight from "../../utils/useHeight";
+import Board from '../../components/Board';
 
 const SanLeonardo2 = () => {
     
@@ -7,9 +8,7 @@ const SanLeonardo2 = () => {
     const height = useHeight(110);
 
   return <Wrapper style={{ height: `${height}px` }}>
-    <div>
-        Div al centro
-    </div>
+    <Board />
   </Wrapper>
 }
 

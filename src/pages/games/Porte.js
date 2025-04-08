@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Title from '../../components/Title';
 import porte1 from '../../images/games/porte/1.png';
 import porte2 from '../../images/games/porte/2.png';
@@ -17,12 +17,12 @@ import useHeight from "../../utils/useHeight";
 
 const Porte = () => {
   const porteImages = {
-    1: porte1,
-    2: porte2,
+    1: porte5,
+    2: porte1,
     3: porte3,
-    4: porte4,
-    5: porte5,
-    6: porte6,
+    4: porte2,
+    5: porte6,
+    6: porte4,
   };
 
   const {cards, games, places, setCards, setPlaces} = useGlobalContext();
@@ -77,8 +77,7 @@ const Porte = () => {
 
   const gioca = () => {
     const isTopFull = top.every((elm) => elm !== null);
-    const arrayToWin = [5, 1, 3, 2, 6, 4];
-    const areArraysEqual = arrayToWin.length === top.length && arrayToWin.every((el, index) => el === top[index]);
+    const areArraysEqual = game.answer.length === top.length && game.answer.every((el, index) => el === top[index]);
     
     if (isTopFull && areArraysEqual) {
 

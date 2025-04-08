@@ -79,6 +79,7 @@ const dbGames = [
       'lat' : 40.761381645738474, 
       'lng' : 14.033831568670061,
       'path' : '/porte',
+      "answer" : [2, 4, 3, 6, 1, 5],
       'unblocked' : false
     },
     { 
