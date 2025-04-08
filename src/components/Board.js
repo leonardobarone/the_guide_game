@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import Overlay from "./Overlay";
 import Tile from "./Tile";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import Winner from "./Winner";
 
 const Board = () => {
 
@@ -13,10 +14,11 @@ const Board = () => {
       .map((x, i) => ({value : x, index : i}))
 
   const [numbers, setNumbers] = useState(shuffle());  
+  const [animating, setAnimating] = useState(false);
   
   const moveTile = tile => {
     const i16 = numbers.find(n => n.value === 16).index
-    if (![i16 - 1, i16 + 1, i16 - 4, i16 + 4].includes(tile.index))
+    if (![i16 - 1, i16 + 1, i16 - 4, i16 + 4].includes(tile.index) || animating)
       return
 
     const newNumbers = 
@@ -29,9 +31,30 @@ const Board = () => {
           
           return {value : tile.value, index: i16}
       })
-
+      setAnimating(true);
       setNumbers(newNumbers)
+      setTimeout(()=> setAnimating(false), 400)
   }
+
+
+  // TASTIERA
+  const handleKeyDown = e => {
+    const i16 = numbers.find(n => n.value === 16).index
+    if (e.keyCode === 37 && !(i16 % 4 === 3))
+      moveTile(numbers.find(n => n.index === i16 + 1))
+    if (e.keyCode === 38 && !(i16 > 11))
+      moveTile(numbers.find(n => n.index === i16 + 4))
+    if (e.keyCode === 39 && !(i16 % 4 === 0))
+      moveTile(numbers.find(n => n.index === i16 - 1))
+    if (e.keyCode === 40 && !(i16 < 4))
+      moveTile(numbers.find(n => n.index === i16 - 4))
+  } 
+
+  // TASTIERA
+  useEffect(() => {
+    document.addEventListener('keydown', handleKeyDown)
+    return () => document.removeEventListener('keydown', handleKeyDown)
+  })
 
   return <Game>
     <div className="board">
@@ -40,6 +63,7 @@ const Board = () => {
           <Tile key={i} number={x} moveTile={moveTile} />
           // <div key={i}>{x.value}</div>
         )}
+        <Winner numbers={numbers} />
     </div>
   </Game>
 }
@@ -56,6 +80,5 @@ const Game = styled.section`
     grid-template-columns: repeat(4, var(--size));
     grid-template-rows: repeat(4, var(--size));
     overflow: hidden;
-    border: 1px solid red;
   }
 `

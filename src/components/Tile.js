@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 const Tile = ({number, moveTile}) => {
-  return <Wrapper onClick={() => moveTile(number)} className={`number ${number.value === 16 ? 'disabled' : ''} slot--${number.index}`}>
+  return <Wrapper onClick={() => moveTile(number)} className={` ${number.value === number.index + 1 ? 'correct' : ''} number ${number.value === 16 ? 'disabled' : ''} slot--${number.index}`}>
     {number.value === 16 ? '' : number.value}
   </Wrapper>
 }
@@ -19,7 +19,9 @@ const Wrapper = styled.div`
         font-size: 50px;
         background-color: red;
         cursor: pointer;
+        transition: left .4s, top .4s;
         &.disabled {pointer-events: none; background-color: transparent;}
+        &.correct {background-color: orange}
         
         &.slot--0 {left: 0; top: 0;};
         &.slot--1 {left: calc(var(--size)); top: 0;};
