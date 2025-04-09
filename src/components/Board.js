@@ -36,6 +36,7 @@ const Board = forwardRef((_, ref) => {
       setTimeout(()=> setAnimating(false), 400)
   }
 
+  // shuffle()
   const reset = () => setNumbers([
     { value: 1, index: 0 },
     { value: 2, index: 1 },

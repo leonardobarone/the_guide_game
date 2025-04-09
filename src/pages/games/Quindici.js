@@ -25,7 +25,7 @@ const Quindici = () => {
       <Board ref={ref} />
       <div className="buttonContainer">
         <div className="p-absolute">
-          <button onClick={() => ref.current?.reset()} className="btn">RESET</button>
+          <button onClick={() => ref.current?.reset()} className="btn">RESET (al momento vinci)</button>
         </div>
       </div>
     </div>
