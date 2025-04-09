@@ -16,7 +16,7 @@ import Merlato from "./pages/games/Merlato";
 import Frutta from "./pages/games/Frutta";
 import Borgo from "./pages/games/Borgo";
 import Porte from "./pages/games/Porte";
-import SanLeonardo2 from "./pages/games/SanLeonardo2";
+import Quindici from "./pages/games/Quindici";
 
 function App() {
   return (
@@ -48,7 +48,7 @@ function App() {
           <Route path="/porte" element={<Porte />} />
 
           {/* Gioco 15 San Leonardo */}
-          <Route path="san_leonardo_2" element={<SanLeonardo2 />} />
+          <Route path="quindici" element={<Quindici />} />
 
           <Route path="*" element={<Error />} />
         </Routes>

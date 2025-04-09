@@ -2,7 +2,7 @@ import styled from "styled-components";
 import useHeight from "../../utils/useHeight";
 import Board from '../../components/Board';
 
-const SanLeonardo2 = () => {
+const Quindici = () => {
     
     // Per calcolare l'altezza
     const height = useHeight(110);
@@ -12,7 +12,7 @@ const SanLeonardo2 = () => {
   </Wrapper>
 }
 
-export default SanLeonardo2;
+export default Quindici;
 
 const Wrapper = styled.section`
     display: flex;
