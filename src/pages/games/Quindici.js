@@ -5,21 +5,30 @@ import Board from '../../components/Board';
 const Quindici = () => {
     
     // Per calcolare l'altezza
-    const height = useHeight(110);
+    const height = useHeight(124);
 
-  return <Wrapper style={{ height: `${height}px` }}>
-    <Board />
+  return <Wrapper>
+    <div className="bigContainer" style={{ height: `${height}px` }}>
+      <div className="question">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      </div>
+      <Board />
+      <div className="buttonContainer">
+        <div className="p-absolute">
+          <button className="btn">RESET</button>
+        </div>
+      </div>
+    </div>
   </Wrapper>
 }
 
 export default Quindici;
 
 const Wrapper = styled.section`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px;
-    margin-bottom: 60px;
-    border: 1px solid black;
-    background-color: pink;
+    margin-top: 57px;
+    margin-bottom: 67px;
+    .bigContainer {
+      background-color: yellow;
+    }
+
 `

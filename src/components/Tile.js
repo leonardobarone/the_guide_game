@@ -72,7 +72,7 @@ const Wrapper = styled.div`
         cursor: pointer;
         transition: left .4s, top .4s;
         &.disabled {pointer-events: none; background-color: transparent;}
-        &.correct {background-color: orange}
+        /* &.correct {background-color: orange} */
         
         &.slot--0 {left: 0; top: 0;};
         &.slot--1 {left: calc(var(--size)); top: 0;};

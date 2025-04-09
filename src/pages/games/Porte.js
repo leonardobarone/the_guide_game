@@ -111,7 +111,7 @@ const Porte = () => {
       <Title name={game.name} />
       <div className="bigContainer" style={{ height: `${height}px` }}>
         <div className="question">
-          Metti in ordine le porte della città antica 513 264
+          Metti in ordine le porte della città antica <br />2-4-3-6-1-5
         </div>
         <div className="container">
           <div className="top">
@@ -152,100 +152,44 @@ export default Porte;
 
 const Wrapper = styled.section`
   margin-top: 50px;
+
   .bigContainer {
-    padding: 7px;
-    margin: 7px;
-    border-radius: 4px;
     background-color: #D7DEDC;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    .question {
-      font-weight: lighter;
-      border-radius: 4px;
-      background-color: white;
-      padding: 14px;
-      font-size: 12px;
-      line-height: 15px;
-    }
+  }
+  
+  .container {
     .top, .bottom {
-      height: 100px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      div {
-        .empty {
-          background-color: white;
-          height: 90%;
-          width: 90%;
-          border-radius: 4px;
-          color: var(--purple);
-        }
-        img {
-          background-color: white;
-          padding: 2px;
-          object-fit: cover;
-          object-position: center;
-          height: 90%;
-          border-radius: 4px;
-          width: 90%;
-        }
-        font-size: 30px;
+        height: 100px;
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100%;
-        width: 100%;
-        width: calc(100% / 6);
-        text-align: center;
-        cursor: pointer;
-      }
-    }
-    .buttonContainer {
-      height: 47px;
-      position: relative;
-      .p-absolute {
-        border-radius: 4px;
-        position: absolute;
-        background-color: white;
-        padding: 4px;
-        left: -7px;
-        bottom: -7px;
-        .btn {
-          font-family: "Mitr", serif;
-          display: inline-block;
-          font-weight: lighter;
-          background-color: var(--orange);
-          color: white;
-          padding: 10px 75px;
-          border-style: none;
-          border-radius: 4px;
-          letter-spacing: 1px;
-          &::after {
-              width: 20px;
-              height: 20px;
-              content: '';
-              position: absolute;
-              background-color: transparent;
-              top: 29px;
-              right: -20px;
-              border-bottom-left-radius: 4px;
-              box-shadow: -3px 2px white;
+        div {
+          .empty {
+            background-color: white;
+            height: 90%;
+            width: 90%;
+            border-radius: 4px;
+            color: var(--purple);
           }
-          
-          &::before {
-              content: '';
-              width: 20px;
-              height: 20px;
-              position: absolute;
-              background-color: transparent;
-              top: -20px;
-              left: 0px;
-              border-bottom-left-radius: 4px;
-              box-shadow: -6px 4px white;
+          img {
+            background-color: white;
+            padding: 2px;
+            object-fit: cover;
+            object-position: center;
+            height: 90%;
+            border-radius: 4px;
+            width: 90%;
           }
+          font-size: 30px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+          width: 100%;
+          width: calc(100% / 6);
+          text-align: center;
+          cursor: pointer;
         }
-      }
-    }
+     }
   }
 `;

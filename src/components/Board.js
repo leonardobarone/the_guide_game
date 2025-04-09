@@ -73,6 +73,7 @@ export default Board;
 const Game = styled.section`
   position: relative;
   width: 100%;
+
   .board {
     height: 400px;
     position: relative;
