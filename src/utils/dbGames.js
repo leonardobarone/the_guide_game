@@ -45,7 +45,8 @@ const dbGames = [
       'lat' : 40.7644142361896, 
       'lng' : 14.028981057360241,
       'path' : null,
-      'unblocked' : false
+      'unblocked' : false,
+      'answer' : '1894'
     },
     { 
       'id' : "7",

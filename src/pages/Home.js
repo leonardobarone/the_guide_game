@@ -22,6 +22,9 @@ const Home = () => {
                 <Link to='/porte'>Quiz Porte</Link>
               </li>
               <li>
+                <Link to='/prima_quindici'>San Leonardo prima del 15</Link>
+              </li>
+              <li>
                 <Link to='/quindici'>Quiz 15</Link>
               </li>
           </ul>

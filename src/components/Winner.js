@@ -1,14 +1,30 @@
-import styled from "styled-components"
+import styled from "styled-components";
+import { useState, useEffect } from "react";
 
-const Winner = ({numbers}) => {
-    if (!numbers.every(n => n.value === n.index + 1))
-        return null;
-
-
-    return <Wrapper>
+const Winner = ({ numbers }) => {
+    const [showWin, setShowWin] = useState(false);
+  
+    useEffect(() => {
+      const isSorted = numbers.every(n => n.value === n.index + 1);
+  
+      if (isSorted) {
+        const timer = setTimeout(() => {
+          setShowWin(true);
+        }, 2000);
+        return () => clearTimeout(timer); // pulizia se i numeri cambiano prima dei 3 sec
+      } else {
+        setShowWin(false);
+      }
+    }, [numbers]);
+  
+    if (!showWin) return null;
+  
+    return (
+      <Wrapper>
         <p>You Won!</p>
-    </Wrapper>
-}
+      </Wrapper>
+    );
+  };
 
 export default Winner;
 

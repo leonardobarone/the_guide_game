@@ -8,7 +8,7 @@ import sad from '../images/popup/sad.png'
 import glasses from '../images/popup/glasses.png'
 
 
-const Popup = ({popup, setPopup, cardWon, placeWon, victory, game}) => {
+const Popup = ({popup, setPopup, cardWon, placeWon, victory, game, goToPage}) => {
     const { games, setGames } = useGlobalContext();
     const navigate = useNavigate();
     const [level, setLevel] = useState(1);
@@ -30,6 +30,10 @@ const Popup = ({popup, setPopup, cardWon, placeWon, victory, game}) => {
     const vaiESblocca = () => {
         setGames(unblockById(games, game.id));
         navigate('/profilo');
+    }
+
+    const secondaParte = () => {
+        navigate(goToPage);
     }
 
     // Si è attivato il popup e hai perso (entrambi le condizioni sono vere)
@@ -56,10 +60,16 @@ const Popup = ({popup, setPopup, cardWon, placeWon, victory, game}) => {
                 </div>
                 <div className="center">
                         <h3>COMPLIMENTI</h3>
-                        <p>HAI SUPERATO IL LIVELLO</p>
+                        {
+                            goToPage ? <p>HAI SUPERATO LA PRIMA PARTE</p> : <p>HAI SUPERATO IL LIVELLO</p>
+                        }
+                        
                     </div>
                 <div className="bottom">
-                    <button className="bnt" onClick={vaiESblocca}>CHIUDI</button>
+                    {
+                        goToPage ? <button className="bnt" onClick={secondaParte}>SECONDA PARTE</button> : <button className="bnt" onClick={vaiESblocca}>CHIUDI</button>
+                    }
+                    
                 </div>
             </div> : null}
             
