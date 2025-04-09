@@ -1,13 +1,20 @@
 import styled from "styled-components";
 import useHeight from "../../utils/useHeight";
 import Board from '../../components/Board';
+import Title from "../../components/Title";
+import { useGlobalContext } from "../../context";
+import findById from "../../utils/findById";
 
 const Quindici = () => {
-    
+
+    const {games} = useGlobalContext();
+    const game = findById(games, '6');
+
     // Per calcolare l'altezza
-    const height = useHeight(124);
+    const height = useHeight(110);
 
   return <Wrapper>
+    <Title name={game.name} />
     <div className="bigContainer" style={{ height: `${height}px` }}>
       <div className="question">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -25,8 +32,7 @@ const Quindici = () => {
 export default Quindici;
 
 const Wrapper = styled.section`
-    margin-top: 57px;
-    margin-bottom: 67px;
+    margin-top: 50px;
     .bigContainer {
       background-color: yellow;
     }

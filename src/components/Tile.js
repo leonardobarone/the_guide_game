@@ -70,7 +70,7 @@ const Wrapper = styled.div`
         font-size: 50px;
         background-color: red;
         cursor: pointer;
-        transition: left .4s, top .4s;
+        transition: left .2s, top .2s;
         &.disabled {pointer-events: none; background-color: transparent;}
         /* &.correct {background-color: orange} */
         

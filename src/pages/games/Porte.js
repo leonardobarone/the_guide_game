@@ -42,7 +42,7 @@ const Porte = () => {
   const [selectedValue, setSelectedValue] = useState(null); // Il valore selezionato dalla riga inferiore
 
   // Per calcolare l'altezza
-  const height = useHeight(120);
+  const height = useHeight(110);
 
   // Funzione per selezionare un numero dalla riga inferiore
   const handleSelectBottom = (value) => {
@@ -173,7 +173,6 @@ const Wrapper = styled.section`
           }
           img {
             background-color: white;
-            padding: 2px;
             object-fit: cover;
             object-position: center;
             height: 90%;
