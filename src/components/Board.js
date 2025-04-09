@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import Overlay from "./Overlay";
 import Tile from "./Tile";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useImperativeHandle, forwardRef } from "react";
 import Winner from "./Winner";
 
-const Board = () => {
+const Board = forwardRef(({ onResetClick }, ref) => {
 
   const shuffle = () => 
     new Array (16)
@@ -36,6 +36,13 @@ const Board = () => {
       setTimeout(()=> setAnimating(false), 400)
   }
 
+  const reset = () => setNumbers(shuffle());
+
+  // 🔥 Espone la funzione reset al padre
+  useImperativeHandle(ref, () => ({
+    reset
+  }));
+
 
   // TASTIERA
   const handleKeyDown = e => {
@@ -66,7 +73,7 @@ const Board = () => {
         <Winner numbers={numbers} />
     </div>
   </Game>
-}
+})
 
 export default Board;
 

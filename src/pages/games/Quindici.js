@@ -4,6 +4,7 @@ import Board from '../../components/Board';
 import Title from "../../components/Title";
 import { useGlobalContext } from "../../context";
 import findById from "../../utils/findById";
+import { useRef } from "react";
 
 const Quindici = () => {
 
@@ -13,16 +14,18 @@ const Quindici = () => {
     // Per calcolare l'altezza
     const height = useHeight(110);
 
+    const ref = useRef();
+
   return <Wrapper>
     <Title name={game.name} />
     <div className="bigContainer" style={{ height: `${height}px` }}>
       <div className="question">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </div>
-      <Board />
+      <Board ref={ref} />
       <div className="buttonContainer">
         <div className="p-absolute">
-          <button className="btn">RESET</button>
+          <button onClick={() => ref.current?.reset()} className="btn">RESET</button>
         </div>
       </div>
     </div>
