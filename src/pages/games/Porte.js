@@ -166,8 +166,8 @@ const Wrapper = styled.section`
         div {
           .empty {
             background-color: white;
-            height: 90%;
-            width: 90%;
+            height: 93%;
+            width: 93%;
             border-radius: 4px;
             color: var(--purple);
           }
@@ -175,9 +175,9 @@ const Wrapper = styled.section`
             background-color: white;
             object-fit: cover;
             object-position: center;
-            height: 90%;
+            height: 93%;
             border-radius: 4px;
-            width: 90%;
+            width: 93%;
           }
           font-size: 30px;
           display: flex;

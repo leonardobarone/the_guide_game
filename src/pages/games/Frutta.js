@@ -330,7 +330,7 @@ const Wrapper = styled.main`
         }
         .center {
             .letters {
-                margin-top: 10px;
+                margin-top: 7px;
                 div {
                     background-color: white;
                     border-radius: 4px;
@@ -343,7 +343,7 @@ const Wrapper = styled.main`
                     color: var(--purple);
                     height: 66px;
                     &:not(:last-child) {
-                        margin-right: 8px;
+                        margin-right: 7px;
                     }
                 }
             }
@@ -402,7 +402,7 @@ const Wrapper = styled.main`
     }
 
     .letter-one, .letter-two, .letter-three, .letter-four {
-        margin-right: 8px;
+        margin-right: 7px;
     }
     .letter-one, .letter-two, .letter-three, .letter-four, .letter-five {
         display: flex;

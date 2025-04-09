@@ -12,7 +12,7 @@ export default Overlay;
 
 const Wrapper = styled.div`
     &.overlay {
-        border: 1px solid blue;
+        border: 1px solid yellow;
         pointer-events: none;
         z-index: 20;
     }

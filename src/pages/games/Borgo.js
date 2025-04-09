@@ -302,10 +302,6 @@ const Wrapper = styled.main`
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
-      .hr {
-        padding-bottom: 6px;
-        margin-bottom: 3px;
-      }
       div {
         display: flex;
         justify-content: center;
