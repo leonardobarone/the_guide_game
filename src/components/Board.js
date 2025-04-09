@@ -4,7 +4,7 @@ import Tile from "./Tile";
 import { useEffect, useState, useImperativeHandle, forwardRef } from "react";
 import Winner from "./Winner";
 
-const Board = forwardRef(({ onResetClick }, ref) => {
+const Board = forwardRef((_, ref) => {
 
   const shuffle = () => 
     new Array (16)
