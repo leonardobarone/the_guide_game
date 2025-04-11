@@ -2,10 +2,12 @@ import { useState, useEffect } from "react";
 import Popup from "./Popup";
 import { useGlobalContext } from "../context";
 import findById from "../utils/findById";
+import unblockById from "../utils/unblockById";
+import timeById from "../utils/timeById";
 
 const Winner = ({ numbers, infoQuindici }) => {
 
-    const {places, cards} = useGlobalContext();
+    const {places, cards, setCards, setPlaces} = useGlobalContext();
     const {place, card, game} = infoQuindici;
 
     const [popup, setPopup] = useState(false);  
@@ -19,6 +21,11 @@ const Winner = ({ numbers, infoQuindici }) => {
   
       if (isSorted) {
         const timer = setTimeout(() => {
+          setCards(unblockById(cards, card.id));
+          setCards(timeById(cards, card.id));
+          setPlaces(unblockById(places, place.id));
+          setPlaces(timeById(places, place.id));
+
           setCardWon(findById(cards, card.id))
           setPlaceWon(findById(places, place.id))
           setVictory(true);
@@ -29,7 +36,7 @@ const Winner = ({ numbers, infoQuindici }) => {
         setVictory(false);
         setPopup(false);
       }
-    }, [numbers, card, place, cards, places,]);
+    }, [numbers, card, place, cards, places, setPlaces, setCards]);
   
     if (!setPopup) return null;
   
