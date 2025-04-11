@@ -1,11 +1,9 @@
-import styled from "styled-components";
 import { useState, useEffect } from "react";
 import Popup from "./Popup";
 import { useGlobalContext } from "../context";
 import findById from "../utils/findById";
 
 const Winner = ({ numbers, infoQuindici }) => {
-    const [showWin, setShowWin] = useState(false);
 
     const {places, cards} = useGlobalContext();
     const {place, card, game} = infoQuindici;
@@ -31,7 +29,7 @@ const Winner = ({ numbers, infoQuindici }) => {
         setVictory(false);
         setPopup(false);
       }
-    }, [numbers]);
+    }, [numbers, card, place, cards, places,]);
   
     if (!setPopup) return null;
   
@@ -47,20 +45,6 @@ const Winner = ({ numbers, infoQuindici }) => {
 
 export default Winner;
 
-const Wrapper = styled.div`
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: var(--tile);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 60px;
-    color: white;
-    z-index: 50;
-;
-`
+
 
 
