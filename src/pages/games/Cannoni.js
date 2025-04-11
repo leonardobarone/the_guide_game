@@ -3,8 +3,12 @@ import { useGlobalContext } from "../../context";
 import cannon from '../../images/games/cannoni/cannon2.png';
 import findById from "../../utils/findById";
 import Error from "../Error";
+import useImagesLoaded from '../../utils/useImagesLoaded';
+import Loading from "../../components/Loading";
 
 const Cannoni = () => {
+    const images = [cannon]
+    const loading = useImagesLoaded(images);
     const {cards, games, places} = useGlobalContext();
     const game = findById(games, '9');
     const place = findById(places, '7');
@@ -20,6 +24,7 @@ const Cannoni = () => {
        'hex' : '#89B8F6'
     }
 
+    if (!loading) return <Loading height={50} />
   
   return (
     <div>

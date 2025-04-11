@@ -9,16 +9,20 @@ import { FaBook } from "react-icons/fa";
 import { MdDarkMode } from "react-icons/md";
 import { useGlobalContext } from "../../context";
 import Title from "../../components/Title";
-
+import useImagesLoaded from "../../utils/useImagesLoaded";
+import Loading from "../../components/Loading";
 
 const Account = () => {
+
+    const images = [student];
+    const loading = useImagesLoaded(images);
 
     const {cards, places} = useGlobalContext();
     
     const unblockedCards = cards.filter(obj => obj.unblocked === true);
     const unblockedPlaces = places.filter(obj => obj.unblocked === true);
 
-
+    if (!loading) return <Loading height={110} />
     
     return (
       <Wrapper>
