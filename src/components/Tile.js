@@ -1,6 +1,17 @@
 import styled from "styled-components";
 
+
+
+import useImagesLoaded from "../utils/useImagesLoaded";
+
+
+
 const Tile = ({number, moveTile, infoQuindici}) => {
+
+    const quindiciImages = infoQuindici.images.reduce((acc, img, index) => {
+        acc[index + 1] = img;
+        return acc;
+    }, {});
 
     
   return <Wrapper onClick={() => moveTile(number)} className={` ${number.value === number.index + 1 ? 'correct' : ''} number ${number.value === 16 ? 'disabled' : ''} slot--${number.index}`}>
@@ -9,7 +20,7 @@ const Tile = ({number, moveTile, infoQuindici}) => {
     {number.value === 16 ? 
         null
     : 
-        <img src={infoQuindici.images[number.value]} alt="" />
+        <img src={quindiciImages[number.value]} alt="" />
     }
   </Wrapper>
 }
