@@ -22,6 +22,7 @@ const Winner = ({ numbers, infoQuindici }) => {
   
       if (isSorted) {
         const timer = setTimeout(() => {
+          
           if (!game.half) {
             setGames(halfById(games, game.id))
           }

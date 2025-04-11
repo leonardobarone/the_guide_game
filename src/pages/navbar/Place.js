@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { useGlobalContext } from '../../context';
 import { useState } from 'react';
 import Title from '../../components/Title';
+import { Link } from 'react-router-dom';
 
 const Place = () => {
 
@@ -49,14 +50,14 @@ const Place = () => {
         </div>
 
       {filteredPlaces().map((place) => {
-        return <div key={place.id} className="cardOutside">
+        return <Link to={place.unblocked ? `/luoghi/${place.id}` : ''} key={place.id} className="cardOutside">
           <div className="cardInside">
             <div className="imgContainer">
               <img src={place.unblocked ? place.imgVisible : place.imgHidden} alt="" />
             </div>
             <h3 style={{backgroundColor: `${place.unblocked ? 'var(--green)' : 'var(--red)'}`}}>{place.unblocked ? place.name : 'Bloccato' }</h3>
           </div>
-        </div>
+        </Link>
       })}
     </Wrapper>
   }
@@ -97,6 +98,7 @@ margin-bottom: 60px;
   flex-wrap: wrap;
   align-content: flex-start;
   .cardOutside {
+    text-decoration: none;
     flex-basis: 50%;
     padding: 8px 4px 8px 8px;
     &:nth-child(2n) {

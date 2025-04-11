@@ -5,6 +5,7 @@ import { FaLock } from "react-icons/fa";
 import { FaLockOpen } from "react-icons/fa";
 import unblocked from '../../images/cards/unblocked.webp'
 import Title from "../../components/Title";
+import { Link } from "react-router-dom";
 
 const Card = () => {
     
@@ -55,22 +56,22 @@ const Card = () => {
         {
           filteredCards().map((card) => {
             return (
-              <div key={card.id} className="card">
-                <div className="body">
-                  <img src={card.unblocked ? card.img : unblocked} alt="" />
-                  <div className="tag">
-                    <div style={{backgroundColor: `${card.unblocked ? 'var(--green)' : 'var(--red)'}`}} className="inside">
-                      {card.unblocked ? <FaLockOpen /> : <FaLock />}
+                <Link to='/' key={card.id} className="card">
+                  <div className="body">
+                    <img src={card.unblocked ? card.img : unblocked} alt="" />
+                    <div className="tag">
+                      <div style={{backgroundColor: `${card.unblocked ? 'var(--green)' : 'var(--red)'}`}} className="inside">
+                        {card.unblocked ? <FaLockOpen /> : <FaLock />}
+                      </div>
                     </div>
+                    <div className="name">
+                      {card.name}
+                    </div>
+                    {
+                      card.unblocked ? '' : <div className="question">?</div>
+                    }
                   </div>
-                  <div className="name">
-                    {card.name}
-                  </div>
-                  {
-                    card.unblocked ? '' : <div className="question">?</div>
-                  }
-                </div>
-              </div>
+                </Link>
             )
           })
         }
@@ -85,6 +86,7 @@ const Card = () => {
 
 margin-top: 50px;
 margin-bottom: 60px;
+
 .buttons {
     display: flex;
     justify-content: center;
@@ -140,6 +142,7 @@ margin-bottom: 60px;
           width: calc(100% - 24px);
           border-radius: 4px;
           padding: 7px 0px;
+          color: var(--purple);
           text-align: center;
           font-size: 13px;
           background-color: white;
