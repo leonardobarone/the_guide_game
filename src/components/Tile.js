@@ -1,11 +1,5 @@
 import styled from "styled-components";
 
-
-
-import useImagesLoaded from "../utils/useImagesLoaded";
-
-
-
 const Tile = ({number, moveTile, infoQuindici}) => {
 
     
