@@ -6,12 +6,16 @@ import { FaLockOpen } from "react-icons/fa";
 import unblocked from '../../images/cards/unblocked.webp'
 import Title from "../../components/Title";
 import { Link } from "react-router-dom";
+import useCardsLoaded from "../../utils/useCardsLoaded";
+import Loading from "../../components/Loading";
+
 
 const Card = () => {
     
   const {cards} = useGlobalContext();
 
   const [filtro, setFiltro] = useState('tutte');
+  const loading = useCardsLoaded(cards);
 
   const filteredCards = () => {
 
@@ -41,6 +45,8 @@ const Card = () => {
         return cards;
     } 
   }
+
+    if (!loading) return <Loading />
 
     return (<Wrapper>
 
