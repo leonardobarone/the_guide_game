@@ -4,10 +4,11 @@ import { useGlobalContext } from "../context";
 import findById from "../utils/findById";
 import unblockById from "../utils/unblockById";
 import timeById from "../utils/timeById";
+import halfById from "../utils/halfByID";
 
 const Winner = ({ numbers, infoQuindici }) => {
 
-    const {places, cards, setCards, setPlaces} = useGlobalContext();
+    const {places, cards, games, setGames, setCards, setPlaces} = useGlobalContext();
     const {place, card, game} = infoQuindici;
 
     const [popup, setPopup] = useState(false);  
@@ -21,6 +22,10 @@ const Winner = ({ numbers, infoQuindici }) => {
   
       if (isSorted) {
         const timer = setTimeout(() => {
+          if (!game.half) {
+            setGames(halfById(games, game.id))
+          }
+
           setCards(unblockById(cards, card.id));
           setCards(timeById(cards, card.id));
           setPlaces(unblockById(places, place.id));
@@ -36,7 +41,7 @@ const Winner = ({ numbers, infoQuindici }) => {
         setVictory(false);
         setPopup(false);
       }
-    }, [numbers, card, place, cards, places, setPlaces, setCards]);
+    }, [numbers, card, place, cards, places, setPlaces, setCards, games, setGames, game]);
   
     if (!setPopup) return null;
   
