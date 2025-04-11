@@ -1,29 +1,48 @@
 import styled from "styled-components";
 import { useState, useEffect } from "react";
+import Popup from "./Popup";
+import { useGlobalContext } from "../context";
+import findById from "../utils/findById";
 
-const Winner = ({ numbers }) => {
+const Winner = ({ numbers, infoQuindici }) => {
     const [showWin, setShowWin] = useState(false);
+
+    const {places, cards} = useGlobalContext();
+    const {place, card, game} = infoQuindici;
+
+    const [popup, setPopup] = useState(false);  
+    const [victory, setVictory] = useState(null);  
+
+    const [cardWon, setCardWon] = useState(null);   
+    const [placeWon, setPlaceWon] = useState(null);   
   
     useEffect(() => {
       const isSorted = numbers.every(n => n.value === n.index + 1);
   
       if (isSorted) {
         const timer = setTimeout(() => {
-          setShowWin(true);
+          setCardWon(findById(cards, card.id))
+          setPlaceWon(findById(places, place.id))
+          setVictory(true);
+          setPopup(true);
         }, 2000);
         return () => clearTimeout(timer); // pulizia se i numeri cambiano prima dei 3 sec
       } else {
-        setShowWin(false);
+        setVictory(false);
+        setPopup(false);
       }
     }, [numbers]);
   
-    if (!showWin) return null;
+    if (!setPopup) return null;
   
-    return (
-      <Wrapper>
-        <p>You Won!</p>
-      </Wrapper>
-    );
+    return <Popup 
+      popup={popup} 
+      setPopup={setPopup} 
+      victory={victory} 
+      cardWon={cardWon} 
+      placeWon={placeWon}
+      game={game} 
+    />
   };
 
 export default Winner;

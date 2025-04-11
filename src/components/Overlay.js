@@ -14,6 +14,6 @@ const Wrapper = styled.div`
     &.overlay {
         border: 1px solid yellow;
         pointer-events: none;
-        z-index: 20;
+        z-index: 2;
     }
 `

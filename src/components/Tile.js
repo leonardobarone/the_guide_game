@@ -89,14 +89,6 @@ const Wrapper = styled.div`
         &.slot--12 {left: 0; top: calc(3 * var(--size));};
         &.slot--13 {left: calc(var(--size)); top: calc(3 * var(--size));};
         &.slot--14 {left: calc(2 * var(--size)); top: calc(3 * var(--size));};
-        &.slot--15 {left: calc(3 * var(--size)); top: calc(3 * var(--size));};
-
-
-
-
-
-    
-
-        
+        &.slot--15 {left: calc(3 * var(--size)); top: calc(3 * var(--size));};        
     }
 `

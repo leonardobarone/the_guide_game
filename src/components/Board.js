@@ -4,7 +4,8 @@ import Tile from "./Tile";
 import { useEffect, useState, useImperativeHandle, forwardRef } from "react";
 import Winner from "./Winner";
 
-const Board = forwardRef((_, ref) => {
+const Board = forwardRef((props, ref) => {
+
 
   const shuffle = () => 
     new Array (16)
@@ -88,7 +89,7 @@ const Board = forwardRef((_, ref) => {
           <Tile key={i} number={x} moveTile={moveTile} />
           // <div key={i}>{x.value}</div>
         )}
-        <Winner numbers={numbers} />
+        <Winner numbers={numbers} infoQuindici={props.infoQuindici} />
     </div>
   </Game>
 })
