@@ -35,7 +35,6 @@ const Popup = ({popup, setPopup, cardWon, placeWon, victory, game, goToPage}) =>
     }
 
     const secondaParte = () => {
-        console.log(goToPage)
         setGames(halfById(games, game.id))
         setGames(changePathById(games, game.id, goToPage))
         navigate(goToPage);
