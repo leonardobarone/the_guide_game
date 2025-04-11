@@ -5,8 +5,14 @@ import arch from '../../images/games/merlato/arch.svg';
 import styled from "styled-components";
 import findById from "../../utils/findById";
 import Error from "../Error";
+import useImagesLoaded from "../../utils/useImagesLoaded";
+import Loading from "../../components/Loading";
 
 const Merlato = () => {
+
+    const images = [lace, arch];
+    const loading = useImagesLoaded(images);
+
     const {cards, games, places} = useGlobalContext();
     const game = findById(games, '14');
     const place = findById(places, '12');
@@ -22,7 +28,7 @@ const Merlato = () => {
         'hex' : '#DD6C70'
     }
 
-  
+  if (!loading) return <Loading height={50} />
   return (
     <div>
       {

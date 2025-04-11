@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 
 
-import useImagesLoaded from "../utils/useImagesLoaded";
 
 
 
