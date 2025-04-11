@@ -3,12 +3,15 @@ import { useGlobalContext } from '../../context';
 import { useState } from 'react';
 import Title from '../../components/Title';
 import { Link } from 'react-router-dom';
+import usePlacesLoaded from '../../utils/usePlacesLoaded';
+import Loading from "../../components/Loading";
 
 const Place = () => {
 
     const {places} = useGlobalContext();
 
     const [filtro, setFiltro] = useState('tutti');
+    const loading = usePlacesLoaded(places);
     
       const filteredPlaces = () => {
     
@@ -38,6 +41,10 @@ const Place = () => {
             return places;
         } 
       }
+
+    if (!loading) return <Loading />
+
+
     return <Wrapper>
 
         <Title name={'i miei luoghi'} />
