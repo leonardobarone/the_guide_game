@@ -19,8 +19,7 @@ const Wrapper = styled.div`
     align-items: center;
     font-size: 75px;
     color: var(--green);
-    border: 1px solid black;
-
+    
 
 @keyframes rotate {
 from {

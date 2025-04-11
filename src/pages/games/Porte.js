@@ -14,8 +14,12 @@ import Error from "../Error";
 import timeById from "../../utils/timeById";
 import unblockById from "../../utils/unblockById";
 import useHeight from "../../utils/useHeight";
+import useImagesLoaded from "../../utils/useImagesLoaded";
+import Loading from "../../components/Loading";
 
 const Porte = () => {
+  const images = [porte1, porte2, porte3, porte4, porte5, porte6];
+  const loading = useImagesLoaded(images);
   const porteImages = {
     1: porte5,
     2: porte1,
@@ -105,7 +109,7 @@ const Porte = () => {
       setSix([1, 2, 3, 4, 5, 6]);
     }
   }
-
+  if (!loading) return <Loading height={50} />
   return (
     game.unblocked ? <Error /> : (<Wrapper>
       <Title name={game.name} />
