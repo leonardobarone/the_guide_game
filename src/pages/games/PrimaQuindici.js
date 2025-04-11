@@ -41,10 +41,10 @@ const PrimaQuindici = () => {
           <Title name={game.name} />
           <div className="bigContainer" style={{height: `${height}px`}}>
             <div className="question">
-              Inserisci la data presente sull'edicola votiva (1894)
+              Chiunque tu sia che passi fermati contempla e di: (1894)
             </div>
             <div className="container">
-              Qui ci dev'essere immagine dell'edicola votiva!
+              AVE MARIA
             </div>
             <div className="buttonContainer">
               <div className="p-absolute">
@@ -78,7 +78,12 @@ const Wrapper = styled.section`
   margin-top: 50px;
 
   .bigContainer {
-    background-color: red;
+    background-color: pink;
+  }
+
+  .container {
+    text-align: center;
+    font-size: 35px;
   }
 
 `
