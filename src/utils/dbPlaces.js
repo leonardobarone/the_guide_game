@@ -63,7 +63,8 @@ const dbPlaces = [
       'imgVisible' : vivaraVisible,
       'imgHidden' : vivaraHidden,
       'imgBorder' : vivaraBorder,
-      'unblocked' : false
+      'unblocked' : false,
+      'time' : ''
     },
     { 
       'id' : "2",
@@ -71,7 +72,8 @@ const dbPlaces = [
       'imgVisible' : chiaiolellaVisible,
       'imgHidden' : chiaiolellaHidden,
       'imgBorder' : chiaiolellaBorder,
-      'unblocked' : false
+      'unblocked' : false,
+      'time' : ''
     },
     { 
       'id' : "3",
@@ -79,7 +81,8 @@ const dbPlaces = [
       'imgVisible' : chiaiaVisible,
       'imgHidden' : chiaiaHidden,
       'imgBorder' : chiaiaBorder,
-      'unblocked' : false
+      'unblocked' : false,
+      'time' : ''
     },
     { 
       'id' : "4",
@@ -87,7 +90,8 @@ const dbPlaces = [
       'imgVisible' : mamozioVisible,
       'imgHidden' : mamozioHidden,
       'imgBorder' : mamozioBorder,
-      'unblocked' : false
+      'unblocked' : false,
+      'time' : ''
     },
     { 
       'id' : "5",
@@ -95,7 +99,8 @@ const dbPlaces = [
       'imgVisible' : canaleVisible,
       'imgHidden' : canaleHidden,
       'imgBorder' : canaleBorder,
-      'unblocked' : false
+      'unblocked' : false,
+      'time' : ''
     },
     { 
       'id' : "6",
@@ -103,7 +108,8 @@ const dbPlaces = [
       'imgVisible' : martiriVisible,
       'imgHidden' : martiriHidden,
       'imgBorder' : martiriBorder,
-      'unblocked' : false
+      'unblocked' : false,
+      'time' : ''
     },
     { 
       'id' : "7",
@@ -111,7 +117,8 @@ const dbPlaces = [
       'imgVisible' : cannoniVisible,
       'imgHidden' : cannoniHidden,
       'imgBorder' : cannoniBorder,
-      'unblocked' : false
+      'unblocked' : false,
+      'time' : ''
     },
     { 
       'id' : "8",
@@ -119,7 +126,8 @@ const dbPlaces = [
       'imgVisible' : carcereVisible,
       'imgHidden' : carcereHidden,
       'imgBorder' : carcereBorder,
-      'unblocked' : false
+      'unblocked' : false,
+      'time' : ''
     },
     { 
       'id' : "9",
@@ -127,7 +135,8 @@ const dbPlaces = [
       'imgVisible' : culturaVisible,
       'imgHidden' : culturaHidden,
       'imgBorder' : culturaBorder,
-      'unblocked' : false
+      'unblocked' : false,
+      'time' : ''
     },
     { 
       'id' : "10",
@@ -135,7 +144,8 @@ const dbPlaces = [
       'imgVisible' : abbaziaVisible,
       'imgHidden' : abbaziaHidden,
       'imgBorder' : abbaziaBorder,
-      'unblocked' : false
+      'unblocked' : false,
+      'time' : ''
     },
     { 
       'id' : "11",
@@ -143,7 +153,8 @@ const dbPlaces = [
       'imgVisible' : corricellaVisible,
       'imgHidden' : corricellaHidden,
       'imgBorder' : corricellaBorder,
-      'unblocked' : false
+      'unblocked' : false,
+      'time' : ''
     },
     { 
       'id' : "12",
@@ -151,7 +162,8 @@ const dbPlaces = [
       'imgVisible' : marinaVisible,
       'imgHidden' : marinaHidden,
       'imgBorder' : marinaBorder,
-      'unblocked' : false
+      'unblocked' : false,
+      'time' : ''
     },
     { 
       'id' : "13",
@@ -159,7 +171,8 @@ const dbPlaces = [
       'imgVisible' : faroVisible,
       'imgHidden' : faroHidden,
       'imgBorder' : faroBorder,
-      'unblocked' : false
+      'unblocked' : false,
+      'time' : ''
     },
     { 
       'id' : "14",
@@ -167,7 +180,8 @@ const dbPlaces = [
       'imgVisible' : cimiteroVisible,
       'imgHidden' : cimiteroHidden,
       'imgBorder' : cimiteroBorder,
-      'unblocked' : false
+      'unblocked' : false,
+      'time' : ''
     },
   ];
   
