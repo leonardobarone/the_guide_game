@@ -46,7 +46,7 @@ const Card = () => {
     } 
   }
 
-    if (!loading) return <Loading />
+    if (!loading) return <Loading height={110} />
 
     return (<Wrapper>
 

@@ -2,10 +2,10 @@ import styled from "styled-components";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import useHeight from "../utils/useHeight";
 
-const Loading = () => {
+const Loading = ({height}) => {
     // Per calcolare l'altezza
-  const height = useHeight(110);
-  return <Wrapper className="loading" style={{ height: `${height}px`}}>
+  const altezza = useHeight(height);
+  return <Wrapper className="loading" style={{ height: `${altezza}px`}}>
     <AiOutlineLoading3Quarters className="icon" />
   </Wrapper>
 }
@@ -19,6 +19,7 @@ const Wrapper = styled.div`
     align-items: center;
     font-size: 75px;
     color: var(--green);
+    border: 1px solid black;
 
 
 @keyframes rotate {

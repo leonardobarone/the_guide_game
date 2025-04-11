@@ -19,8 +19,13 @@ import nespola from '../../images/games/frutta/nespola.png';
 import sette from '../../images/games/frutta/sette.png';
 import Error from "../Error";
 import useHeight from "../../utils/useHeight";
+import useImagesLoaded from "../../utils/useImagesLoaded";
+import Loading from "../../components/Loading";
 
 const Frutta = () => {
+
+    const images =  [arancia, banana, bar, big, ciliegia, cocomero, limone, nespola, sette];
+    const loading = useImagesLoaded(images);
 
     
 
@@ -195,6 +200,8 @@ const Frutta = () => {
         } 
     }
     
+    if (!loading) return <Loading height={50} />
+
   return <>
   {
     game.unblocked ? <Error /> : (

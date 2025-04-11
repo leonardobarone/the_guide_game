@@ -25,8 +25,13 @@ import catena3 from '../../images/games/borgo/catena3.png';
 import catena4 from '../../images/games/borgo/catena4.png';
 import Error from "../Error";
 import useHeight from "../../utils/useHeight";
+import useImagesLoaded from "../../utils/useImagesLoaded";
+import Loading from "../../components/Loading";
 
 const Borgo = () => {
+  const images = [lupo1, lupo2, lupo3, lupo4, catena1, catena2, catena3, catena4, croce1, croce2, croce3, croce4, madonna1, madonna2, madonna3, madonna4];
+  const loading = useImagesLoaded(images);
+
   const { games, cards, setCards, places, setPlaces } = useGlobalContext();
   const game = findById(games, '16');
   const [array, setArray] = useState({});
@@ -176,7 +181,7 @@ const Borgo = () => {
       }
     }
   }
-
+  if (!loading) return <Loading height={50} />
 
   return <>
   {
