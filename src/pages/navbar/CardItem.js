@@ -4,10 +4,10 @@ import Error from "../Error";
 import styled from "styled-components";
 import Title from "../../components/Title";
 
-const PlaceItem = () => {
-  const {places} = useGlobalContext();
+const CardItem = () => {
+  const {cards} = useGlobalContext();
   const {id} = useParams();
-  const oggettoTrovato = places.find(oggetto => oggetto.id === id && oggetto.unblocked);
+  const oggettoTrovato = cards.find(oggetto => oggetto.id === id && oggetto.unblocked);
   
   if (!oggettoTrovato) {
     return <Error />
@@ -23,7 +23,7 @@ const PlaceItem = () => {
   )
 }
 
-export default PlaceItem;
+export default CardItem;
 
 const Wrapper = styled.section`
   

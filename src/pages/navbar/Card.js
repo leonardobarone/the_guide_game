@@ -56,7 +56,7 @@ const Card = () => {
         {
           filteredCards().map((card) => {
             return (
-                <Link to='/' key={card.id} className="card">
+                <Link to={card.unblocked ? `/carte/${card.id}` : ''} key={card.id} className="card">
                   <div className="body">
                     <img src={card.unblocked ? card.img : unblocked} alt="" />
                     <div className="tag">

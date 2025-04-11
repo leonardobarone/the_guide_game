@@ -10,6 +10,7 @@ import Card from "./pages/navbar/Card";
 import Place from "./pages/navbar/Place";
 import Error from "./pages/Error";
 import PlaceItem from "./pages/navbar/PlaceItem";
+import CardItem from "./pages/navbar/CardItem";
 import Home from "./pages/Home";
 import Cannoni from "./pages/games/Cannoni";
 import Merlato from "./pages/games/Merlato";
@@ -30,6 +31,7 @@ function App() {
           <Route path="/mappa" element={<Mappa />} />
           <Route path="/profilo" element={<Account />} />
           <Route path="/carte" element={<Card />} />
+            <Route path="/carte/:id" element={<CardItem />} />
           <Route path="/luoghi" element={<Place />} />
             <Route path="/luoghi/:id" element={<PlaceItem />} />
           

@@ -38,7 +38,6 @@ const Place = () => {
             return places;
         } 
       }
-
     return <Wrapper>
 
         <Title name={'i miei luoghi'} />
