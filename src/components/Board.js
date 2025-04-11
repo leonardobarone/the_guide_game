@@ -86,7 +86,7 @@ const Board = forwardRef((props, ref) => {
     <div className="board">
         <Overlay />
         {numbers.map((x, i) => 
-          <Tile key={i} number={x} moveTile={moveTile} />
+          <Tile key={i} number={x} moveTile={moveTile} infoQuindici={props.infoQuindici} />
           // <div key={i}>{x.value}</div>
         )}
         <Winner numbers={numbers} infoQuindici={props.infoQuindici} />
