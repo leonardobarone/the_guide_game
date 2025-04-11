@@ -6,6 +6,7 @@ import Keyboard from "../../components/Keyboard";
 import { useState } from "react";
 import useHeight from "../../utils/useHeight";
 import Popup from "../../components/Popup";
+import Error from "../Error";
 
 const PrimaQuindici = () => {
   const {games} = useGlobalContext();
@@ -33,36 +34,42 @@ const PrimaQuindici = () => {
     }
   }
   
-  return <Wrapper>
-    <Title name={game.name} />
-    <div className="bigContainer" style={{height: `${height}px`}}>
-      <div className="question">
-        Inserisci la data presente sull'edicola votiva (1894)
-      </div>
-      <div className="container">
-        Qui ci dev'essere immagine dell'edicola votiva!
-      </div>
-      <div className="buttonContainer">
-        <div className="p-absolute">
-          <button onClick={gioca} className="btn">GIOCA</button>
-        </div>
-      </div>
-    </div>
-    <Popup 
-        popup={popup} 
-        setPopup={setPopup} 
-        // cardWon={cardWon} 
-        victory={victory} 
-        goToPage={'/quindici'}
-        // placeWon={placeWon}
-        game={game} 
-    />
-    <Keyboard 
-      sendDataToParent={handleDataFromChild} 
-      popup={popup}
-      limit={4}
-    />
-  </Wrapper>
+  return <>
+    {
+      game.half ? <Error /> : (
+        <Wrapper>
+          <Title name={game.name} />
+          <div className="bigContainer" style={{height: `${height}px`}}>
+            <div className="question">
+              Inserisci la data presente sull'edicola votiva (1894)
+            </div>
+            <div className="container">
+              Qui ci dev'essere immagine dell'edicola votiva!
+            </div>
+            <div className="buttonContainer">
+              <div className="p-absolute">
+                <button onClick={gioca} className="btn">GIOCA</button>
+              </div>
+            </div>
+          </div>
+          <Popup 
+              popup={popup} 
+              setPopup={setPopup} 
+              // cardWon={cardWon} 
+              victory={victory} 
+              goToPage={'/quindici'}
+              // placeWon={placeWon}
+              game={game} 
+          />
+          <Keyboard 
+            sendDataToParent={handleDataFromChild} 
+            popup={popup}
+            limit={4}
+          />
+        </Wrapper>
+      )
+    }
+  </>  
 }
 
 export default PrimaQuindici;

@@ -6,6 +6,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import sad from '../images/popup/sad.png'
 import glasses from '../images/popup/glasses.png'
+import halfById from "../utils/halfByID";
+import changePathById from "../utils/changePathById";
 
 
 const Popup = ({popup, setPopup, cardWon, placeWon, victory, game, goToPage}) => {
@@ -33,6 +35,9 @@ const Popup = ({popup, setPopup, cardWon, placeWon, victory, game, goToPage}) =>
     }
 
     const secondaParte = () => {
+        console.log(goToPage)
+        setGames(halfById(games, game.id))
+        setGames(changePathById(games, game.id, goToPage))
         navigate(goToPage);
     }
 

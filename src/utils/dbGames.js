@@ -44,9 +44,10 @@ const dbGames = [
       'name' : 'san leonardo', 
       'lat' : 40.7644142361896, 
       'lng' : 14.028981057360241,
-      'path' : null,
+      'path' : '/prima_quindici',
       'unblocked' : false,
-      'answer' : '1894'
+      'answer' : '1894',
+      'half' : false
     },
     { 
       'id' : "7",
