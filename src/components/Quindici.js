@@ -11,11 +11,11 @@ import Loading from "./Loading";
 
 const Quindici = (props) => {
 
-    const {game} = props.infoRequest;
+    const {game, images} = props.infoRequest;
 
     
 
-    const loading = useImagesLoaded(game.images);
+    const loading = useImagesLoaded(images);
     // Per calcolare l'altezza
     const height = useHeight(110);
 
