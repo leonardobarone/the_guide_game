@@ -1,16 +1,14 @@
 import styled from "styled-components";
-import Title from "../../components/Title";
-import findById from "../../utils/findById";
-import { useGlobalContext } from "../../context";
-import Keyboard from "../../components/Keyboard";
+import Title from "./Title";
+import Keyboard from "./Keyboard";
 import { useState } from "react";
-import useHeight from "../../utils/useHeight";
-import Popup from "../../components/Popup";
-import Error from "../Error";
+import useHeight from "../utils/useHeight";
+import Popup from "./Popup";
+import Error from "../pages/Error";
 
-const PrimaQuindici = () => {
-  const {games} = useGlobalContext();
-  const game = findById(games, '6');
+const PrimaQuindici = (props) => {
+  const { game, hex, inner } = props.infoRequest;
+
   const [dataFromChild, setDataFromChild] = useState(""); 
   const [popup, setPopup] = useState(false);  
   const [victory, setVictory] = useState(null);   
@@ -39,12 +37,12 @@ const PrimaQuindici = () => {
       game.half ? <Error /> : (
         <Wrapper>
           <Title name={game.name} />
-          <div className="bigContainer" style={{height: `${height}px`}}>
+          <div className="bigContainer" style={{height: `${height}px`, backgroundColor: `${hex}`}}>
             <div className="question">
-              Chiunque tu sia che passi fermati contempla e di: (1894)
+              {game.question}
             </div>
             <div className="container">
-              AVE MARIA
+              {inner}
             </div>
             <div className="buttonContainer">
               <div className="p-absolute">
@@ -55,16 +53,16 @@ const PrimaQuindici = () => {
           <Popup 
               popup={popup} 
               setPopup={setPopup} 
-              // cardWon={cardWon} 
               victory={victory} 
-              goToPage={'/quindici'}
-              // placeWon={placeWon}
               game={game} 
+              // cardWon={cardWon} 
+              goToPage={game.new_path}
+              // placeWon={placeWon}
           />
           <Keyboard 
             sendDataToParent={handleDataFromChild} 
             popup={popup}
-            limit={4}
+            limit={game.answer.length}
           />
         </Wrapper>
       )

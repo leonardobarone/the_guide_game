@@ -17,8 +17,11 @@ import Merlato from "./pages/games/Merlato";
 import Frutta from "./pages/games/Frutta";
 import Borgo from "./pages/games/Borgo";
 import Porte from "./pages/games/Porte";
-import Quindici from "./pages/games/Quindici";
-import PrimaQuindici from "./pages/games/PrimaQuindici";
+import SanLeonardo from "./pages/games/SanLeonardo";
+import TettoMondo from "./pages/games/TettoMondo";
+import SanLeonardo2 from "./pages/games/SanLeonardo2";
+import TettoMondo2 from "./pages/games/TettoMondo2";
+
 
 function App() {
   return (
@@ -51,8 +54,13 @@ function App() {
           <Route path="/porte" element={<Porte />} />
 
           {/* Gioco 15 San Leonardo */}
-          <Route path="prima_quindici" element={<PrimaQuindici />} />
-          <Route path="quindici" element={<Quindici />} />
+          <Route path="san_leonardo" element={<SanLeonardo />} />
+          <Route path="san_leonardo_2" element={<SanLeonardo2 />} />
+
+          {/* Gioco 15 Palazzo Cultura */}
+          <Route path="tetto_mondo" element={<TettoMondo />} />
+          <Route path="tetto_mondo_2" element={<TettoMondo2 />} />
+          
 
           <Route path="*" element={<Error />} />
         </Routes>

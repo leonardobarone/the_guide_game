@@ -44,7 +44,9 @@ const dbGames = [
       'name' : 'san leonardo', 
       'lat' : 40.7644142361896, 
       'lng' : 14.028981057360241,
-      'path' : '/prima_quindici',
+      'path' : '/san_leonardo',
+      'new_path' : '/san_leonardo_2',
+      'question' : 'Chiunque tu sia che passi fermati contempla e di: (1894)',
       'unblocked' : false,
       'answer' : '1894',
       'half' : false
@@ -87,10 +89,14 @@ const dbGames = [
     { 
       'id' : "11",
       'name' : 'il tetto del mondo', 
+      'question' : 'Inserisci il numero civico vicino a questo quadro: (194)',
       'lat' : 40.761431419915354, 
       'lng' : 14.034814598270996,
-      'path' : null,
-      'unblocked' : false
+      'path' : '/tetto_mondo',
+      'new_path' : '/tetto_mondo_2',
+      'unblocked' : false,
+      'answer' : '194',
+      'half' : false
     },
     { 
       'id' : "12",

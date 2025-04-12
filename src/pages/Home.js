@@ -22,10 +22,16 @@ const Home = () => {
                 <Link to='/porte'>Quiz Porte</Link>
               </li>
               <li>
-                <Link to='/prima_quindici'>San Leonardo prima del 15</Link>
+                <Link to='/san_leonardo'>San Leonardo prima del 15</Link>
               </li>
               <li>
-                <Link to='/quindici'>Quiz 15</Link>
+                <Link to='/san_leonardo_2'>San Leonardo Quiz 15</Link>
+              </li>
+              <li>
+                <Link to='/tetto_mondo'>Plazzo Cultura prima del 15</Link>
+              </li>
+              <li>
+                <Link to='/tetto_mondo_2'>Palazzo Cultura Quiz 15</Link>
               </li>
           </ul>
         </div>
