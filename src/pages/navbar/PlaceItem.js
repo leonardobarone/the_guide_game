@@ -16,6 +16,9 @@ const PlaceItem = () => {
   return (
     <Wrapper style={{marginTop: '50px', marginBottom: '75px'}}>
       <Title name={oggettoTrovato.name} />
+      <div className="cover">
+        <img src={oggettoTrovato.imgCover} alt="" />
+      </div>
       <p>
         {oggettoTrovato.description}
       </p>
@@ -26,5 +29,15 @@ const PlaceItem = () => {
 export default PlaceItem;
 
 const Wrapper = styled.section`
-  
+    .cover {
+      img {
+        width: 100%;
+        display: block;
+        border-radius: 4px;
+      }
+      padding: 7px;
+    }
+    p {
+      padding: 3px 10px;
+    }
 `
