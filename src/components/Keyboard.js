@@ -29,7 +29,7 @@ const Keyboard = ({ sendDataToParent, popup, limit, boxVisible}) => {
     const btns2 = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'];
     const btns3 = ['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L'];
     const btns4 = ['Z', 'X', 'C', 'V', 'B', 'N', 'M', 'indietro'];
-    const btns5 = [' '];
+    const btns5 = ['_'];
 
     return <>
         <Wrapper>

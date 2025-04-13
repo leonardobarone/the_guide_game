@@ -8,6 +8,7 @@ import Title from "../../components/Title";
 import { Link } from "react-router-dom";
 import useCardsLoaded from "../../utils/useCardsLoaded";
 import Loading from "../../components/Loading";
+import useImagesLoaded from '../../utils/useImagesLoaded';
 
 
 const Card = () => {
@@ -15,7 +16,10 @@ const Card = () => {
   const {cards} = useGlobalContext();
 
   const [filtro, setFiltro] = useState('tutte');
+
   const loading = useCardsLoaded(cards);
+  const images = [unblocked];
+  const loading2 = useImagesLoaded(images);
 
   const filteredCards = () => {
 
@@ -46,7 +50,7 @@ const Card = () => {
     } 
   }
 
-    if (!loading) return <Loading height={110} />
+    if (!loading && !loading2) return <Loading height={110} />
 
     return (<Wrapper>
 
