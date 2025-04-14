@@ -158,7 +158,7 @@ const Wrapper = styled.section`
   margin-top: 50px;
 
   .bigContainer {
-    background-color: #D7DEDC;
+    background-color: var(--verdePeppe);
   }
   
   .container {

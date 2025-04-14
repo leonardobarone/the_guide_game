@@ -25,7 +25,7 @@ const Merlato = () => {
         'cards' : cards,
         'places' : places,
         'games' : games,
-        'hex' : '#DD6C70'
+        'hex' : 'var(--rosaPeppe)'
     }
 
   if (!loading) return <Loading height={50} />

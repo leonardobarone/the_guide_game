@@ -291,7 +291,7 @@ const Wrapper = styled.main`
       padding: 7px;
       margin: 7px;
       border-radius: 4px;
-      background-color: #7BC872;
+      background-color: var(--verdePeppe);
     }
     .question {
       font-weight: lighter;

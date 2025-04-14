@@ -31,6 +31,7 @@ const Navbar = () => {
       location.pathname === '/porte' ||
       location.pathname === '/san_leonardo' ||
       location.pathname === '/tetto_mondo' ||
+      location.pathname === '/figli' ||
       location.pathname === '/san_leonardo_2' ||
       location.pathname === '/tetto_mondo_2' 
     ) {
@@ -104,14 +105,14 @@ const Wrapper = styled.nav`
             font-size: 24px;
             transition: 0.5s;
             text-align: center;
-            color: var(--my-text);
+            color: black;
             opacity: 0.3;
           }
            .text {
             position: absolute;
             font-weight: 600;
             font-size: 8px;
-            color: var(--bg-gray);
+            color: #ebebeb;
             text-transform: uppercase;
             transform: translateY(0px);
             letter-spacing: 0.05em;

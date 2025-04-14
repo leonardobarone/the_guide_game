@@ -142,7 +142,7 @@ const Wrapper = styled.main`
       bottom: -1px;
       left: -1px;
       padding: 5px;
-      background-color: var(--bg-white);
+      background-color: white;
       &::after {
         width: 20px;
         height: 20px;
@@ -164,7 +164,7 @@ const Wrapper = styled.main`
         top: -20px;
         left: 1px;
         border-bottom-left-radius: 4px;
-        box-shadow: -6px 4px var(--bg-white);
+        box-shadow: -6px 4px white;
       }
       .btn {
         font-family: "Mitr", serif;

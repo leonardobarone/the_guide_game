@@ -21,6 +21,7 @@ import SanLeonardo from "./pages/games/SanLeonardo";
 import TettoMondo from "./pages/games/TettoMondo";
 import SanLeonardo2 from "./pages/games/SanLeonardo2";
 import TettoMondo2 from "./pages/games/TettoMondo2";
+import Figli from "./pages/games/Figli";
 
 
 function App() {
@@ -61,6 +62,8 @@ function App() {
           <Route path="tetto_mondo" element={<TettoMondo />} />
           <Route path="tetto_mondo_2" element={<TettoMondo2 />} />
           
+          {/* Gioco Figli */}
+          <Route path="figli" element={<Figli />} />
 
           <Route path="*" element={<Error />} />
         </Routes>

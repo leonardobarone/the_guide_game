@@ -21,7 +21,7 @@ const Cannoni = () => {
       'card' : card,
       'place' : place,
       'game' : game,
-       'hex' : '#89B8F6'
+       'hex' : 'var(--bluPeppe)'
     }
 
     if (!loading) return <Loading height={50} />

@@ -40,7 +40,7 @@ const Wrapper = styled.div`
         align-items: center;
         justify-content: center;
         font-size: 50px;
-        background-color: yellow;
+        background-color: var(--purple);
         cursor: pointer;
         transition: left .2s, top .2s;
         &.disabled {pointer-events: none; background-color: transparent;}

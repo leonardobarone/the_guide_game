@@ -18,21 +18,14 @@ body {
   --red: #E73A5E;
   --green: #4EBDAB;
   --orange: #FB9300;
-
   --size: 25%;
-  --tile: #342956;
-  --correct: #6e50b4;
 
-
-
-  --bg: #f7feda;
-  
-  --bg-white: #fff;
-  --bg-gray: #ebebeb;
-  --my-text: black;
-  --success-bootstrap: #5cb85c;
-  --danger-bootstrap: #d9534f;
-  --my-success: #ee670e;
+  --rossoPeppe: #EA5E4F;
+  --violaPeppe: #B679A2;
+  --rosaPeppe: #EF7987;
+  --bluPeppe: #B2C0CD;
+  --verdePeppe: #BBBFB0;
+  --gialloPeppe: #FFDA8C;
 }
 
 .bigContainer {

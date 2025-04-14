@@ -33,11 +33,12 @@ const dbGames = [
     },
     { 
       'id' : "5",
-      'name' : 'san giacomo', 
-      'lat' : 40.76147334330341, 
-      'lng' : 14.024883709709318,
-      'path' : null,
-      'unblocked' : false
+      'name' : 'ai figli di procida', 
+      'lat' : 40.76145083880172, 
+      'lng' : 14.024923173873704,
+      'path' : '/figli',
+      'unblocked' : false,
+      'answer' : 'VIVETIS'    
     },
     { 
       'id' : "6",

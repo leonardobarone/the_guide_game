@@ -33,6 +33,9 @@ const Home = () => {
               <li>
                 <Link to='/tetto_mondo_2'>Palazzo Cultura Quiz 15</Link>
               </li>
+              <li>
+                <Link to='/figli'>Ai Figli di Procida</Link>
+              </li>
           </ul>
         </div>
 

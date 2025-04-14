@@ -326,7 +326,7 @@ const Wrapper = styled.main`
         border-radius: 4px;
         margin: 7px;
         padding: 7px;
-        background-color: #ffce1f;
+        background-color: var(--gialloPeppe);
         .descrizione {
             font-weight: lighter;
             line-height: 15px;

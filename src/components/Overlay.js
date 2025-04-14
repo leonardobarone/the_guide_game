@@ -12,7 +12,7 @@ export default Overlay;
 
 const Wrapper = styled.div`
     &.overlay {
-        border: 1px solid yellow;
+        border: 1px solid var(--purple);
         pointer-events: none;
         z-index: 2;
     }

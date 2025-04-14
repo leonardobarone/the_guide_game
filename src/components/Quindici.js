@@ -44,7 +44,7 @@ export default Quindici;
 const Wrapper = styled.section`
     margin-top: 50px;
     .bigContainer {
-      background-color: yellow;
+      background-color: var(--violaPeppe);
     }
 
 `
