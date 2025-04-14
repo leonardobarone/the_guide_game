@@ -118,7 +118,6 @@ export default QuizNumeric;
 const Wrapper = styled.main`
   margin-top: 50px;
   margin-bottom: 210px;
-  /* padding: 0px 7px; */
   .card {
     margin: 7px;
     position: relative;

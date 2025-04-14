@@ -7,14 +7,21 @@ import Keyboard from "../../components/Keyboard";
 import { useState } from "react";
 import Popup from "../../components/Popup";
 import statua from '../../images/games/figli/statua.jpg';
+import timeById from "../../utils/timeById";
+import unblockById from "../../utils/unblockById";
+
 
 const Figli = () => {
-  const {games} = useGlobalContext();
+  const {games, places, cards, setPlaces, setCards} = useGlobalContext();
   const game = findById(games, '5')
   const height = useHeight(330);
   const [dataFromChild, setDataFromChild] = useState(""); 
   const [popup, setPopup] = useState(false);
-  const [victory, setVictory] = useState(null);   
+  const [victory, setVictory] = useState(null); 
+  const [cardWon, setCardWon] = useState(null);   
+  const [placeWon, setPlaceWon] = useState(null);  
+  const place = findById(places, '4');
+  const card = findById(cards, '8');
 
   function handleDataFromChild(data) {
     setDataFromChild(data);
@@ -24,6 +31,15 @@ const Figli = () => {
       setDataFromChild('');
       setVictory(true);
       setPopup(true);
+      
+      setCards(unblockById(cards, card.id));
+      setCards(timeById(cards, card.id));
+      
+      setPlaces(unblockById(places, place.id));
+      setPlaces(timeById(places, place.id));
+
+      setCardWon(findById(cards, card.id))
+      setPlaceWon(findById(places, place.id))
     } else if (dataFromChild.length !== 0) {
       setDataFromChild('');
       setVictory(false);
@@ -49,11 +65,10 @@ const Figli = () => {
     <Popup 
         popup={popup} 
         setPopup={setPopup} 
+        cardWon={cardWon} 
         victory={victory} 
+        placeWon={placeWon}
         game={game} 
-        // cardWon={cardWon} 
-        goToPage={game.new_path}
-        // placeWon={placeWon}
     />
     <Keyboard 
         sendDataToParent={handleDataFromChild} 
