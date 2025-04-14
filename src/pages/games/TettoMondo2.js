@@ -9,7 +9,7 @@ import quindici6 from '../../images/games/tetto_mondo/6.webp';
 import quindici7 from '../../images/games/tetto_mondo/7.webp';
 import quindici8 from '../../images/games/tetto_mondo/8.webp';
 import quindici9 from '../../images/games/tetto_mondo/9.webp';
-// import quindici10 from '../../images/games/tetto_mondo/10.webp';
+import quindici10 from '../../images/games/tetto_mondo/10.webp';
 import quindici11 from '../../images/games/tetto_mondo/11.webp';
 import quindici12 from '../../images/games/tetto_mondo/12.webp';
 import quindici13 from '../../images/games/tetto_mondo/13.webp';
@@ -39,7 +39,7 @@ const TettoMondo2 = () => {
           quindici7,
           quindici8,
           quindici9,
-        //   quindici10,
+          quindici10,
           quindici11,
           quindici12,
           quindici13,
