@@ -39,7 +39,7 @@ const Frutta = () => {
     const [placeWon, setPlaceWon] = useState(null);   
 
     // Per calcolare l'altezza
-    const height = useHeight(300);
+    const height = useHeight(295);
 
 
 

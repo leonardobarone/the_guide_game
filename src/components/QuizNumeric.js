@@ -25,7 +25,7 @@ const QuizNumeric = (props) => {
     const { cards, places, games, game, place, card, hex } = props.infoQuizNumeric;
 
   // Per calcolare l'altezza
-  const height = useHeight(340);
+  const height = useHeight(330);
 
   // HOOKS
   const {setCards, setPlaces} = useGlobalContext();
@@ -83,9 +83,9 @@ const QuizNumeric = (props) => {
   } 
 
   return (
-    <Wrapper style={{ height: `${height}px`}}>
+    <Wrapper>
       <Title name={game.name} />
-    <div className="card" style={{backgroundColor : `${hex}`}}>
+    <div className="card" style={{backgroundColor : `${hex}`, height: `${height}px`}}>
       <div className="domanda">
         {game.question}
       </div>
