@@ -9,6 +9,7 @@ import Popup from "../../components/Popup";
 import statua from '../../images/games/figli/statua.jpg';
 import timeById from "../../utils/timeById";
 import unblockById from "../../utils/unblockById";
+import Error from "../Error";
 
 
 const Figli = () => {
@@ -47,7 +48,8 @@ const Figli = () => {
     }
   }
 
-  return <Wrapper>
+  return <>
+    {game.unblocked ? <Error /> : (<Wrapper>
     <Title name={game.name} />
     <div className="bigContainer" style={{height : `${height}px`}}>
         <div className="question">
@@ -75,7 +77,8 @@ const Figli = () => {
         popup={popup}
         limit={game.answer.length}
     />
-  </Wrapper>
+  </Wrapper>)}
+    </>
 }
 
 export default Figli;

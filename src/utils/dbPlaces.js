@@ -162,7 +162,7 @@ const dbPlaces = [
     { 
       'id' : "9",
       'name' : 'terra murata', 
-      'description' : "L'Abbazia di San Michele fu costruita dai benedettini nell’XI secolo e affidata, poi, in commenda a cardinali. L’edificio religioso, costruito su un impianto basilicale, si articola su due livelli, di cui quello superiore ospita la chiesa, mentre il piano inferiore comprende il complesso abbaziale. L’interno della chiesa accoglie tre navate di cui quella centrale è coperta da un soffitto a cassettoni in legno ed oro zecchino con al centro il dipinto raffigurante San Michele che sconfigge Satana, realizzato nel XVII secolo.",
+      'description' : "Terra Murata è il cuore storico di Procida, un borgo fortificato che domina l'isola dall'alto di un promontorio a picco sul mare. Il borgo ha origini antiche, risalenti al Medioevo, quando l'isola era spesso soggetta ad incursioni piratesche. La sua posizione strategica e le imponenti mura di difesa la resero un rifugio sicuro per la popolazione. Nel corso dei secoli, il borgo ha subito diverse trasformazioni, ospitando un'abbazia, un castello e, successivamente, un carcere.",
       'imgCover' : culturaCover,
       'imgVisible' : culturaVisible,
       'imgHidden' : culturaHidden,
@@ -173,7 +173,7 @@ const dbPlaces = [
     { 
       'id' : "10",
       'name' : 'abbazia di san michele', 
-      'description' : "Terra Murata è il cuore storico di Procida, un borgo fortificato che domina l'isola dall'alto di un promontorio a picco sul mare. Il borgo ha origini antiche, risalenti al Medioevo, quando l'isola era spesso soggetta ad incursioni piratesche. La sua posizione strategica e le imponenti mura di difesa la resero un rifugio sicuro per la popolazione. Nel corso dei secoli, il borgo ha subito diverse trasformazioni, ospitando un'abbazia, un castello e, successivamente, un carcere.",
+      'description' : "L'Abbazia di San Michele fu costruita dai benedettini nell’XI secolo e affidata, poi, in commenda a cardinali. L’edificio religioso, costruito su un impianto basilicale, si articola su due livelli, di cui quello superiore ospita la chiesa, mentre il piano inferiore comprende il complesso abbaziale. L’interno della chiesa accoglie tre navate di cui quella centrale è coperta da un soffitto a cassettoni in legno ed oro zecchino con al centro il dipinto raffigurante San Michele che sconfigge Satana, realizzato nel XVII secolo.",
       'imgCover' : abbaziaCover,
       'imgVisible' : abbaziaVisible,
       'imgHidden' : abbaziaHidden,
