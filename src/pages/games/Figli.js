@@ -10,9 +10,13 @@ import statua from '../../images/games/figli/statua.jpg';
 import timeById from "../../utils/timeById";
 import unblockById from "../../utils/unblockById";
 import Error from "../Error";
+import useImagesLoaded from "../../utils/useImagesLoaded";
+import Loading from "../../components/Loading";
 
 
 const Figli = () => {
+  const images = [statua];
+  const loading = useImagesLoaded(images);
   const {games, places, cards, setPlaces, setCards} = useGlobalContext();
   const game = findById(games, '5')
   const height = useHeight(330);
@@ -47,6 +51,8 @@ const Figli = () => {
       setPopup(true); 
     }
   }
+
+  if (!loading) return <Loading height={50} />
 
   return <>
     {game.unblocked ? <Error /> : (<Wrapper>
