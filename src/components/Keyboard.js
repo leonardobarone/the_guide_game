@@ -36,7 +36,12 @@ const Keyboard = ({ sendDataToParent, popup, limit, boxVisible}) => {
             {
                 !boxVisible ? <div className="top">
                 <div className="search">
-                    <span>{parola}</span>
+                {parola.split('').map((char, index) => (
+                    <span style={char === '_' ? {color: 'white'} : {}} key={index}>     
+                        {char}
+                    </span>
+                ))}
+                <span></span>
                 </div>
             </div> : null
             }
@@ -90,7 +95,7 @@ const Keyboard = ({ sendDataToParent, popup, limit, boxVisible}) => {
                     <div className='halfLeftSpace'></div>
                     {btns5.map((btn, i) => {
                         return <div className='space' key={i}>
-                            <div className='in' onClick={() => handleButtonClick(btn)}>
+                            <div style={{color: 'white'}} className='in' onClick={() => handleButtonClick(btn)}>
                                 {btn}
                             </div>
                         </div>
@@ -132,7 +137,7 @@ const Wrapper = styled.div`
             height: 78%;
             border-radius: 4px;
             background-color: white;
-            span {
+            span:last-child {
                 position: relative;
                 height: 100%;
                 display: flex;

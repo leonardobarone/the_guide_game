@@ -1,6 +1,6 @@
 import QuizNumeric from "../../components/QuizNumeric";
 import { useGlobalContext } from "../../context";
-import cannon from '../../images/games/cannoni/cannon2.png';
+import cannon from '../../images/games/cannoni/cannon.webp';
 import findById from "../../utils/findById";
 import Error from "../Error";
 import useImagesLoaded from '../../utils/useImagesLoaded';
