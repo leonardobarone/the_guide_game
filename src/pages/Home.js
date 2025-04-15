@@ -36,6 +36,9 @@ const Home = () => {
               <li>
                 <Link to='/figli'>Ai Figli di Procida</Link>
               </li>
+              <li>
+                <Link to='/cripta'>La Cripta Nascosta</Link>
+              </li>
           </ul>
         </div>
 

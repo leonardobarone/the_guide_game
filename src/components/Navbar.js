@@ -32,6 +32,7 @@ const Navbar = () => {
       location.pathname === '/san_leonardo' ||
       location.pathname === '/tetto_mondo' ||
       location.pathname === '/figli' ||
+      location.pathname === '/cripta' ||
       location.pathname === '/san_leonardo_2' ||
       location.pathname === '/tetto_mondo_2' 
     ) {

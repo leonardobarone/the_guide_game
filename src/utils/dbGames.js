@@ -163,7 +163,8 @@ const dbGames = [
       'lat' : 40.76310198032642, 
       'lng' : 14.011398610432943,
       'path' : null,
-      'unblocked' : false
+      'unblocked' : false,
+      'answer' : 'DONA_EIS_REQUIEM'
     },
   ];
   
