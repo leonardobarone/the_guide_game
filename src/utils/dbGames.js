@@ -57,7 +57,8 @@ const dbGames = [
       'name' : 'la vendetta dei borbone', 
       'lat' : 40.76209727290956, 
       'lng' : 14.030961605019023,
-      'path' : null,
+      'path' : '/mestieri',
+      "answer" : [4, 2, 8, 7, 3, 5, 1, 6],
       'unblocked' : false
     },
     { 
