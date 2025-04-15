@@ -10,7 +10,7 @@ const PlaceItem = () => {
   const {places} = useGlobalContext();
   const {id} = useParams();
   const oggettoTrovato = places.find(oggetto => oggetto.id === id && oggetto.unblocked);
-  const images = [oggettoTrovato.cover];
+  const images = [oggettoTrovato.imgCover];
   const loading = useImagesLoaded(images);
 
   if (!oggettoTrovato) {

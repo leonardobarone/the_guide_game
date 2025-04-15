@@ -6,17 +6,13 @@ import Title from "../../components/Title";
 import Keyboard from "../../components/Keyboard";
 import { useState } from "react";
 import Popup from "../../components/Popup";
-import statua from '../../images/games/figli/statua.jpg';
 import timeById from "../../utils/timeById";
 import unblockById from "../../utils/unblockById";
 import Error from "../Error";
-import useImagesLoaded from "../../utils/useImagesLoaded";
-import Loading from "../../components/Loading";
 
 
 const Cripta = () => {
-  const images = [statua];
-  const loading = useImagesLoaded(images);
+
   const {games, places, cards, setPlaces, setCards} = useGlobalContext();
   const game = findById(games, '18')
   const height = useHeight(330);
@@ -52,7 +48,6 @@ const Cripta = () => {
     }
   }
 
-  if (!loading) return <Loading height={50} />
 
   return <>
     {game.unblocked ? <Error /> : (<Wrapper>
