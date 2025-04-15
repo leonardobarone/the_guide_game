@@ -26,7 +26,7 @@ const Cripta = () => {
   const [cardWon, setCardWon] = useState(null);   
   const [placeWon, setPlaceWon] = useState(null);  
   const place = findById(places, '14');
-  const card = findById(cards, '7');
+  const card = findById(cards, '14');
 
   function handleDataFromChild(data) {
     setDataFromChild(data);

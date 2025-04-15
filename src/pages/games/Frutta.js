@@ -294,7 +294,10 @@ const Frutta = () => {
 
                 <div className="base buttonContainer">
                     <div className="p-absolute">
-                        <button onClick={prova} className="btn">GIOCA</button>
+                        <button onClick={prova} className="btn">
+                            <span></span>
+                            GIOCA
+                        </button>
                     </div>
                 </div>
             
@@ -356,51 +359,70 @@ const Wrapper = styled.main`
             }
         }
         .buttonContainer {
-            height: 47px;
-            position: relative;
-            .p-absolute {
-                border-radius: 4px;
-                position: absolute;
-                background-color: white;
-                padding: 4px;
-                left: -7px;
-                bottom: -7px;
-                .btn {
-                    font-family: "Mitr", serif;
-                    display: inline-block;
-                    font-weight: lighter;
-                    background-color: var(--orange);
-                    color: white;
-                    padding: 10px 75px;
-                    border-style: none;
-                    border-radius: 4px;
+    height: 47px;
+    position: relative;
+    .p-absolute {
+      border-radius: 4px;
+      position: absolute;
+      background-color: white;
+      padding: 4px;
+      left: -7px;
+      bottom: -7px;
+      .btn {
+        overflow: hidden;
+        position: relative;
+        font-family: "Mitr", serif;
+        display: inline-block;
+        font-weight: lighter;
+        background-color: var(--orange);
+        color: white;
+        padding: 10px 75px;
+        border-style: none;
+        border-radius: 4px;
         letter-spacing: 1px;
-                    &::after {
-                        width: 20px;
-                        height: 20px;
-                        content: '';
-                        position: absolute;
-                        background-color: transparent;
-                        top: 29px;
-                        right: -20px;
-                        border-bottom-left-radius: 4px;
-                        box-shadow: -3px 2px white;
-                    }
-                    
-                    &::before {
-                        content: '';
-                        width: 20px;
-                        height: 20px;
-                        position: absolute;
-                        background-color: transparent;
-                        top: -20px;
-                        left: 0px;
-                        border-bottom-left-radius: 4px;
-                        box-shadow: -6px 4px white;
-                    }
-                }
-            }
+        span {
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 60%;
+            height: 100%;
+            background: linear-gradient(
+              120deg,
+              rgba(255,255,255,0) 30%,
+              rgba(255,255,255,0.5),
+              rgba(255,255,255,0) 70%
+            );
+            animation: shine 5s infinite;
+            z-index: 2;
+            pointer-events: none;
+            mix-blend-mode: screen; /* per un bel riflesso soft */
+          }
         }
+        &::after {
+            width: 20px;
+            height: 20px;
+            content: '';
+            position: absolute;
+            background-color: transparent;
+            top: 29px;
+            right: -20px;
+            border-bottom-left-radius: 4px;
+            box-shadow: -3px 2px white;
+        }
+        
+        &::before {
+            content: '';
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            background-color: transparent;
+            top: -20px;
+            left: 0px;
+            border-bottom-left-radius: 4px;
+            box-shadow: -6px 4px white;
+        }
+      }
+    }
     }
     .base {
         display: flex;

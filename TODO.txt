@@ -25,9 +25,9 @@ I18N
 SHINE BUTTON
 merlato
 cannoni
-frutta
 
 
+frutta -> fatto!
 borgo -> fatto!
 porte -> fatto!
 san_leonardo_2 -> fatto!
