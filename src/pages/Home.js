@@ -39,6 +39,9 @@ const Home = () => {
               <li>
                 <Link to='/cripta'>La Cripta Nascosta</Link>
               </li>
+              <li>
+                <Link to='/mestieri'>Mestieri Martiri</Link>
+              </li>
           </ul>
         </div>
 
