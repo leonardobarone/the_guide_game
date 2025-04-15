@@ -136,7 +136,10 @@ const Porte = () => {
         </div>
         <div className="buttonContainer">
           <div className="p-absolute">
-            <button onClick={() => gioca()} className="btn">GIOCA</button>
+            <button onClick={() => gioca()} className="btn">
+              <span></span>
+              GIOCA
+            </button>
           </div>
         </div>
       </div>

@@ -32,7 +32,10 @@ const Quindici = (props) => {
       <Board ref={ref} infoQuindici={props.infoRequest} />
       <div className="buttonContainer">
         <div className="p-absolute">
-          <button onClick={() => ref.current?.reset()} className="btn">RESET (al momento vinci)</button>
+          <button onClick={() => ref.current?.reset()} className="btn">
+            <span></span>
+            RESET (al momento vinci)
+          </button>
         </div>
       </div>
     </div>

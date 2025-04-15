@@ -23,3 +23,16 @@ I18N
 
 
 SHINE BUTTON
+merlato
+cannoni
+frutta
+
+
+borgo -> fatto!
+porte -> fatto!
+san_leonardo_2 -> fatto!
+tetto_mondo_2 -> fatto!
+sanLeo1 -> fatto!
+tetto_mondo_1 -> fatto!
+figli -> fatto!
+cripta -> fatto!
