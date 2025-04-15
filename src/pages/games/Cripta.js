@@ -57,7 +57,7 @@ const Cripta = () => {
     <Title name={game.name} />
     <div className="bigContainer" style={{height : `${height}px`}}>
         <div className="question">
-          Qualcosa che deve mettere Peppe
+          Scendi lungo via spiaggia del postino e cerca sulla sinistra questa cripta. Completa la frase e supererai il livello.
         </div>
          <div className="container">
             <img src={cripta} alt="" />
@@ -99,7 +99,7 @@ const Wrapper = styled.section`
         display: flex;
         justify-content: center;
         img {
-            height: 180px;
+            height: 175px;
             display: block;
         }
     }
