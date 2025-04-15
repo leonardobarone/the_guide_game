@@ -9,10 +9,13 @@ import Popup from "../../components/Popup";
 import timeById from "../../utils/timeById";
 import unblockById from "../../utils/unblockById";
 import Error from "../Error";
-
+import cripta from '../../images/games/cripta/cripta.webp'
+import useImagesLoaded from "../../utils/useImagesLoaded";
+import Loading from "../../components/Loading";
 
 const Cripta = () => {
-
+  const images = [cripta];
+  const loading = useImagesLoaded(images);
   const {games, places, cards, setPlaces, setCards} = useGlobalContext();
   const game = findById(games, '18')
   const height = useHeight(330);
@@ -47,7 +50,7 @@ const Cripta = () => {
       setPopup(true); 
     }
   }
-
+  if (!loading) return <Loading height={50} />
 
   return <>
     {game.unblocked ? <Error /> : (<Wrapper>
@@ -57,9 +60,7 @@ const Cripta = () => {
           Qualcosa che deve mettere Peppe
         </div>
          <div className="container">
-            Qualcosa che deve mettere Peppe (scegliendo colore sfondo) 
-            <br/>
-            Soluzione: DONA EIS REQUIEM
+            <img src={cripta} alt="" />
         </div>
         <div className="buttonContainer">
             <div className="p-absolute">
@@ -95,9 +96,11 @@ const Wrapper = styled.section`
         background-color: var(--verdePeppe);
     }
     .container {
-        text-align: center;
+        display: flex;
+        justify-content: center;
         img {
-            width: 100px;
+            height: 180px;
+            display: block;
         }
     }
  
