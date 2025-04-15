@@ -10,6 +10,8 @@ import patrono from '../images/cards/patrono.webp';
 import postino from '../images/cards/postino.webp';
 import processione from '../images/cards/processione.webp';
 import scialoia from '../images/cards/scialoia.webp';
+import limoni from '../images/cards/limoni.webp';
+import torri from '../images/cards/torri.webp'
 
 const dbCards = [
     {
@@ -108,21 +110,22 @@ const dbCards = [
         'unblocked' : false,
         'time' : ''
     },
+    {
+        'id' : '13',
+        'name' : 'i limoni',
+        'description' : "I limoni sono il simbolo della cucina procidana. La coltivazione dei limoni ha origini antiche, risalenti al periodo della dominazionaragonese. I limoni di Procida sono anche conosciuti come \"limoni pane\" per via delle loro dimensioni e della polpa spessa, che può essere consumata come un frutto. I dolci e i liquori a base di limone prodotti a Procida sono famosi in tutto il mondo.",
+        'img' : limoni,
+        'unblocked' : false,
+        'time' : ''
+    },
+    {
+        'id' : '14',
+        'name' : 'le tre torri',
+        'description' : "Le tre torri a Procida sono lo stemma comunale. L'isola è situata sulle rotte marinare del Tirreno ed è sempre stata esposta a incursioni di \"nemici\", che siano pirati locali, saraceni o ottomani. Le torri di avvistamento erano un primo sistema di difesa per la popolazione. Le tre torri sono: la torre di Tabaia (località Lingua), la torre della Rotonda (località Pozzo Vecchio), la torre degli Infernali (località Chiaiolella).",
+        'img' : torri,
+        'unblocked' : false,
+        'time' : ''
+    },
 ];
 
 export default dbCards;
-
-
-
-
-// 13. I LIMONI
-// I limoni sono il simbolo della cucina procidana. 
-// La coltivazione dei limoni ha origini antiche, risalenti al periodo della dominazione aragonese.
-// I limoni di Procida sono anche conosciuti come "limoni pane" per via delle loro dimensioni e della polpa spessa, che può essere consumata come un frutto.
-// I dolci e i liquori a base di limone prodotti a Procida sono famosi in tutto il mondo.
-
-// 14. LE TRE TORRI
-// Le tre torri a Procida sono lo stemma comunale.
-// L'isola è situata sulle rotte marinare del Tirreno ed è sempre stata esposta a incursioni di "nemici", che siano pirati locali, saraceni o ottomani.
-// Le torri di avvistamento erano un primo sistema di difesa per la popolazione.
-// Le tre torri sono: la torre di Tabaia (località Lingua), la torre della Rotonda (località Pozzo Vecchio), la torre degli Infernali (località Chiaiolella).
